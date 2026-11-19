@@ -37,7 +37,7 @@ Sınava kalan süre kısa olduğu için 60 günlük aralık kullanılmıyor.
 
 ### 2.2 Araç seçimi
 
-- **Anki (önerilen):** Aralıkları kendisi hesaplar. Windows'ta ve Fedora'da çalışır. Kartları elle girebilir ya da 12-02'deki kartları CSV olarak içe aktarabilirsin (`Soru;Cevap` biçimi).
+- **Anki (önerilen):** Aralıkları kendisi hesaplar. Windows'ta ve Fedora'da çalışır. Kartları elle girebilir ya da `12-REVISION/anki/` klasöründeki hazır dosyaları içe aktarabilirsin (File → Import). Her ders dosyası için ayrı bir dosya vardır (ör. `00-01.txt`); yalnızca çalıştığın dosyanınkini aktar.
 - **Markdown ile Leitner kutuları:** Bir dosyada beş başlık aç (Kutu 1–5) ve kartı her tekrardan sonra ilgili başlığa taşı.
 
 Hangisini seçersen seç, kartların **ana kaynağı sensin**: 12-02'deki kartlar başlangıç setidir; kendi cümlelerinle yazdığın kartlar daha etkilidir.

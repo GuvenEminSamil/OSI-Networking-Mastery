@@ -1,6 +1,6 @@
 # 12-02 Modül Modül Tekrar Kartları (Flashcards by Module)
 
-> Bu dosya bir **başlangıç setidir**. Kendi cümlelerinle yazdığın kartlar daha etkilidir (12-01, Bölüm 3). Anki'ye aktarmak için her tablonun iki sütununu `Soru;Cevap` biçiminde bir CSV dosyasına kopyalayabilirsin.
+> Bu dosya bir **başlangıç setidir**. Kendi cümlelerinle yazdığın kartlar daha etkilidir (12-01, Bölüm 3). Anki'ye aktarılmaya hazır sürümleri `12-REVISION/anki/` klasöründedir (sekmeyle ayrılmış, dosya başına bir ders).
 >
 > Kartlar, ilgili teori dosyası yazıldıkça eklenir. Son güncelleme: 2026-11-19 (00-01 – 00-04).
 

@@ -86,6 +86,7 @@ Her paket, ilgili fazın başlangıç tarihinden önce hazır olmalı. Her oturu
 
 - 2026-11-19 — README.md, CURRICULUM.md, STUDY-ROADMAP.md, PROGRESS.md, SOURCES.md (planlama, v0.2)
 - 2026-11-19 — GLOSSARY.md, 12-01, 12-02 (00-01 – 00-04 kartları), CE-00 ve cevapları, 00-01, 00-02, 00-03, 00-04
+- 2026-11-19 — START-HERE.md (günlük rehber), MY-NOTES/ şablonları, 12-REVISION/anki/ içe aktarma dosyaları (00-01 – 00-04, 32 kart)
 
 ## B. Öğrenci ustalık takibi
 
@@ -135,7 +136,7 @@ Sınav sonuçları:
 | 7 | Çalışma temposu | Pazartesi–cumartesi ~4,5–5 saat/gün, 1–1,5 saatlik oturumlar; pazar ~2 saat tekrar |
 | 8 | "Kendini Kontrol Et" cevapları katlanmış `<details>` bloğunda | Varsayılan olarak uygulanıyor |
 | 9 | **Sınav yeri ve uygunluk** | **Açık; en geç 22 Aralık'ta netleşmeli (CE-02 karar noktası).** Cisco'nun politikasına göre Rusya'da ikamet edenler Cisco sınavlarına giremiyor; politika, onaylı kimliğinde yaptırımsız bir ülkede ikamet görünen adayların girebileceğini de belirtiyor (CISCO-POLICY). Pearson VUE ise 2022'den beri Rusya'da test merkezi ve OnVUE dahil hiçbir sınav hizmeti vermiyor (SEC-PV-RU). Yapılacaklar: uygunluğu Cisco sertifikasyon desteğine sormak; Rusya dışında bir Pearson VUE merkezi ve tarih seçmek; rezervasyon yapmak |
-| 10 | GitHub bağlantısı | Kısmen: Hesap bağlı ve depo oluşturuldu (`GuvenEminSamil/OSI-Networking-Mastery`). Claude'un GitHub uygulamasının bu depoya erişimi yok; erişim verilince dosyalar gönderilecek |
+| 10 | GitHub bağlantısı | Kısmen: Hesap bağlı ve depo oluşturuldu (`GuvenEminSamil/OSI-Networking-Mastery`). Erişim verildiği bildirildi (19 Kas 23:55), ama depo bu oturumdan hâlâ görünmüyor. Geçici çözüm: kullanıcı depoyu git bundle dosyasından kendisi doldurur |
 | 11 | Pratik biçimi | Çoğunlukla yönerge (69); tam lab yalnızca arıza avı, entegrasyon ve sınav tarzı görevlerde (31) |
 
 ## D. Doğrulama bekleyenler
@@ -176,3 +177,4 @@ Henüz yok. Bir komut PT'de çalışmazsa ya da bir açıklamada hata bulursan b
 | 2026-11-19 | Mevcut OSI notları (USR-OSI-NOTES) incelendi. CURRICULUM.md'ye Bölüm 11 eklendi (eşleme ve 5 düzeltme). 03-13, 04-01, 04-06 ve 07-01'in kapsamı genişletildi. CE-00 tanı testi Faz 0'a eklendi. |
 | 2026-11-19 | v0.2: Hedef v1.1 olarak belirlendi ve resmi Cisco PDF'iyle doğrulandı. Tarihli takvim (20 Kas – 26 Oca), günlük şablon ve karar noktaları eklendi. Pratiklerin 69'u yönergeye dönüştürüldü (31 tam lab). v2.0 farkları, `[DERİN]` bölümler, K01–K08 ve 10 host labı Faz 14'e alındı. Sınav yeri ve uygunluk riski kararlara eklendi. |
 | 2026-11-19 | İçerik üretimi başladı: P0 tamamlandı (GLOSSARY.md, 12-01, 12-02, CE-00 ve cevapları); P1'den 00-01 – 00-04 yazıldı. SOURCES.md'ye RFC 1071, IEC 80000-13, Shannon (1948) ve öğrenme bilimi kaynakları eklendi. |
+| 2026-11-19 | START-HERE.md eklendi; README'ye bağlantısı verildi. MY-NOTES/ (LOG, QUESTIONS, TEACH-BACK, CE-00-MY-ANSWERS) ve Anki içe aktarma dosyaları oluşturuldu. Oturum protokolüne günlüğün okunması eklendi. |

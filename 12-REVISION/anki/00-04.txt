@@ -1,0 +1,11 @@
+#separator:tab
+#html:false
+Ohm yasası nedir?	V = I × R (00-04)
+Bir telde ısıya dönüşen güç akıma nasıl bağlıdır?	Akımın karesiyle: P = I² × R. Akım iki katına çıkarsa kayıp dört katına çıkar. (00-04)
+PoE neden ~48 V kullanır?	Aynı gücü düşük akımla taşıyıp kablodaki I²R kaybını küçük tutmak için; bu gerilim aynı zamanda güvenlik açısından düşük gerilim sınıfındadır. (00-04)
+Gerilim neden "bir telde" değil, "iki nokta arasında" ölçülür?	Gerilim tanımı gereği potansiyel farkıdır; her zaman bir referansa göredir. (00-04)
+Diferansiyel alıcı gürültüyü nasıl iptal eder?	İki telin farkını alır; iki tele eşit eklenen gürültü çıkarmada yok olur. (00-04)
+Diferansiyel sinyalin çalışması için hangi koşul gerekir?	İki telin gürültüyü eşit alması; bunu büküm sağlar. (00-04)
+Sinyal neden kabloda çok hızlı yayılır, elektronlar yavaş olduğu hâlde?	Yayılan, gerilim değişiminin oluşturduğu elektromanyetik dalgadır (~5 ns/m), elektronların kendisi değil. (00-04)
+802.3af ve 802.3at'nin güç kaynağı tarafındaki en yüksek güçleri nedir?	af (PoE): 15,4 W. at (PoE+): 30 W. (00-04)
+Bükümlü çift Ethernet kablosunun karakteristik empedansı nedir?	100 Ω. (00-04)

@@ -1,0 +1,10 @@
+#separator:tab
+#html:false
+Bir baytın konum ağırlıkları nelerdir (soldan sağa)?	128, 64, 32, 16, 8, 4, 2, 1 (00-02)
+Maske baytlarında kullanılan sekiz değer nelerdir (0 hariç)?	128, 192, 224, 240, 248, 252, 254, 255 (00-02)
+Onaltılık neden ağda yaygındır?	Bir onaltılık basamak tam olarak 4 bite (nibble) karşılık gelir; uzun bit dizileri kısa ve hatasız yazılır. (00-02)
+0x0800 onluk tabanda kaçtır?	2048 (8 × 256). Ethernet'te IPv4'ün EtherType değeridir. (00-02)
+RFC'ler neden "byte" yerine "octet" der?	Geçmişte bayt her zaman 8 bit değildi; oktet tam olarak 8 bit demektir. (00-02)
+1 Gbps kaç MB/s eder (ham)?	125 MB/s (1000 / 8). (00-02)
+1 TB'lık disk Windows'ta neden ~931 GB görünür?	Üretici 10¹² bayt sayar; sistem 2³⁰'luk birimlerle bölüp "GB" etiketiyle gösterir: 10¹² / 2³⁰ ≈ 931. (00-02)
+Ağ bağlantı hızları hangi birim sistemini kullanır?	Ondalık SI birimleri ve bit/saniye (1 Gbps = 10⁹ bit/s). (00-02)

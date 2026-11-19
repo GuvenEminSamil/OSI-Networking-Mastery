@@ -2,6 +2,8 @@
 
 > **Durum:** Müfredat onaylandı (v0.2, 2026-11-19). Hedef: CCNA 200-301 v1.1, en geç 2 Şubat 2027.
 > Ders içerikleri, pratikler ve soru bankası faz faz yazılıyor; güncel durum PROGRESS.md'de.
+>
+> **Bugün ne yapmalıyım?** → [START-HERE.md](START-HERE.md)
 
 ## Amaç
 
@@ -35,7 +37,9 @@ Dizin numaraları konuyu gruplar; **çalışma sırasını STUDY-ROADMAP.md beli
 
 ```
 OSI-Networking-Mastery/
+├── START-HERE.md                   Günlük çalışma rehberi: "bugün ne yapmalıyım?"
 ├── README.md, CURRICULUM.md, STUDY-ROADMAP.md, PROGRESS.md, SOURCES.md, GLOSSARY.md
+├── MY-NOTES/                       Senin notların: günlük, CE-00 cevapların, teach-back, sorular
 ├── 00-FOUNDATIONS/                 Bilgi, ikili sistem, Boole mantığı, elektrik, transistör, veri temsili,
 │                                   bilgisayar mimarisi, ağ temelleri, OSI ve TCP/IP modelleri
 ├── 01-PHYSICAL-LAYER/              Sinyaller, hat kodlaması, bit senkronizasyonu, bakır, fiber, RF, Ethernet PHY
@@ -174,8 +178,9 @@ Alan kodları: `FND` temeller, `PHY` fiziksel, `DL` veri bağlantı, `NET` ağ, 
 
 Her yeni oturum boş bir çalışma alanıyla başlar. Bu yüzden proje GitHub'daki bir depoda tutulur; her oturum depodan okur ve değişiklikleri depoya yazar. Devam ederken:
 
-1. **PROGRESS.md**'yi oku: mevcut faz, sıradaki dosya, açık kararlar, bilinen sorunlar.
-2. **CURRICULUM.md**'de ilgili satırı bul: kapsam, önkoşullar, CCNA kodu.
-3. Önkoşul dosyalarının yalnızca ilgili bölümlerine ve **GLOSSARY.md**'ye bak. Tanım yeniden yazılmaz, bağlantı verilir.
-4. Dosyayı yaz, yeni kaynakları **SOURCES.md**'ye, yeni terimleri **GLOSSARY.md**'ye ekle, ardından **PROGRESS.md**'yi güncelle.
-5. Tamamlanmış dosyalar yalnızca düzeltme gerektiğinde yeniden yazılır. Düzeltme PROGRESS.md'deki değişiklik günlüğüne işlenir.
+1. **MY-NOTES/LOG.md** ve **MY-NOTES/QUESTIONS.md**'yi oku: öğrencinin son durumu ve soruları. Soruları cevapla, PROGRESS.md'yi günlüğe göre güncelle.
+2. **PROGRESS.md**'yi oku: mevcut faz, sıradaki dosya, açık kararlar, bilinen sorunlar.
+3. **CURRICULUM.md**'de ilgili satırı bul: kapsam, önkoşullar, CCNA kodu.
+4. Önkoşul dosyalarının yalnızca ilgili bölümlerine ve **GLOSSARY.md**'ye bak. Tanım yeniden yazılmaz, bağlantı verilir.
+5. Dosyayı yaz, yeni kaynakları **SOURCES.md**'ye, yeni terimleri **GLOSSARY.md**'ye ekle, ardından **PROGRESS.md**'yi güncelle.
+6. Tamamlanmış dosyalar yalnızca düzeltme gerektiğinde yeniden yazılır. Düzeltme PROGRESS.md'deki değişiklik günlüğüne işlenir.

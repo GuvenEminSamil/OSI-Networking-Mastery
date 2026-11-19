@@ -1,0 +1,9 @@
+#separator:tab
+#html:false
+Bilgi ile veri arasındaki fark nedir?	Veri temsildir (bitler, gerilimler). Bilgi, bu temsilin ortak bir anlaşmaya göre yorumlanmasıyla giderilen belirsizliktir. (00-01)
+Bir bit tam olarak neyi ölçer?	Eşit olasılıklı iki seçenek arasındaki tek bir kararı. (00-01)
+Gürültü payı nedir ve neden önemlidir?	Bir sembol seviyesi ile karar eşiği arasındaki mesafe. Gürültü bu mesafeyi aşmadıkça alıcı doğru sembole karar verir. (00-01)
+Dijital temsil, bir ara cihazın gürültüyü bir sonraki bağlantıya taşımasını nasıl engeller?	Cihaz sembollere karar verir ve temiz sembolleri yeniden üretir (yenileme). Analogda ise gürültü sinyalle birlikte güçlendirilir. (00-01)
+Bilgisayarlar neden ikili kullanır?	İki durum en geniş gürültü payını verir ve transistör iki durumda en kararlı çalışır. Neden hız değil, güvenilirliktir. (00-01)
+Kabloda her zaman ikili sinyal mi vardır?	Hayır. Örneğin 1000BASE-T beş seviyeli PAM-5 sembolleri kullanır; Wi-Fi QAM ile sembol başına birçok bit taşır. (00-01)
+1000 cihaza benzersiz numara vermek için en az kaç bit gerekir?	10 bit (2¹⁰ = 1024). (00-01)

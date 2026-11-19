@@ -1,0 +1,10 @@
+#separator:tab
+#html:false
+XOR ile OR'u ayıran tek satır hangisidir?	1 ve 1: OR 1 verir, XOR 0 verir. XOR "bitler farklı mı?" sorusudur. (00-03)
+Bir IP adresinden ağ adresi hangi işlemle bulunur?	Adres AND maske. (00-03)
+Yayın adresi hangi işlemle bulunur?	Adres OR joker maske (host bitlerinin tamamını 1 yapmak). (00-03)
+255.255.255.192 maskesinin joker maskesi nedir?	0.0.0.63 (her bayt için 255 − değer). (00-03)
+Hedefin yerel olup olmadığına kim karar verir?	Gönderen host, kendi maskesiyle iki adresi AND'leyerek. Router değil. (00-03)
+Parite neden çift sayıda bit hatasını kaçırır?	Yalnızca 1'lerin sayısının tekliğine bakar; iki bit değişince teklik değişmez. (00-03)
+Yarım toplayıcı hangi kapılardan oluşur?	Toplam için XOR, elde için AND. (00-03)
+TCP sıra numaraları neden modüler aritmetikle karşılaştırılır?	32 bitlik sabit genişlikte oldukları için zamanla taşar ve 0'a dönerler. (00-03)
