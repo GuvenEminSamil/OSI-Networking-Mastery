@@ -103,7 +103,7 @@ Tüm RFC'ler `https://www.rfc-editor.org/rfc/rfcNNNN` adresindedir. Bir RFC yeri
 |---|---|---|
 | Mimari ve katmanlar | 1122 (host gereksinimleri: iletişim katmanları), 1123 (uygulama ve destek), 3439 (mimari ilkeler; katmanlaşmanın sınırları) | 00-09, 05-02 |
 | ARP ve L2 ilişkisi | 826 (ARP), 5227 (IPv4 adres çakışması tespiti, gratuitous ARP), 1661 (PPP) | 02-01, 02-10 |
-| IPv4 | 791 (IPv4), 792 (ICMP), 1191 (PMTUD), 1812 (IPv4 router gereksinimleri), 1918 (özel adresler), 3021 (/31), 3927 (IPv4 link-local), 4632 (CIDR), 5737 (dokümantasyon adresleri), 6598 (paylaşılan adres alanı), 6890 (özel amaçlı adres kayıtları) | 03-02 – 03-12 |
+| IPv4 | 791 (IPv4), 792 (ICMP), 1071 (İnternet checksum'ının hesaplanması), 1191 (PMTUD), 1812 (IPv4 router gereksinimleri), 1918 (özel adresler), 3021 (/31), 3927 (IPv4 link-local), 4632 (CIDR), 5737 (dokümantasyon adresleri), 6598 (paylaşılan adres alanı), 6890 (özel amaçlı adres kayıtları) | 03-02 – 03-12 |
 | QoS ve ECN | 2474 (DSCP), 3168 (ECN) | 03-02, 03-21, 04-05 |
 | Yönlendirme ve FHRP | 2328 (OSPFv2), 5340 (OSPFv3), 2453 (RIPv2), 4271 (BGP-4), 2281 (HSRP, bilgilendirme amaçlı), 5798 (VRRPv3) | 03-13 – 03-19 |
 | NAT | 2663 (NAT terminolojisi), 3022 (geleneksel NAT) | 03-20 |
@@ -137,6 +137,7 @@ Tüm RFC'ler `https://www.rfc-editor.org/rfc/rfcNNNN` adresindedir. Bir RFC yeri
 | ISO-8823 | ISO 8823 / ITU-T X.226 (OSI sunum protokolü) | 06-01 |
 | ITU-ASN1 | ITU-T X.680 (ASN.1), X.690 (BER/DER), X.509 (sertifikalar) | 06-01, 06-03, 06-05 |
 | ISO-10589 | ISO/IEC 10589 (IS-IS) | 03-13 |
+| STD-IEC80000 | IEC 80000-13 (bilgi bilimi ve teknolojisinde büyüklükler ve birimler; ikili önekler kibi, mebi, gibi) | 00-02 |
 
 ### 4.5 Kayıtlar ve referans verileri (planlandı)
 
@@ -171,3 +172,12 @@ Tüm RFC'ler `https://www.rfc-editor.org/rfc/rfcNNNN` adresindedir. Bir RFC yeri
 | TOOL-LINUX | iproute2 ve Linux man sayfaları (`ip`, `ss`, `ip netns`). https://man7.org/linux/man-pages/ | H01, H07, H16 |
 | TOOL-OPENSSL | OpenSSL belgeleri (`s_client`) | H09 |
 | TOOL-OPENSSH | OpenSSH belgeleri (ssh, scp, sftp) | H13 |
+
+### 4.8 Temel makaleler ve öğrenme bilimi
+
+| Kimlik | Kaynak | Kullanım |
+|---|---|---|
+| PAPER-SHANNON | C. E. Shannon, "A Mathematical Theory of Communication", *Bell System Technical Journal*, 27 (1948) | 00-01: bit, bilgi ve entropi |
+| LRN-ROEDIGER | H. L. Roediger ve J. D. Karpicke, "Test-Enhanced Learning", *Psychological Science*, 17(3), 2006 | 12-01: geri çağırma pratiği |
+| LRN-CEPEDA | N. J. Cepeda ve diğerleri, "Distributed Practice in Verbal Recall Tasks", *Psychological Bulletin*, 132(3), 2006 | 12-01: aralıklı çalışma |
+| LRN-DUNLOSKY | J. Dunlosky ve diğerleri, "Improving Students' Learning With Effective Learning Techniques", *Psychological Science in the Public Interest*, 14(1), 2013 | 12-01: öğrenme tekniklerinin karşılaştırılması |

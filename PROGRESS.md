@@ -1,14 +1,14 @@
 # İlerleme (Progress)
 
 > **Son güncelleme:** 2026-11-19
-> **Proje aşaması:** Müfredat onaylandı (v0.2). Hedef CCNA v1.1, en geç 2 Şubat 2027. İçerik üretimi başlıyor.
-> **Sıradaki adım:** P0 ve P1 paketleri: `GLOSSARY.md`, `12-01`, `CE-00` ve `00-01` – `00-09` (bkz. Bölüm A.4).
+> **Proje aşaması:** İçerik üretimi başladı. Hedef CCNA v1.1, en geç 2 Şubat 2027.
+> **Sıradaki adım:** P1'in ikinci yarısı: `00-05` – `00-09` ve FND soruları (gerekli: 22 Kasım).
 
 Bu dosya iki şeyi takip eder: (A) içeriğin üretim durumu ve (B) öğrencinin ustalık durumu. Dosya listesi CURRICULUM.md'dedir; burada yalnızca sayılar, tamamlanan dosyalar, takvim ve sorunlar tutulur.
 
 ## A. İçerik üretim durumu
 
-Durumlar: **Yazıldı** = dosya oluşturuldu. **Doğrulandı** = kaynak kontrolü yapıldı; pratiklerde ayrıca PT durum etiketleri kontrol edildi.
+Durumlar: **Yazıldı** = dosya oluşturuldu. **Doğrulandı** = hesaplar, kimlikler ve dosyalar arası bağlantılar betikle kontrol edildi; sayısal iddialar kaynaklarla eşleştirildi (açık kalanlar Bölüm D'de); pratiklerde ayrıca PT durum etiketleri kontrol edildi.
 
 ### A.1 Proje dosyaları
 
@@ -19,13 +19,13 @@ Durumlar: **Yazıldı** = dosya oluşturuldu. **Doğrulandı** = kaynak kontrol�
 | STUDY-ROADMAP.md | Yazıldı (v0.2) |
 | PROGRESS.md | Yazıldı |
 | SOURCES.md | Yazıldı (v0.2) |
-| GLOSSARY.md | Planlandı (P0) |
+| GLOSSARY.md | Yazıldı (00-01 – 00-04 terimleri) |
 
 ### A.2 Teori modülleri
 
 | Modül | Planlanan | Yazıldı | Doğrulandı | Sıradaki |
 |---|---|---|---|---|
-| 00-FOUNDATIONS | 9 | 0 | 0 | 00-01 |
+| 00-FOUNDATIONS | 9 | 4 | 4 | 00-05 |
 | 01-PHYSICAL-LAYER | 10 | 0 | 0 | 01-01 |
 | 02-DATA-LINK-LAYER | 16 | 0 | 0 | 02-01 |
 | 03-NETWORK-LAYER | 21 | 0 | 0 | 03-01 |
@@ -35,11 +35,11 @@ Durumlar: **Yazıldı** = dosya oluşturuldu. **Doğrulandı** = kaynak kontrol�
 | 07-APPLICATION-LAYER | 11 | 0 | 0 | 07-01 |
 | 08-CROSS-LAYER-COMMUNICATION | 10 | 0 | 0 | 08-01 |
 | 11-TROUBLESHOOTING | 5 | 0 | 0 | 11-01 |
-| 12-REVISION | 3 | 0 | 0 | 12-01 |
+| 12-REVISION | 3 | 2 | 2 | 12-03 |
 | 13-CCNA-EXAM-PREPARATION | 4 | 0 | 0 | 13-01 |
 | 14-SECURITY-FUNDAMENTALS | 6 | 0 | 0 | 14-01 |
 | 15-NETWORK-OPERATIONS-AUTOMATION-AI | 6 | 0 | 0 | 15-01 |
-| **Toplam** | **116** | **0** | **0** | |
+| **Toplam** | **116** | **6** | **6** | |
 
 ### A.3 Pratikler ve değerlendirme
 
@@ -55,7 +55,7 @@ Durumlar: **Yazıldı** = dosya oluşturuldu. **Doğrulandı** = kaynak kontrol�
 | Kod labları (K01 – K08; hepsi Faz 14) | 8 | 0 | 0 |
 | `10-QUESTION-BANK/README.md` | 1 | 0 | 0 |
 | Soru bankası (hedef ~490 soru, 10 alan) | ~490 | 0 | 0 |
-| Tanı testi (CE-00) | 1 | 0 | 0 |
+| Tanı testi (CE-00) | 1 | 1 | 1 |
 | Kapsamlı sınavlar (CE-01 – CE-06) | 6 | 0 | 0 |
 
 ### A.4 İçerik üretim takvimi
@@ -64,8 +64,8 @@ Her paket, ilgili fazın başlangıç tarihinden önce hazır olmalı. Her oturu
 
 | Paket | İçerik | Gerektiği tarih | Durum |
 |---|---|---|---|
-| P0 | GLOSSARY.md, 12-01, CE-00 ve cevapları | 20 Kas | Bekliyor |
-| P1 | 00-01 – 00-09, FND soruları | 20 Kas (00-01 – 00-04), 22 Kas (00-05 – 00-09) | Bekliyor |
+| P0 | GLOSSARY.md, 12-01, CE-00 ve cevapları | 20 Kas | **Tamamlandı** (19 Kas) |
+| P1 | 00-01 – 00-09, FND soruları | 20 Kas (00-01 – 00-04), 22 Kas (00-05 – 00-09) | **Kısmen:** 00-01 – 00-04 tamamlandı; 00-05 – 00-09 ve FND soruları bekliyor |
 | P2 | 11-01, 01-01 – 01-10, DRILLS-F02, LAB-011, H04, PHY soruları | 25 Kas | Bekliyor |
 | P3 | 02-01 – 02-09, 02-14, DRILLS-F03, LAB-020, H02, DL soruları (I) | 28 Kas | Bekliyor |
 | P4 | 03-01 – 03-08, 02-10, 11-03, 08-01, 08-03, DRILLS-F04, H01, NET soruları (I), CE-01 | 3 Ara | Bekliyor |
@@ -85,6 +85,7 @@ Her paket, ilgili fazın başlangıç tarihinden önce hazır olmalı. Her oturu
 ### A.5 Tamamlanan dosyalar
 
 - 2026-11-19 — README.md, CURRICULUM.md, STUDY-ROADMAP.md, PROGRESS.md, SOURCES.md (planlama, v0.2)
+- 2026-11-19 — GLOSSARY.md, 12-01, 12-02 (00-01 – 00-04 kartları), CE-00 ve cevapları, 00-01, 00-02, 00-03, 00-04
 
 ## B. Öğrenci ustalık takibi
 
@@ -134,7 +135,7 @@ Sınav sonuçları:
 | 7 | Çalışma temposu | Pazartesi–cumartesi ~4,5–5 saat/gün, 1–1,5 saatlik oturumlar; pazar ~2 saat tekrar |
 | 8 | "Kendini Kontrol Et" cevapları katlanmış `<details>` bloğunda | Varsayılan olarak uygulanıyor |
 | 9 | **Sınav yeri ve uygunluk** | **Açık; en geç 22 Aralık'ta netleşmeli (CE-02 karar noktası).** Cisco'nun politikasına göre Rusya'da ikamet edenler Cisco sınavlarına giremiyor; politika, onaylı kimliğinde yaptırımsız bir ülkede ikamet görünen adayların girebileceğini de belirtiyor (CISCO-POLICY). Pearson VUE ise 2022'den beri Rusya'da test merkezi ve OnVUE dahil hiçbir sınav hizmeti vermiyor (SEC-PV-RU). Yapılacaklar: uygunluğu Cisco sertifikasyon desteğine sormak; Rusya dışında bir Pearson VUE merkezi ve tarih seçmek; rezervasyon yapmak |
-| 10 | GitHub bağlantısı | Açık: claude.ai ayarlarında GitHub hesabı bağlanacak; `OSI-Networking-Mastery` adında boş, private bir depo oluşturulacak; ardından dosyalar depoya gönderilecek |
+| 10 | GitHub bağlantısı | Kısmen: Hesap bağlı ve depo oluşturuldu (`GuvenEminSamil/OSI-Networking-Mastery`). Claude'un GitHub uygulamasının bu depoya erişimi yok; erişim verilince dosyalar gönderilecek |
 | 11 | Pratik biçimi | Çoğunlukla yönerge (69); tam lab yalnızca arıza avı, entegrasyon ve sınav tarzı görevlerde (31) |
 
 ## D. Doğrulama bekleyenler
@@ -144,6 +145,7 @@ Pratik yazılmadan önce kontrol edilecek PT desteği (⚠️):
 | Öğe | Etkilenen | Durum |
 |---|---|---|
 | v1.1 konu listesinin resmi Cisco metniyle karşılaştırılması | CURRICULUM.md Bölüm 9.1 | **Kapandı** (2026-11-19, CISCO-V11) |
+| PoE güç ve gerilim değerlerinin ve 802.3 madde numaralarının birincil kaynakla eşleştirilmesi | 00-04, 01-06 | Açık (01-06 yazılırken) |
 | Auto-MDIX davranışı | LAB-003 | Açık |
 | Duplex uyumsuzluğu simülasyonu | LAB-008, LAB-089 | Açık |
 | /31 bağlantı desteği | LAB-025 | Açık |
@@ -173,3 +175,4 @@ Henüz yok. Bir komut PT'de çalışmazsa ya da bir açıklamada hata bulursan b
 | 2026-11-19 | Planlama aşaması: README.md, CURRICULUM.md, STUDY-ROADMAP.md, PROGRESS.md ve SOURCES.md oluşturuldu. CCNA v2.0 geçişi tespit edildi. |
 | 2026-11-19 | Mevcut OSI notları (USR-OSI-NOTES) incelendi. CURRICULUM.md'ye Bölüm 11 eklendi (eşleme ve 5 düzeltme). 03-13, 04-01, 04-06 ve 07-01'in kapsamı genişletildi. CE-00 tanı testi Faz 0'a eklendi. |
 | 2026-11-19 | v0.2: Hedef v1.1 olarak belirlendi ve resmi Cisco PDF'iyle doğrulandı. Tarihli takvim (20 Kas – 26 Oca), günlük şablon ve karar noktaları eklendi. Pratiklerin 69'u yönergeye dönüştürüldü (31 tam lab). v2.0 farkları, `[DERİN]` bölümler, K01–K08 ve 10 host labı Faz 14'e alındı. Sınav yeri ve uygunluk riski kararlara eklendi. |
+| 2026-11-19 | İçerik üretimi başladı: P0 tamamlandı (GLOSSARY.md, 12-01, 12-02, CE-00 ve cevapları); P1'den 00-01 – 00-04 yazıldı. SOURCES.md'ye RFC 1071, IEC 80000-13, Shannon (1948) ve öğrenme bilimi kaynakları eklendi. |
