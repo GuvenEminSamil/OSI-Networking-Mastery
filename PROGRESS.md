@@ -94,7 +94,7 @@ Seviyeler STUDY-ROADMAP.md, Bölüm 6'da tanımlıdır (0 Başlanmadı → 5 Ust
 
 | Faz | Konu | Hedef tarih | Seviye | Kapı tarihi | Gecikmeli test | Not |
 |---|---|---|---|---|---|---|
-| 0 | Kurulum ve tanı | 20 Kas | 3 | 20 Kas | — | Kurulum ve CE-00 tamamlandı |
+| 0 | Kurulum ve tanı | 20 Kas | — | 20 Kas | — | Kurulum ve CE-00 tamamlandı |
 | 1 | Temeller | 20–25 Kas | 1 | — | — | 00-01 okundu; ustalık maddelerinin 4/5'i işaretli |
 | 2 | Fiziksel Katman | 25–28 Kas | 0 | — | — | |
 | 3 | Veri Bağlantı I | 28 Kas – 3 Ara | 0 | — | — | |
@@ -133,12 +133,13 @@ Sınav sonuçları:
 | 4 | "Kodla-Anla" alıştırmaları | Onaylandı; takvim nedeniyle Faz 14'e alındı |
 | 5 | Projenin kalıcı konumu | **GitHub** (private depo). Bağlantı bekleniyor (#10) |
 | 6 | Packet Tracer | **PT 9.0.0, Windows**. Host labları Windows ve Fedora'da |
-| 7 | Çalışma temposu | Pazartesi–cumartesi ~4,5–5 saat/gün, 1–1,5 saatlik oturumlar; pazar ~2 saat tekrar |
+| 7 | Çalışma temposu | Pazartesi–cumartesi ~4,5–5 saat/gün, 1–1,5 saatlik oturumlar; pazar ~2 saat tekrar. Ocak'ta da aynı (kullanıcı onayı, 20 Kas) |
 | 8 | "Kendini Kontrol Et" cevapları katlanmış `<details>` bloğunda | Varsayılan olarak uygulanıyor |
-| 9 | **Sınav yeri ve tarihi** | Yer: **Türkiye** (Pearson VUE test merkezi). Tarih: Ocak sonu – Şubat başı; v1.1 için **en geç 2 Şubat 2027** (3 Şubat ve sonrası v2.0'dır). Rezervasyon en geç 22 Aralık'ta (CE-02 karar noktası). Cisco'nun ikamet kuralı (CISCO-POLICY) rezervasyondan önce teyit edilmeli |
+| 9 | **Sınav yeri ve tarihi** | Yer: **Türkiye** (Pearson VUE test merkezi). Tarih: Ocak sonu – Şubat başı, **2 Şubat 2027 veya öncesi** (kullanıcı onayı, 20 Kas); 3 Şubat ve sonrası v2.0 olurdu. Rezervasyon en geç 22 Aralık'ta (CE-02 karar noktası). Cisco'nun ikamet kuralı (CISCO-POLICY) rezervasyondan önce teyit edilmeli |
 | 10 | GitHub bağlantısı | Kısmen: Depo dolu ve okunabiliyor (20 Kas). **Yazma (push) reddediliyor**; Claude GitHub uygulamasının depoya yazma erişimi olmalı. Kural: değişiklikler yalnızca depoya yapılır, sohbete dosya gönderilmez |
 | 11 | Pratik biçimi | Çoğunlukla yönerge (69); tam lab yalnızca arıza avı, entegrasyon ve sınav tarzı görevlerde (31) |
 | 12 | Kişisel notlar | Teach-back ve günlük tutulmuyor. Kullanıcı yalnızca test sonuçlarını `MY-NOTES/RESULTS.md`'ye ve ustalık işaretlerini ders dosyalarına yazar. Ustalık seviyesi 2'nin ölçütü "Kendini Kontrol Et" ve K sorularına göre güncellendi |
+| 13 | Dosya uzunluğu ve derinliği | 00-01 – 00-04 ölçüsü (~2.200 kelime, 1,5–2 saat) uygun; kalan dosyalar aynı ölçüde (kullanıcı onayı, 20 Kas) |
 
 ## D. Doğrulama bekleyenler
 
