@@ -19,7 +19,7 @@ Bu kütüphanenin amacı, bir bitin fiziksel temsilinden İnternet üzerindeki i
 | [STUDY-ROADMAP.md](STUDY-ROADMAP.md) | **Hangi sırayla ve ne zaman:** 15 faz (0–14) ve tarihli takvim; her fazın dosyaları, pratikleri ve sınavları; ustalık kapıları; günlük şablon; karar noktaları. |
 | [PROGRESS.md](PROGRESS.md) | **Nerede kaldık:** içerik üretim durumu, öğrenci ustalık takibi, açık kararlar, bilinen sorunlar. |
 | [SOURCES.md](SOURCES.md) | **Neye dayanıyor:** kaynak hiyerarşisi, atıf biçimi, doğrulama yöntemi, kaynak kaydı. |
-| `GLOSSARY.md` | Terimler sözlüğü (Türkçe ↔ English). İlk teori dosyasıyla birlikte oluşturulacak. |
+| [GLOSSARY.md](GLOSSARY.md) | Terimler sözlüğü (English ↔ Türkçe), her terimin ilk açıklandığı dosyayla. Her yeni dosyayla büyür. |
 
 ## Çalışma döngüsü
 

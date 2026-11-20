@@ -181,3 +181,27 @@ Tüm RFC'ler `https://www.rfc-editor.org/rfc/rfcNNNN` adresindedir. Bir RFC yeri
 | LRN-ROEDIGER | H. L. Roediger ve J. D. Karpicke, "Test-Enhanced Learning", *Psychological Science*, 17(3), 2006 | 12-01: geri çağırma pratiği |
 | LRN-CEPEDA | N. J. Cepeda ve diğerleri, "Distributed Practice in Verbal Recall Tasks", *Psychological Bulletin*, 132(3), 2006 | 12-01: aralıklı çalışma |
 | LRN-DUNLOSKY | J. Dunlosky ve diğerleri, "Improving Students' Learning With Effective Learning Techniques", *Psychological Science in the Public Interest*, 14(1), 2013 | 12-01: öğrenme tekniklerinin karşılaştırılması |
+
+### 4.9 P1'in ikinci yarısında kullanılan kaynaklar (00-05 – 00-09, FND soruları; erişim: 2026-11-20)
+
+Bu bölümdeki kimlikler ilk kez burada tanımlandı ya da daha önce "planlandı" durumundaydı ve bu oturumda okundu. "Okundu (arama özeti)", kaynağın yalnızca arama sonucundaki ilgili bölümünün okunduğunu gösterir.
+
+| Kimlik | Kaynak | Düzey | Durum | Kullanım |
+|---|---|---|---|---|
+| CISCO-V11 | (Bölüm 4.1) | 1 | Okundu (arama özeti, yeniden) | 00-08: v1.1 1.1.a–h alt maddeleri |
+| CISCO-NETACAD | Cisco Networking Academy CCNA materyali (Tartu Üniversitesi aynası, modül 6.3.1.3) ve NSRC atölye notları (çapraz kontrol) | 1 | Okundu (arama özeti) | 00-05: router bellek türleri (RAM, ROM, NVRAM, flash) |
+| CISCO-PCM | Cisco, *Waveform Coding Techniques* (belge 8123). https://www.cisco.com/c/en/us/support/docs/voice/h323/8123-waveform-coding.html | 1 | Okundu (arama özeti) | 00-06: örnekleme öncesi süzme, PCM, 64 kbps |
+| CISCO-VOIP-BW | Cisco, *Voice Over IP – Per Call Bandwidth Consumption* (belge 7934). https://www.cisco.com/c/en/us/support/docs/voice/voice-quality/7934-bwidth-consume.html | 1 | Okundu (arama özeti) | 00-06: G.711, 20 ms, 50 pps, Ethernet üzerinde 87,2 kbps; 40 bayt IP/UDP/RTP ve 18 bayt Ethernet başlığı varsayımı |
+| CISCO-IFCOUNT | Cisco belgeleri ve Cisco Community: `show interfaces` sayaçları (ör. *Troubleshoot Ignored Errors*, belge 18003; Cisco çalışanlarının overrun açıklaması) | 1 / 6 | Okundu (arama özeti) | 00-07: overrun, ignored, no buffer |
+| STD-TI-LOGIC | Texas Instruments, *Logic Guide* (SDYU001, 2017). https://www.ti.com/lit/sdyu001 | 4 | Okundu (arama özeti) | 00-05: 5 V TTL ve 3,3 V LVTTL seviyeleri (VIH 2,0; VIL 0,8; VOH 2,4; VOL 0,4 V) |
+| STD-JEDEC-DDR4 | JEDEC JESD79-4, DDR4 SDRAM | 2 | Açık (birincil metin ücretli; okunmadı) | 00-05: 64 ms yenileme penceresi. Değer SEC-DRAM ile çapraz kontrol edildi |
+| SEC-DRAM | *HiRA: Hidden Row Activation for Reducing Refresh Latency of Off-the-Shelf DRAM Chips* (arXiv:2209.10198); arXiv:2303.07445; Maine Üniversitesi ECE 571 ders notları | 5–6 | Okundu (arama özeti) | 00-05: DDR4 tREFW = 64 ms, tREFI = 7,8 µs; yüksek sıcaklıkta daha sık yenileme |
+| PAPER-COHEN | D. Cohen, "On Holy Wars and a Plea for Peace", IEN 137, 1 Nisan 1980. https://www.ietf.org/rfc/ien/ien137.txt | 3 | Okundu (arama özeti) | 00-06: big-endian ve little-endian terimlerinin kökeni |
+| RFC 791 | (Bölüm 4.3) RFC 791, Ek B: *Data Transmission Order* | 3 | Okundu (arama özeti) | 00-06: oktetlerin iletim sırası; 00-09: "internet datagram" terimi |
+| ITU-G711 | ITU-T G.711, *Pulse code modulation (PCM) of voice frequencies*. https://www.itu.int/rec/T-REC-G.711 | 2 | Okundu (arama özeti; Blue Book alıntısı) | 00-06: 8.000 örnek/s, örnek başına 8 bit |
+| STD-PNG | W3C, *Portable Network Graphics (PNG) Specification* (3. baskı), §5.2 PNG signature. https://www.w3.org/TR/png/ | 2 | Okundu (arama özeti) | 00-06: PNG imzası 137 80 78 71 13 10 26 10 |
+| LNX-NAPI | Linux kernel documentation, *NAPI*. https://docs.kernel.org/networking/napi.html | 4 | Okundu (arama özeti) | 00-07: kesme + yoklama, bütçe, kesme maskeleme, cihazdaki IRQ birleştirme |
+| TOOL-WINNET | Microsoft, NetAdapter PowerShell modülü belgeleri (`Get-NetAdapter`, `Get-NetAdapterStatistics`, `Get-NetAdapterAdvancedProperty`). https://learn.microsoft.com/powershell/module/netadapter/ | 4 | Planlandı (komut adları bilinen davranışa göre; H01'de doğrulanacak) | 00-07: Windows'ta NIC istatistikleri ve sürücü ayarları |
+| RFC 1122 | (Bölüm 4.3) §1.1.3 *Internet Protocol Suite*, §1.3.1 *Organization* | 3 | Okundu | 00-09: dört katman; ICMP'nin IP ile ilişkisi; "strict layering is an imperfect model" |
+| RFC 3439 | (Bölüm 4.3) §3 *Layering Considered Harmful* | 3 | Okundu (arama özeti: içindekiler ve bölüm girişi) | 00-09: katmanlamanın sakıncaları |
+| ITU-X200 | ITU-T X.200 (07/1994), *OSI Basic Reference Model: The basic model*; ISO/IEC 7498-1:1994 ile aynı metin. https://www.itu.int/rec/T-REC-X.200-199407-I | 2 | Okundu (kayıt sayfası; metin ücretsiz, bu oturumda açılmadı) | 00-09: OSI modelinin geçerli metni ve tarihi; önceki sürüm X.200 (11/88) |

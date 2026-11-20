@@ -1,8 +1,8 @@
 # İlerleme (Progress)
 
-> **Son güncelleme:** 2026-11-19
-> **Proje aşaması:** İçerik üretimi sürüyor. Faz 0 tamamlandı (20 Kas). Hedef CCNA v1.1, sınav Türkiye'de, en geç 2 Şubat 2027.
-> **Sıradaki adım:** P1'in ikinci yarısı: `00-05` – `00-09` ve FND soruları (gerekli: 22 Kasım).
+> **Son güncelleme:** 2026-11-20
+> **Proje aşaması:** İçerik üretimi sürüyor. Faz 0 tamamlandı (20 Kas); Faz 1'in bütün içeriği (P1) hazır. Hedef CCNA v1.1, sınav Türkiye'de, en geç 2 Şubat 2027.
+> **Sıradaki adım:** P2 (Faz 2, gerekli: 25 Kasım). Büyük bir paket olduğu için iki oturumda: **P2a** `11-01`, `09-PACKET-TRACER-LABS/README.md`, `01-01` – `01-06`, `DRILLS-F02` (cevaplarıyla); **P2b** `01-07` – `01-10`, `LAB-011` (çözümüyle), `H04`, PHY soruları.
 
 Bu dosya iki şeyi takip eder: (A) içeriğin üretim durumu ve (B) öğrencinin ustalık durumu. Dosya listesi CURRICULUM.md'dedir; burada yalnızca sayılar, tamamlanan dosyalar, takvim ve sorunlar tutulur.
 
@@ -19,13 +19,13 @@ Durumlar: **Yazıldı** = dosya oluşturuldu. **Doğrulandı** = hesaplar, kimli
 | STUDY-ROADMAP.md | Yazıldı (v0.2) |
 | PROGRESS.md | Yazıldı |
 | SOURCES.md | Yazıldı (v0.2) |
-| GLOSSARY.md | Yazıldı (00-01 – 00-04 terimleri) |
+| GLOSSARY.md | Yazıldı (00-01 – 00-09 terimleri, 159 terim) |
 
 ### A.2 Teori modülleri
 
 | Modül | Planlanan | Yazıldı | Doğrulandı | Sıradaki |
 |---|---|---|---|---|
-| 00-FOUNDATIONS | 9 | 4 | 4 | 00-05 |
+| 00-FOUNDATIONS | 9 | 9 | 9 | — (tamamlandı) |
 | 01-PHYSICAL-LAYER | 10 | 0 | 0 | 01-01 |
 | 02-DATA-LINK-LAYER | 16 | 0 | 0 | 02-01 |
 | 03-NETWORK-LAYER | 21 | 0 | 0 | 03-01 |
@@ -39,7 +39,7 @@ Durumlar: **Yazıldı** = dosya oluşturuldu. **Doğrulandı** = hesaplar, kimli
 | 13-CCNA-EXAM-PREPARATION | 4 | 0 | 0 | 13-01 |
 | 14-SECURITY-FUNDAMENTALS | 6 | 0 | 0 | 14-01 |
 | 15-NETWORK-OPERATIONS-AUTOMATION-AI | 6 | 0 | 0 | 15-01 |
-| **Toplam** | **116** | **6** | **6** | |
+| **Toplam** | **116** | **11** | **11** | |
 
 ### A.3 Pratikler ve değerlendirme
 
@@ -53,8 +53,8 @@ Durumlar: **Yazıldı** = dosya oluşturuldu. **Doğrulandı** = hesaplar, kimli
 | Tam lablar, EXPERT (LAB-083 – LAB-100 aralığında) | 16 | 0 | 0 |
 | Host labları (H01 – H19; 9'u sınav öncesi) | 19 | 0 | 0 |
 | Kod labları (K01 – K08; hepsi Faz 14) | 8 | 0 | 0 |
-| `10-QUESTION-BANK/README.md` | 1 | 0 | 0 |
-| Soru bankası (hedef ~490 soru, 10 alan) | ~490 | 0 | 0 |
+| `10-QUESTION-BANK/README.md` | 1 | 1 | 1 |
+| Soru bankası (hedef ~490 soru, 10 alan) | ~490 | 40 (FND) | 40 |
 | Tanı testi (CE-00) | 1 | 1 | 1 |
 | Kapsamlı sınavlar (CE-01 – CE-06) | 6 | 0 | 0 |
 
@@ -65,8 +65,8 @@ Her paket, ilgili fazın başlangıç tarihinden önce hazır olmalı. Her oturu
 | Paket | İçerik | Gerektiği tarih | Durum |
 |---|---|---|---|
 | P0 | GLOSSARY.md, 12-01, CE-00 ve cevapları | 20 Kas | **Tamamlandı** (19 Kas) |
-| P1 | 00-01 – 00-09, FND soruları | 20 Kas (00-01 – 00-04), 22 Kas (00-05 – 00-09) | **Kısmen:** 00-01 – 00-04 tamamlandı; 00-05 – 00-09 ve FND soruları bekliyor |
-| P2 | 11-01, 01-01 – 01-10, DRILLS-F02, LAB-011, H04, PHY soruları | 25 Kas | Bekliyor |
+| P1 | 00-01 – 00-09, FND soruları | 20 Kas (00-01 – 00-04), 22 Kas (00-05 – 00-09) | **Tamamlandı** (20 Kas) |
+| P2 | 11-01, 01-01 – 01-10, DRILLS-F02, LAB-011, H04, PHY soruları (+ `09-PACKET-TRACER-LABS/README.md`) | 25 Kas (P2a), 26 Kas (P2b) | Bekliyor |
 | P3 | 02-01 – 02-09, 02-14, DRILLS-F03, LAB-020, H02, DL soruları (I) | 28 Kas | Bekliyor |
 | P4 | 03-01 – 03-08, 02-10, 11-03, 08-01, 08-03, DRILLS-F04, H01, NET soruları (I), CE-01 | 3 Ara | Bekliyor |
 | P5 | 02-11 – 02-13, 02-15, 02-16, 03-09 – 03-12, 11-02, 08-04, DRILLS-F05, LAB-030, LAB-039, H06, DL (II) ve NET (II) soruları | 9 Ara | Bekliyor |
@@ -87,6 +87,7 @@ Her paket, ilgili fazın başlangıç tarihinden önce hazır olmalı. Her oturu
 - 2026-11-19 — README.md, CURRICULUM.md, STUDY-ROADMAP.md, PROGRESS.md, SOURCES.md (planlama, v0.2)
 - 2026-11-19 — GLOSSARY.md, 12-01, 12-02 (00-01 – 00-04 kartları), CE-00 ve cevapları, 00-01, 00-02, 00-03, 00-04
 - 2026-11-19 — START-HERE.md (günlük rehber), MY-NOTES/ şablonları, 12-REVISION/anki/ içe aktarma dosyaları (00-01 – 00-04, 32 kart)
+- 2026-11-20 — 00-05, 00-06, 00-07, 00-08, 00-09; `10-QUESTION-BANK/README.md`; FND soruları (40 soru: Q-FND-DAT 12, Q-FND-HW 9, Q-FND-NET 9, Q-FND-OSI 10) ve cevap dosyaları; 12-02 ve anki/ (00-05 – 00-09, 46 kart; toplam 78)
 
 ## B. Öğrenci ustalık takibi
 
@@ -136,7 +137,7 @@ Sınav sonuçları:
 | 7 | Çalışma temposu | Pazartesi–cumartesi ~4,5–5 saat/gün, 1–1,5 saatlik oturumlar; pazar ~2 saat tekrar. Ocak'ta da aynı (kullanıcı onayı, 20 Kas) |
 | 8 | "Kendini Kontrol Et" cevapları katlanmış `<details>` bloğunda | Varsayılan olarak uygulanıyor |
 | 9 | **Sınav yeri ve tarihi** | Yer: **Türkiye** (Pearson VUE test merkezi). Tarih: Ocak sonu – Şubat başı, **2 Şubat 2027 veya öncesi** (kullanıcı onayı, 20 Kas); 3 Şubat ve sonrası v2.0 olurdu. Rezervasyon en geç 22 Aralık'ta (CE-02 karar noktası). Cisco'nun ikamet kuralı (CISCO-POLICY) rezervasyondan önce teyit edilmeli |
-| 10 | GitHub bağlantısı | Kısmen: Depo dolu ve okunabiliyor (20 Kas). **Yazma (push) reddediliyor**; Claude GitHub uygulamasının depoya yazma erişimi olmalı. Kural: değişiklikler yalnızca depoya yapılır, sohbete dosya gönderilmez |
+| 10 | GitHub bağlantısı | **Tamamlandı:** Okuma ve yazma çalışıyor (20 Kas, P1'in ikinci yarısı doğrudan `main`'e gönderildi). Kural: değişiklikler yalnızca depoya yapılır, sohbete dosya gönderilmez |
 | 11 | Pratik biçimi | Çoğunlukla yönerge (69); tam lab yalnızca arıza avı, entegrasyon ve sınav tarzı görevlerde (31) |
 | 12 | Kişisel notlar | Teach-back ve günlük tutulmuyor. Kullanıcı yalnızca test sonuçlarını `MY-NOTES/RESULTS.md`'ye ve ustalık işaretlerini ders dosyalarına yazar. Ustalık seviyesi 2'nin ölçütü "Kendini Kontrol Et" ve K sorularına göre güncellendi |
 | 13 | Dosya uzunluğu ve derinliği | 00-01 – 00-04 ölçüsü (~2.200 kelime, 1,5–2 saat) uygun; kalan dosyalar aynı ölçüde (kullanıcı onayı, 20 Kas) |
@@ -149,6 +150,8 @@ Pratik yazılmadan önce kontrol edilecek PT desteği (⚠️):
 |---|---|---|
 | v1.1 konu listesinin resmi Cisco metniyle karşılaştırılması | CURRICULUM.md Bölüm 9.1 | **Kapandı** (2026-11-19, CISCO-V11) |
 | PoE güç ve gerilim değerlerinin ve 802.3 madde numaralarının birincil kaynakla eşleştirilmesi | 00-04, 01-06 | Açık (01-06 yazılırken) |
+| DDR4 yenileme penceresinin (64 ms) JEDEC JESD79-4 birincil metniyle eşleştirilmesi | 00-05 | Açık (değer ikincil kaynaklarla çapraz kontrol edildi; SOURCES.md 4.9) |
+| Windows NetAdapter cmdlet'lerinin (`Get-NetAdapterStatistics`, `Get-NetAdapterAdvancedProperty`) çıktılarının gerçek sistemde doğrulanması | 00-07 | Açık (H01 yazılırken) |
 | Auto-MDIX davranışı | LAB-003 | Açık |
 | Duplex uyumsuzluğu simülasyonu | LAB-008, LAB-089 | Açık |
 | /31 bağlantı desteği | LAB-025 | Açık |
@@ -181,3 +184,4 @@ Henüz yok. Bir komut PT'de çalışmazsa ya da bir açıklamada hata bulursan b
 | 2026-11-19 | İçerik üretimi başladı: P0 tamamlandı (GLOSSARY.md, 12-01, 12-02, CE-00 ve cevapları); P1'den 00-01 – 00-04 yazıldı. SOURCES.md'ye RFC 1071, IEC 80000-13, Shannon (1948) ve öğrenme bilimi kaynakları eklendi. |
 | 2026-11-19 | START-HERE.md eklendi; README'ye bağlantısı verildi. MY-NOTES/ (LOG, QUESTIONS, TEACH-BACK, CE-00-MY-ANSWERS) ve Anki içe aktarma dosyaları oluşturuldu. Oturum protokolüne günlüğün okunması eklendi. |
 | 2026-11-20 | Depo bağlandı (okuma). Kullanıcının isteğiyle teach-back ve günlük kaldırıldı: MY-NOTES/TEACH-BACK.md ve LOG.md silindi, RESULTS.md eklendi; START-HERE.md, README.md, 12-01 ve STUDY-ROADMAP.md (ustalık seviyesi 2, günlük şablon) güncellendi. CE-00 puanlandı (21/40). Sınav yeri Türkiye olarak kaydedildi. |
+| 2026-11-20 | P1 tamamlandı: 00-05 – 00-09 yazıldı ve betikle doğrulandı (kimlikler, bölüm bağlantıları, kaynak kimlikleri, hesaplar). `10-QUESTION-BANK/README.md` (puanlama kuralları) ve 40 FND sorusu cevaplarıyla eklendi. GLOSSARY.md'ye 103 terim, 12-02'ye ve `12-REVISION/anki/`'ye 46 kart eklendi. SOURCES.md'ye Bölüm 4.9 eklendi. Depoya yazma erişimi doğrulandı (karar #10). |

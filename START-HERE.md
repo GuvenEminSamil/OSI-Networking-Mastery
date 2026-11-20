@@ -48,7 +48,7 @@ Gün sonunda değişiklikleri gönder: `git add -A`, `git commit -m "..."`, `git
 | 22 Kas, Pazar | Tekrar (~2 saat) |
 | 23 Kas, Pazartesi | 00-04, ardından 00-05 |
 | 24 Kas, Salı | 00-06, ardından 00-07 |
-| 25 Kas, Çarşamba | 00-08, 00-09, FND soruları ve Faz 1 kapısı |
+| 25 Kas, Çarşamba | 00-08, 00-09, FND soruları (`10-QUESTION-BANK/FOUNDATIONS/`, önce `10-QUESTION-BANK/README.md`) ve Faz 1 kapısı |
 
 Kurulumda eksik kaldıysa: Fedora'da Wireshark (`sudo dnf install wireshark`, ardından `sudo usermod -aG wireshark $USER` ve oturumu kapatıp aç). İlk kullanım Faz 3'te.
 

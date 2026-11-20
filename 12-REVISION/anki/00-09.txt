@@ -1,0 +1,12 @@
+#separator:tab
+#html:false
+OSI katmanlarını aşağıdan yukarıya sırala.	Fiziksel, Veri Bağlantı, Ağ, Taşıma, Oturum, Sunum, Uygulama. Hatırlatma: "Fiziksel Veri Ağda Taşınır; Oturum Sunumla Uygulanır." (00-09)
+RFC 1122'nin dört katmanı nelerdir?	Application, Transport, Internet, Link. (00-09)
+L1–L4 katmanlarının PDU adları nelerdir?	L4: segment (TCP) / datagram (UDP); L3: paket; L2: çerçeve; L1: bit. (00-09)
+Alıcı, yükü bir üst katmana verirken hangi alanlara bakar?	EtherType (L2 → L3), IPv4 Protocol alanı (L3 → L4), port numarası (L4 → uygulama). (00-09)
+Router bir çerçeveyi hangi katmana kadar açar ve neyi değiştirir?	L3'e kadar. Yeni bir L2 başlığı yazar, TTL'yi bir azaltır, IPv4 checksum'ını yeniden hesaplar. (00-09)
+ARP'nin katmanı neden tartışmalıdır?	L3'e hizmet eder (IP → MAC), ama IP başlığı olmadan doğrudan Ethernet çerçevesinde taşınır (EtherType 0x0806). (00-09)
+DNS hangi katmandadır?	L7 (uygulama); UDP/TCP 53 üzerinde çalışır. (00-09)
+Katmanlamanın iki faydası ve bir bedeli nedir?	Faydalar: modülerlik ve bağımsız gelişim, birlikte çalışabilirlik, katman katman arıza giderme. Bedel: başlık yükü, işlev tekrarı. (00-09)
+1460 baytlık TCP yükleriyle Ethernet'in kablodaki verimliliği nedir?	1460 / 1538 ≈ %94,9 → 1 Gbps'ta ~949 Mbps. (00-09)
+show ip interface brief: "administratively down / down" ne demektir?	Arayüz shutdown komutuyla kapatılmıştır; açmak için arayüz modunda no shutdown. (00-09)
