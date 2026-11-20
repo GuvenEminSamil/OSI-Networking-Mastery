@@ -53,10 +53,6 @@ Anlamadığın bir nokta olursa `MY-NOTES/QUESTIONS.md` dosyasına yaz ve devam 
    sudo dnf install wireshark
    sudo usermod -aG wireshark $USER   # yakalama izni; ardından oturumu kapatıp yeniden aç
    ```
-5. **Git ve VS Code** (15 dk): Depoyu klonla ve VS Code'da aç.
-   ```bash
-   git clone https://github.com/GuvenEminSamil/OSI-Networking-Mastery.git
-   ```
 
 15 dakika mola.
 

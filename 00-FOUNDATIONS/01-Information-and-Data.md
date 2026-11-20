@@ -207,11 +207,11 @@ Bu dosyanın PT pratiği yoktur. Kısa bir düşünce alıştırması yap: Evind
 
 ## 13. Ustalık Kontrol Listesi
 
-- [ ] Bilgi ile veri farkını, kaynağa bakmadan bir ağ örneğiyle anlatabiliyorum.
-- [ ] Gürültü payı kavramını bir çizimle açıklayabiliyorum.
+- [ X ] Bilgi ile veri farkını, kaynağa bakmadan bir ağ örneğiyle anlatabiliyorum.
+- [ X ] Gürültü payı kavramını bir çizimle açıklayabiliyorum.
 - [ ] Dijitalin ağ iletişimine sağladığı dört avantajı ve her birinin nedenini söyleyebiliyorum.
-- [ ] N durum için gereken bit sayısını ve n bitin ayırt edebileceği durum sayısını hesaplayabiliyorum.
-- [ ] "Kabloda 0 ve 1 akar" ifadesinin neden yanlış olduğunu iki gerekçeyle açıklayabiliyorum.
+- [ X ] N durum için gereken bit sayısını ve n bitin ayırt edebileceği durum sayısını hesaplayabiliyorum.
+- [ X ] "Kabloda 0 ve 1 akar" ifadesinin neden yanlış olduğunu iki gerekçeyle açıklayabiliyorum.
 
 ## Kaynaklar
 
