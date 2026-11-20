@@ -24,12 +24,11 @@ Bu kütüphanenin amacı, bir bitin fiziksel temsilinden İnternet üzerindeki i
 ## Çalışma döngüsü
 
 1. STUDY-ROADMAP.md'de sıradaki fazı ve dosyayı bul.
-2. Teori dosyasını oku ve dosya içindeki "Kendini Kontrol Et" sorularını cevapla.
-3. Konuyu kendi cümlelerinle anlat (teach-back): yazılı ya da sesli, kaynağa bakmadan.
-4. İlgili Packet Tracer pratiğini (yönerge ya da tam lab) veya host labını **çözüme bakmadan** yap.
-5. Soru bankasındaki ilgili soruları çöz ve ayrı cevap anahtarıyla kontrol et.
-6. Tekrar kartlarını aralıklı tekrar takvimine ekle (bkz. STUDY-ROADMAP.md, Bölüm 5).
-7. PROGRESS.md'deki ustalık seviyeni güncelle. Okumak tek başına ustalık sayılmaz.
+2. Teori dosyasını oku ve dosya içindeki "Kendini Kontrol Et" sorularını cevaplara bakmadan cevapla.
+3. İlgili Packet Tracer pratiğini (yönerge ya da tam lab) veya host labını **çözüme bakmadan** yap.
+4. Soru bankasındaki ilgili soruları çöz ve ayrı cevap anahtarıyla kontrol et.
+5. Tekrar kartlarını aralıklı tekrar takvimine ekle (bkz. STUDY-ROADMAP.md, Bölüm 5).
+6. Dosyanın "Ustalık Kontrol Listesi"ni işaretle; test sonuçlarını `MY-NOTES/RESULTS.md`'ye yaz. Okumak tek başına ustalık sayılmaz.
 
 ## Dizin yapısı
 
@@ -39,7 +38,7 @@ Dizin numaraları konuyu gruplar; **çalışma sırasını STUDY-ROADMAP.md beli
 OSI-Networking-Mastery/
 ├── START-HERE.md                   Günlük çalışma rehberi: "bugün ne yapmalıyım?"
 ├── README.md, CURRICULUM.md, STUDY-ROADMAP.md, PROGRESS.md, SOURCES.md, GLOSSARY.md
-├── MY-NOTES/                       Senin notların: günlük, CE-00 cevapların, teach-back, sorular
+├── MY-NOTES/                       Senin dosyaların: test sonuçları, CE-00 cevapların, sorular
 ├── 00-FOUNDATIONS/                 Bilgi, ikili sistem, Boole mantığı, elektrik, transistör, veri temsili,
 │                                   bilgisayar mimarisi, ağ temelleri, OSI ve TCP/IP modelleri
 ├── 01-PHYSICAL-LAYER/              Sinyaller, hat kodlaması, bit senkronizasyonu, bakır, fiber, RF, Ethernet PHY
@@ -178,7 +177,7 @@ Alan kodları: `FND` temeller, `PHY` fiziksel, `DL` veri bağlantı, `NET` ağ, 
 
 Her yeni oturum boş bir çalışma alanıyla başlar. Bu yüzden proje GitHub'daki bir depoda tutulur; her oturum depodan okur ve değişiklikleri depoya yazar. Devam ederken:
 
-1. **MY-NOTES/LOG.md** ve **MY-NOTES/QUESTIONS.md**'yi oku: öğrencinin son durumu ve soruları. Soruları cevapla, PROGRESS.md'yi günlüğe göre güncelle.
+1. **MY-NOTES/RESULTS.md** ve **MY-NOTES/QUESTIONS.md**'yi oku; ders dosyalarındaki işaretlenmiş ustalık maddelerine bak (`git log` son değişiklikleri gösterir). Soruları cevapla, PROGRESS.md'yi buna göre güncelle.
 2. **PROGRESS.md**'yi oku: mevcut faz, sıradaki dosya, açık kararlar, bilinen sorunlar.
 3. **CURRICULUM.md**'de ilgili satırı bul: kapsam, önkoşullar, CCNA kodu.
 4. Önkoşul dosyalarının yalnızca ilgili bölümlerine ve **GLOSSARY.md**'ye bak. Tanım yeniden yazılmaz, bağlantı verilir.

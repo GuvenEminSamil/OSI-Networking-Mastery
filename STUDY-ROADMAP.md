@@ -274,7 +274,7 @@ PROGRESS.md'deki öğrenci takibi bu seviyeleri kullanır. Okumak tek başına u
 |---|---|---|---|
 | 0 | Başlanmadı | — | — |
 | 1 | Okundu | Dosya okundu ve "Kendini Kontrol Et" soruları cevaplandı | — |
-| 2 | Açıklıyor | Kaynağa bakmadan kendi cümleleriyle, nasıl ve neden çalıştığını da anlatarak teach-back yapıldı | (1) kendi cümleleriyle açıklama, (2) nasıl ve neden, (3) iletişimdeki rolü |
+| 2 | Açıklıyor | "Kendini Kontrol Et" soruları ve soru bankasındaki K (kendi cümlelerinle) soruları, kaynağa bakmadan ve nasıl/neden çalıştığını da açıklayarak doğru cevaplandı | (1) kendi cümleleriyle açıklama, (2) nasıl ve neden, (3) iletişimdeki rolü |
 | 3 | Uyguluyor | İlgili pratikler çözüme bakmadan tamamlandı; konu sorularında ≥ %85 | (4) pratikte uygulama, (7) teknik sorular |
 | 4 | Arıza gideriyor | İlgili break-fix labı ve A kategorisi sorular başarıldı | (5) yaygın hataları tanıma, (6) arıza giderme |
 | 5 | Ustalaştı | Faz kapısı geçildi ve ≥ 14 gün sonraki gecikmeli testte ≥ %80 alındı | Yedi ölçütün tamamı, kalıcı olarak |
@@ -286,7 +286,7 @@ Pazartesi–cumartesi, toplam ~4,75 saat:
 | Oturum | Süre | İçerik |
 |---|---|---|
 | 1 | 1,5 saat | Yeni teori (günün en zinde saati) |
-| 2 | 1,5 saat | Teorinin devamı ve teach-back |
+| 2 | 1,5 saat | Teorinin devamı ve "Kendini Kontrol Et" soruları |
 | 3 | 1,5 saat | PT pratiği (yönerge ya da tam lab) veya host labı |
 | Kart tekrarı | 15 dk | Günü gelen kartlar |
 | Ek | 0–1 saat | Soru bankası veya geride kalınan pratik |

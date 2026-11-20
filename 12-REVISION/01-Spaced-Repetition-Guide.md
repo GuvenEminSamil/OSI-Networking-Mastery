@@ -67,11 +67,7 @@ Hangisini seçersen seç, kartların **ana kaynağı sensin**: 12-02'deki kartla
 2. Yanlışları Kutu 1'e al. Aynı kartı üst üste iki kez yanlış yaptıysan kartı yeniden yaz ya da dosyaya dön.
 3. O gün bitirdiğin teori dosyası için 5–15 yeni kart ekle.
 
-### 4.2 Teach-back (her teori dosyasından sonra, ~10 dk)
-
-Dosyayı kapat ve konuyu sesli ya da yazılı olarak, sanki sıfırdan öğrenen birine anlatıyormuş gibi açıkla. Takıldığın her nokta, dosyada yeniden okuman gereken yerdir. Bu, ustalık seviyesi 2'nin ölçütüdür (STUDY-ROADMAP.md, Bölüm 6).
-
-### 4.3 Pazar tekrarı (~2 saat)
+### 4.2 Pazar tekrarı (~2 saat)
 
 | Süre | Etkinlik |
 |---|---|

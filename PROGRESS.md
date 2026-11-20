@@ -1,7 +1,7 @@
 # İlerleme (Progress)
 
 > **Son güncelleme:** 2026-11-19
-> **Proje aşaması:** İçerik üretimi başladı. Hedef CCNA v1.1, en geç 2 Şubat 2027.
+> **Proje aşaması:** İçerik üretimi sürüyor. Faz 0 tamamlandı (20 Kas). Hedef CCNA v1.1, sınav Türkiye'de, en geç 2 Şubat 2027.
 > **Sıradaki adım:** P1'in ikinci yarısı: `00-05` – `00-09` ve FND soruları (gerekli: 22 Kasım).
 
 Bu dosya iki şeyi takip eder: (A) içeriğin üretim durumu ve (B) öğrencinin ustalık durumu. Dosya listesi CURRICULUM.md'dedir; burada yalnızca sayılar, tamamlanan dosyalar, takvim ve sorunlar tutulur.
@@ -94,8 +94,8 @@ Seviyeler STUDY-ROADMAP.md, Bölüm 6'da tanımlıdır (0 Başlanmadı → 5 Ust
 
 | Faz | Konu | Hedef tarih | Seviye | Kapı tarihi | Gecikmeli test | Not |
 |---|---|---|---|---|---|---|
-| 0 | Kurulum ve tanı | 20 Kas | 0 | — | — | |
-| 1 | Temeller | 20–25 Kas | 0 | — | — | |
+| 0 | Kurulum ve tanı | 20 Kas | 3 | 20 Kas | — | Kurulum ve CE-00 tamamlandı |
+| 1 | Temeller | 20–25 Kas | 1 | — | — | 00-01 okundu; ustalık maddelerinin 4/5'i işaretli |
 | 2 | Fiziksel Katman | 25–28 Kas | 0 | — | — | |
 | 3 | Veri Bağlantı I | 28 Kas – 3 Ara | 0 | — | — | |
 | 4 | Ağ Katmanı I | 3–9 Ara | 0 | — | — | |
@@ -114,7 +114,7 @@ Sınav sonuçları:
 
 | Sınav | Hedef tarih | Gerçek tarih | Puan | Zayıf alanlar |
 |---|---|---|---|---|
-| CE-00 (tanı) | 20 Kas | — | — | — |
+| CE-00 (tanı) | 20 Kas | 20 Kas | 21/40 | Mekanizmalar: router'da IP'nin değişmediği, VLAN'lar arası yönlendirme, ARP'nin rolü, DNS'in katmanı, TCP el sıkışması, DHCP DORA, TLS'in amaçları |
 | CE-01 | 9 Ara | — | — | — |
 | CE-02 | 22 Ara | — | — | — |
 | CE-03 | 4 Oca | — | — | — |
@@ -135,9 +135,10 @@ Sınav sonuçları:
 | 6 | Packet Tracer | **PT 9.0.0, Windows**. Host labları Windows ve Fedora'da |
 | 7 | Çalışma temposu | Pazartesi–cumartesi ~4,5–5 saat/gün, 1–1,5 saatlik oturumlar; pazar ~2 saat tekrar |
 | 8 | "Kendini Kontrol Et" cevapları katlanmış `<details>` bloğunda | Varsayılan olarak uygulanıyor |
-| 9 | **Sınav yeri ve uygunluk** | **Açık; en geç 22 Aralık'ta netleşmeli (CE-02 karar noktası).** Cisco'nun politikasına göre Rusya'da ikamet edenler Cisco sınavlarına giremiyor; politika, onaylı kimliğinde yaptırımsız bir ülkede ikamet görünen adayların girebileceğini de belirtiyor (CISCO-POLICY). Pearson VUE ise 2022'den beri Rusya'da test merkezi ve OnVUE dahil hiçbir sınav hizmeti vermiyor (SEC-PV-RU). Yapılacaklar: uygunluğu Cisco sertifikasyon desteğine sormak; Rusya dışında bir Pearson VUE merkezi ve tarih seçmek; rezervasyon yapmak |
-| 10 | GitHub bağlantısı | Kısmen: Hesap bağlı ve depo oluşturuldu (`GuvenEminSamil/OSI-Networking-Mastery`). Erişim verildiği bildirildi (19 Kas 23:55), ama depo bu oturumdan hâlâ görünmüyor. Geçici çözüm: kullanıcı depoyu git bundle dosyasından kendisi doldurur |
+| 9 | **Sınav yeri ve tarihi** | Yer: **Türkiye** (Pearson VUE test merkezi). Tarih: Ocak sonu – Şubat başı; v1.1 için **en geç 2 Şubat 2027** (3 Şubat ve sonrası v2.0'dır). Rezervasyon en geç 22 Aralık'ta (CE-02 karar noktası). Cisco'nun ikamet kuralı (CISCO-POLICY) rezervasyondan önce teyit edilmeli |
+| 10 | GitHub bağlantısı | Kısmen: Depo dolu ve okunabiliyor (20 Kas). **Yazma (push) reddediliyor**; Claude GitHub uygulamasının depoya yazma erişimi olmalı. Kural: değişiklikler yalnızca depoya yapılır, sohbete dosya gönderilmez |
 | 11 | Pratik biçimi | Çoğunlukla yönerge (69); tam lab yalnızca arıza avı, entegrasyon ve sınav tarzı görevlerde (31) |
+| 12 | Kişisel notlar | Teach-back ve günlük tutulmuyor. Kullanıcı yalnızca test sonuçlarını `MY-NOTES/RESULTS.md`'ye ve ustalık işaretlerini ders dosyalarına yazar. Ustalık seviyesi 2'nin ölçütü "Kendini Kontrol Et" ve K sorularına göre güncellendi |
 
 ## D. Doğrulama bekleyenler
 
@@ -178,3 +179,4 @@ Henüz yok. Bir komut PT'de çalışmazsa ya da bir açıklamada hata bulursan b
 | 2026-11-19 | v0.2: Hedef v1.1 olarak belirlendi ve resmi Cisco PDF'iyle doğrulandı. Tarihli takvim (20 Kas – 26 Oca), günlük şablon ve karar noktaları eklendi. Pratiklerin 69'u yönergeye dönüştürüldü (31 tam lab). v2.0 farkları, `[DERİN]` bölümler, K01–K08 ve 10 host labı Faz 14'e alındı. Sınav yeri ve uygunluk riski kararlara eklendi. |
 | 2026-11-19 | İçerik üretimi başladı: P0 tamamlandı (GLOSSARY.md, 12-01, 12-02, CE-00 ve cevapları); P1'den 00-01 – 00-04 yazıldı. SOURCES.md'ye RFC 1071, IEC 80000-13, Shannon (1948) ve öğrenme bilimi kaynakları eklendi. |
 | 2026-11-19 | START-HERE.md eklendi; README'ye bağlantısı verildi. MY-NOTES/ (LOG, QUESTIONS, TEACH-BACK, CE-00-MY-ANSWERS) ve Anki içe aktarma dosyaları oluşturuldu. Oturum protokolüne günlüğün okunması eklendi. |
+| 2026-11-20 | Depo bağlandı (okuma). Kullanıcının isteğiyle teach-back ve günlük kaldırıldı: MY-NOTES/TEACH-BACK.md ve LOG.md silindi, RESULTS.md eklendi; START-HERE.md, README.md, 12-01 ve STUDY-ROADMAP.md (ustalık seviyesi 2, günlük şablon) güncellendi. CE-00 puanlandı (21/40). Sınav yeri Türkiye olarak kaydedildi. |
