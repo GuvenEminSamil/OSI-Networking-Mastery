@@ -1,10 +1,9 @@
 #separator:tab
 #html:false
-DMA nedir ve neden gerekir?	NIC'in çerçeveyi CPU'ya sormadan doğrudan RAM'e yazması; CPU'nun her baytı tek tek kopyalamasını önler. (00-07)
-RX halka tamponu dolunca ne olur?	NIC yeni gelen çerçeveleri düşürür. Kayıp kabloda değil bilgisayarın içindedir; CRC sayacı artmaz. (00-07)
-Kesme birleştirme (interrupt coalescing) nedir?	NIC'in birden fazla çerçeve için tek bir kesme üretmesi; CPU yükünü azaltır, küçük bir gecikme ekler. (00-07)
-Linux'ta NAPI nasıl çalışır?	İlk çerçevede kesme gelir; sürücü kesmeleri kapatıp halkayı bir bütçeyle yoklayarak boşaltır; halka boşalınca kesmeleri yeniden açar. (00-07)
-Soket nedir?	Bir uygulamanın ağ iletişimi için açtığı uç nokta. Gelen segmentler port numaralarına göre doğru sokete, yani doğru uygulamaya verilir. (00-07)
-Kendi bilgisayarında yakaladığın giden paketlerde Wireshark neden "checksum incorrect" der?	Checksum offload: Checksum'ı NIC, Wireshark'ın yakalama noktasından sonra hesaplar. Kablodaki paket doğrudur. (00-07)
-10 Gbps'ta en küçük çerçevelerle saniyede kaç çerçeve gelir?	~14,88 milyon; her ~67 ns'de bir ((64 + 20) × 8 = 672 bit). (00-07)
-Cisco show interfaces çıktısında overrun, ignored ve no buffer neyi gösterir?	Kapasite sorununu: tamponlar yetmiyor. Kablo ve gürültü sorunları ise CRC, frame, runts ve giants ile görünür. (00-07)
+What does NIC stand for?	Network Interface Card (or Network Interface Controller); it connects a computer to a network. (00-07)
+What is a network driver?	Software that allows the operating system to communicate with a hardware device. (00-07)
+What is DMA?	Direct Memory Access; it lets hardware transfer data to or from RAM without the CPU copying every byte. (00-07)
+What is a buffer?	A temporary memory area that holds data while it waits to be processed. (00-07)
+What can happen when a receive buffer is full?	New incoming frames may be dropped because no free buffer space is available. (00-07)
+What does show interfaces help you inspect on Cisco devices?	Interface status, traffic counters, errors, and drops. (00-07)
+Why might a local capture show an incorrect checksum on an outgoing packet?	Checksum offload may calculate the final checksum in the NIC after the capture point. (00-07)
