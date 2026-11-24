@@ -305,3 +305,15 @@
 | What does FCS do? | Carries a CRC value used to detect frame corruption. |
 | What is the standard Ethernet MTU? | Commonly 1500 bytes. |
 | Is IFG part of the frame? | No. It is the minimum idle time between transmissions. |
+
+### 02-04 — Error Detection: FCS and CRC
+
+| Question | Answer |
+|---|---|
+| What is the difference between error detection and error correction? | Detection identifies possible corruption; correction attempts to repair it. |
+| What is a parity bit? | An extra bit that makes the total number of 1s follow an even or odd rule. |
+| What does CRC stand for? | Cyclic Redundancy Check. |
+| Which binary operation is used in modulo-2 addition? | XOR. |
+| What is the Ethernet FCS? | A four-byte field carrying the CRC-32 value used to detect frame corruption. |
+| What does a switch normally do with a frame that has an invalid FCS? | It discards the frame. |
+| Does Ethernet retransmit a frame after an FCS failure? | No. A higher-layer protocol such as TCP may recover. |
