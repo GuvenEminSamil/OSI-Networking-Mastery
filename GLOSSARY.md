@@ -226,3 +226,26 @@
 | Giant | An Ethernet frame larger than the supported maximum frame size. | 01-10 |
 | FCS (Frame Check Sequence) | An error-detection value carried at the end of an Ethernet frame. | 01-10 |
 | Late collision | A collision detected after the normal collision window. | 01-10 |
+
+| Logical topology | The way data flows through a network, regardless of the physical arrangement. | 01-10 |
+| Physical topology | The actual arrangement of network devices, cables, and connections. | 01-10 |
+| Repeater | A Physical-layer device that regenerates a signal. | 01-10 |
+| Hub | A multiport repeater that repeats incoming bits to its other ports. | 01-10 |
+| Media converter | A device that converts between compatible physical media types, such as copper and fiber Ethernet. | 01-10 |
+| Collision | An event in which simultaneous transmissions interfere on a shared half-duplex medium. | 01-10 |
+| Collision domain | A network segment where simultaneous half-duplex transmissions can collide. | 01-10 |
+| Runt | An Ethernet frame shorter than the minimum valid size, excluding special cases. | 01-10 |
+| Giant | An Ethernet frame larger than the supported maximum frame size. | 01-10 |
+| FCS (Frame Check Sequence) | An error-detection value carried at the end of an Ethernet frame. | 01-10 |
+| Late collision | A collision detected after the normal collision window. | 01-10 |
+| LLC (Logical Link Control) | The upper sublayer of the IEEE 802 Data Link architecture; provides an interface to Network-layer protocols. | 02-01 |
+| MAC sublayer | The Data Link sublayer responsible for local-link tasks such as MAC addressing and media access. | 02-01 |
+| Framing | Organizing a bit stream into separate units called frames. | 02-01 |
+| Frame | The data unit used at the Data Link layer. | 02-01 |
+| Media access | Rules that determine how devices use a communication medium. | 02-01 |
+| Point-to-point link | A direct communication link between two endpoints. | 02-01 |
+| Shared medium | A communication medium used by multiple devices. | 02-01 |
+| PPP (Point-to-Point Protocol) | A Data Link protocol historically used for direct connections between two network devices. | 02-01 |
+| HDLC (High-Level Data Link Control) | A bit-oriented Data Link protocol used on point-to-point links. | 02-01 |
+| Next hop | The next router or network device that should receive a packet on its way to the destination. | 02-01 |
+| Trailer | Information placed after the payload in a frame or packet. | 02-01 |
