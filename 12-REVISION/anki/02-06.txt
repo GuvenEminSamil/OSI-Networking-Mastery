@@ -1,0 +1,12 @@
+#separator:tab
+#html:false
+Which MAC address does a switch use to learn a device location?	The source MAC address of an incoming frame. (02-06)
+What information is stored in a MAC address table?	VLAN, MAC address, and switch port. (02-06)
+What happens to a known unicast frame?	It is forwarded only out the destination port in the same VLAN. (02-06)
+What happens to an unknown unicast frame?	It is flooded within the VLAN, except the incoming port. (02-06)
+What happens when a frame's destination is learned on the incoming port?	It is filtered and not sent back out the same port. (02-06)
+Why does a switch use MAC aging?	To remove old dynamic entries after inactivity. (02-06)
+What is the difference between CAM and TCAM?	CAM performs exact lookup; TCAM also supports don't-care matching. (02-06)
+Which switching method checks the full FCS before forwarding?	Store-and-forward. (02-06)
+Which switching method may begin forwarding before the FCS arrives?	Cut-through. (02-06)
+Why can switch buffers overflow?	Frames arrive faster than the output port can transmit them. (02-06)
