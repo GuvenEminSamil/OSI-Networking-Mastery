@@ -1,5 +1,8 @@
 # Buradan Başla (Start Here)
 
+> **ÖNEMLİ — 2026-11-24:** Kullanıcı en son `00-02` dersini tamamladı. Mevcut içerik ve çalışma biçimi fazla karmaşık/yorucu geldiği için devamı durduruldu. **Eski günlük plan ve ders sırası askıdadır. `00-03` veya başka bir sonraki dersi atama.** Önce kullanıcıyla daha sade, yönetilebilir bir öğrenme biçimi tasarla ve onaylanan değişikliği buraya/PROGRESS.md'ye kaydet. Eski saat, uzunluk, Anki ve günlük rutinleri otomatik olarak dayatma.
+
+
 > Bu dosya tek bir soruyu cevaplar: **"Bugün ne yapmalıyım?"** Planın tamamını anlaman gerekmiyor; her gün yalnızca aşağıdaki rutini izle.
 
 ## Her sabah
@@ -54,10 +57,4 @@ Kurulumda eksik kaldıysa: Fedora'da Wireshark (`sudo dnf install wireshark`, ar
 
 ## Yeni bir sohbet açtığında
 
-Her yeni sohbet boş başlar; önceki sohbeti hatırlamaz. Bu yüzden ilk mesaj olarak şunu yapıştır:
-
-```
-OSI-Networking-Mastery projesine devam. GuvenEminSamil/OSI-Networking-Mastery deposunu
-bağla, README.md'deki "Yeni oturumda çalışmaya devam etme protokolü"nü uygula ve
-PROGRESS.md'deki sıradaki paketi yaz.
-```
+Her yeni sohbet boş başlar. En güncel başlangıç talimatı `GuvenEminSamil/ai-workspace` deposundaki `NEXT_AGENT_PROMPT.md` dosyasıdır. Onu yapıştır; eski kısa promptu kullanma. Prompt her anlamlı kontrol noktasında güncellenir.
