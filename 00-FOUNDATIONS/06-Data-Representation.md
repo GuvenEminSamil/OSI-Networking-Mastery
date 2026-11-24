@@ -1,266 +1,198 @@
-# 00-06 Veri Temsili (Data Representation)
+# 00-06 — Data Representation
 
-> Önkoşullar: 00-02 (00-03 yardımcı olur) | Tahmini süre: ~1,5–2 saat | CCNA: dolaylı (başlık alanlarının okunuşu; ses trafiği ve QoS, v1.1 2.1 voice VLAN ve 4.7)
+> **Prerequisite:** 00-02 — Number Systems and Units  
+> **CCNA connection:** Understanding protocol fields, byte order, and how data is represented inside packets.  
+> **Suggested study time:** Flexible.
 
-## Öğrenme Hedefleri
+## What You Will Learn
 
-- Aynı bayt dizisinin farklı anlamlara gelebildiğini bir örnekle göstermek.
-- Bir alanın bit genişliğinden alabileceği değer aralığını hesaplamak ve bunun protokol sınırlarını nasıl belirlediğini açıklamak.
-- Big-endian ve little-endian ayrımını ve ağ bayt sırasını (network byte order) açıklamak; çok baytlı bir değeri kabloda gidecek sırayla yazmak.
-- Metin, görüntü, ses ve video için gereken bit hızını hesaplamak; ses için Nyquist koşulunu söylemek.
-- Her dosyanın bir bayt dizisi olduğunu ve türünün nasıl anlaşıldığını açıklamak.
+- Explain why the same bytes can represent different kinds of information.
+- Calculate the value range of a field from its bit length.
+- Distinguish big-endian and little-endian byte order.
+- Understand network byte order.
+- Recognize how text and files are represented as bytes.
 
-## 1. Sezgisel Giriş
+## 1. Bytes Need a Meaning
 
-Şu dört bayta bak: `C0 A8 01 01`. Bunlar ne anlama gelir?
+A **byte** is a group of eight bits. By itself, a byte does not tell us what kind of information it represents.
 
-| Yorum | Sonuç |
+Look at these four bytes:
+
+`C0 A8 01 01`
+
+They could be interpreted as:
+
+- An IPv4 address: `192.168.1.1`
+- Part of a 32-bit number.
+- Four values in a data file.
+
+The bytes do not explain their meaning. A protocol or file format defines how they must be interpreted.
+
+A **protocol field** is a specific part of a message that carries a particular value, such as a source address, destination address, or length.
+
+## 2. Bit Length and Value Range
+
+The number of bits in a field determines how many values it can represent.
+
+An unsigned field uses only non-negative values.
+
+For an unsigned field with n bits:
+
+[
+Number of values=2^n
+]
+
+The range begins at zero, so:
+
+[
+Maximum value=2^n-1
+]
+
+Examples:
+
+| Field size | Number of possible values | Range |
+|---:|---:|---:|
+| 8 bits | 256 | 0–255 |
+| 12 bits | 4,096 | 0–4,095 |
+| 16 bits | 65,536 | 0–65,535 |
+| 32 bits | 4,294,967,296 | 0–4,294,967,295 |
+
+This is useful when reading protocol fields. For example, a TCP or UDP port number is 16 bits long, so its numeric range is 0–65,535.
+
+## 3. Byte Order: Big-Endian and Little-Endian
+
+When a value uses more than one byte, systems need an agreed order for those bytes.
+
+**Big-endian** stores or sends the most significant byte first.
+
+**Little-endian** stores the least significant byte first.
+
+Consider the 32-bit value:
+
+`0x0A0B0C0D`
+
+| Byte order | Byte sequence |
 |---|---|
-| Bir IPv4 adresi (her bayt bir oktet) | **192.168.1.1** |
-| 32 bitlik işaretsiz bir sayı (big-endian) | 3.232.235.777 |
-| Aynı sayı, ters bayt sırasıyla okunursa (little-endian) | 16.885.952 |
-| Bir pikselin rengi (kırmızı, yeşil, mavi) + opaklık (alpha) | Hardal sarısına yakın bir renk; opaklık 1/255, yani neredeyse tamamen saydam |
+| Big-endian | `0A 0B 0C 0D` |
+| Little-endian | `0D 0C 0B 0A` |
 
-Baytlar kendi anlamlarını taşımaz. Anlamı, iki tarafın önceden üzerinde anlaştığı **yorum kuralı** verir. 00-01'deki "veri ile bilgi" ayrımının pratikteki karşılığı budur ve protokollerin var olma nedeni de budur.
+The numeric value is the same. Only the order of the bytes is different.
 
-## 2. Neden Var?
+### Network Byte Order
 
-Ağdaki her başlık alanı, belirli genişlikte ve belirli bir bayt sırasıyla yazılmış bir sayıdır. Başlıkların arkasındaki yük (payload) ise metin, görüntü, ses ya da bir dosya olabilir. Bu dosyayı bilmeden:
+**Network byte order** is the standard byte order used for multi-byte numeric fields in Internet protocols. It is big-endian.
 
-- Wireshark'taki onaltılık dökümü okuyamazsın (H02).
-- "Neden en fazla 4094 VLAN var?" sorusunu ezberle cevaplarsın.
-- Bir sesli görüşmenin hattan ne kadar bant genişliği istediğini hesaplayamazsın (03-21).
+For example, decimal port 80 is hexadecimal `0x0050`. It is represented in network byte order as:
 
-## 3. Mekanizma
+`00 50`
 
-### 3.1 Tamsayılar ve alan genişliği
+This agreement allows different types of computers to communicate reliably.
 
-00-02'deki kural: **n bit, 2ⁿ farklı değer** taşır.
+## 4. How Text Becomes Bytes
 
-- **İşaretsiz (unsigned):** 0 … 2ⁿ − 1. Ağ başlıklarındaki alanların neredeyse tamamı işaretsizdir.
-- **İşaretli (signed), ikiye tümleyen:** −2ⁿ⁻¹ … 2ⁿ⁻¹ − 1 (00-03, Bölüm 3.3).
+Computers store text using character encodings.
 
-Bir alanın genişliği, protokolün sınırını belirler:
+A **character encoding** is a rule that maps characters to numeric values and bytes.
 
-| Alan | Genişlik | Değer aralığı | Ayrıntı |
-|---|---|---|---|
-| IPv4 TTL | 8 bit | 0–255 | 03-02 |
-| 802.1Q VLAN kimliği (VID) | 12 bit | 0–4.095; 0 ve 4.095 ayrılmıştır → **1–4.094** kullanılabilir | 02-09 |
-| TCP/UDP port numarası | 16 bit | 0–65.535 | 04-01 |
-| IPv4 Total Length | 16 bit | En fazla 65.535 bayt | 03-02 |
-| TCP sıra numarası | 32 bit | 0–4.294.967.295; sonra 0'a döner (00-03, taşma) | 04-04 |
-| IPv4 adresi | 32 bit | ~4,3 milyar | 03-03 |
-| MAC adresi | 48 bit | ~2,8 × 10¹⁴ | 02-02 |
-| IPv6 adresi | 128 bit | ~3,4 × 10³⁸ | 03-16 |
+Two common examples are:
 
-"Neden 4094 VLAN?" sorusunun cevabı bir ezber değil, bir hesaptır: 2¹² = 4096 değer, eksi ayrılmış iki değer [IEEE-8021Q].
+- **ASCII:** an older encoding for basic English letters, digits, and symbols.
+- **UTF-8:** a widely used encoding that can represent characters from many writing systems.
 
-### 3.2 Bayt sırası (endianness)
+For example, the letter `A` has the value 65 in ASCII and is represented by the same single byte in UTF-8.
 
-Bir değer birden fazla bayt tutuyorsa, baytların hangi sırayla saklanacağına ya da gönderileceğine karar vermek gerekir. 32 bitlik `0x12345678` değeri için:
+The important lesson: text is also stored as bytes. The encoding tells the computer how to interpret those bytes.
 
-```
- Adres / gönderim sırası →    1.     2.     3.     4.
- Big-endian (önce büyük uç):  [12]   [34]   [56]   [78]    ← ağ bayt sırası
- Little-endian (önce küçük):  [78]   [56]   [34]   [12]    ← x86 belleği
-```
+## 5. Images, Audio, and Video
 
-*Ne görüyoruz:* Değer aynıdır; yalnızca baytların sırası farklıdır. Big-endian'da en anlamlı bayt (0x12) önce gelir; insanlar sayıları da böyle yazar.
+Digital media is also represented by numbers and bytes.
 
-- **[TCP/IP-GERÇEK]** İnternet protokolleri çok baytlı alanları **big-endian** gönderir. Buna **ağ bayt sırası (network byte order)** denir. RFC 791, oktetlerin diyagramlarda soldan sağa, yukarıdan aşağıya okunduğu sırayla iletildiğini tanımlar [RFC 791, Ek B].
-- Bugünkü kişisel bilgisayarların çoğu (x86 ve tipik yapılandırmasıyla ARM) belleği **little-endian** kullanır.
-- Bu yüzden ağ programları, bir değeri pakete yazmadan önce ağ bayt sırasına çevirir. Soket API'sindeki `htons()` ("host to network short", 16 bit) ve `htonl()` (32 bit) işlevleri bunu yapar; `ntohs()` ve `ntohl()` tersini yapar (04-07).
+- An **image** is made of pixels. A pixel is one small picture element that stores color information.
+- **Audio** can be represented by taking measurements of a sound signal at regular intervals. Each measurement is called a sample.
+- **Video** is commonly made of a sequence of images, often combined with audio.
 
-Terimler, Danny Cohen'in 1980 tarihli bir yazısından gelir. Cohen, Gulliver'in Gezileri'nde yumurtanın hangi ucundan kırılacağı yüzünden savaşan iki halkın adlarını bu tartışmaya uyarlamıştır [PAPER-COHEN].
+The details of image compression, audio sampling, and video codecs are outside the core goal of this lesson. For now, remember that digital media is represented using bits and bytes according to an agreed format.
 
-**Somut bir hata:** Port 443, 16 bit olarak `0x01BB`'dir ve kabloda `01 BB` sırasıyla gider. Little-endian bir bilgisayarda bellekte `BB 01` olarak durur. Program `htons()` çağırmayı unutursa belleği olduğu gibi pakete kopyalar ve kabloya `BB 01` gider. Karşı taraf bunu `0xBB01` = **47.873** olarak okur. Bağlantı kurulmaz, Wireshark'ta da 47873 numaralı porta giden bir paket görünür.
+## 6. File Types and File Signatures
 
-> **[DERİN]** Bayt sırası ile **bit sırası** ayrı konulardır. Ethernet her baytın bitlerini en az anlamlı bitten başlayarak gönderir [IEEE-8023]. Bu ayrıntı, bir MAC adresinin ilk baytındaki I/G bitinin neden kabloya ilk çıkan bit olduğunu açıklar (02-02).
+A file extension is the text at the end of a file name, such as `.pdf` or `.png`.
 
-### 3.3 Metin
+A **file signature** is a recognizable sequence of bytes near the beginning of some file types. It can help identify the real file format.
 
-Metin, her karaktere bir sayı karşılık getiren bir tabloyla temsil edilir: **karakter kodlaması (character encoding)**.
+For example:
 
-- **ASCII** 7 bitlik bir tablodur (0–127). Örnekler: `A` = 0x41 (65), `0` = 0x30 (48), boşluk = 0x20, satır sonu için CR = 0x0D ve LF = 0x0A.
-- Türkçe karakterler (ş, ğ, ı, İ) ASCII'de yoktur. Bunlar için önce bölgesel kod sayfaları (Windows-1254, ISO-8859-9), bugün ise **Unicode** ve onun bayt düzeyindeki kodlaması **UTF-8** kullanılır. UTF-8'de bir karakter 1 ile 4 bayt arasında yer tutar; ASCII karakterler 1, "ş" gibi karakterler 2 bayttır.
+- A PDF file commonly begins with the bytes for `%PDF-`.
+- A PNG image begins with the byte sequence `89 50 4E 47 0D 0A 1A 0A`.
 
-Ayrıntılar ve bozuk Türkçe metin (mojibake) örnekleri 06-02'de. Burada bilmen gereken şu: HTTP, SMTP ve FTP gibi birçok uygulama protokolü komutlarını **ASCII metin** olarak gönderir. Örneğin bir HTTP isteği `GET / HTTP/1.1` satırıyla ve CR LF ile biter. Bu yüzden şifrelenmemiş bir bağlantıyı Wireshark'ta okunabilir metin olarak görürsün (07-04).
+The extension is only a name. The internal data format is more reliable evidence of what the file contains.
 
-### 3.4 Görüntü
+## 7. Why This Matters in Networking
 
-Bir **raster görüntü**, piksellerden oluşan bir ızgaradır. Her pikselin rengi genellikle kırmızı, yeşil ve mavi (RGB) için 8'er bit, yani 24 bitle tutulur. 2²⁴ ≈ 16,7 milyon renk eder.
+Network messages contain fields with defined sizes and meanings.
 
-> 1920 × 1080 piksel × 3 bayt = 6.220.800 bayt ≈ **6,2 MB** (sıkıştırılmamış tek bir Full HD kare)
+For example:
 
-PNG bu veriyi kayıpsız, JPEG ise insan gözünün fark etmediği ayrıntıları atarak kayıplı sıkıştırır (06-04).
+- A TCP or UDP port field is 16 bits.
+- An IPv4 address is 32 bits, normally shown as four octets.
+- Ethernet uses an EtherType field to identify the type of payload carried in a frame.
 
-### 3.5 Ses: örnekleme, Nyquist ve PCM
+A receiver reads the fields according to the protocol specification. If the sender and receiver disagree about field size or byte order, the value can be interpreted incorrectly.
 
-00-01'de analog bir sinyalin iki adımda dijitale çevrildiğini gördün: **örnekleme (sampling)** ve **nicemleme (quantization)**. Kaç örnek yeterlidir?
+## 8. Common Mistakes
 
-**Nyquist koşulu:** Bir sinyaldeki en yüksek frekans f_max ise örnekleme frekansı **2 × f_max'tan büyük** olmalıdır. Daha seyrek örneklenirse yüksek frekanslar sahte düşük frekanslar gibi görünür (aliasing). Bu yüzden ses örneklenmeden önce süzgeçten geçirilir ve f_max'ın üstü atılır [CISCO-PCM]. Teoremin türetilmesi 01-02'de.
-
-| Uygulama | f_max (yaklaşık) | Örnekleme | Örnek başına bit | Kanal | Bit hızı |
-|---|---|---|---|---|---|
-| Telefon (G.711 PCM) | 3,4 kHz | 8.000 örnek/s | 8 | 1 | 8.000 × 8 = **64 kbps** |
-| Müzik CD'si | 20 kHz | 44.100 örnek/s | 16 | 2 | 44.100 × 16 × 2 = **1.411,2 kbps** |
-
-Telefon sesinin bu yöntemle sayısallaştırılmasına **PCM (pulse code modulation)** denir ve ITU-T G.711'de tanımlıdır [ITU-G711]. IP telefonların varsayılan kodeklerinden biri hâlâ G.711'dir.
-
-### 3.6 Video
-
-Video, saniyede belirli sayıda görüntüden (kare, frame) oluşur. Sıkıştırılmamış 1080p, 30 kare/s bir video:
-
-> 6.220.800 bayt × 30 kare/s × 8 bit ≈ **1,49 Gbps**
-
-Bir video akış servisi aynı görüntüyü tipik olarak birkaç Mbps ile gönderir; yani sıkıştırma oranı yüzlerle ifade edilir. Bunu **kodekler (codec)** sağlar (H.264, H.265, AV1). Kodek iki fazlalıktan yararlanır:
-
-- **Kare içi (spatial):** Bir karede yan yana duran pikseller birbirine benzer.
-- **Kareler arası (temporal):** Ardışık kareler birbirine çok benzer. Kodek ara sıra tam bir kare (I-frame) gönderir; arada yalnızca değişen kısımları (P- ve B-frame) gönderir.
-
-Ağdaki sonucu: Kayıp bir I-frame, bir sonrakine kadar görüntünün bozulmasına yol açar. Kayba toleransı ve gecikme gereksinimi, videonun TCP mi UDP mi kullanacağını etkiler (04-06).
-
-### 3.7 Her dosya bir bayt dizisidir
-
-Bir disk ya da ağ için fotoğraf, belge ve program arasında fark yoktur: Hepsi bir **bayt dizisidir**. Türü belirleyen, dizinin nasıl yorumlanacağıdır:
-
-- **Dosya uzantısı** (`.png`, `.pdf`) yalnızca bir ipucudur; değiştirilebilir.
-- Birçok biçim dosyanın ilk baytlarına sabit bir **imza (magic number)** koyar. Örneğin her PNG dosyası şu 8 baytla başlar: `89 50 4E 47 0D 0A 1A 0A` [STD-PNG §5.2]. 2.–4. baytlar ASCII'de "PNG" demektir. PDF dosyaları ise ASCII `%PDF-` metniyle başlar.
-- Ağda türü **protokol** bildirir. HTTP, yükün türünü `Content-Type: image/png` gibi bir başlıkla söyler (MIME türleri, 06-03).
-
-Bu bağımsızlık önemli bir tasarım ilkesidir: Ağın alt katmanları taşıdıkları baytların ne olduğuyla ilgilenmez; yorum en üst katmana bırakılır (00-09).
-
-## 4. Teknik Ayrıntı: Bir paketin baytlarını okumak
-
-Aşağıda bir bilgisayarın bir web sunucusuna gönderdiği ilk TCP paketinin başı var. **[BASİTLEŞTİRME]** Satırlar alanlara göre bölündü (Wireshark her satırda 16 bayt gösterir); MAC adresleri ve checksum `xx` ile gizlendi.
-
-```
-Ethernet  xx xx xx xx xx xx  xx xx xx xx xx xx  08 00
-IPv4      45 00 00 3c 1c 46 40 00 40 06 xx xx  c0 a8 01 0a  cb 00 71 0a
-TCP       c9 3a 01 bb ...
-```
-
-| Baytlar | Yorum | Nasıl? |
-|---|---|---|
-| `08 00` | EtherType = IPv4 | 0x0800 (00-02) |
-| `45` | Sürüm 4, başlık uzunluğu 5 × 4 = 20 bayt | Üst nibble = 4, alt nibble = 5 (00-02, Bölüm 4.4) |
-| `00 3c` | Toplam uzunluk 60 bayt | 0x003C, big-endian |
-| `40` (9. bayt) | TTL = 64 | 0x40 |
-| `06` | Üst protokol = TCP | IANA protokol numarası 6 [IANA-PROTO] |
-| `c0 a8 01 0a` | Kaynak IP 192.168.1.10 | Her bayt bir oktet |
-| `cb 00 71 0a` | Hedef IP 203.0.113.10 | Dokümantasyon adresi [RFC 5737] |
-| `c9 3a` | Kaynak port 51.514 | 0xC93A |
-| `01 bb` | Hedef port 443 (HTTPS) | 0x01BB |
-
-Bu tabloyu bir kez kendi başına doldurabildiğinde, H02'de Wireshark'ın alt panelindeki onaltılık dökümü korkmadan okuyabilirsin. Alanların ne işe yaradığı 03-02 ve 04-03'te.
-
-## 5. Gerçek Dünya Örnekleri
-
-- **IP telefon planlaması:** G.711'in 64 kbps'ı yalnızca ses verisidir. Varsayılan 20 ms'lik paketlerde her pakette 160 bayt ses taşınır ve saniyede 50 paket gider. Her pakete RTP (12) + UDP (8) + IP (20) = 40 bayt başlık eklenir: (160 + 40) × 8 × 50 = **80 kbps**. Ethernet başlığı ve FCS (toplam 18 bayt) de eklenince **87,2 kbps** olur [CISCO-VOIP-BW]. 20 eş zamanlı görüşme taşıyacak bir WAN bağlantısı bu yüzden 20 × 64 kbps ile değil, gerçek değerle planlanır (03-21).
-- **Video akışı:** Bir dizi izlerken ağ yavaşlarsa oynatıcı çözünürlüğü düşürür. Kodek, daha az bitle daha düşük kaliteli kareler göndermeye geçer.
-- **Kendi yazdığın sunucu:** Little-endian bir makinede port numarasını `htons()` olmadan yazan bir Python ya da C programı, Bölüm 3.2'deki gibi yanlış porta bağlanmaya çalışır.
-
-## 6. Diğer Konularla Bağlantı
-
-| Bu dosyadaki fikir | Nerede derinleşiyor |
+| Mistake | Correct idea |
 |---|---|
-| Alan genişlikleri ve başlık okuma | 02-03, 02-09, 03-02, 04-03 |
-| Ağ bayt sırası, `htons()` | 04-07 |
-| Bit sırası ve MAC adresinin I/G biti | 02-02 |
-| Karakter kodlaması, UTF-8, mojibake | 06-02 |
-| Serileştirme ve MIME türleri | 06-03 |
-| Kayıpsız ve kayıplı sıkıştırma, kodekler | 06-04 |
-| Nyquist teoremi | 01-02 |
-| Ses ve video trafiğinin önceliklendirilmesi | 02-08 (voice VLAN), 03-21 |
+| A byte always means text. | A byte can represent text, part of an address, a number, or many other kinds of data. |
+| Big-endian and little-endian change the value. | They change the order of bytes used to represent the value. |
+| A file extension proves what the file contains. | A file signature or its internal format is stronger evidence. |
+| Network byte order is little-endian. | Internet protocols use big-endian network byte order for multi-byte numeric fields. |
 
-## 7. Pratik: Baytları kendi gözünle gör
+## 9. Knowledge Check
 
-Bu dosyanın Cisco komutu yoktur; araçlar senin bilgisayarında. Bir PNG ya da PDF dosyasının ilk baytlarına bak:
+1. How many values can an 8-bit unsigned field represent?
+   <details><summary>Answer</summary>2⁸ = **256 values**, from 0 to 255.</details>
 
+2. What is the maximum value of a 16-bit unsigned field?
+   <details><summary>Answer</summary>2¹⁶ − 1 = **65,535**.</details>
+
+3. Write `0x0A0B0C0D` in big-endian byte order.
+   <details><summary>Answer</summary>`0A 0B 0C 0D`.</details>
+
+4. Which byte order is used by Internet protocols as network byte order?
+   <details><summary>Answer</summary>Big-endian.</details>
+
+5. What is a character encoding?
+   <details><summary>Answer</summary>A rule that maps characters to numeric values and bytes.</details>
+
+6. Why is a file extension not always enough to identify a file?
+   <details><summary>Answer</summary>Because the extension is only part of the file name and may not match the file's actual internal format.</details>
+
+## 10. Practice
+
+Use Python to explore the byte order of a number:
+
+```python
+value = 0x0A0B0C0D
+
+value.to_bytes(4, byteorder="big")  
+value.to_bytes(4, byteorder="little")
 ```
-# Fedora
-$ xxd resim.png | head -2
-$ file resim.png                 # imzaya bakarak türü söyler, uzantıya değil
 
-# Windows PowerShell
-PS> Format-Hex -Path .\resim.png | Select-Object -First 2
-```
+Compare the two results. The number is unchanged; only the byte sequence differs.
 
-Dosyanın uzantısını değiştir (`resim.png` → `resim.txt`) ve `file` komutunu yeniden çalıştır. Sonuç değişmez, çünkü `file` imzaya bakar.
+## 11. CCNA Takeaways
 
-## 8. Yaygın Yanılgılar
+- Protocols define how fields and bytes must be interpreted.
+- Field size determines its possible value range.
+- Big-endian places the most significant byte first.
+- Network byte order is big-endian.
+- Text, images, audio, and video are all represented using bits and bytes.
 
-| Yanılgı | Doğrusu |
-|---|---|
-| "Dosyanın türünü uzantısı belirler." | Uzantı bir ipucudur. Tür, baytların yorumundan anlaşılır: dosyanın imzası ya da ağda protokolün bildirdiği tür (`Content-Type`). |
-| "Bilgisayar ağ verisini kendi bayt sırasıyla gönderir." | İnternet protokolleri big-endian (ağ bayt sırası) kullanır; little-endian bir bilgisayar çok baytlı alanları göndermeden önce çevirmek zorundadır. |
-| "Bir G.711 görüşmesi 64 kbps kullanır." | 64 kbps yalnızca ses verisidir. Başlıklarla IP düzeyinde 80 kbps, Ethernet üzerinde 87,2 kbps eder. |
-| "Bir karakter her zaman bir bayttır." | Bu yalnızca ASCII için doğrudur. UTF-8'de bir karakter 1–4 bayttır; Türkçe harflerin çoğu 2 bayttır. |
-| "Örnekleme frekansını artırmak her zaman daha iyi ses verir." | 2 × f_max'ı geçtikten sonra o frekans bandı için yeni bilgi eklenmez; yalnızca veri miktarı artar. |
+## Self-Check
 
-## 9. Arıza Giderme Yaklaşımı
+- [ ] I can calculate the range of an unsigned field.
+- [ ] I can explain big-endian and little-endian.
+- [ ] I know that Internet protocols use network byte order.
+- [ ] I can explain why a byte sequence needs a format or protocol to give it meaning.
 
-| Belirti | Bu dosyaya göre olası neden | Nereye bak |
-|---|---|---|
-| Türkçe karakterler "ÅŸ" gibi bozuk görünüyor | Gönderen ve alan farklı karakter kodlaması kullanıyor | 06-02 |
-| Kendi uygulaman bağlanamıyor; yakalamada beklenmedik bir port numarası var | Bayt sırası çevrilmemiş | Port numarasını onaltılık yaz ve baytları ters çevir |
-| Ses kesik kesik geliyor; bağlantı hızı "yeterli" görünüyordu | Bant genişliği başlıklar hesaba katılmadan planlanmış | Bölüm 5'teki hesap, 03-21 |
-| İkili bir dosya FTP ile aktarıldıktan sonra açılmıyor | FTP ASCII modunda satır sonlarını değiştirip dosyayı bozdu | 07-07 |
-
-## 10. CCNA Bağlantısı
-
-CCNA bayt sırası sormaz. Ama başlık alanlarının genişlikleri (VLAN kimliği 12 bit, port 16 bit, TTL 8 bit) sınavda doğrudan sorulur ve bu dosyadaki hesaptan gelir. Ses trafiğinin özellikleri (sabit ve küçük paketler, gecikmeye duyarlılık) v1.1 2.1'deki voice VLAN ve 4.7'deki QoS konularının temelidir.
-
-## 11. Kendini Kontrol Et
-
-1. 16 bitlik işaretsiz bir alan en fazla hangi değeri taşır? 12 bitlik VLAN kimliği alanıyla kaç VLAN kullanılabilir, neden?
-   <details><summary>Cevap</summary>
-   2¹⁶ − 1 = <b>65.535</b>. VLAN alanı 2¹² = 4096 değer taşır; 0 ve 4095 ayrılmış olduğu için <b>4094</b> VLAN (1–4094) kullanılabilir.
-   </details>
-
-2. `0x0A0B0C0D` değerini big-endian ve little-endian olarak bayt bayt yaz. Hangisi kabloda gönderilir?
-   <details><summary>Cevap</summary>
-   Big-endian: <code>0A 0B 0C 0D</code>. Little-endian: <code>0D 0C 0B 0A</code>. Kabloda ağ bayt sırası, yani big-endian gönderilir.
-   </details>
-
-3. Port 80 kabloda hangi iki baytla gider? Little-endian bir programcı `htons()` kullanmayı unutursa karşı taraf hangi portu görür?
-   <details><summary>Cevap</summary>
-   80 = 0x0050, kabloda <code>00 50</code>. Çevrilmezse bellekteki sıra (<code>50 00</code>) gider; karşı taraf 0x5000 = <b>20.480</b> görür.
-   </details>
-
-4. Tek kanallı bir ses 16.000 örnek/s ve örnek başına 16 bitle kaydediliyor. Bit hızı nedir? Bu kayıt en fazla hangi frekansı temsil edebilir?
-   <details><summary>Cevap</summary>
-   16.000 × 16 = <b>256 kbps</b>. Nyquist koşuluna göre 8 kHz'in altındaki frekansları temsil edebilir.
-   </details>
-
-5. `rapor.pdf` adlı bir dosyanın ilk baytları `89 50 4E 47 0D 0A 1A 0A`. Bu dosya gerçekte nedir? Bunu nasıl anladın?
-   <details><summary>Cevap</summary>
-   Bir <b>PNG görüntüsüdür</b>. Bu 8 bayt PNG imzasıdır; uzantı yalnızca bir addır. Bir PDF dosyası <code>%PDF-</code> ile başlardı.
-   </details>
-
-## 12. Uygulama
-
-1. Bölüm 7'deki komutlarla bilgisayarındaki bir PNG ve bir PDF dosyasının imzasını bul.
-2. Bölüm 4'teki tabloyu kâğıda kopyala, cevap sütunlarını kapat ve baytlardan yeniden doldur.
-3. 10 eş zamanlı G.711 görüşmesinin Ethernet üzerinde kaç kbps gerektirdiğini hesapla.
-
-## 13. Ustalık Kontrol Listesi
-
-- [ ] Aynı baytların farklı yorumlarla farklı anlamlara geldiğini kendi seçtiğim bir örnekle gösterebiliyorum.
-- [ ] Bir alanın bit genişliğinden değer aralığını hesaplayıp VLAN, port ve TTL sınırlarını açıklayabiliyorum.
-- [ ] Çok baytlı bir değeri big-endian ve little-endian yazabiliyor, ağ bayt sırasının neden gerektiğini anlatabiliyorum.
-- [ ] Ses için Nyquist koşulunu söyleyip G.711 ve sıkıştırılmamış video bit hızlarını hesaplayabiliyorum.
-- [ ] Bir dosyanın türünün uzantıdan değil, imzadan ya da protokolün bildirdiği türden anlaşıldığını açıklayabiliyorum.
-
-## Kaynaklar
-
-- [RFC 791, Ek B] Data Transmission Order: oktetlerin iletim sırası (ağ bayt sırası).
-- [PAPER-COHEN] D. Cohen, "On Holy Wars and a Plea for Peace", IEN 137 (1980): big-endian ve little-endian terimleri.
-- [IEEE-8021Q] VLAN kimliği alanı ve ayrılmış değerler (0 ve 4095).
-- [IEEE-8023] Oktet içindeki bitlerin iletim sırası.
-- [ITU-G711] ITU-T G.711: 8.000 örnek/s, örnek başına 8 bit.
-- [CISCO-PCM] Cisco, *Waveform Coding Techniques*: örnekleme öncesi süzme, PCM ve 64 kbps.
-- [CISCO-VOIP-BW] Cisco, *Voice Over IP – Per Call Bandwidth Consumption* (belge 7934): G.711, 20 ms, 50 pps, Ethernet üzerinde 87,2 kbps.
-- [STD-PNG §5.2] W3C, *Portable Network Graphics (PNG) Specification*: PNG imzası.
-- [IANA-PROTO] IANA Protocol Numbers: 6 = TCP.
-- [RFC 5737] IPv4 dokümantasyon adresleri (203.0.113.0/24).
+**Next lesson:** 00-07 — Computer Architecture for Networking.
