@@ -26,6 +26,14 @@ Twisting helps reduce the effect of external noise and crosstalk. The two wires 
 
 A common Ethernet twisted-pair cable contains four pairs, or eight individual wires.
 
+### Differential Signaling
+
+**Differential signaling** means that the receiver reads the voltage difference between the two wires in a pair. If similar unwanted noise affects both wires, comparing their difference can reduce that common noise. This is one reason balanced twisted-pair cabling works well in network environments.
+
+### Coaxial Cable
+
+**Coaxial cable** uses one central copper conductor surrounded by insulation, a conductive shield, and an outer protective jacket. The central conductor carries the signal, while the shield helps protect it from external interference. Coaxial cable is used in cable television and broadband access networks. It was also used by older Ethernet technologies, but modern office Ethernet usually uses twisted-pair copper or fiber.
+
 ## 2. UTP and Shielded Cable
 
 **UTP** means *Unshielded Twisted Pair*. It uses twisted pairs without an additional metallic shield.
