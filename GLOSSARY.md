@@ -1,167 +1,94 @@
-# Sözlük (Glossary)
+# Foundations Glossary
 
-> Her terim, ilk açıklandığı dosyanın kimliğiyle birlikte verilir. Tanım kısadır; ayrıntı ilgili dosyadadır. Terimler İngilizce adlarına göre alfabetik sıralıdır, çünkü sınav ve teknik belgeler İngilizcedir.
->
-> Yeni bir dosya yazıldıkça bu liste büyür. Son güncelleme: 2026-11-20 (00-01 – 00-09).
+> This glossary uses simple English definitions. Every new technical term should also be explained in the lesson where it first appears. This list is a quick reference, not a replacement for the lesson.
 
-| English | Türkçe | Kısa tanım | Dosya |
-|---|---|---|---|
-| AC (alternating current) | Alternatif akım | Yönü periyodik olarak değişen akım; şebeke elektriği | 00-04 |
-| Access point (AP) | Erişim noktası | Kablosuz istemcileri kablolu LAN'a bağlayan cihaz | 00-08 (ayrıntı: 02-15) |
-| Aliasing | Örtüşme | Yetersiz örneklemede yüksek frekansların sahte düşük frekanslar gibi görünmesi | 00-06 |
-| Analog | Analog | Sürekli değerler alabilen temsil | 00-01 |
-| AND | VE | İki bit de 1 ise 1 veren işlem; IP adresinden ağ adresini seçmede kullanılır | 00-03 |
-| Application layer | Uygulama katmanı | OSI L7; ağ hizmetlerini uygulamalara sunar (HTTP, DNS, DHCP) | 00-09 |
-| ASCII | ASCII | 7 bitlik karakter kodlaması (0–127) | 00-06 (ayrıntı: 06-02) |
-| ASIC (application-specific integrated circuit) | Uygulamaya özel tümleşik devre | Ağ cihazlarında veri düzlemini donanımda çalıştıran yonga | 00-05 |
-| Bandwidth | Bant genişliği | Bir bağlantının saniyede taşıyabileceği en fazla bit sayısı (bps) | 00-08 |
-| Base (radix) | Taban | Konumsal sayı sisteminde her konumun bir öncekinin kaç katı olduğu (2, 10, 16) | 00-02 |
-| Big-endian | Big-endian (önce büyük uç) | Çok baytlı değerde en anlamlı baytın önce gelmesi; ağ bayt sırası | 00-06 |
-| Bit (binary digit) | Bit | Eşit olasılıklı iki seçenek arasındaki tek karar; bilginin temel birimi | 00-01 |
-| Bitwise operation | Bit düzeyi işlem | Bir mantık işleminin bir sayının her bitine ayrı ayrı uygulanması | 00-03 |
-| Broadcast address | Yayın adresi | Bir alt ağda host kısmının tamamı 1 olan adres | 00-03 (ayrıntı: 03-04) |
-| Broadcast domain | Yayın alanı | Bir yayın çerçevesinin ulaştığı cihazlar kümesi; router'lar sınırlar | 00-08 (ayrıntı: 02-07) |
-| Bus | Veri yolu | Bilgisayar bileşenleri arasındaki bağlantı (ör. PCIe) | 00-07 |
-| Byte | Bayt | 8 bit | 00-02 |
-| Capacitance | Kapasitans | İki iletken arasında yük depolama yeteneği | 00-04 |
-| Carry | Elde | Toplamada bir üst basamağa aktarılan değer | 00-03 |
-| Catalyst Center (DNA Center) | Catalyst Center | Cisco'nun kurum ağı için merkezi yönetim ve SDN kontrolcüsü | 00-08 (ayrıntı: 15-04) |
-| Character encoding | Karakter kodlaması | Karakterleri sayılarla eşleyen tablo ve bayt düzeni | 00-06 (ayrıntı: 06-02) |
-| Characteristic impedance | Karakteristik empedans | Sinyalin bir iletim hattı boyunca gördüğü empedans; bükümlü çiftte 100 Ω | 00-04 |
-| Circuit | Devre | Akımın aktığı kapalı yol | 00-04 |
-| Client-server model | İstemci-sunucu modeli | İstemcinin istediği, sunucunun dinleyip yanıt verdiği model | 00-08 (ayrıntı: 07-01) |
-| Clock signal | Saat sinyali | Flip-flop'ların aynı anda değer yakalamasını sağlayan periyodik kare dalga | 00-05 |
-| CMOS (complementary MOS) | CMOS | pMOS ve nMOS'u birbirini tamamlayacak şekilde kullanan kapı tekniği | 00-05 |
-| Codec | Kodek | Ses ya da görüntüyü kodlayan ve sıkıştıran algoritma (G.711, H.264) | 00-06 (ayrıntı: 06-04) |
-| Combinational logic | Kombinasyonel mantık | Çıkışı yalnızca o anki girişlere bağlı devre | 00-05 |
-| Conductor | İletken | Yükün kolayca akabildiği madde (bakır) | 00-04 |
-| Current | Akım | Birim zamanda geçen yük; birimi amper (A) | 00-04 |
-| Data | Veri | Bilginin semboller, sayılar ya da fiziksel durumlarla temsili | 00-01 |
-| Data Link Layer | Veri Bağlantı Katmanı (eş anlamlı: Veri Bağı Katmanı) | OSI'nin 2. katmanı | 00-09 (ayrıntı: 02-01) |
-| DC (direct current) | Doğru akım | Hep aynı yönde akan akım; PoE gücü | 00-04 |
-| Decapsulation | Açma | Alıcıda her katmanın kendi başlığını okuyup çıkarması ve yükü yukarı vermesi | 00-09 (ayrıntı: 08-01) |
-| Decimal | Onluk | 10 tabanlı sayı sistemi | 00-02 |
-| Decision threshold | Karar eşiği | Alıcının bir sembolü diğerinden ayırdığı sınır değer | 00-01 |
-| Default gateway | Varsayılan ağ geçidi | Host'un uzak hedeflere giden paketleri gönderdiği router | 00-08 (ayrıntı: 03-06) |
-| Descriptor | Tanımlayıcı | Halka tamponda RAM'deki bir tampona işaret eden kayıt | 00-07 |
-| Differential signaling | Diferansiyel sinyal | Bilginin iki tel arasındaki gerilim farkıyla taşınması | 00-04 (ayrıntı: 01-06) |
-| Digital | Dijital | Sonlu sayıda ayrık sembolle yapılan temsil | 00-01 |
-| DMA (direct memory access) | Doğrudan bellek erişimi | Bir cihazın CPU'ya sormadan RAM'e okuma ve yazma yapması | 00-07 |
-| DRAM (dynamic RAM) | Dinamik RAM | Biti bir kapasitördeki yükle saklayan, yenileme gerektiren uçucu bellek | 00-05 |
-| Driver | Sürücü | Belirli bir donanımı işletim sistemine tanıtan yazılım | 00-07 |
-| EMI (electromagnetic interference) | Elektromanyetik girişim | Dış kaynakların bir iletkende istenmeyen gerilim oluşturması | 00-04 |
-| Encapsulation | Kapsülleme | Gönderende her katmanın yükün önüne kendi başlığını (L2'de ayrıca trailer) eklemesi | 00-09 (ayrıntı: 08-01) |
-| End device (host) | Uç cihaz | Verinin kaynağı ya da hedefi olan cihaz | 00-08 |
-| Endianness | Bayt sırası | Çok baytlı bir değerin baytlarının saklanma ya da gönderilme sırası | 00-06 |
-| Entropy | Entropi | Bir kaynağın ortalama bilgi miktarı (bit cinsinden) | 00-01 |
-| EtherType | EtherType | Ethernet başlığında yükün protokolünü belirten 16 bitlik alan (0x0800 = IPv4) | 00-09 (ayrıntı: 02-03) |
-| Fan-out | Fan-out | Bir kapı çıkışının sürebildiği giriş sayısı | 00-05 |
-| Firewall | Güvenlik duvarı | Trafiğe bir güvenlik politikasına göre izin veren ya da engelleyen cihaz | 00-08 (ayrıntı: 14-01) |
-| Flash memory | Flash bellek | Elektrik kesilince silinmeyen, yazma sayısı sınırlı bellek | 00-05 |
-| Flip-flop | Flip-flop | Saat kenarında bir biti yakalayıp tutan bellek elemanı | 00-05 |
-| Frame | Çerçeve | L2'nin PDU'su: başlık + yük + trailer (FCS) | 00-09 (ayrıntı: 02-03) |
-| Goodput | Yararlı verim | Uygulamaya ulaşan yararlı veri hızı (başlıklar ve yeniden iletimler hariç) | 00-08 |
-| Ground | Toprak | Gerilimlerin ölçüldüğü ortak referans noktası | 00-04 |
-| Half adder | Yarım toplayıcı | İki biti toplayan, bir XOR ve bir AND kapısından oluşan devre | 00-03 |
-| Header | Başlık | Bir katmanın yükün önüne eklediği kontrol bilgisi | 00-09 |
-| Hexadecimal (hex) | Onaltılık | 16 tabanlı sayı sistemi; bir basamak 4 bit | 00-02 |
-| Hub | Hub | Gelen bitleri bütün portlara tekrarlayan L1 cihazı | 00-08 (ayrıntı: 01-10) |
-| IANA | IANA | Port, protokol numarası ve adres bloklarının kaydını tutan kuruluş | 00-08 |
-| IEEE | IEEE | L1 ve L2 standartlarını (802.x) yayımlayan kuruluş | 00-08 |
-| IETF | IETF | İnternet protokollerini RFC'lerle standartlaştıran kuruluş | 00-08 |
-| Impedance | Empedans | Değişen sinyallere karşı toplam zorluk | 00-04 |
-| Information | Bilgi | Bir mesajın alıcıdaki belirsizliği giderme miktarı | 00-01 |
-| Insulator | Yalıtkan | Yükün neredeyse hiç akmadığı madde (plastik) | 00-04 |
-| Internet layer | İnternet katmanı | TCP/IP modelinde IP'nin bulunduğu katman (OSI L3) | 00-09 |
-| Interrupt | Kesme | Bir donanımın CPU'ya olay bildirmesi; CPU işini bırakıp işleyiciyi çalıştırır | 00-07 |
-| Interrupt coalescing | Kesme birleştirme | NIC'in birden fazla çerçeve için tek kesme üretmesi | 00-07 |
-| IPS (intrusion prevention system) | Saldırı önleme sistemi | Trafiği imzalara göre inceleyip saldırıyı hat içinde engelleyen sistem; yalnızca uyarana IDS denir | 00-08 (ayrıntı: 14-01) |
-| ISO | ISO | Uluslararası Standardizasyon Örgütü; OSI modelini yayımladı | 00-08, 00-09 |
-| ITU-T | ITU-T | Uluslararası Telekomünikasyon Birliği'nin standart kolu (G.711, X.200) | 00-08 |
-| Kernel space / user space | Çekirdek alanı / kullanıcı alanı | İşletim sistemi çekirdeği ile uygulamaların ayrı çalıştığı bellek ve yetki alanları | 00-07 |
-| L3 switch (multilayer switch) | L3 switch | Switch işlevine ek olarak donanımda yönlendirme yapan cihaz | 00-08 (ayrıntı: 03-10) |
-| LAN (local area network) | Yerel ağ | Bir bina ya da kampüs ölçeğindeki, kurumun kendi altyapısı olan ağ | 00-08 |
-| Latency | Gecikme | Bir paketin kaynaktan hedefe varma süresi; iletim, yayılma, kuyruklama, işleme | 00-08 |
-| Layered model | Katmanlı model | İletişimi, her biri altındakinin hizmetini kullanan katmanlara bölen model | 00-09 |
-| Link layer | Bağlantı katmanı | TCP/IP modelinde OSI L1 ve L2'ye karşılık gelen katman | 00-09 |
-| Little-endian | Little-endian (önce küçük uç) | Çok baytlı değerde en az anlamlı baytın önce gelmesi (x86 belleği) | 00-06 |
-| Logic gate | Mantık kapısı | Bir Boole işlemini gerçekleştiren devre | 00-03 |
-| Logic level (VIH, VIL, VOH, VOL) | Mantık seviyesi | 1 ve 0'ın kabul edildiği gerilim aralıkları | 00-05 |
-| LSB (least significant bit) | En az anlamlı bit | Bir sayının en küçük ağırlıklı biti | 00-02 |
-| Magic number (file signature) | Dosya imzası | Bir dosya biçimini tanıtan sabit ilk baytlar (PNG: 89 50 4E 47 ...) | 00-06 |
-| MOSFET | MOSFET | Kapı gerilimiyle açılıp kapanan transistör; nMOS ve pMOS türleri | 00-05 |
-| MSB (most significant bit) | En anlamlı bit | Bir sayının en büyük ağırlıklı biti | 00-02 |
-| NAND | VE-DEĞİL | AND'in tersi; tek başına her mantık işlemini kurabilen evrensel kapı | 00-03 |
-| NAPI | NAPI | Linux'ta kesmeyle başlayıp yoklamayla süren paket işleme mekanizması | 00-07 |
-| Network | Ağ | Ortak protokollerle veri alışverişi yapan iki ya da daha fazla cihaz | 00-08 |
-| Network address | Ağ adresi | Bir alt ağda host kısmının tamamı 0 olan adres; adres AND maske | 00-03 |
-| Network byte order | Ağ bayt sırası | İnternet protokollerinde kullanılan big-endian sıra | 00-06 |
-| Network layer | Ağ katmanı | OSI L3; mantıksal adresleme ve ağlar arası yönlendirme | 00-09 (ayrıntı: 03-01) |
-| NGFW (next-generation firewall) | Yeni nesil güvenlik duvarı | Uygulama tanıma, URL filtreleme ve tümleşik IPS sunan güvenlik duvarı | 00-08 (ayrıntı: 14-01) |
-| Nibble | Nibble | 4 bit; bir onaltılık basamak | 00-02 |
-| Noise | Gürültü | Sinyale karışan istenmeyen değişim | 00-01, 00-04 |
-| Noise margin | Gürültü payı | Bir sembol seviyesi ile karar eşiği arasındaki güvenlik mesafesi | 00-01 |
-| NOT | DEĞİL | Biti tersine çeviren işlem | 00-03 |
-| NVRAM | NVRAM | Cisco'da startup-config'in tutulduğu, elektrik kesilince silinmeyen bellek | 00-05 |
-| Nyquist criterion | Nyquist koşulu | Örnekleme frekansının en yüksek sinyal frekansının iki katından büyük olması | 00-06 (ayrıntı: 01-02) |
-| Octet | Oktet | Tam olarak 8 bit; standartlarda "bayt" yerine kullanılır | 00-02 |
-| Offload | Yük boşaltma | Checksum ve segmentasyon gibi işlerin NIC'e bırakılması | 00-07 |
-| Ohm's law | Ohm yasası | V = I × R | 00-04 |
-| One's complement | Birler tümleyeni | Bitlerin tersine çevrilmesi; İnternet checksum'ı bu aritmetiği kullanır | 00-03 |
-| OR | VEYA | En az bir bit 1 ise 1 veren işlem; yayın adresinin hesabında kullanılır | 00-03 |
-| OSI model | OSI modeli | ISO/IEC 7498-1'deki yedi katmanlı başvuru modeli | 00-09 |
-| Overflow (wraparound) | Taşma | Sabit genişlikteki bir sayının sığmayan sonucu nedeniyle başa dönmesi | 00-03 |
-| Overhead | Başlık yükü | Başlıkların ve çerçeveleme alanlarının kabloda kapladığı ek yer | 00-09 |
-| Packet | Paket | L3'ün PDU'su (RFC 791'de "internet datagram") | 00-09 (ayrıntı: 03-02) |
-| Parity | Parite | Bir bit dizisindeki 1'lerin sayısının tek ya da çift olması; basit hata tespiti | 00-03 |
-| Payload | Yük | Bir başlığın taşıdığı, üst katmana ait veri | 00-09 |
-| PCM (pulse code modulation) | Darbe kod modülasyonu | Analog sesin örneklenip nicemlenerek sayısallaştırılması (G.711) | 00-06 |
-| PDU (protocol data unit) | Protokol veri birimi | Bir katmanın başlığı ile yükünün toplamı | 00-09 |
-| Peer-to-peer (P2P) | Eşler arası | Her düğümün hem istemci hem sunucu olduğu model | 00-08 (ayrıntı: 07-01) |
-| Physical layer | Fiziksel katman | OSI L1; bitleri sinyale çevirir | 00-09 (ayrıntı: 01-01) |
-| Pixel | Piksel | Raster bir görüntünün tek noktası; genellikle 24 bit RGB | 00-06 |
-| PoE (Power over Ethernet) | Ethernet üzerinden güç | Veri kablosu üzerinden DC güç verme (IEEE 802.3af/at/bt) | 00-04 |
-| Polling | Yoklama | CPU'nun bir cihazı belirli aralıklarla kontrol etmesi | 00-07 |
-| Positional notation | Konumsal gösterim | Rakamın değerinin bulunduğu konuma bağlı olduğu sayı yazımı | 00-02 |
-| Power | Güç | Birim zamanda aktarılan enerji; birimi watt (W) | 00-04 |
-| Presentation layer | Sunum katmanı | OSI L6; verinin gösterimi: kodlama, sıkıştırma, şifreleme | 00-09 (ayrıntı: 06-01) |
-| Processing delay | İşleme gecikmesi | Cihazın başlığı inceleyip karar verme süresi | 00-08 |
-| Propagation delay | Yayılma gecikmesi | Sinyalin bir kapıdan ya da bir ortamdan geçme süresi; bakır ve fiberde ≈ 5 µs/km | 00-05, 00-08 |
-| Protocol | Protokol | Bitlerin ve mesajların anlamını tanımlayan ortak kurallar | 00-01 (ayrıntı: 00-08) |
-| Quantization | Nicemleme | Bir ölçümü sonlu sayıda seviyeden en yakınına yuvarlama | 00-01 |
-| Queuing delay | Kuyruklama gecikmesi | Paketin çıkış tamponunda bekleme süresi | 00-08 (ayrıntı: 03-21) |
-| Regeneration | Yenileme | Dijital sembollerin alınıp temiz olarak yeniden üretilmesi | 00-01 |
-| Resistance | Direnç | Akıma karşı gösterilen zorluk; birimi ohm (Ω) | 00-04 |
-| RFC (Request for Comments) | RFC | IETF'in yayımladığı belge serisi; İnternet standartlarını içerir | 00-08 |
-| Ring buffer | Halka tampon | NIC ile sürücünün paylaştığı dairesel tanımlayıcı dizisi | 00-07 |
-| ROM | ROM | Üretimde yazılmış, açılış programını tutan bellek | 00-05 |
-| Router | Router (yönlendirici) | Ağlar arasında IP adresine göre paket ileten cihaz | 00-08 (ayrıntı: 03-07) |
-| RTT (round-trip time) | Gidiş-dönüş süresi | Bir paketin gidip cevabının dönmesine kadar geçen süre | 00-08 |
-| Running-config | Çalışan yapılandırma | Cisco cihazında RAM'de duran ve etkin olan yapılandırma | 00-05 |
-| Sampling | Örnekleme | Sürekli bir sinyalden belirli aralıklarla ölçüm alma | 00-01 |
-| Segment | Segment | TCP'nin PDU'su | 00-09 (ayrıntı: 04-03) |
-| Semiconductor | Yarı iletken | İletkenliği kontrol edilebilen madde (silisyum) | 00-05 |
-| Serialization delay | İletim (serileştirme) gecikmesi | Paketin bütün bitlerini hatta itme süresi: boyut / bant genişliği | 00-08 |
-| Server | Sunucu | Başka cihazlara hizmet veren host; bir donanım türü değil, bir rol | 00-08 |
-| Session layer | Oturum katmanı | OSI L5; diyaloğun kurulması, sürdürülmesi ve senkronizasyonu | 00-09 (ayrıntı: 05-01) |
-| Socket | Soket | Bir uygulamanın ağ iletişimi için açtığı uç nokta | 00-07 (ayrıntı: 04-01) |
-| SRAM (static RAM) | Statik RAM | Biti iki evirici halkasıyla tutan hızlı, uçucu bellek | 00-05 |
-| Standard | Standart | Tanınmış bir kuruluşun yayımladığı, farklı üreticilerin uyduğu protokol belgesi | 00-08 |
-| Startup-config | Başlangıç yapılandırması | Cisco cihazının açılışta yüklediği, NVRAM'de kayıtlı yapılandırma | 00-05 |
-| Switch | Switch (anahtar) | Aynı ağ içinde çerçeveleri hedef MAC adresine göre ileten L2 cihazı | 00-08 (ayrıntı: 02-06) |
-| System call | Sistem çağrısı | Bir uygulamanın çekirdekten hizmet istemesi (ör. recv, send) | 00-07 |
-| TCAM | TCAM | Bütün kayıtları paralel arayan, 0/1/X bitli özel bellek | 00-05 (ayrıntı: 02-06) |
-| TCP/IP model | TCP/IP modeli | RFC 1122'deki dört katmanlı İnternet mimarisi | 00-09 |
-| Threshold voltage | Eşik gerilimi | Bir MOSFET'in iletime geçtiği kapı gerilimi | 00-05 |
-| Throughput | Verim | Gerçekte ölçülen aktarım hızı | 00-08 |
-| Trailer | Trailer | Yükün arkasına eklenen alan; Ethernet'te FCS | 00-09 |
-| Transistor | Transistör | Gerilimle kontrol edilen elektronik anahtar | 00-05 |
-| Transport layer | Taşıma katmanı | OSI L4; süreçten sürece teslim, portlar (TCP, UDP) | 00-09 (ayrıntı: 04-01) |
-| Two's complement | İkiye tümleyen | Negatif tamsayıların gösterimi: bitleri çevir, 1 ekle | 00-03 |
-| Volatile memory | Uçucu bellek | Elektrik kesilince içeriği silinen bellek (SRAM, DRAM) | 00-05 |
-| Voltage | Gerilim | İki nokta arasındaki elektriksel potansiyel farkı; birimi volt (V) | 00-04 |
-| WAN (wide area network) | Geniş alan ağı | Şehirleri ve ülkeleri bağlayan, genellikle kiralanan ağ | 00-08 (ayrıntı: 15-01) |
-| Wildcard mask | Joker maske | Maskenin tersi; Cisco ACL ve OSPF komutlarında kullanılır | 00-03 |
-| WLAN (wireless LAN) | Kablosuz yerel ağ | IEEE 802.11 ile kurulan yerel ağ | 00-08 (ayrıntı: 02-15) |
-| WLC (wireless LAN controller) | Kablosuz LAN kontrolcüsü | Birçok AP'yi merkezden yöneten cihaz | 00-08 (ayrıntı: 02-16) |
-| XOR (exclusive OR) | Dışlayıcı VEYA | İki bit farklıysa 1 veren işlem; parite ve CRC'nin temeli | 00-03 |
+| Term | Simple definition | First lesson |
+|---|---|---|
+| Access point (AP) | A device that connects wireless clients to a network. | 00-08 |
+| AND | A Boolean operation that returns 1 only when both input bits are 1. | 00-03 |
+| Bandwidth | The maximum data-carrying capacity of a link, usually measured in bits per second. | 00-08 |
+| Base | The number of different digits used by a number system. | 00-02 |
+| Big-endian | A byte order in which the most significant byte comes first. | 00-06 |
+| Binary | A base-2 number system that uses only 0 and 1. | 00-02 |
+| Bit | A binary digit; its value is 0 or 1. | 00-02 |
+| Bitwise operation | A logical operation applied separately to each bit position. | 00-03 |
+| Buffer | A temporary memory area that holds data while it waits to be processed. | 00-07 |
+| Broadcast address | The IPv4 address used to send traffic to all hosts in a subnet. | 00-03 |
+| Byte | A group of eight bits. | 00-02 |
+| Carry | A value moved to the next binary column during addition. | 00-03 |
+| Character encoding | A rule that maps characters to numeric values and bytes. | 00-06 |
+| Client-server model | A communication model in which a client requests a service from a server. | 00-08 |
+| CRC (Cyclic Redundancy Check) | An error-detection calculation used to detect corrupted data. | 00-03 |
+| Current | The rate at which electric charge flows; measured in amperes. | 00-04 |
+| Data Link layer | OSI Layer 2; handles local-link delivery, frames, and MAC addresses. | 00-09 |
+| Decapsulation | Reading and removing protocol information as data moves up the layers at the receiver. | 00-09 |
+| Decimal | A base-10 number system using digits 0 through 9. | 00-02 |
+| Default gateway | The router or Layer 3 device a host uses for destinations outside its local network. | 00-08 |
+| Differential signaling | A signaling method that uses the voltage difference between two wires. | 00-04 |
+| DMA (Direct Memory Access) | A method that lets hardware transfer data to or from RAM without the CPU copying every byte. | 00-07 |
+| Driver | Software that allows an operating system to control a hardware device. | 00-07 |
+| Encapsulation | Adding protocol information as data moves down the layers before transmission. | 00-09 |
+| End device (host) | A device that sends or receives user data on a network. | 00-08 |
+| Endianness | The order in which the bytes of a multi-byte value are stored or sent. | 00-06 |
+| Ethernet | A family of wired LAN technologies standardized by IEEE 802.3. | 00-08 |
+| EtherType | An Ethernet frame field that identifies the payload protocol, such as IPv4 or IPv6. | 00-09 |
+| Firewall | A security device or function that allows or blocks traffic according to rules. | 00-08 |
+| Flash memory | Non-volatile memory commonly used to store IOS images and files. | 00-05 |
+| Frame | The data unit used at the Data Link layer. | 00-09 |
+| Hexadecimal | A base-16 number system that uses 0–9 and A–F. | 00-02 |
+| Host | An endpoint device or an individual networked computer. | 00-03 |
+| IANA | The organization that coordinates Internet protocol numbers, port registries, and other identifiers. | 00-08 |
+| IEEE | The standards organization responsible for Ethernet and Wi-Fi specifications, among others. | 00-08 |
+| IETF | The standards community that develops Internet protocols and publishes RFCs. | 00-08 |
+| Interrupt | A signal that asks the CPU to handle a hardware or software event. | 00-07 |
+| IP address | A logical address used to identify a source or destination in an IP network. | 00-08 |
+| IPS (Intrusion Prevention System) | A security system that detects and can block suspicious traffic. | 00-08 |
+| ISO | The International Organization for Standardization; it published the OSI reference model. | 00-08 |
+| Jitter | Variation in packet delay. | 00-08 |
+| LAN (Local Area Network) | A network covering a limited geographic area, such as a home or office. | 00-08 |
+| Latency | The time it takes data to travel from one point to another. | 00-08 |
+| Layer 2 switch | A device that forwards Ethernet frames using MAC addresses. | 00-08 |
+| Layer 3 switch | A switch that can also route traffic between IP networks. | 00-08 |
+| Little-endian | A byte order in which the least significant byte comes first. | 00-06 |
+| MAC address | A link-layer address used to identify a network interface on a local link. | 00-02 |
+| Mbps | Megabits per second; a data-rate unit using bits. | 00-02 |
+| MB/s | Megabytes per second; a data-rate unit using bytes. | 00-02 |
+| Network | A group of connected devices that can exchange data or share resources. | 00-08 |
+| Network byte order | Big-endian order used for multi-byte numeric fields in Internet protocols. | 00-06 |
+| Network driver | Software that allows the operating system to communicate with a network adapter. | 00-07 |
+| Network stack | The operating system components that implement networking protocols. | 00-07 |
+| NIC (Network Interface Card/Controller) | Hardware that connects a computer to a network. | 00-07 |
+| NOT | A Boolean operation that reverses a bit: 0 becomes 1 and 1 becomes 0. | 00-03 |
+| NVRAM | Non-volatile memory used by many Cisco devices to store startup configuration. | 00-05 |
+| Octet | A group of exactly eight bits. | 00-02 |
+| OR | A Boolean operation that returns 1 when at least one input bit is 1. | 00-03 |
+| Overflow | A result that requires more bits than a fixed-size field can store. | 00-03 |
+| Packet | The data unit commonly used at the Network layer. | 00-09 |
+| Packet loss | The failure of packets to reach their destination. | 00-08 |
+| Parity bit | An extra bit used to help detect some data errors. | 00-03 |
+| PoE (Power over Ethernet) | A technology that supplies electrical power and data over Ethernet cabling. | 00-04 |
+| Port number | A 16-bit number used by TCP or UDP to identify an application endpoint. | 00-06 |
+| Propagation delay | Time for a signal to travel through a physical medium. | 00-08 |
+| Protocol | A set of rules that devices follow to communicate. | 00-08 |
+| Protocol Data Unit (PDU) | The name given to the data handled at a particular network layer. | 00-09 |
+| RAM (Random Access Memory) | Volatile working memory used by a computer or network device. | 00-05 |
+| Resistance | How strongly a material opposes electric current; measured in ohms. | 00-04 |
+| ROM (Read-Only Memory) | Non-volatile memory used for essential startup instructions. | 00-05 |
+| Router | A device that forwards packets between IP networks. | 00-08 |
+| Running configuration | The configuration currently active on a Cisco device. | 00-05 |
+| Server | A device or application that provides a service to clients. | 00-08 |
+| Socket | A software communication endpoint used by an application. | 00-07 |
+| Standard | An agreed technical specification that helps different products work together. | 00-08 |
+| Startup configuration | The saved Cisco configuration loaded when a device starts. | 00-05 |
+| Subnet mask | A value that identifies the network and host portions of an IPv4 address. | 00-03 |
+| Throughput | The actual rate of successful data delivery. | 00-08 |
+| Transistor | An electronic component that can control current and act as a switch. | 00-05 |
+| Transport layer | OSI Layer 4; provides communication between applications on different hosts. | 00-09 |
+| TTL (Time to Live) | An IPv4 field decreased by routers to prevent packets circulating forever. | 00-08 |
+| UTF-8 | A widely used character encoding that can represent many writing systems. | 00-06 |
+| VLAN (Virtual Local Area Network) | A logical way to divide a switched network into separate Layer 2 networks. | 00-09 |
+| Voltage | Electrical potential difference between two points; measured in volts. | 00-04 |
+| WAN (Wide Area Network) | A network connecting locations over a large geographic area. | 00-08 |
+| Wildcard mask | A mask used by Cisco features to specify which address bits must be checked or ignored. | 00-03 |
+| WLAN (Wireless Local Area Network) | A LAN that uses wireless communication, usually Wi-Fi. | 00-08 |
+| XOR (Exclusive OR) | A Boolean operation that returns 1 when its input bits are different. | 00-03 |
