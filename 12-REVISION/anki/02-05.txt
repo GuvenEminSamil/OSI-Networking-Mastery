@@ -1,0 +1,9 @@
+#separator:tab
+#html:false
+What does CSMA/CD stand for?	Carrier Sense Multiple Access with Collision Detection. (02-05)
+What is a collision domain?	A shared half-duplex network segment where simultaneous transmissions can collide. (02-05)
+What is the purpose of a jam signal?	It makes sure other devices on the shared segment recognize a collision. (02-05)
+Why do devices use backoff after a collision?	They wait for different random periods to reduce repeated collisions. (02-05)
+Can half-duplex send and receive simultaneously?	No. (02-05)
+Why does full-duplex switched Ethernet not use CSMA/CD?	Each point-to-point link can send and receive simultaneously and does not share a collision medium. (02-05)
+What does CSMA/CA stand for?	Carrier Sense Multiple Access with Collision Avoidance. (02-05)
