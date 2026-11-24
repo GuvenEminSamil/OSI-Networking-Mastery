@@ -92,3 +92,29 @@
 | Wildcard mask | A mask used by Cisco features to specify which address bits must be checked or ignored. | 00-03 |
 | WLAN (Wireless Local Area Network) | A LAN that uses wireless communication, usually Wi-Fi. | 00-08 |
 | XOR (Exclusive OR) | A Boolean operation that returns 1 when its input bits are different. | 00-03 |
+
+| Aliasing | A sampling error in which high-frequency components appear as incorrect lower frequencies. | 01-02 |
+| Analog signal | A signal that can take a continuous range of values over time. | 01-02 |
+| Amplitude | The size or strength of a signal. | 01-02 |
+| Band-limited signal | A signal whose frequency content is restricted to a defined range. | 01-02 |
+| Bit stream | An ordered sequence of bits. | 01-01 |
+| Cycle | One complete repetition of a waveform. | 01-02 |
+| Data rate | The number of bits transmitted per second, usually measured in bps. | 01-01 |
+| Digital signal | A signal that represents information using a limited set of distinct symbols or levels. | 01-02 |
+| Fourier analysis | A way to understand a complex waveform as a combination of simpler frequency components. | 01-02 |
+| Frequency | The number of complete cycles per second; measured in hertz. | 01-02 |
+| MII (Media Independent Interface) | A family of internal interfaces used for communication between Ethernet MAC and PHY functions. | 01-01 |
+| Medium | The material or space through which a signal travels, such as copper, fiber, or air. | 01-01 |
+| MAC (Media Access Control) | The Data Link sublayer function that handles Ethernet frame and link-access tasks. | 01-01 |
+| Nyquist sampling criterion | In an ideal system, the sampling rate must be at least twice the highest frequency in a band-limited signal. | 01-02 |
+| Phase | The position of a waveform in its cycle relative to a reference. | 01-02 |
+| Period | The time required for one complete signal cycle; T = 1/f. | 01-02 |
+| PHY (Physical Layer transceiver) | The function that sends and receives physical signals carrying bits. | 01-01 |
+| Physical layer | OSI Layer 1; it carries bits as electrical, optical, or radio signals. | 01-01 |
+| Sampling | Measuring a changing signal at regular time intervals. | 01-02 |
+| Shannon capacity | A theoretical upper limit for data rate based on channel bandwidth and signal-to-noise ratio. | 01-02 |
+| Signal | A physical change that carries information from one place to another. | 01-02 |
+| Signal bandwidth | The range of frequencies occupied by a signal or allowed by a channel, measured in hertz. | 01-02 |
+| Sine wave | A smooth, repeating waveform used as a basic signal model. | 01-02 |
+| SNR (Signal-to-Noise Ratio) | A comparison between wanted signal power and noise power. | 01-02 |
+| Transceiver | A component that can both transmit and receive signals. | 01-01 |
