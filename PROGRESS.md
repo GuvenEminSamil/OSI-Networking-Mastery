@@ -2,8 +2,8 @@
 
 > **ACTIVE STUDY STANDARD (2026-11-24):** The user approved the redesigned English-first teaching format. The target remains CCNA 200-301 v1.1; the curriculum scope is unchanged. The last completed lesson remains `00-02`. The existing `00-02` through `00-09` lessons have been rewritten in clear, beginner-friendly English, and Physical Layer lessons `01-01` through `01-04` have been created. This redesign does not record any new lesson completion. Use the revised 00-02 as a quick refresh if helpful, then continue with 00-03. No fixed calendar, daily hour target, mandatory Anki routine, or daily log is required. The older dated production plan below is historical only.
 > **Last update:** 2026-11-24
-> **Project status:** The Foundations module has nine lesson files. Lessons 00-02 through 00-09 have been rewritten in English; 00-01 remains the previously completed original lesson. All ten Physical Layer lessons 01-01 through 01-10 are published. Data Link lessons 02-01 through 02-03 are published; next content-production item is 02-04.
-> **Active study step:** Review the revised 00-02 briefly if useful, then continue with 00-03 through 00-09, followed by the Physical Layer lessons in order. Physical Layer content production is complete; Data Link 02-01 through 02-03 are published, and next is 02-04.
+> **Project status:** The Foundations module has nine lesson files. Lessons 00-02 through 00-09 have been rewritten in English; 00-01 remains the previously completed original lesson. All ten Physical Layer lessons 01-01 through 01-10 are published. Data Link lessons 02-01 through 02-04 are published; next content-production item is 02-05.
+> **Active study step:** Review the revised 00-02 briefly if useful, then continue with 00-03 through 00-09, followed by the Physical Layer lessons in order. Physical Layer content production is complete; Data Link 02-01 through 02-04 are published, and next is 02-05.
 
 Bu dosya iki şeyi takip eder: (A) içeriğin üretim durumu ve (B) öğrencinin ustalık durumu. Dosya listesi CURRICULUM.md'dedir; burada yalnızca sayılar, tamamlanan dosyalar, takvim ve sorunlar tutulur.
 
@@ -28,7 +28,7 @@ Durumlar: **Yazıldı** = dosya oluşturuldu. **Doğrulandı** = hesaplar, kimli
 |---|---|---|---|---|
 | 00-FOUNDATIONS | 9 | 9 | 1* | Written: 9; 00-02–00-09 rewritten in English; formal audit pending |
 | 01-PHYSICAL-LAYER | 10 | 10 | 0 | 02-01 |
-| 02-DATA-LINK-LAYER | 16 | 3 | 0 | 02-04 |
+| 02-DATA-LINK-LAYER | 16 | 4 | 0 | 02-05 |
 | 03-NETWORK-LAYER | 21 | 0 | 0 | 03-01 |
 | 04-TRANSPORT-LAYER | 7 | 0 | 0 | 04-01 |
 | 05-SESSION-LAYER | 2 | 0 | 0 | 05-01 |
@@ -40,7 +40,7 @@ Durumlar: **Yazıldı** = dosya oluşturuldu. **Doğrulandı** = hesaplar, kimli
 | 13-CCNA-EXAM-PREPARATION | 4 | 0 | 0 | 13-01 |
 | 14-SECURITY-FUNDAMENTALS | 6 | 0 | 0 | 14-01 |
 | 15-NETWORK-OPERATIONS-AUTOMATION-AI | 6 | 0 | 0 | 15-01 |
-| **Total** | **116** | **24** | **3** | |
+| **Total** | **116** | **25** | **3** | |
 
 ### A.3 Pratikler ve değerlendirme
 
@@ -210,3 +210,5 @@ Henüz yok. Bir komut PT'de çalışmazsa ya da bir açıklamada hata bulursan b
 | 2026-11-24 | Published 02-02 MAC Addresses and NICs; added English review cards, glossary terms, and references to IEEE/RFC material. Learner completion remains 00-02. |
 
 | 2026-11-24 | Published 02-03 Ethernet Frame Structure; added review cards, glossary definitions, and Cisco frame-format references. Learner completion unchanged. |
+
+| 2026-11-24 | Published 02-04 Error Detection: FCS and CRC; added English review cards and glossary terms. Learner completion remains unchanged at 00-02. |
