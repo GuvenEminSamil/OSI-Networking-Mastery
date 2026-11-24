@@ -1,279 +1,242 @@
-# 00-02 Sayı Sistemleri ve Birimler (Number Systems and Units)
+# 00-02 — Number Systems and Units
 
-> Önkoşullar: 00-01 | Tahmini süre: ~2 saat | CCNA: v1.1 1.6, 1.8, 1.9 (altyapı)
+> **Prerequisite:** 00-01 — Information and Data  
+> **CCNA 200-301 v1.1 connection:** Foundations for IPv4 subnetting and IPv6 address representation.  
+> **Suggested study time:** Flexible. Take breaks whenever you need them.
 
-## Öğrenme Hedefleri
+## What You Will Learn
 
-- Konumsal sayı sistemini (positional notation) kullanarak onluk, ikili ve onaltılık sayıları yorumlamak.
-- 8 bitlik bir değeri bu üç sistem arasında 30 saniyede çevirmek.
-- Ağda onaltılığın neden yaygın olduğunu açıklamak.
-- Bit, nibble, bayt ve oktet terimlerini doğru kullanmak.
-- SI ve IEC öneklerini ayırt etmek; Mbps ile MB/s arasında dönüşüm yapmak.
+By the end of this lesson, you should be able to:
 
-## 1. Sezgisel Giriş
+- Explain decimal, binary, and hexadecimal numbers.
+- Convert an 8-bit binary value to decimal and hexadecimal.
+- Explain bits, bytes, and octets.
+- Understand why network addresses often use hexadecimal.
+- Convert between Mbps and MB/s.
 
-"2026" yazdığında aslında şunu söylüyorsun: 2 tane bin, 0 tane yüz, 2 tane on, 6 tane bir. Her rakamın değeri **bulunduğu konuma** bağlıdır. Bu fikir, yalnızca 10 tabanına özgü değildir. Taban 2 olursa her konum bir öncekinin iki katı değerindedir; taban 16 olursa on altı katı. Bilgisayarlar ve ağlar bu üç sistemi (10, 2, 16) birlikte kullanır. Bir ağ mühendisi aralarında akıcı biçimde geçiş yapabilmelidir; subnetting, IPv6 ve MAC adresleri bunu gerektirir.
+## 1. Why Do We Need Different Number Systems?
 
-## 2. Neden Var?
+A **number system** is a way to write and represent numbers.
 
-- **İkili (binary)**, donanımın doğal dilidir: Her bit iki durumdan birine karşılık gelir (00-01, 00-05).
-- **Onluk (decimal)**, insanların doğal dilidir. IPv4 adreslerini `192.168.1.10` biçiminde yazmamız bu yüzdendir.
-- **Onaltılık (hexadecimal, hex)**, ikisi arasında bir köprüdür. Bir onaltılık basamak tam olarak 4 bite karşılık gelir; bu sayede uzun bit dizileri kısa ve hatasız yazılabilir. 48 bitlik bir MAC adresi ikili olarak 48 karakter tutarken onaltılık olarak yalnızca 12 karakterdir.
+The number system you use every day is called **decimal**. Computers use two-state electronic circuits, so digital information is commonly represented using **binary**. Network engineers also use **hexadecimal** because it makes long binary values shorter and easier to read.
 
-## 3. Mekanizma: Konumsal gösterim
+The important idea is simple: the value does not change when we write it in a different number system. Only its representation changes.
 
-Taban (base, radix) b olan bir sistemde bir sayının değeri, her basamağın kendi konum ağırlığıyla çarpılıp toplanmasıdır:
+## 2. Decimal, Binary, and Hexadecimal
 
-> değer = dₙ·bⁿ + … + d₂·b² + d₁·b¹ + d₀·b⁰
+### Decimal — Base 10
 
-| Sistem | Taban | Basamaklar | Konum ağırlıkları (sağdan sola) | Yazım örneği |
-|---|---|---|---|---|
-| Onluk | 10 | 0–9 | 1, 10, 100, 1000 … | 2026 |
-| İkili | 2 | 0, 1 | 1, 2, 4, 8, 16 … | `0b1011` ya da 1011₂ |
-| Onaltılık | 16 | 0–9, A–F (A=10 … F=15) | 1, 16, 256, 4096 … | `0x7E4` ya da 7E4₁₆ |
+**Base** tells us how many different digits a number system uses.
 
-Örnek: 1011₂ = 1·8 + 0·4 + 1·2 + 1·1 = **11**.
-Örnek: 0x7E4 = 7·256 + 14·16 + 4·1 = 1792 + 224 + 4 = **2020**.
+Decimal has base 10 and uses these ten digits:
 
-**Not:** `0x` öneki onaltılığı, `0b` öneki ikiliyi belirtir. Bu önekler programlama dillerinden gelir ve ağ belgelerinde de yaygındır. `0x0800` ile `800` aynı sayı değildir: 0x0800 = 8·256 = **2048**.
+`0, 1, 2, 3, 4, 5, 6, 7, 8, 9`
 
-## 4. Teknik Ayrıntı
+For example, the number `352` means:
 
-### 4.1 Ağ mühendisinin tablosu: 8 bitlik ağırlıklar
+- 3 hundreds
+- 5 tens
+- 2 ones
 
-Bir baytın (8 bit) konum ağırlıklarını ezbere bilmek, subnetting'in yarısıdır:
+Each digit's value depends on its position. This is called **place value**.
 
-| Bit konumu | 7 | 6 | 5 | 4 | 3 | 2 | 1 | 0 |
-|---|---|---|---|---|---|---|---|---|
-| Ağırlık | 128 | 64 | 32 | 16 | 8 | 4 | 2 | 1 |
+### Binary — Base 2
 
-En soldaki bite **en anlamlı bit (MSB, Most Significant Bit)**, en sağdakine **en az anlamlı bit (LSB, Least Significant Bit)** denir. Sekiz bitin hepsi 1 olduğunda değer 128 + 64 + … + 1 = **255** olur. Bir IPv4 adresinin her bölümünün 0–255 aralığında olmasının nedeni budur: Her bölüm bir bayttır.
+Binary uses only two digits: `0` and `1`.
 
-### 4.2 İkiliden onluğa
+A **bit** (short for *binary digit*) is one binary value. A bit can be either 0 or 1.
 
-1'lerin bulunduğu konumların ağırlıklarını topla.
+In binary, place values grow by powers of two from right to left:
 
-```
-  1  1  0  0  0  0  0  0      ikili: 11000000
-128 64 32 16  8  4  2  1
-128+64                    = 192
-```
+| Place | 128 | 64 | 32 | 16 | 8 | 4 | 2 | 1 |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|
 
-### 4.3 Onluktan ikiliye: çıkarma yöntemi
+Let's convert `1011` to decimal:
 
-Ağ dünyasında en hızlı yöntem budur. Soldan başla; ağırlık kalan değere sığıyorsa o konuma 1 yaz ve ağırlığı çıkar, sığmıyorsa 0 yaz.
+| Binary digit | 1 | 0 | 1 | 1 |
+|---|---:|---:|---:|---:|
+| Place value | 8 | 4 | 2 | 1 |
+| Contribution | 8 | 0 | 2 | 1 |
 
-Örnek: **200**
+Add the contributions:
 
-| Ağırlık | 128 | 64 | 32 | 16 | 8 | 4 | 2 | 1 |
-|---|---|---|---|---|---|---|---|---|
-| Kalan | 200 → 72 | 72 → 8 | 8 | 8 | 8 → 0 | 0 | 0 | 0 |
-| Bit | 1 | 1 | 0 | 0 | 1 | 0 | 0 | 0 |
+[
+8+0+2+1=11
+]
 
-Sonuç: 200 = **11001000**₂. Kontrol: 128 + 64 + 8 = 200 ✓
+Therefore:
 
-Alternatif olarak **ikiye bölme yöntemi** de kullanılabilir: Sayıyı tekrar tekrar 2'ye böl, kalanları alttan üste oku. Uzun sayılarda işe yarar ama baytlar için çıkarma yöntemi daha hızlıdır.
+[
+1011_2=11_{10}
+]
 
-### 4.4 İkili ve onaltılık arasında: nibble yöntemi
+The small number after a value tells us its base: 2 means binary and 10 means decimal.
 
-Dört bitlik gruba **nibble** denir. Bir nibble 0–15 arası değer alır; bu da tam olarak bir onaltılık basamaktır. Bu yüzden dönüşüm için hesap yapmana gerek yoktur; yalnızca 4 bitlik grupları eşlersin:
+### Hexadecimal — Base 16
 
-| Onaltılık | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | A | B | C | D | E | F |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| İkili | 0000 | 0001 | 0010 | 0011 | 0100 | 0101 | 0110 | 0111 | 1000 | 1001 | 1010 | 1011 | 1100 | 1101 | 1110 | 1111 |
+**Hexadecimal** (often shortened to *hex*) uses sixteen symbols:
 
-Örnek: `11001000` → `1100 1000` → `C 8` → **0xC8** (= 200).
-Örnek: `0x2F` → `0010 1111` → **00101111**₂ (= 47).
+`0–9` and `A–F`
 
-Onaltılıktan onluğa geçmek için ya doğrudan konum ağırlıklarını (16'nın kuvvetleri) kullan ya da önce ikiliye, sonra onluğa çevir.
+The letters represent values that decimal writes using two digits:
 
-### 4.5 2'nin kuvvetleri
+| Hex digit | Decimal value |
+|---|---:|
+| A | 10 |
+| B | 11 |
+| C | 12 |
+| D | 13 |
+| E | 14 |
+| F | 15 |
 
-Bu değerler ağ mühendisliğinde sürekli karşına çıkar. İlk satırı ezberle; ikinciyi tanı.
+One hexadecimal digit represents exactly four bits. A group of four bits is called a **nibble**.
 
-| n | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| 2ⁿ | 1 | 2 | 4 | 8 | 16 | 32 | 64 | 128 | 256 | 512 | 1024 | 2048 | 4096 | 8192 | 16384 | 32768 | 65536 |
+Examples:
 
-| n | 2ⁿ | Nerede karşına çıkacak |
-|---|---|---|
-| 16 | 65.536 | Port numarası sayısı (0–65535), 04-01 |
-| 24 | 16.777.216 | Bir /8 ağındaki adres sayısı; MAC adresinde OUI'den sonraki adres alanı |
-| 32 | 4.294.967.296 | Tüm IPv4 adres alanı |
-| 48 | ≈ 2,8 × 10¹⁴ | Tüm MAC adres alanı |
-| 128 | ≈ 3,4 × 10³⁸ | Tüm IPv6 adres alanı |
+- Binary `1010` = hexadecimal `A`
+- Binary `1100` = hexadecimal `C`
+- Binary `1010 1100` = hexadecimal `AC`
 
-### 4.6 Maskelerde kullanılan sekiz değer
+So:
 
-Bir alt ağ maskesinin baytları soldan doldurulan 1'lerden oluşur. Bu yüzden bir maske baytı yalnızca dokuz değerden biri olabilir. 0'ı ve sekiz değeri ezberle; Faz 4'te hayatını kolaylaştıracak:
+[
+10101100_2=AC_{16}
+]
 
-| İkili | 10000000 | 11000000 | 11100000 | 11110000 | 11111000 | 11111100 | 11111110 | 11111111 |
-|---|---|---|---|---|---|---|---|---|
-| Onluk | 128 | 192 | 224 | 240 | 248 | 252 | 254 | 255 |
+Hexadecimal is useful because it makes long binary values easier to read. For example, a **MAC address** (Media Access Control address) identifies a network interface on a local network link. It is normally written in hexadecimal.
 
-Her adımda bir önceki değere bir sonraki ağırlık eklenir: 128 + 64 = 192, 192 + 32 = 224, …
+## 3. Bits, Bytes, and Octets
 
-### 4.7 Bit, nibble, bayt, oktet
+A **byte** is a group of eight bits:
 
-| Terim | Boyut | Not |
-|---|---|---|
-| bit | 1 bit | Bilginin temel birimi (00-01). Kısaltması küçük **b** |
-| nibble | 4 bit | Bir onaltılık basamak |
-| bayt (byte) | 8 bit | Kısaltması büyük **B** |
-| oktet (octet) | tam olarak 8 bit | RFC'ler ve ağ standartları "byte" yerine bunu kullanır |
+[
+1 byte=8 bits
+]
 
-Neden "oktet"? Bilgisayar tarihinin ilk dönemlerinde bayt her zaman 8 bit değildi; bazı makinelerde 6 ya da 9 bitlik baytlar vardı. İnternet standartları belirsizliği önlemek için "tam 8 bit" anlamına gelen oktet terimini seçti. Bugün pratikte ikisi aynı anlama gelir.
+An **octet** is a group of exactly eight bits. Networking standards often use the word *octet* when they need to be precise about the size.
 
-### 4.8 Birimler: SI ve IEC önekleri
+An **IPv4 address** (Internet Protocol version 4 address) identifies an interface on an IP network. It is written as four decimal numbers separated by dots.
 
-İki ayrı önek sistemi vardır ve karıştırılmaları yaygın hatalara yol açar:
+Example:
 
-| SI (ondalık) | Değer | IEC (ikili) | Değer |
-|---|---|---|---|
-| k (kilo) | 10³ = 1.000 | Ki (kibi) | 2¹⁰ = 1.024 |
-| M (mega) | 10⁶ | Mi (mebi) | 2²⁰ = 1.048.576 |
-| G (giga) | 10⁹ | Gi (gibi) | 2³⁰ = 1.073.741.824 |
-| T (tera) | 10¹² | Ti (tebi) | 2⁴⁰ |
+`192.168.1.10`
 
-IEC önekleri, IEC 80000-13 standardında tanımlıdır [STD-IEC80000].
+It contains four octets:
 
-Ağda kural basittir: **Bağlantı hızları her zaman ondalık SI birimleri ve bit cinsindendir.** 1 Gbps = 10⁹ bit/saniye. "Gigabit Ethernet" tam olarak saniyede bir milyar bit demektir.
+`192` · `168` · `1` · `10`
 
-Bellek boyutları ise genellikle ikili önekleri kullanır. Depolama üreticileri ondalık birim kullanırken bazı işletim sistemleri ikili hesaplayıp "GB" etiketiyle gösterir. Bu yüzden 1 TB'lık bir disk Windows'ta yaklaşık "931 GB" görünür: 10¹² / 2³⁰ ≈ 931.
+Each octet contains eight bits, so its decimal value can range from 0 to 255.
 
-### 4.9 Mbps ile MB/s
+## 4. Network Speeds: Mbps and MB/s
 
-1 bayt = 8 bit olduğundan:
+These two units look similar, but they measure different things:
 
-> MB/s = Mbps ÷ 8
+- **Mbps** means *megabits per second*. The lowercase `b` means bits.
+- **MB/s** means *megabytes per second*. The uppercase `B` means bytes.
 
-| Bağlantı | Ham kapasite (bayt) |
+Because one byte contains eight bits, divide Mbps by eight to find its theoretical equivalent in MB/s.
+
+Example:
+
+[
+100 Mbpsdiv 8=12.5 MB/s
+]
+
+A 100 Mbps connection can therefore carry at most about 12.5 MB of data per second before accounting for communication overhead.
+
+**Overhead** is extra data used to manage communication, such as packet headers. Because of overhead and other real-world limits, an actual download is usually slower than the theoretical value.
+
+## 5. Decimal and Binary Size Prefixes
+
+You may see two ways to describe storage sizes:
+
+| Decimal prefix | Meaning | Binary prefix | Meaning |
+|---|---:|---|---:|
+| 1 kB | 1,000 bytes | 1 KiB | 1,024 bytes |
+| 1 MB | 1,000,000 bytes | 1 MiB | 1,048,576 bytes |
+| 1 GB | 1,000,000,000 bytes | 1 GiB | 1,073,741,824 bytes |
+
+**SI prefixes** (kilo, mega, giga) use powers of 1,000. **IEC prefixes** (kibi, mebi, gibi) use powers of 1,024.
+
+For network link speeds, decimal units are standard. A 1 Gbps link means one billion bits per second.
+
+## 6. A Practical Example
+
+Your internet plan is 100 Mbps. A file is downloading at 11.8 MB/s.
+
+Is the connection necessarily faulty?
+
+No. First convert the advertised connection speed:
+
+[
+100div 8=12.5 MB/s
+]
+
+The theoretical limit is about 12.5 MB/s. An observed speed of 11.8 MB/s can be reasonable after overhead and other limits.
+
+## 7. Common Mistakes
+
+| Mistake | Correct idea |
 |---|---|
-| 100 Mbps | 12,5 MB/s |
-| 1 Gbps | 125 MB/s |
-| 10 Gbps | 1,25 GB/s |
+| `b` and `B` mean the same thing. | `b` is bit; `B` is byte. |
+| Hexadecimal changes the actual value. | It changes only how the value is written. |
+| One IPv4 octet can be larger than 255. | An octet has 8 bits, so its maximum value is 255. |
+| 100 Mbps means 100 MB/s. | 100 Mbps is theoretically 12.5 MB/s before overhead. |
 
-Gerçek dosya aktarım hızı bundan daha düşüktür, çünkü her çerçeve ve paket başlık taşır (protokol ek yükü, 08-01), TCP'nin kendi davranışları vardır (04-05) ve yol üzerindeki en yavaş bağlantı hızı belirler.
+## 8. Knowledge Check
 
-> **[DERİN]** Bitlerin kabloya hangi sırayla gönderildiği de bir anlaşmadır. IEEE 802.3 Ethernet, her okteti **en az anlamlı biti önce** olacak şekilde gönderir [IEEE-8023]. Bir MAC adresinin multicast olup olmadığını belirten bit, ilk oktetin en az anlamlı bitidir; dolayısıyla kabloya çıkan ilk adres bitidir. Bu tasarım, alıcının adresin multicast olduğunu ilk bitte anlamasını sağlar (02-02).
+Try each question before opening its answer.
 
-## 5. Gerçek Dünya Örnekleri
+1. Which digits does binary use?
+   <details><summary>Answer</summary>Only `0` and `1`.</details>
 
-- **MAC adresleri** 48 bittir ve onaltılık yazılır. Aynı adres farklı araçlarda farklı biçimlerde görünür:
+2. What is the decimal value of binary `1011`?
+   <details><summary>Answer</summary>8 + 2 + 1 = **11**.</details>
 
-  | Araç | Biçim |
-  |---|---|
-  | Windows (`ipconfig /all`) | `00-1A-2B-3C-4D-5E` |
-  | Linux (`ip link`) | `00:1a:2b:3c:4d:5e` |
-  | Cisco IOS | `001a.2b3c.4d5e` |
+3. What is the decimal value of hexadecimal `A`?
+   <details><summary>Answer</summary>**10**.</details>
 
-- **EtherType:** Ethernet çerçevesindeki `0x0800` değeri yükün IPv4, `0x86DD` değeri IPv6, `0x0806` değeri ARP olduğunu söyler (02-03).
-- **IPv6 adresleri** 128 bittir ve 16 bitlik 8 grup halinde onaltılık yazılır: `2001:0db8:0000:0000:0000:0000:0000:0001`. Kısaltma kuralları 03-16'da.
-- **İnternet paketin:** Evindeki "100 Mbps" bağlantıda bir oyunun 50 GB'lık güncellemesi en iyi durumda 50 × 8 / 100 = 4000 saniye, yani yaklaşık 67 dakika sürer. Bu hesabı yaparken baytı bite çevirmeyi unutmak, sonucu sekiz kat yanlış bulmak demektir.
+4. How many bits are in one byte?
+   <details><summary>Answer</summary>**8 bits**.</details>
 
-## 6. Diğer Konularla Bağlantı
+5. What is the maximum decimal value of one octet?
+   <details><summary>Answer</summary>**255**, because 11111111 in binary equals 255.</details>
 
-| Bu dosyadaki fikir | Nerede kullanılıyor |
-|---|---|
-| 8 bitlik ağırlıklar ve maske değerleri | 03-03, 03-04, 03-05 |
-| Onaltılık ve nibble | 02-02 (MAC), 02-03 (EtherType), 03-16 (IPv6) |
-| 2'nin kuvvetleri | 03-04 (host sayısı), 04-01 (port aralığı) |
-| Bit/bayt ve SI birimleri | 01-09 (Ethernet hızları), 04-05 (pencere ve BDP) |
-| Bit gönderim sırası | 02-02 |
+6. Convert binary `11001000` to decimal.
+   <details><summary>Answer</summary>128 + 64 + 8 = **200**.</details>
 
-## 7. Cisco ve Pratik
+7. What is 128 + 32 + 8?
+   <details><summary>Answer</summary>**168**. (This question's answer key has been checked.)</details>
 
-Cisco cihazlarında bu sistemlerin hepsiyle karşılaşırsın:
+8. A connection is 100 Mbps. What is its theoretical equivalent in MB/s?
+   <details><summary>Answer</summary>100 ÷ 8 = **12.5 MB/s**.</details>
 
-```
-Router# show interfaces GigabitEthernet0/0
-GigabitEthernet0/0 is up, line protocol is up
-  Hardware is ..., address is 001a.2b3c.4d5e (bia 001a.2b3c.4d5e)
-  ...
-  MTU 1500 bytes, BW 1000000 Kbit/sec, DLY 10 usec,
-```
+## 9. Practice
 
-(Çıktının biçimi gerçek, değerler örnektir.) Burada MAC adresi onaltılık, MTU bayt, bant genişliği (BW) kilobit/saniye cinsindendir: 1.000.000 Kbit/sec = 1 Gbps.
+Write down five decimal values between 0 and 255. Convert each value to 8-bit binary. Then group the binary digits into two nibbles and convert them to hexadecimal.
 
-Programlama tarafında, Python bu dönüşümleri doğrudan yapar. Kendi cevaplarını kontrol etmek için kullanabilirsin:
+You can check your work with Python:
 
 ```python
-bin(200)           # '0b11001000'
-hex(200)           # '0xc8'
-int('11001000', 2) # 200
-int('0x0800', 16)  # 2048
-format(10, '08b')  # '00001010'  (8 haneye tamamlanmış ikili)
+bin(200)            # '0b11001000'
+hex(200)            # '0xc8'
+int('11001000', 2)  # 200
 ```
 
-## 8. Yaygın Yanılgılar
+## 10. CCNA Takeaways
 
-| Yanılgı | Doğrusu |
-|---|---|
-| "1 Gbps bağlantıyla 1 GB'lık dosya 1 saniyede iner." | 1 GB = 8 gigabit. En iyi durumda 8 saniye, protokol ek yüküyle daha uzun. |
-| "0x0800 sekiz yüz demektir." | Onaltılık 0800 = 8·256 = 2048. |
-| "Onaltılık başka türde bir sayıdır." | Sayı aynıdır; yalnızca yazılış biçimi farklıdır. 200, 11001000₂ ve 0xC8 aynı değerdir. |
-| "1 KB her zaman 1024 bayttır." | SI'da 1 kB = 1000 bayt, IEC'de 1 KiB = 1024 bayt. Ağ hızlarında her zaman ondalık birimler kullanılır. |
-| "Bayt ile oktet farklı boyutlardır." | Bugün ikisi de 8 bittir. Standartların "oktet" demesinin nedeni tarihsel belirsizliği önlemektir. |
+- Binary uses 0 and 1; hexadecimal uses 0–9 and A–F.
+- One hexadecimal digit represents four bits.
+- One byte and one octet contain eight bits.
+- One IPv4 address contains four 8-bit octets.
+- Remember the difference between Mbps and MB/s.
 
-## 9. Arıza Giderme Yaklaşımı
+## Self-Check
 
-Sayı sistemi hataları gerçek arızalara yol açar. Sık görülen iki örnek:
+- [ ] I can explain decimal, binary, and hexadecimal in simple words.
+- [ ] I can convert an 8-bit binary number to decimal.
+- [ ] I can convert four-bit groups to hexadecimal.
+- [ ] I understand bits, bytes, and octets.
+- [ ] I can convert Mbps to MB/s.
 
-- Bir maske baytını yanlış çevirmek (örneğin /26'yı 255.255.255.224 sanmak). Doğrusu 255.255.255.192'dir. Sonuç: Host, yerel ağındaki bir cihazı uzak sanar ya da tersini yapar (03-06).
-- Hız ve boyut birimlerini karıştırmak. "Hat 100 Mbps ama dosya 12 MB/s geliyor, hat bozuk" şikâyeti çoğu zaman birim hatasıdır; 12 MB/s, 100 Mbps'nin yaklaşık %96'sıdır.
-
-Bir değerden şüphelendiğinde onu ikiliye çevir ve bit bit kontrol et.
-
-## 10. CCNA Bağlantısı
-
-CCNA sınavında hesap makinesi kullanamazsın. v1.1'in 1.6 (IPv4 subnetting), 1.8 ve 1.9 (IPv6 adresleme ve EUI-64) konuları hızlı ve hatasız sayı dönüşümü gerektirir. Bu dosyadaki tabloları ezbere bilmek, sınavda zamandan önemli ölçüde tasarruf sağlar.
-
-## 11. Kendini Kontrol Et
-
-1. 172'yi ikiliye ve onaltılığa çevir.
-   <details><summary>Cevap</summary>
-   172 = 128 + 32 + 8 + 4 → <code>10101100</code>₂ → <code>1010 1100</code> → <b>0xAC</b>.
-   </details>
-
-2. `11100000`₂ kaçtır? Bu değeri hangi bağlamda çok göreceksin?
-   <details><summary>Cevap</summary>
-   128 + 64 + 32 = <b>224</b>. Bir maske baytı olarak (/27 maskesinin son baytı: 255.255.255.224). Ayrıca 224.0.0.0, IPv4 multicast aralığının başlangıcıdır.
-   </details>
-
-3. `0x86DD` onluk tabanda kaçtır?
-   <details><summary>Cevap</summary>
-   8·4096 + 6·256 + 13·16 + 13 = 32768 + 1536 + 208 + 13 = <b>34525</b>. (Ethernet'te IPv6'nın EtherType değeridir.)
-   </details>
-
-4. Bir MAC adresi 48 bittir. Onaltılık yazıldığında kaç karakter tutar? Neden?
-   <details><summary>Cevap</summary>
-   12 karakter. Her onaltılık basamak 4 bit taşır: 48 / 4 = 12.
-   </details>
-
-5. 300 Mbps'lik bir bağlantıda 9 GB'lık bir dosya en iyi durumda kaç saniyede iner?
-   <details><summary>Cevap</summary>
-   9 GB × 8 = 72 gigabit = 72.000 megabit. 72.000 / 300 = <b>240 saniye</b> (4 dakika). Gerçekte protokol ek yükü yüzünden biraz daha uzun sürer.
-   </details>
-
-6. Bir host bölümünde 6 bit varsa kaç farklı adres ifade edilebilir?
-   <details><summary>Cevap</summary>
-   2⁶ = <b>64</b>. (Kaçının host'lara atanabileceği 03-04'te.)
-   </details>
-
-## 12. Uygulama
-
-Bu dosyanın PT pratiği yoktur. Kendi hızını ölç: Kâğıda rastgele 10 sayı yaz (0–255) ve her birini ikiliye ve onaltılığa çevir. Süreyi tut; hedef her biri için 30 saniye. Cevaplarını Python ile kontrol et (Bölüm 7). Hedefe ulaşana kadar her gün 5 dakika tekrar et.
-
-## 13. Ustalık Kontrol Listesi
-
-- [ ] 0–255 arasındaki her değeri ikili, onluk ve onaltılık arasında 30 saniyede çevirebiliyorum (10 denemede 10 doğru).
-- [ ] 8 bitlik ağırlık tablosunu ve maskelerde kullanılan sekiz değeri ezbere yazabiliyorum.
-- [ ] 2⁰'dan 2¹⁶'ya kadar kuvvetleri ezbere biliyorum.
-- [ ] Onaltılığın ağda neden kullanıldığını nibble kavramıyla açıklayabiliyorum.
-- [ ] Mbps ile MB/s arasında ve SI ile IEC önekleri arasında hatasız dönüşüm yapabiliyorum.
-
-## Kaynaklar
-
-- [STD-IEC80000] IEC 80000-13: ikili önekler (kibi, mebi, gibi).
-- [IEEE-8023] IEEE 802.3: oktetlerin en az anlamlı bit önce gönderilmesi; EtherType değerleri için ayrıca [IEEE-RA].
-- [TXT-PETZOLD] Code, 2. baskı: ikili ve onaltılık sistemlere sezgisel giriş (ek okuma).
+**Next lesson:** 00-03 — Binary Arithmetic and Boolean Logic.
