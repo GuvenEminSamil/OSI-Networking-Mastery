@@ -236,3 +236,6 @@ Bu bölümdeki kimlikler ilk kez burada tanımlandı ya da daha önce "planland�
 
 | CISCO-ETHERNET-ERROR-DETECTION | [Cisco — Ethernet and IEEE 802.3 Frame Formats](https://www.cisco.com/en/US/docs/internetworking/troubleshooting/guide/tr1904.pdf) | 02-04: Ethernet FCS and frame integrity checks |
 | CISCO-LAN-TROUBLESHOOT-ERRORS | [Cisco — Troubleshoot LAN Switching Environments](https://www.cisco.com/c/en/us/support/docs/lan-switching/ethernet/12006-chapter22.html) | 02-04: CRC/FCS errors and interface troubleshooting |
+
+| CISCO-ETHERNET-CSMA-CD | [Cisco Press — Ethernet Frames and Shared Ethernet](https://www.ciscopress.com/articles/article.asp?p=3089352&seqNum=4) | 02-05: half-duplex shared Ethernet and CSMA/CD |
+| CISCO-LAN-TROUBLESHOOT-CSMA | [Cisco — Troubleshoot LAN Switching Environments](https://www.cisco.com/c/en/us/support/docs/lan-switching/ethernet/12006-chapter22.html) | 02-05: collisions, late collisions, duplex mismatch and troubleshooting |
