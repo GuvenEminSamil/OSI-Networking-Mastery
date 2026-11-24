@@ -233,3 +233,6 @@ Bu bölümdeki kimlikler ilk kez burada tanımlandı ya da daha önce "planland�
 | CISCO-ETHERNET-FRAME-TR | [Cisco — Ethernet and IEEE 802.3 Frame Formats](https://www.cisco.com/en/US/docs/internetworking/troubleshooting/guide/tr1904.pdf) | 02-03: frame fields, preamble, SFD, Type/Length, FCS, minimum frame size and padding |
 | CISCO-NETFLOW-L2-FRAME | [Cisco — NetFlow Layer 2 and Ethernet Frame Formats](https://www.cisco.com/c/en/us/td/docs/ios-xml/ios/iproute_pi/configuration/15-s/nf-15-s-book.pdf) | 02-03: Ethernet II and IEEE 802.3 frame fields |
 | CISCO-PRESS-ETHERNET-FRAME | [Cisco Press — Ethernet Frames](https://www.ciscopress.com/articles/article.asp?p=3089352&seqNum=4) | 02-03: standard frame size and VLAN-tagged Ethernet |
+
+| CISCO-ETHERNET-ERROR-DETECTION | [Cisco — Ethernet and IEEE 802.3 Frame Formats](https://www.cisco.com/en/US/docs/internetworking/troubleshooting/guide/tr1904.pdf) | 02-04: Ethernet FCS and frame integrity checks |
+| CISCO-LAN-TROUBLESHOOT-ERRORS | [Cisco — Troubleshoot LAN Switching Environments](https://www.cisco.com/c/en/us/support/docs/lan-switching/ethernet/12006-chapter22.html) | 02-04: CRC/FCS errors and interface troubleshooting |
