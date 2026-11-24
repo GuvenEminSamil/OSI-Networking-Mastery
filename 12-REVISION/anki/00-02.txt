@@ -1,10 +1,10 @@
 #separator:tab
 #html:false
-Bir baytın konum ağırlıkları nelerdir (soldan sağa)?	128, 64, 32, 16, 8, 4, 2, 1 (00-02)
-Maske baytlarında kullanılan sekiz değer nelerdir (0 hariç)?	128, 192, 224, 240, 248, 252, 254, 255 (00-02)
-Onaltılık neden ağda yaygındır?	Bir onaltılık basamak tam olarak 4 bite (nibble) karşılık gelir; uzun bit dizileri kısa ve hatasız yazılır. (00-02)
-0x0800 onluk tabanda kaçtır?	2048 (8 × 256). Ethernet'te IPv4'ün EtherType değeridir. (00-02)
-RFC'ler neden "byte" yerine "octet" der?	Geçmişte bayt her zaman 8 bit değildi; oktet tam olarak 8 bit demektir. (00-02)
-1 Gbps kaç MB/s eder (ham)?	125 MB/s (1000 / 8). (00-02)
-1 TB'lık disk Windows'ta neden ~931 GB görünür?	Üretici 10¹² bayt sayar; sistem 2³⁰'luk birimlerle bölüp "GB" etiketiyle gösterir: 10¹² / 2³⁰ ≈ 931. (00-02)
-Ağ bağlantı hızları hangi birim sistemini kullanır?	Ondalık SI birimleri ve bit/saniye (1 Gbps = 10⁹ bit/s). (00-02)
+What is the base of the decimal number system?	10. It uses the digits 0 through 9. (00-02)
+Which digits are used in binary?	Only 0 and 1. Binary has base 2. (00-02)
+What is the decimal value of binary 1011?	11, because 8 + 2 + 1 = 11. (00-02)
+How many bits does one byte contain?	8 bits. An octet is also exactly 8 bits. (00-02)
+How many bits are represented by one hexadecimal digit?	4 bits, also called one nibble. (00-02)
+What is the maximum decimal value of an 8-bit octet?	255, because 11111111 in binary equals 255. (00-02)
+What is the theoretical MB/s equivalent of 100 Mbps?	12.5 MB/s. Divide by 8 because one byte contains eight bits. (00-02)
+What is the difference between SI and IEC prefixes?	SI uses powers of 1,000 (kB, MB, GB); IEC uses powers of 1,024 (KiB, MiB, GiB). (00-02)
