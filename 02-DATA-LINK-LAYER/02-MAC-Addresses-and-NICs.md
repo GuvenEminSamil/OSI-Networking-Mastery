@@ -1,0 +1,302 @@
+# 02-02 — MAC Addresses and NICs
+
+> **Prerequisites:** 00-02 — Number Systems and Units; 02-01 — The Purpose of the Data Link Layer  
+> **CCNA 200-301 v1.1 connection:** Network Fundamentals objective 1.13 — MAC learning, forwarding, and switching concepts.  
+> **Suggested study time:** Flexible.
+
+## What You Will Learn
+
+- Explain what a MAC address is.
+- Read the structure of a 48-bit MAC address.
+- Recognize the OUI, I/G bit, and U/L bit.
+- Distinguish unicast, multicast, and broadcast MAC addresses.
+- Understand locally administered and randomized MAC addresses.
+- Explain how a Network Interface Card (NIC) filters frames.
+- Recognize promiscuous mode and hardware offloading.
+
+## 1. What Is a MAC Address?
+
+A **MAC address** (Media Access Control address) is a link-layer identifier used to identify a network interface on a local network link.
+
+An Ethernet frame contains:
+
+- A source MAC address: the interface that sent the frame on this link.
+- A destination MAC address: the interface or group meant to receive the frame.
+
+A MAC address is not the same as an IP address:
+
+- A MAC address is used for local-link delivery.
+- An IP address is used to identify a source or destination across IP networks.
+
+A router receives a frame, processes the IP packet inside it, and creates a new frame for the next link. This means the MAC addresses normally change at every routed Ethernet hop.
+
+## 2. The 48-Bit MAC Address Format
+
+A common Ethernet MAC address is 48 bits long.
+
+Since one byte contains eight bits:
+
+[
+48 bitsdiv8=6 bytes
+]
+
+The address is usually written as six pairs of hexadecimal digits, separated by colons or hyphens.
+
+Example:
+
+`00:1A:2B:3C:4D:5E`
+
+Each pair represents one byte (also called an octet).
+
+| Part | Example | Meaning |
+|---|---|---|
+| First three octets | `00:1A:2B` | Commonly the OUI portion of a globally administered EUI-48 address |
+| Last three octets | `3C:4D:5E` | Identifier portion assigned by the organization holding the prefix |
+
+**OUI** means *Organizationally Unique Identifier*. It is a prefix assigned by the IEEE Registration Authority to identify the organization that issued a block of identifiers.
+
+For a common globally administered 48-bit address, the OUI is the first three octets. Some IEEE address blocks use longer prefixes, so do not assume every possible allocation always splits neatly into three and three octets.
+
+## 3. Two Special Bits in the First Octet
+
+Two bits in the first octet have special meanings:
+
+- **I/G bit:** Individual/Group bit.
+- **U/L bit:** Universal/Local bit.
+
+They are the two least significant bits in the first octet.
+
+### I/G — Individual or Group
+
+The I/G bit tells us whether the address is for one interface or a group.
+
+- I/G = 0: individual (unicast) address.
+- I/G = 1: group address (multicast or broadcast).
+
+For example:
+
+- `00` in hexadecimal is `00000000` in binary. Its I/G bit is 0.
+- `01` in hexadecimal is `00000001` in binary. Its I/G bit is 1.
+
+### U/L — Universal or Local
+
+The U/L bit tells us whether the address is universally administered or locally administered.
+
+- U/L = 0: universally administered address.
+- U/L = 1: locally administered address.
+
+A **universally administered address** is intended to be globally unique and is normally assigned from an IEEE-registered address block.
+
+A **locally administered address** is set by software or a network administrator rather than being used as the device's universal hardware-assigned identity.
+
+Remember: U/L describes how the address is administered. I/G describes whether the destination is an individual interface or a group.
+
+## 4. Unicast, Multicast, and Broadcast
+
+These three address types describe who should receive a frame.
+
+### Unicast
+
+A **unicast** frame is addressed to one specific interface.
+
+Example:
+
+`00:1A:2B:3C:4D:5E`
+
+A switch can use its MAC address table to forward a known unicast frame toward the correct port.
+
+### Multicast
+
+A **multicast** frame is addressed to a group of interfaces that have an interest in receiving it.
+
+A multicast MAC address has the I/G bit set to 1.
+
+Multicast is useful because one frame can be delivered to a selected group instead of being sent separately to every interface.
+
+### Broadcast
+
+A **broadcast** frame is intended for all devices in the local Layer 2 broadcast domain.
+
+The Ethernet broadcast MAC address is:
+
+`FF:FF:FF:FF:FF:FF`
+
+Every bit is 1. The frame is processed by all compatible devices in the local broadcast domain.
+
+| Type | Intended recipients | Example |
+|---|---|---|
+| Unicast | One interface | `00:1A:2B:3C:4D:5E` |
+| Multicast | A selected group | A group MAC address with I/G = 1 |
+| Broadcast | All devices in the local broadcast domain | `FF:FF:FF:FF:FF:FF` |
+
+## 5. Locally Administered and Randomized MAC Addresses
+
+A **randomized MAC address** is a locally administered address generated by software for privacy or other management reasons.
+
+For example, a phone may use a different MAC address when joining different Wi-Fi networks. This can make it harder for observers to track the device using one permanent hardware address.
+
+Randomization does not mean that every MAC address is chosen completely without rules. The address must still follow the format requirements, including the appropriate U/L and I/G bits.
+
+A locally administered address can be used by:
+
+- A network administrator.
+- A virtual machine or software interface.
+- An operating system using MAC randomization for privacy.
+
+A locally administered address should be unique within the network where it is used. Duplicate MAC addresses can cause confusing forwarding behavior.
+
+## 6. What Is a NIC?
+
+A **NIC** means *Network Interface Card* or *Network Interface Controller*. It is the hardware that connects a device to a network.
+
+A NIC may be:
+
+- A wired Ethernet adapter.
+- A wireless Wi-Fi adapter.
+- A virtual network interface implemented in software.
+
+A NIC performs physical signaling tasks through its PHY and Data Link tasks through its MAC functions.
+
+It also processes received frames and prepares frames for transmission.
+
+## 7. NIC Frame Filtering
+
+A NIC does not normally pass every received Ethernet frame to the operating system.
+
+It checks the destination MAC address and may accept a frame when it is:
+
+- Addressed to the NIC's own MAC address.
+- A broadcast frame.
+- A multicast frame the NIC is configured to receive.
+- A frame the NIC is specifically configured to accept.
+
+Other frames may be discarded by the NIC before the operating system processes them.
+
+This filtering helps avoid processing unnecessary traffic.
+
+## 8. Promiscuous Mode
+
+**Promiscuous mode** is a NIC operating mode in which the interface passes received frames to the operating system even when their destination MAC address is not the NIC's own address.
+
+This is useful for network analysis tools such as Wireshark.
+
+However, promiscuous mode does not magically make every frame in the network visible.
+
+For example, on a switched Ethernet network, a switch normally sends a unicast frame only toward the port associated with the destination MAC address. A computer connected to another port may not receive that frame at all.
+
+To capture traffic from other switch ports, a network administrator may configure a SPAN session or use another monitoring method.
+
+**SPAN** means *Switched Port Analyzer*. It mirrors selected traffic from switch ports or VLANs to a monitoring port.
+
+## 9. Hardware Offloading
+
+**Hardware offloading** means that a NIC performs some processing tasks in its own hardware instead of asking the CPU to perform every operation.
+
+Examples include:
+
+- **Checksum offload:** the NIC calculates or checks certain protocol checksums.
+- **TCP segmentation offload (TSO):** the NIC divides large blocks of data into smaller TCP segments for transmission.
+- **Receive-side scaling (RSS):** the NIC can distribute received network processing across multiple CPU cores.
+
+A **checksum** is a calculated value used to help detect data corruption.
+
+These features can improve performance by reducing CPU workload. Their availability depends on the NIC, operating system, driver, and configuration.
+
+## 10. Common Mistakes
+
+| Mistake | Correct idea |
+|---|---|
+| MAC and IP addresses are interchangeable. | MAC addresses support local-link delivery; IP addresses support communication across IP networks. |
+| Every MAC address is universally assigned by a manufacturer. | Locally administered addresses can be assigned by software or an administrator. |
+| I/G and U/L mean the same thing. | I/G identifies individual or group; U/L identifies universal or local administration. |
+| Multicast and broadcast are identical. | Multicast targets a selected group; broadcast targets all devices in the local broadcast domain. |
+| Promiscuous mode allows a NIC to see all traffic on every switch port. | The switch must actually deliver or mirror that traffic to the monitoring port. |
+| Hardware offload changes the purpose of a protocol. | It moves some processing tasks from the CPU to the NIC; the protocol behavior remains the same. |
+
+## 11. Knowledge Check
+
+1. How long is a common Ethernet MAC address?
+   <details><summary>Answer</summary>48 bits, or six bytes.</details>
+
+2. What does OUI stand for?
+   <details><summary>Answer</summary>Organizationally Unique Identifier.</details>
+
+3. What does I/G = 0 mean?
+   <details><summary>Answer</summary>The address is an individual (unicast) address.</details>
+
+4. What does U/L = 1 mean?
+   <details><summary>Answer</summary>The address is locally administered.</details>
+
+5. What is the Ethernet broadcast MAC address?
+   <details><summary>Answer</summary>`FF:FF:FF:FF:FF:FF`.</details>
+
+6. What is the difference between multicast and broadcast?
+   <details><summary>Answer</summary>Multicast targets a selected group of interfaces; broadcast targets all devices in the local Layer 2 broadcast domain.</details>
+
+7. Why might a phone use a randomized MAC address?
+   <details><summary>Answer</summary>To improve privacy and make tracking the device across wireless networks more difficult.</details>
+
+8. What is promiscuous mode?
+   <details><summary>Answer</summary>A NIC mode that passes received frames to the operating system even if their destination MAC address is not the NIC's own address.</details>
+
+9. Does promiscuous mode guarantee that a computer connected to a switch receives every unicast frame on the switch?
+   <details><summary>Answer</summary>No. The switch must first deliver or mirror the frame to that port.</details>
+
+10. What is hardware offloading?
+    <details><summary>Answer</summary>Using the NIC to perform selected processing tasks instead of making the CPU perform them all.</details>
+
+## 12. Practice
+
+Look up the MAC address of a network interface on your own computer.
+
+On Windows:
+
+```powershell
+getmac /v
+ipconfig /all
+```
+
+On Linux:
+
+```bash
+ip link
+```
+
+Then answer:
+
+1. How many hexadecimal pairs are shown?
+2. Which address belongs to the wired or wireless adapter?
+3. Is the address shown as a physical address or a locally administered address?
+4. What could cause the address shown by the operating system to differ from the permanent hardware address?
+
+Do not publish your own MAC address publicly; treat it as device-identifying information.
+
+## 13. CCNA Takeaways
+
+- A common Ethernet MAC address is 48 bits (six bytes).
+- OUI is a prefix identifying the organization that issued a block of addresses.
+- I/G = 0 means individual; I/G = 1 means group.
+- U/L = 0 means universal; U/L = 1 means locally administered.
+- Unicast is one recipient, multicast is a selected group, and broadcast is all devices in the local broadcast domain.
+- A NIC filters frames using destination-address and configuration rules.
+- Promiscuous mode helps capture traffic that reaches the NIC, but a switch may not deliver all unicast frames to that port.
+- Hardware offloading moves selected processing tasks to the NIC.
+
+## Self-Check
+
+- [ ] I can explain what a MAC address identifies.
+- [ ] I can describe the six-byte MAC address format.
+- [ ] I can define OUI, I/G, and U/L.
+- [ ] I can distinguish unicast, multicast, and broadcast.
+- [ ] I understand locally administered and randomized MAC addresses.
+- [ ] I can explain NIC filtering and promiscuous mode.
+- [ ] I understand why a switch mirror session may be needed for traffic capture.
+- [ ] I can explain the basic purpose of hardware offloading.
+
+**Next lesson:** 02-03 — Ethernet Frame Structure.
+
+## References
+
+- [RFC 9724 — State of Affairs for Randomized and Changing MAC Addresses](https://www.rfc-editor.org/rfc/rfc9724.html)
+- [IEEE — Guidelines for EUI, OUI, and CID](https://standards-support.ieee.org/hc/en-us/articles/4888705676564-Guidelines-for-Use-of-Extended-Unique-Identifier-EUI-Organizationally-Unique-Identifier-OUI-and-Company-ID-CID)
+- [RFC 7042 — IANA Considerations and IEEE 802 Parameters](https://www.rfc-editor.org/rfc/rfc7042.html)
