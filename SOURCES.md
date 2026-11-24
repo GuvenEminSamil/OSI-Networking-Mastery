@@ -229,3 +229,7 @@ Bu bölümdeki kimlikler ilk kez burada tanımlandı ya da daha önce "planland�
 | RFC-9724-MAC-RANDOMIZATION | [RFC 9724 — State of Affairs for Randomized and Changing MAC Addresses](https://www.rfc-editor.org/rfc/rfc9724.html) | 02-02: 48-bit MAC address format, OUI, I/G and U/L bits, local/randomized addresses |
 | IEEE-EUI-OUI-GUIDELINES | [IEEE — Guidelines for EUI, OUI, and CID](https://standards-support.ieee.org/hc/en-us/articles/4888705676564-Guidelines-for-Use-of-Extended-Unique-Identifier-EUI-Organizationally-Unique-Identifier-OUI-and-Company-ID-CID) | 02-02: OUI and special MAC address bits |
 | RFC-7042-IEEE-802-IDENTIFIERS | [RFC 7042 — IANA Considerations and IEEE 802 Parameters](https://www.rfc-editor.org/rfc/rfc7042.html) | 02-02: EUI-48 address structure, group and local bits |
+
+| CISCO-ETHERNET-FRAME-TR | [Cisco — Ethernet and IEEE 802.3 Frame Formats](https://www.cisco.com/en/US/docs/internetworking/troubleshooting/guide/tr1904.pdf) | 02-03: frame fields, preamble, SFD, Type/Length, FCS, minimum frame size and padding |
+| CISCO-NETFLOW-L2-FRAME | [Cisco — NetFlow Layer 2 and Ethernet Frame Formats](https://www.cisco.com/c/en/us/td/docs/ios-xml/ios/iproute_pi/configuration/15-s/nf-15-s-book.pdf) | 02-03: Ethernet II and IEEE 802.3 frame fields |
+| CISCO-PRESS-ETHERNET-FRAME | [Cisco Press — Ethernet Frames](https://www.ciscopress.com/articles/article.asp?p=3089352&seqNum=4) | 02-03: standard frame size and VLAN-tagged Ethernet |
