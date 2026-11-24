@@ -3,7 +3,7 @@
 > **ACTIVE STUDY STANDARD (2026-11-24):** The user approved the redesigned English-first teaching format. The target remains CCNA 200-301 v1.1; the curriculum scope is unchanged. The last completed lesson remains `00-02`. The existing `00-02` through `00-09` lessons have been rewritten in clear, beginner-friendly English, and `01-01` has been created as the first Physical Layer lesson. This redesign does not record any new lesson completion. Use the revised 00-02 as a quick refresh if helpful, then continue with 00-03. No fixed calendar, daily hour target, mandatory Anki routine, or daily log is required. The older dated production plan below is historical only.
 > **Last update:** 2026-11-24
 > **Project status:** The Foundations module has nine lesson files. Lessons 00-02 through 00-09 have been rewritten in English; 00-01 remains the previously completed original lesson. Physical Layer lesson 01-01 is published; 01-02 onward and later modules remain planned or in production.
-> **Active study step:** Review the revised 00-02 briefly if useful, then study 00-03. The next new module after 00-09 is the Physical Layer; lesson 01-01 is published and 01-02 is the next content-production item.
+> **Active study step:** Review the revised 00-02 briefly if useful, then continue with 00-03 through 00-09, followed by 01-01. Content production continues with 01-02.
 
 Bu dosya iki şeyi takip eder: (A) içeriğin üretim durumu ve (B) öğrencinin ustalık durumu. Dosya listesi CURRICULUM.md'dedir; burada yalnızca sayılar, tamamlanan dosyalar, takvim ve sorunlar tutulur.
 
@@ -20,7 +20,7 @@ Durumlar: **Yazıldı** = dosya oluşturuldu. **Doğrulandı** = hesaplar, kimli
 | STUDY-ROADMAP.md | Yazıldı (v0.2) |
 | PROGRESS.md | Yazıldı |
 | SOURCES.md | Yazıldı (v0.2) |
-| GLOSSARY.md | Yazıldı (00-01 – 00-09 terimleri, 159 terim) |
+| GLOSSARY.md | Rewritten in simple English for Foundations; later-topic terms to be retained/expanded as modules are produced |
 
 ### A.2 Teori modülleri
 
@@ -40,7 +40,7 @@ Durumlar: **Yazıldı** = dosya oluşturuldu. **Doğrulandı** = hesaplar, kimli
 | 13-CCNA-EXAM-PREPARATION | 4 | 0 | 0 | 13-01 |
 | 14-SECURITY-FUNDAMENTALS | 6 | 0 | 0 | 14-01 |
 | 15-NETWORK-OPERATIONS-AUTOMATION-AI | 6 | 0 | 0 | 15-01 |
-| **Toplam** | **116** | **11** | **11** | |
+| **Total** | **116** | **12** | **3** | |
 
 ### A.3 Pratikler ve değerlendirme
 
@@ -67,7 +67,7 @@ Her paket, ilgili fazın başlangıç tarihinden önce hazır olmalı. Her oturu
 |---|---|---|---|
 | P0 | GLOSSARY.md, 12-01, CE-00 ve cevapları | 20 Kas | **Tamamlandı** (19 Kas) |
 | P1 | 00-01 – 00-09, FND soruları | 20 Kas (00-01 – 00-04), 22 Kas (00-05 – 00-09) | **Tamamlandı** (20 Kas) |
-| P2 | 11-01, 01-01 – 01-10, DRILLS-F02, LAB-011, H04, PHY soruları (+ `09-PACKET-TRACER-LABS/README.md`) | 25 Kas (P2a), 26 Kas (P2b) | Bekliyor |
+| P2 | 11-01, 01-01 – 01-10, DRILLS-F02, LAB-011, H04, PHY questions (+ `09-PACKET-TRACER-LABS/README.md`) | Historical target: 25–26 Nov | In progress: 01-01 published; remaining items pending |
 | P3 | 02-01 – 02-09, 02-14, DRILLS-F03, LAB-020, H02, DL soruları (I) | 28 Kas | Bekliyor |
 | P4 | 03-01 – 03-08, 02-10, 11-03, 08-01, 08-03, DRILLS-F04, H01, NET soruları (I), CE-01 | 3 Ara | Bekliyor |
 | P5 | 02-11 – 02-13, 02-15, 02-16, 03-09 – 03-12, 11-02, 08-04, DRILLS-F05, LAB-030, LAB-039, H06, DL (II) ve NET (II) soruları | 9 Ara | Bekliyor |
