@@ -109,3 +109,25 @@
 | What is encapsulation? | Adding protocol information, such as headers, as data moves down the layers. |
 | Which field identifies IPv4 or IPv6 in an Ethernet frame? | EtherType: 0x0800 for IPv4 and 0x86DD for IPv6. |
 | Which command displays a Cisco routing table? | `show ip route`. |
+
+
+## 01-PHYSICAL-LAYER
+
+### 01-01 — The Purpose of the Physical Layer
+
+| Question | Answer |
+|---|---|
+| What is the main responsibility of the Physical layer? | It carries bits as physical signals through copper, fiber, or air. |
+| Which layer creates Ethernet frames? | Layer 2, the Data Link layer. |
+| What is the difference between MAC and PHY? | MAC handles frame and link-access functions; PHY sends and receives physical signals carrying bits. |
+| Does a link light prove that DNS and the Internet are working? | No. It provides evidence about the local physical link only. |
+
+### 01-02 — Signals and Bandwidth
+
+| Question | Answer |
+|---|---|
+| What is amplitude? | The size or strength of a signal. |
+| What is frequency? | The number of complete cycles per second, measured in hertz. |
+| What is period? | The time required for one complete cycle; T = 1/f. |
+| What is the difference between signal bandwidth and data rate? | Signal bandwidth is measured in Hz; data rate is measured in bits per second. |
+| What does SNR compare? | Wanted signal power with noise power. |
