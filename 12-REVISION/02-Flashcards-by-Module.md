@@ -179,3 +179,16 @@
 | What does Auto-MDIX do? | Detects and adapts to the required transmit and receive pair arrangement. |
 | What is the difference between PSE and PD? | PSE supplies PoE power; PD receives it. |
 | What is the maximum power at the PD under IEEE 802.3bt Type 4? | Up to 71.3 W. |
+
+### 01-07 — Fiber Optics
+
+| Question | Answer |
+|---|---|
+| What travels through optical fiber? | Light signals. |
+| What is the role of the core? | It guides light through the fiber. |
+| What is total internal reflection? | Light reflects back into the higher-index core instead of passing into the lower-index cladding. |
+| What is the main difference between SMF and MMF? | SMF has a smaller core and is commonly used for longer links; MMF has a larger core and is common for shorter links. |
+| Which wavelength is commonly used with 1000BASE-SX? | 850 nm. |
+| What is modal dispersion? | Different light paths in MMF arrive at different times and spread the pulse. |
+| What are LC and SC? | Common fiber-optic connector types. |
+| What are SFP and SFP+? | Pluggable transceiver form factors; SFP is commonly Gigabit and SFP+ commonly 10 Gigabit. |
