@@ -176,3 +176,27 @@
 | PoE+ | Common name for IEEE 802.3at Power over Ethernet. | 01-06 |
 | PoE++ | Common name often used for higher-power IEEE 802.3bt PoE. | 01-06 |
 | Patch cord | A short flexible cable used to connect equipment to a wall outlet or patch panel. | 01-06 |
+
+| Coaxial cable | A cable with a central copper conductor, insulation, a conductive shield, and an outer jacket. | 01-06 |
+| Differential signaling | A method in which a receiver reads the voltage difference between two wires in a pair. | 01-06 |
+| Cladding | The layer surrounding the fiber core, designed with a lower refractive index. | 01-07 |
+| Core (fiber) | The central part of an optical fiber through which light travels. | 01-07 |
+| Fiber-optic cable | A cable that carries information using light through optical fibers. | 01-07 |
+| LC (Lucent Connector) | A small, latch-style fiber-optic connector. | 01-07 |
+| Link budget | The allowed range of optical power loss between a transmitter and receiver. | 01-07 |
+| MMF (Multimode Fiber) | Optical fiber with a larger core that supports multiple light modes. | 01-07 |
+| Modal dispersion | Pulse spreading caused by different light paths arriving at different times in multimode fiber. | 01-07 |
+| Chromatic dispersion | Pulse spreading caused by different light wavelengths traveling at slightly different speeds. | 01-07 |
+| Nanometer (nm) | One billionth of a meter; a common unit for optical wavelength. | 01-07 |
+| OM category | A designation for multimode optical-fiber categories. | 01-07 |
+| OS category | A designation for single-mode optical-fiber categories. | 01-07 |
+| Optical transceiver | A module that converts electrical data to optical signals and received light back to electrical data. | 01-07 |
+| QSFP (Quad Small Form-Factor Pluggable) | A pluggable transceiver form factor that supports multiple data lanes. | 01-07 |
+| Refractive index | A value describing how much light slows down in a material. | 01-07 |
+| SC (Subscriber Connector) | A square, push-pull fiber-optic connector. | 01-07 |
+| SFP (Small Form-Factor Pluggable) | A removable transceiver form factor commonly used for Gigabit Ethernet. | 01-07 |
+| SFP+ | An enhanced SFP form factor commonly used for 10 Gigabit Ethernet. | 01-07 |
+| SMF (Single-Mode Fiber) | Optical fiber with a very small core that guides one light mode, commonly used for longer links. | 01-07 |
+| Total internal reflection | Reflection that keeps light inside the higher-index fiber core at the core-cladding boundary. | 01-07 |
+| VCSEL | A Vertical-Cavity Surface-Emitting Laser, commonly used with multimode fiber. | 01-07 |
+| Wavelength | The distance between repeating points on a wave, such as peak to peak. | 01-07 |
