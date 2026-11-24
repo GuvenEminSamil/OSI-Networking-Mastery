@@ -228,3 +228,51 @@
 | What does a media converter do? | Converts between compatible physical media, such as copper Ethernet and fiber. |
 | What does an increasing CRC counter suggest? | Received frames are corrupted; investigate cabling, connectors, interference, and transceivers. |
 | What is a late collision? | A collision detected after the normal collision window; it can indicate duplex mismatch or physical cabling problems. |
+
+### 01-08 — Wireless RF Fundamentals
+
+| Question | Answer |
+|---|---|
+| What does RF stand for? | Radio Frequency; electromagnetic frequencies used for wireless communication. |
+| What are the three common Wi-Fi bands? | 2.4 GHz, 5 GHz, and 6 GHz. |
+| What is a Wi-Fi channel? | A specific portion of radio spectrum used for wireless communication. |
+| What is the difference between SSID and BSSID? | SSID is the wireless network name; BSSID identifies a particular AP radio. |
+| Which is stronger: -55 dBm or -75 dBm? | -55 dBm, because it is closer to zero. |
+| What does SNR compare? | Wanted signal power with noise power. |
+| What is multipath? | Radio waves reaching a receiver by more than one path, often because of reflections. |
+| What does MIMO stand for? | Multiple Input, Multiple Output. |
+
+### 01-09 — Ethernet Physical Standards
+
+| Question | Answer |
+|---|---|
+| What does 1000BASE-T mean? | 1 Gbps Ethernet over twisted-pair copper. |
+| What is auto-negotiation? | A process in which Ethernet interfaces exchange capabilities and select a compatible mode. |
+| What is half-duplex? | A mode in which a device can send or receive at a given time, but not both simultaneously. |
+| What is full-duplex? | A mode that allows both ends to send and receive at the same time. |
+| What is a duplex mismatch? | The two ends of a link use different duplex settings. |
+| Which command displays switch-port speed and duplex? | `show interfaces status`. |
+
+### 01-10 — Topologies, Devices, and Interface Issues
+
+| Question | Answer |
+|---|---|
+| What is physical topology? | The actual arrangement of devices, cables, and physical connections. |
+| What is logical topology? | The way data flows through a network. |
+| What does a repeater do? | Regenerates a signal so it can travel farther. |
+| How does a hub differ from a switch? | A hub repeats bits; a switch forwards frames using MAC-address information. |
+| What does a media converter do? | Converts between compatible physical media, such as copper Ethernet and fiber. |
+| What does an increasing CRC counter suggest? | Received frames are corrupted; investigate cabling, connectors, interference, and transceivers. |
+| What is a late collision? | A collision detected after the normal collision window; it can indicate duplex mismatch or physical cabling problems. |
+
+### 02-01 — The Purpose of the Data Link Layer
+
+| Question | Answer |
+|---|---|
+| Which OSI layer is the Data Link layer? | Layer 2. |
+| What is framing? | Organizing a stream of bits into identifiable frames. |
+| What are the two IEEE 802 Data Link sublayers? | LLC (Logical Link Control) and MAC (Media Access Control). |
+| What is media access? | Rules that determine how devices use a communication medium. |
+| What is a point-to-point link? | A direct link between two endpoints. |
+| What do PPP and HDLC have in common? | Both are Data Link protocols used on point-to-point links. |
+| What happens to the Ethernet frame when a router forwards a packet to a new link? | The incoming Layer 2 frame is removed and a new frame is built for the outgoing link. |
