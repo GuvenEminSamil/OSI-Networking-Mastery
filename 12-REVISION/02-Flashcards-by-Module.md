@@ -329,3 +329,18 @@
 | Can half-duplex send and receive simultaneously? | No. |
 | Why does full-duplex switched Ethernet not use CSMA/CD? | Each point-to-point link can send and receive simultaneously and does not share a collision medium. |
 | What does CSMA/CA stand for? | Carrier Sense Multiple Access with Collision Avoidance. |
+
+### 02-06 — Ethernet Switch Operation and MAC Address Learning
+
+| Question | Answer |
+|---|---|
+| Which MAC address does a switch use to learn a device location? | The source MAC address of an incoming frame. |
+| What information is stored in a MAC address table? | VLAN, MAC address, and switch port. |
+| What happens to a known unicast frame? | It is forwarded only out the destination port in the same VLAN. |
+| What happens to an unknown unicast frame? | It is flooded within the VLAN, except the incoming port. |
+| What happens when a frame's destination is learned on the incoming port? | It is filtered and not sent back out the same port. |
+| Why does a switch use MAC aging? | To remove old dynamic entries after inactivity. |
+| What is the difference between CAM and TCAM? | CAM performs exact lookup; TCAM also supports don't-care matching. |
+| Which switching method checks the full FCS before forwarding? | Store-and-forward. |
+| Which switching method may begin forwarding before the FCS arrives? | Cut-through. |
+| Why can switch buffers overflow? | Frames arrive faster than the output port can transmit them. |
