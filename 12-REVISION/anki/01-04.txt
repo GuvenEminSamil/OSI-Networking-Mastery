@@ -1,0 +1,8 @@
+#separator:tab
+#html:false
+Why does a receiver need bit synchronization?	It must know when to sample the incoming signal. (01-04)
+What is a decision threshold?	A boundary used to decide which symbol a measured signal value represents. (01-04)
+What does a PLL help recover?	Timing synchronized with the incoming signal. (01-04)
+What does the Ethernet preamble do?	It gives the receiver a known pattern to prepare and synchronize before the frame. (01-04)
+What does SFD stand for?	Start Frame Delimiter; it marks the beginning of the Ethernet frame after the preamble. (01-04)
+What does BER measure?	The ratio of incorrect bits to total bits. (01-04)
