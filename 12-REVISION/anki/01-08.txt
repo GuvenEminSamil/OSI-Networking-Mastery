@@ -1,0 +1,12 @@
+#separator:tab
+#html:false
+What does RF stand for?	Radio Frequency; electromagnetic frequencies used for wireless communication. (01-08)
+What are the three common Wi-Fi bands?	2.4 GHz, 5 GHz, and 6 GHz. (01-08)
+What is a Wi-Fi channel?	A specific portion of radio spectrum used for wireless communication. (01-08)
+What does SSID identify?	The wireless network name. (01-08)
+What does BSSID identify?	A particular wireless access point radio. (01-08)
+Which is stronger: -55 dBm or -75 dBm?	-55 dBm, because it is closer to zero. (01-08)
+What does SNR compare?	Wanted signal power with noise power. (01-08)
+What is multipath?	When radio waves reach a receiver along multiple paths, often because of reflections. (01-08)
+What does MIMO stand for?	Multiple Input, Multiple Output. (01-08)
+What is a spatial stream?	An independent data stream sent using a MIMO system. (01-08)
