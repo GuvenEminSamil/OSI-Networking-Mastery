@@ -8,3 +8,5 @@ What cable uses T568A at one end and T568B at the other?	A traditional crossover
 What does Auto-MDIX do?	Detects and adapts to the required transmit and receive pair arrangement. (01-06)
 What is the difference between PSE and PD?	PSE supplies PoE power; PD receives it. (01-06)
 What is the maximum power at the PD under IEEE 802.3bt Type 4?	Up to 71.3 W. (01-06)
+What is differential signaling in twisted-pair Ethernet?	The receiver reads the voltage difference between two wires; similar noise on both wires can be reduced. (01-06)
+What is coaxial cable?	A cable with a central copper conductor, insulation, a conductive shield, and an outer protective jacket. (01-06)
