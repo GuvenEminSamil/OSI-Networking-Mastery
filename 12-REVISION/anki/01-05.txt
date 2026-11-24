@@ -1,0 +1,9 @@
+#separator:tab
+#html:false
+What is attenuation?	Loss of signal strength as a signal travels through a medium. (01-05)
+What is the difference between dB and dBm?	dB compares two values; dBm expresses power relative to 1 mW. (01-05)
+What does SNR compare?	Wanted signal power with noise power. (01-05)
+What is crosstalk?	Unwanted signal coupling from one wire pair to another. (01-05)
+What does NEXT mean?	Near-End Crosstalk, measured at the same end as the signal source. (01-05)
+What can impedance mismatch cause?	Signal reflection. (01-05)
+What does BER measure?	Incorrect bits divided by total bits. (01-05)
