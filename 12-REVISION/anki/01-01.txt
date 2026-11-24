@@ -1,0 +1,8 @@
+#separator:tab
+#html:false
+What is the main responsibility of the Physical layer?	It carries bits as physical signals through a medium such as copper, fiber, or air. (01-01)
+Which OSI layer creates Ethernet frames?	Layer 2, the Data Link layer. (01-01)
+What is a medium in networking?	The material or space through which a signal travels, such as copper, fiber, or air. (01-01)
+What is the difference between MAC and PHY?	MAC handles Ethernet frame and link-access functions; PHY sends and receives physical signals that carry bits. (01-01)
+Does a link light prove that DNS and the Internet are working?	No. It provides evidence about the local physical link, not higher-layer services. (01-01)
+What does MII connect?	It is a family of internal interfaces between MAC and PHY functions; it is not the Ethernet socket for the cable. (01-01)
