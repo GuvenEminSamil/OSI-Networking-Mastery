@@ -1,235 +1,207 @@
-# 00-04 Elektrik Temelleri (Electricity Fundamentals)
+# 00-04 — Electricity Fundamentals
 
-> Önkoşullar: — (00-01 yardımcı olur) | Tahmini süre: ~2 saat | CCNA: dolaylı (v1.1 1.1.h PoE, 1.3, 1.4'ün altyapısı)
+> **Prerequisite:** 00-03 — Binary Arithmetic and Boolean Logic  
+> **CCNA connection:** Understanding copper cabling, Ethernet signals, noise, and Power over Ethernet (PoE).  
+> **Suggested study time:** Flexible.
 
-## Öğrenme Hedefleri
+## What You Will Learn
 
-- Gerilim (voltage), akım (current) ve direnç (resistance) kavramlarını ve aralarındaki ilişkiyi (Ohm yasası) açıklamak.
-- Bir devrenin neden kapalı bir döngü gerektirdiğini ve gerilimin neden her zaman iki nokta arasında ölçüldüğünü açıklamak.
-- Elektronların yavaş hareket ettiği hâlde sinyalin neden çok hızlı yayıldığını açıklamak.
-- PoE'nin neden yaklaşık 48 V gibi görece yüksek bir gerilim kullandığını güç kaybı hesabıyla göstermek.
-- Gürültünün (noise) elektriksel kökenini ve diferansiyel sinyalin temel fikrini tanımlamak.
+- Explain voltage, current, and resistance.
+- Use Ohm's law for simple calculations.
+- Understand electrical power and why cable resistance matters.
+- Explain how Ethernet sends signals over copper cables.
+- Understand the basic idea of differential signaling and Power over Ethernet.
 
-## 1. Sezgisel Giriş
+This is a practical introduction, not an advanced electronics course.
 
-Bir Ethernet kablosunu bilgisayarına taktığında iki cihaz arasında bir **elektrik devresi** kurulur. Gönderici, bir çift telin arasındaki gerilimi çok hızlı bir şekilde değiştirir; alıcı bu değişimleri ölçer ve bitlere çevirir. PoE kullanan bir IP telefonda aynı kablo, veriyle birlikte telefonun çalışması için gereken gücü de taşır.
+## 1. Why Does Networking Need Electricity?
 
-Bunların nasıl mümkün olduğunu ve kablonun neden en fazla 100 metre olabildiğini anlamak için üç büyüklüğü tanıman yeterli: gerilim, akım ve direnç. Bu dosya derin bir elektronik dersi değildir; yalnızca ağ konularını anlamak için gerekeni verir.
+A copper Ethernet cable carries electrical signals between devices. A sender changes the electrical signal in a controlled pattern. The receiver detects those changes and interprets them as data.
 
-## 2. Neden Var?
+Some Ethernet devices can also receive electrical power through the same cable. This is called **Power over Ethernet (PoE)**.
 
-Fiziksel katman (01-*) bitleri elektriksel, optik ya da radyo sinyalleriyle taşır. Bakır kablolar, PoE, gürültü, zayıflama, karışma ve kablo uzunluğu sınırı gibi konuların hepsi elektriğin temel davranışlarından doğar. Bu temeller olmadan "kabloyu kısalt" ya da "kabloyu güç hattından uzaklaştır" gibi önerileri yalnızca ezberleyebilirsin; neden işe yaradıklarını açıklayamazsın.
+To understand these ideas, we need a few basic terms.
 
-## 3. Mekanizma
+## 2. Three Important Electrical Terms
 
-### 3.1 Yük, iletken ve yalıtkan
+### Voltage (V)
 
-Madde atomlardan, atomlar da artı yüklü bir çekirdek ve çevresindeki eksi yüklü elektronlardan oluşur. Elektrik yükünün birimi **coulomb (C)**'dur; tek bir elektronun yükü yaklaşık 1,6 × 10⁻¹⁹ C'dur.
+**Voltage** is the electrical potential difference between two points. It is measured in volts (V).
 
-- **İletken (conductor):** Bakır gibi metallerde atomların en dıştaki elektronlarının bir kısmı serbestçe hareket edebilir. Bu yüzden yük kolayca akar.
-- **Yalıtkan (insulator):** Plastik, cam ve hava gibi maddelerde elektronlar atomlarına sıkıca bağlıdır; yük neredeyse hiç akmaz.
+A useful analogy is water pressure in a pipe: voltage is similar to the pressure that can drive current. The analogy is helpful, but voltage is not literally water pressure.
 
-Bir Ethernet kablosu bu ikisinin birleşimidir: Bakır teller sinyali iletir, plastik kılıf telleri birbirinden ve dış dünyadan yalıtır.
+Voltage is always measured between two points.
 
-### 3.2 Gerilim: itme kuvveti
+### Current (I)
 
-**Gerilim (voltage, V)**, iki nokta arasındaki elektriksel potansiyel farkıdır. Bir yükü bir noktadan diğerine götürmek için birim yük başına ne kadar enerji gerektiğini söyler. Birimi **volt (V)**'tur: 1 V = 1 joule/coulomb.
+**Current** is the rate at which electric charge flows. It is measured in amperes (A).
 
-Sezgisel bir benzetme olarak su borularını düşün: Gerilim, suyu iten **basınç farkı** gibidir. Basınç farkı yoksa su akmaz.
+Using the water analogy, current is similar to the amount of water flowing through a pipe each second.
 
-Bu benzetmenin en önemli dersi şudur: **Gerilim her zaman iki nokta arasında ölçülür.** "Bu telde 5 V var" cümlesi, aslında "bu tel ile referans noktası arasında 5 V fark var" demektir. Bu referansa genellikle **toprak (ground)** ya da devrenin ortak noktası denir. Bu fikir, Ethernet'in diferansiyel sinyalini anlamanın anahtarıdır (Bölüm 3.6).
+### Resistance (R)
 
-### 3.3 Akım: yük akışı
+**Resistance** is how strongly a material opposes current flow. It is measured in ohms (Ω).
 
-**Akım (current, I)**, bir noktadan birim zamanda geçen yük miktarıdır. Birimi **amper (A)**'dir: 1 A = saniyede 1 coulomb. Su benzetmesinde akım, borudan saniyede geçen su miktarıdır.
+A longer or thinner copper wire generally has more resistance than a shorter or thicker wire of the same material.
 
-Akımın akabilmesi için **kapalı bir döngü (closed circuit)** gerekir: Yük kaynaktan çıkar, yükü (lamba, alıcı devresi) geçer ve kaynağa geri döner. Döngü bir yerden koparsa akım durur. Bu yüzden her elektriksel sinyalin bir "gidiş" ve bir "dönüş" yolu vardır. Ethernet'te bu, bir çift içindeki iki teldir.
+## 3. Ohm's Law
 
-### 3.4 Direnç ve Ohm yasası
+**Ohm's law** describes the relationship between voltage, current, and resistance:
 
-**Direnç (resistance, R)**, bir maddenin akıma karşı gösterdiği zorluktur. Birimi **ohm (Ω)**'dur. Su benzetmesinde direnç borunun darlığıdır.
+[
+V=I	imes R
+]
 
-Bu üç büyüklük **Ohm yasasıyla (Ohm's law)** bağlıdır:
+Where:
 
-> V = I × R
+- V = voltage in volts
+- I = current in amperes
+- R = resistance in ohms
 
-Aynı gerilimde direnç artarsa akım azalır. Aynı akımı geçirmek için direnç arttıkça daha fazla gerilim gerekir.
+Example:
 
-Bir telin direnci üç şeye bağlıdır:
+A cable section has a resistance of 2 Ω and carries 0.5 A.
 
-- **Malzeme:** Bakırın direnci düşüktür.
-- **Uzunluk:** Tel uzadıkça direnç **doğru orantılı** olarak artar.
-- **Kesit:** Tel inceldikçe direnç artar.
+[
+V=0.5	imes2=1 V
+]
 
-Ağdaki sonucu: Uzun ve ince bir kablo daha fazla direnç gösterir ve sinyalin bir kısmı yolda ısıya dönüşür. Sinyal zayıflar. Bu, Ethernet'in kablo uzunluğu sınırının nedenlerinden biridir (diğer nedenler 01-05 ve 01-06'da).
+The voltage drop across that resistance is 1 volt.
 
-### 3.5 Güç
+You can rearrange the formula:
 
-**Güç (power, P)**, birim zamanda aktarılan enerjidir. Birimi **watt (W)**'tır.
+[
+I=rac{V}{R}qquad R=rac{V}{I}
+]
 
-> P = V × I ve Ohm yasasıyla birleştirince P = I² × R
+## 4. Electrical Power
 
-İkinci biçim çok önemlidir: **Bir telde ısıya dönüşen güç, akımın karesiyle artar.** Akımı ikiye katlarsan kayıp dört katına çıkar.
+**Power** is the rate at which energy is transferred or used. It is measured in watts (W).
 
-### 3.6 Gürültü ve diferansiyel sinyal
+The basic formula is:
 
-Değişen bir manyetik alan, yakınındaki bir telde gerilim oluşturur (indüklenme). Bu yüzden elektrik motorları, floresan lambalar ve güç kabloları gibi kaynaklar yakındaki veri kablolarına istenmeyen gerilimler ekler. Bu istenmeyen gerilimlere **gürültü (noise)**, kaynağına da **elektromanyetik girişim (EMI, electromagnetic interference)** denir.
+[
+P=V	imes I
+]
 
-Gürültü, 00-01'deki gürültü payını tüketir. Gürültü karar eşiğini aşarsa alıcı yanlış bit okur.
+Combining this with Ohm's law gives another useful formula for power lost as heat in a resistance:
 
-Ethernet'in bakır kablolarda kullandığı çözüm **diferansiyel sinyaldir (differential signaling)**: Bilgi tek bir telin toprağa göre gerilimiyle değil, **bir çiftteki iki tel arasındaki gerilim farkıyla** taşınır. Gönderici bir telin gerilimini yükseltirken diğerininkini düşürür. Alıcı iki teli birbirinden çıkarır:
+[
+P_{loss}=I^2	imes R
+]
 
-```
- Tel A:  sinyal + gürültü
- Tel B: −sinyal + gürültü        (iki tel yan yana olduğu için gürültüyü neredeyse eşit alır)
- ─────────────────────────
- A − B:  2 × sinyal              (gürültü birbirini götürür)
-```
+This helps explain why cable resistance matters: more current creates more heat loss.
 
-İki telin gürültüyü **eşit** alması gerekir. Bükümlü çiftteki büküm (twist) bunu sağlar. Ayrıntılar 01-06'da.
+## 5. Why Does PoE Use a Higher Voltage?
 
-### 3.7 Elektronlar yavaş, sinyal hızlı
+PoE allows a network cable to carry both data and electrical power. It can power devices such as wireless access points, IP phones, and some cameras.
 
-Yaygın bir yanılgı, kabloda elektronların ışık hızıyla aktığıdır. Gerçekte bir bakır teldeki elektronların ortalama ilerleme hızı (sürüklenme hızı, drift velocity) çok düşüktür: Tipik akımlarda saniyede milimetreler mertebesinde ya da daha yavaştır.
+For the same amount of power, using a higher voltage means using less current:
 
-Hızlı olan, **sinyalin kendisidir**: Gerilimdeki bir değişim kablo boyunca bir elektromanyetik dalga olarak yayılır. Bu dalga, bir boruyu baştan sona dolduran suyu bir uçtan ittiğinde diğer uçta suyun neredeyse aynı anda çıkmasına benzer. Su moleküllerinin kendisi o kadar hızlı gitmez. Ağ kablolarında sinyal ışık hızının yaklaşık üçte ikisiyle yayılır; bu da metre başına yaklaşık 5 nanosaniye eder. 100 metrelik bir kabloda yayılma gecikmesi yaklaşık 0,5 mikrosaniyedir.
+[
+I=rac{P}{V}
+]
 
-### 3.8 DC ve AC
+Imagine a device needs 15 watts:
 
-- **Doğru akım (DC, direct current):** Akım hep aynı yönde akar. Pil, adaptör çıkışı ve PoE gücü DC'dir.
-- **Alternatif akım (AC, alternating current):** Akımın yönü periyodik olarak değişir. Şebeke elektriği AC'dir; Türkiye'de ve Rusya'da frekansı 50 Hz'dir, yani saniyede 50 tam döngü.
+- At 48 V: 15 ÷ 48 ≈ 0.31 A
+- At 24 V: 15 ÷ 24 ≈ 0.63 A
 
-Veri sinyalleri de sürekli değişen gerilimlerdir; ama frekansları çok daha yüksektir (megahertz mertebesi). Sinyallerin frekans açısından incelenmesi 01-02'nin konusudur.
+The lower-voltage example needs about twice the current. Since cable loss increases with the square of current, the higher-current case can waste much more energy as heat.
 
-## 4. Teknik Ayrıntı
+This is one reason PoE uses a voltage around 48 V. Actual PoE voltage and power levels depend on the IEEE PoE type and the connected equipment.
 
-### 4.1 PoE neden yaklaşık 48 V kullanır?
+## 6. Noise and Differential Signaling
 
-**PoE (Power over Ethernet)**, IP telefon, kablosuz erişim noktası ve kamera gibi cihazlara veri kablosu üzerinden DC güç verir. IEEE 802.3 standardında tanımlıdır [IEEE-8023]:
+**Noise** is unwanted electrical energy that can interfere with the signal.
 
-| Standart | Ticari adı | Güç kaynağı tarafında en fazla (PSE) | Kaynak tarafındaki gerilim |
-|---|---|---|---|
-| 802.3af (Type 1) | PoE | 15,4 W | 44–57 V |
-| 802.3at (Type 2) | PoE+ | 30 W | 50–57 V |
-| 802.3bt (Type 3 / Type 4) | PoE++ | 60 W / 90 W | — (bt ayrıntıları 01-06'da) |
+It can come from nearby electrical equipment, radio sources, poor connections, or damaged cables.
 
-Cihaz tarafına ulaşan güç, kablodaki kayıp nedeniyle daha düşüktür.
+Ethernet twisted-pair cables use pairs of wires. In **differential signaling**, the sender uses the voltage difference between the two wires to represent the signal. The receiver compares the two wires rather than relying on only one wire.
 
-Neden 5 V ya da 12 V değil? Bölüm 3.5'teki P = I² × R formülü cevabı verir. Aşağıdaki hesap **[BASİTLEŞTİRME]** içerir: Kablonun toplam döngü direncini 12,5 Ω kabul ediyoruz ve gerilimin kablo boyunca sabit kaldığını varsayıyoruz.
+Why is this useful?
 
-| Gerilim | 15,4 W için gereken akım (I = P / V) | Kablodaki kayıp (I² × R) |
-|---|---|---|
-| 48 V | 0,32 A | 0,32² × 12,5 ≈ **1,3 W** |
-| 12 V | 1,28 A | 1,28² × 12,5 ≈ **20,5 W** |
+If similar unwanted noise affects both wires, the receiver can largely cancel it when it measures the difference. Twisting the wires helps them pick up similar noise.
 
-12 V'ta kablo, cihaza iletmek istediğinden daha fazla gücü ısıya çevirir; bu pratikte imkânsızdır. Gerilimi artırmak aynı gücü daha düşük akımla taşımayı, dolayısıyla kaybı karesel olarak azaltmayı sağlar. Elektrik şebekelerinin uzun mesafede yüksek gerilim kullanmasının nedeni de budur. 48 V civarı, güvenlik açısından düşük gerilim sınıfında kalırken kaybı kabul edilebilir düzeyde tutan bir orta noktadır.
+A cable with damaged pairs, poor termination, or excessive interference may cause errors or reduce the speed of the connection.
 
-> **[DERİN]** Ethernet portları, kablo ile cihazın devresi arasında küçük **izolasyon transformatörleri (magnetics)** kullanır. Transformatör değişen sinyalleri (veri) geçirir, sabit DC gerilimi geçirmez. Böylece iki cihazın toprakları arasındaki farklar devreye zarar vermez. PoE, DC gücü transformatörlerin orta uçlarından (center tap) bir çiftin iki teline eşit olarak verir. Bu güç, çiftin iki teli arasında bir fark oluşturmadığı için diferansiyel veri sinyalini bozmaz.
+## 7. Does Electricity Move Slowly Through the Cable?
 
-### 4.2 [DERİN] Kapasitans, endüktans ve empedans
+Do not confuse the movement of individual electrons with the speed of a signal.
 
-Bu kavramlar sinyalin neden "bozulduğunu" anlamak için gereklidir; ayrıntılar 01-05'te.
+The signal is an electromagnetic wave that propagates through the cable. It travels very quickly, often at a substantial fraction of the speed of light.
 
-- **Kapasitans (capacitance, C):** İki iletken arasında yük depolama yeteneğidir. Bir çiftin iki teli de küçük bir kapasitör gibi davranır. Gerilimi değiştirmek için önce bu kapasitörün dolması ya da boşalması gerekir. Bu süreyi R × C (zaman sabiti) belirler. Kablo uzadıkça kapasitans artar, gerilim değişimleri yuvarlanır. Sonuç olarak bitler birbirine karışmaya başlar ve hızlı sinyaller zorlaşır.
-- **Endüktans (inductance, L):** Akımdaki değişime karşı koyma eğilimidir. Değişen akım bir manyetik alan oluşturur; bu alan da değişime karşı bir gerilim üretir.
-- **Empedans (impedance, Z):** Değişen sinyallere karşı toplam "zorluk"tur. Direnci ve kapasitans ile endüktansın frekansa bağlı etkilerini birlikte içerir. Bir iletim hattının **karakteristik empedansı (characteristic impedance)**, sinyalin hat boyunca "gördüğü" empedanstır. Ethernet bükümlü çiftleri 100 Ω, kablo TV koaksiyelleri 75 Ω, eski koaksiyel Ethernet kabloları 50 Ω'dur. Hattın bir noktasında empedans değişirse (kötü bir konnektör, ezilmiş kablo) sinyalin bir kısmı geri yansır. Bu yansıma, kablo test cihazlarının arızanın yerini nasıl bulduğunu da açıklar (01-05).
+This is why data can travel across a long cable without waiting for individual electrons to move from one end to the other.
 
-## 5. Gerçek Dünya Örnekleri
+## 8. Real-World Troubleshooting
 
-- **Ofiste PoE:** Bir Cisco switch, tavandaki kablosuz erişim noktasına ve masalardaki IP telefonlara aynı anda güç verir. Switch'in toplam PoE bütçesi sınırlıdır. Bütçe aşılırsa bazı portlara güç verilmez ve o cihazlar açılmaz. Bu, sık görülen bir "telefon çalışmıyor" arızasıdır.
-- **Fabrika ortamı:** Bir veri kablosu, büyük bir motorun güç kablosuyla aynı kanaldan geçiriliyor. Motor her çalıştığında güçlü bir manyetik alan oluşur, kabloya gürültü indüklenir ve switch portunda CRC hataları artar. Çözümler: kabloları ayırmak, ekranlı kablo kullanmak ya da fibere geçmek. Fiber ışık kullandığı için EMI'den etkilenmez (01-07).
-- **Veri merkezi:** Ağ cihazlarının harcadığı her watt ısıya dönüşür ve soğutulması gerekir. Bu yüzden veri merkezlerinde port başına güç tüketimi önemli bir tasarım ölçütüdür.
+Imagine a user reports that an Ethernet link is unstable.
 
-## 6. Diğer Konularla Bağlantı
+Possible physical causes include:
 
-| Bu dosyadaki fikir | Nerede derinleşiyor |
+- A damaged or sharply bent cable.
+- A connector that is not properly terminated.
+- Strong electrical interference.
+- A cable that exceeds the supported length for the Ethernet standard.
+
+A practical first step is to replace the cable with a known-good cable and check whether the link becomes stable.
+
+## 9. Common Mistakes
+
+| Mistake | Correct idea |
 |---|---|
-| Gürültü payı ve karar eşiği | 00-01, 01-04 |
-| Transistör, gerilimle kontrol edilen bir anahtar olarak | 00-05 |
-| Sinyallerin frekansı ve bant genişliği | 01-02 |
-| Zayıflama, gürültü, karışma, yansıma | 01-05 |
-| Diferansiyel sinyal ve büküm; PoE türleri | 01-06 |
-| Fiberin EMI'den etkilenmemesi | 01-07 |
-| Uç cihazlar için PoE port ayarları | LAB-018 |
+| Voltage and current are the same. | Voltage is potential difference; current is the flow of charge. |
+| Resistance creates useful network data. | Resistance opposes current and can cause voltage drop and heat. |
+| Electrons travel from one device to another at signal speed. | The electrical signal propagates quickly; individual electron drift is much slower. |
+| Twisting the pairs is only for appearance. | Twisting helps reduce the effect of external noise. |
+| PoE sends power instead of data. | PoE can carry both power and data on the same cable. |
 
-## 7. Cisco ve Pratik
+## 10. Knowledge Check
 
-PoE destekli Cisco Catalyst switch'lerde port başına güç durumu şu komutla görülür:
+1. What unit is used to measure voltage?
+   <details><summary>Answer</summary>Volts (V).</details>
 
-```
-Switch# show power inline
-```
+2. A resistance is 4 Ω and the current is 2 A. What is the voltage?
+   <details><summary>Answer</summary>V = I × R = 2 × 4 = **8 V**.</details>
 
-Çıktı; her portun güç verip vermediğini, harcanan watt değerini ve bağlı cihaz sınıfını gösterir. **[CISCO-ÖZEL]** Bu komut gerçek Cisco donanımında vardır. Packet Tracer 9.0'daki desteği LAB-018 yazılırken doğrulanacak (PROGRESS.md, Bölüm D).
+3. What is electrical power measured in?
+   <details><summary>Answer</summary>Watts (W).</details>
 
-## 8. Yaygın Yanılgılar
+4. A device needs 24 W at 48 V. Approximately how much current does it need?
+   <details><summary>Answer</summary>I = P ÷ V = 24 ÷ 48 = **0.5 A**.</details>
 
-| Yanılgı | Doğrusu |
-|---|---|
-| "Elektronlar kabloda ışık hızıyla akar." | Elektronların ortalama hızı çok düşüktür. Işık hızına yakın yayılan, gerilimdeki değişimin oluşturduğu elektromanyetik dalgadır. |
-| "Bir telin gerilimi kendi başına ölçülür." | Gerilim her zaman iki nokta arasındaki farktır. Ethernet bu yüzden bilgiyi iki tel arasındaki farkla taşır. |
-| "PoE yüksek gerilim kullanır, tehlikelidir." | PoE yaklaşık 44–57 V DC kullanır ve güvenlik açısından düşük gerilim sınıfındadır. Şebeke elektriği (220–230 V AC) ise tehlikelidir. |
-| "Kablo uzadıkça yalnızca direnç artar." | Direnç artar, ama asıl sınırlayıcı etkiler yüksek frekanslarda artan zayıflama, kapasitans ve karışmadır (01-05). |
-| "Bakır kablo EMI'den hiç etkilenmez; büküm yalnızca düzen içindir." | Büküm, iki telin gürültüyü eşit almasını sağlayarak diferansiyel alıcının gürültüyü iptal etmesine izin verir. Bükümü bozulmuş kablolar gürültüye çok daha açıktır. |
+5. Why can differential signaling resist some external noise?
+   <details><summary>Answer</summary>The receiver measures the difference between two wires. Similar noise added to both wires can cancel out in that comparison.</details>
 
-## 9. Arıza Giderme Yaklaşımı
+6. What does PoE allow an Ethernet cable to carry?
+   <details><summary>Answer</summary>Both network data and electrical power.</details>
 
-Fiziksel katman arızalarının çoğu bu dosyadaki dört nedenden birine dayanır:
+## 11. Practice
 
-| Belirti | Olası elektriksel neden |
-|---|---|
-| Bağlantı hiç kurulmuyor | Döngü kopuk: tel kopmuş, konnektör oturmamış (devre kapanmıyor) |
-| Bağlantı kuruluyor ama CRC ve input error sayaçları artıyor | Gürültü (EMI) ya da zayıflama, gürültü payını tüketiyor |
-| Uzun kablolarda bağlantı daha düşük hızda kuruluyor | Direnç, kapasitans ve zayıflama, yüksek hızlı sinyali taşıyamıyor |
-| PoE cihazı açılmıyor ya da yeniden başlıyor | Switch'in PoE bütçesi aşıldı ya da kablodaki kayıp çok yüksek |
+Look at the Ethernet cables and connectors around you. Check for:
 
-Bu tabloyu 01-10'da `show interfaces` çıktılarıyla birleştireceğiz.
+- Damaged or crushed cable sections.
+- Loose connectors.
+- Pairs that have been untwisted too far near a connector.
+- Ethernet cables placed directly alongside sources of strong electrical interference.
 
-## 10. CCNA Bağlantısı
+For each issue, explain how it could affect the signal.
 
-CCNA elektrik hesabı sormaz. Ancak v1.1 1.1.h (PoE), 1.3 (kablo türleri) ve 1.4 (arayüz ve kablo sorunları) konularındaki "hangi kablo, neden?" ve "bu hata neden oluşur?" sorularının arkasındaki mantık bu dosyadadır.
+## 12. CCNA Takeaways
 
-## 11. Kendini Kontrol Et
+- Voltage, current, and resistance are different electrical quantities.
+- Ohm's law is V = I × R.
+- Power is P = V × I.
+- High current increases resistive cable loss.
+- Differential signaling helps Ethernet resist external noise.
+- PoE carries electrical power and data over Ethernet cabling.
 
-1. Bir telin direnci 2 Ω ve üzerinden 0,5 A akım geçiyor. Telin iki ucu arasındaki gerilim farkı nedir? Telde ısıya dönüşen güç nedir?
-   <details><summary>Cevap</summary>
-   V = I × R = 0,5 × 2 = <b>1 V</b>. P = I² × R = 0,25 × 2 = <b>0,5 W</b>.
-   </details>
+## Self-Check
 
-2. Bir kablonun uzunluğunu iki katına çıkarırsan direnci nasıl değişir?
-   <details><summary>Cevap</summary>
-   Direnç uzunlukla doğru orantılıdır; iki katına çıkar.
-   </details>
+- [ ] I can define voltage, current, and resistance.
+- [ ] I can solve a simple Ohm's law problem.
+- [ ] I can calculate electrical power.
+- [ ] I can explain why higher voltage can reduce current for the same power.
+- [ ] I can describe differential signaling and the purpose of twisted pairs.
 
-3. PoE'de aynı gücü yarı gerilimle taşımak istersen kablodaki kayıp nasıl değişir?
-   <details><summary>Cevap</summary>
-   Aynı güç için akım iki katına çıkar (I = P / V). Kayıp I² × R olduğu için <b>dört katına</b> çıkar.
-   </details>
-
-4. Diferansiyel bir alıcı neden gürültüye karşı dayanıklıdır? Bunun çalışması için hangi koşul gerekir?
-   <details><summary>Cevap</summary>
-   Alıcı iki telin farkını ölçer. Her iki tele eşit miktarda eklenen gürültü çıkarma işleminde birbirini götürür. Koşul, iki telin gürültüyü gerçekten eşit almasıdır; bunu tellerin birbirine sarılması (büküm) sağlar.
-   </details>
-
-5. 100 metrelik bir kabloda sinyalin yayılma gecikmesi yaklaşık ne kadardır? Bu gecikmenin kaynağı elektronların yavaşlığı mıdır?
-   <details><summary>Cevap</summary>
-   Yaklaşık 5 ns/m × 100 m = <b>500 ns</b> (0,5 µs). Kaynağı elektronların hızı değildir. Elektromanyetik dalga kablo malzemesi içinde ışık hızının yaklaşık üçte ikisiyle yayılır.
-   </details>
-
-## 12. Uygulama
-
-Bu dosyanın PT pratiği yoktur. Evinde ya da yurdunda gözlem yap: Ethernet kablolarının yakınından geçen güç kablolarını, bükümünün açıldığı konnektör uçlarını ve ezilmiş kabloları ara. Bunların her birinin hangi elektriksel etkiye (gürültü, direnç, empedans değişimi) yol açacağını yaz. 01-05'i okuduktan sonra listeni kontrol et.
-
-## 13. Ustalık Kontrol Listesi
-
-- [ ] Gerilim, akım ve direnci kendi cümlelerimle ve bir benzetmeyle açıklayabiliyorum; benzetmenin sınırını da biliyorum.
-- [ ] Ohm yasasıyla ve P = I² × R ile basit hesaplar yapabiliyorum.
-- [ ] PoE'nin neden yaklaşık 48 V kullandığını bir sayısal örnekle gösterebiliyorum.
-- [ ] Diferansiyel sinyalin gürültüyü nasıl iptal ettiğini çizerek anlatabiliyorum.
-- [ ] Sinyal hızı ile elektron hızı arasındaki farkı açıklayabiliyorum.
-
-## Kaynaklar
-
-- [IEEE-8023] IEEE 802.3: PoE Type 1–4 güç seviyeleri ve PSE gerilim aralıkları.
-- [TXT-SPURGEON] Ethernet: The Definitive Guide, 2. baskı: kablo ve sinyal ayrıntıları (ek okuma).
-- [TXT-HARRIS] Digital Design and Computer Architecture: devre temelleri ([DERİN] ek okuma).
+**Next lesson:** 00-05 — Transistors and Digital Logic.
