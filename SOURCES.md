@@ -225,3 +225,7 @@ Bu bölümdeki kimlikler ilk kez burada tanımlandı ya da daha önce "planland�
 | CISCO-LAN-TROUBLESHOOT | [Cisco Troubleshoot LAN Switching Environments](https://www.cisco.com/c/en/us/support/docs/lan-switching/ethernet/12006-chapter22.html) | 01-10: collisions, late collisions, errors and Ethernet troubleshooting |
 
 | IEEE-802-LLC-REFERENCE | [IEEE 802 overview and standards references](https://www.ieee802.org/) | 02-01: LLC/MAC sublayer context and IEEE 802 architecture |
+
+| RFC-9724-MAC-RANDOMIZATION | [RFC 9724 — State of Affairs for Randomized and Changing MAC Addresses](https://www.rfc-editor.org/rfc/rfc9724.html) | 02-02: 48-bit MAC address format, OUI, I/G and U/L bits, local/randomized addresses |
+| IEEE-EUI-OUI-GUIDELINES | [IEEE — Guidelines for EUI, OUI, and CID](https://standards-support.ieee.org/hc/en-us/articles/4888705676564-Guidelines-for-Use-of-Extended-Unique-Identifier-EUI-Organizationally-Unique-Identifier-OUI-and-Company-ID-CID) | 02-02: OUI and special MAC address bits |
+| RFC-7042-IEEE-802-IDENTIFIERS | [RFC 7042 — IANA Considerations and IEEE 802 Parameters](https://www.rfc-editor.org/rfc/rfc7042.html) | 02-02: EUI-48 address structure, group and local bits |
