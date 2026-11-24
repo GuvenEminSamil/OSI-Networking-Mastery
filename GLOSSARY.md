@@ -284,3 +284,9 @@
 | Modulo-2 arithmetic | Binary arithmetic without carries or borrows; addition and subtraction use XOR. | 02-04 |
 | Generator polynomial | The agreed bit pattern used by a CRC algorithm to calculate a remainder. | 02-04 |
 | CRC-32 | A 32-bit cyclic redundancy check used by Ethernet FCS. | 02-04 |
+
+| CSMA/CD (Carrier Sense Multiple Access with Collision Detection) | A media-access method used by traditional shared half-duplex Ethernet. | 02-05 |
+| CSMA/CA (Carrier Sense Multiple Access with Collision Avoidance) | A wireless media-access method that attempts to reduce collisions. | 02-05 |
+| Jam signal | A signal sent after a collision so other devices on a shared segment recognize it. | 02-05 |
+| Backoff | A random waiting period before retrying transmission after a collision. | 02-05 |
+| Binary exponential backoff | A backoff method that increases the range of possible waiting times after repeated collisions. | 02-05 |
