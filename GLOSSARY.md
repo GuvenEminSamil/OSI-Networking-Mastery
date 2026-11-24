@@ -200,3 +200,29 @@
 | Total internal reflection | Reflection that keeps light inside the higher-index fiber core at the core-cladding boundary. | 01-07 |
 | VCSEL | A Vertical-Cavity Surface-Emitting Laser, commonly used with multimode fiber. | 01-07 |
 | Wavelength | The distance between repeating points on a wave, such as peak to peak. | 01-07 |
+
+| RF (Radio Frequency) | Electromagnetic frequencies used for wireless communication. | 01-08 |
+| Frequency band | A range of radio frequencies allocated for a particular use. | 01-08 |
+| Channel | A specific portion of radio spectrum used for wireless communication. | 01-08 |
+| Channel width | The amount of frequency spectrum used by a wireless channel. | 01-08 |
+| Non-overlapping channels | Channels whose frequency ranges do not overlap. | 01-08 |
+| SSID (Service Set Identifier) | The name displayed for a wireless network. | 01-08 |
+| BSSID (Basic Service Set Identifier) | An identifier, commonly a MAC address, for a particular wireless AP radio. | 01-08 |
+| RSSI (Received Signal Strength Indicator) | A measurement or indication of the received wireless signal strength. | 01-08 |
+| Multipath | A condition in which radio waves reach a receiver through multiple paths. | 01-08 |
+| MIMO (Multiple Input, Multiple Output) | A wireless method that uses multiple transmit and receive antennas or paths. | 01-08 |
+| Spatial stream | An independent data stream sent using a MIMO system. | 01-08 |
+| Duplex | A communication mode describing whether a link can send and receive simultaneously. | 01-09 |
+| Half-duplex | A mode in which a device can send or receive at a given time, but not both simultaneously. | 01-09 |
+| Full-duplex | A mode that allows both ends of a link to send and receive at the same time. | 01-09 |
+| Auto-negotiation | A process in which Ethernet interfaces exchange capabilities and select a compatible operating mode. | 01-09 |
+| Baseband | A signaling method that uses the medium directly for the transmitted signal rather than placing data on a separate RF carrier. | 01-09 |
+| Collision | An event in which simultaneous transmissions interfere on a shared half-duplex medium. | 01-10 |
+| Collision domain | A network segment where simultaneous half-duplex transmissions can collide. | 01-10 |
+| Repeater | A Physical-layer device that regenerates a signal. | 01-10 |
+| Hub | A multiport repeater that repeats incoming bits to its other ports. | 01-10 |
+| Media converter | A device that converts between compatible physical media types, such as copper and fiber Ethernet. | 01-10 |
+| Runt | An Ethernet frame shorter than the minimum valid size, excluding special cases. | 01-10 |
+| Giant | An Ethernet frame larger than the supported maximum frame size. | 01-10 |
+| FCS (Frame Check Sequence) | An error-detection value carried at the end of an Ethernet frame. | 01-10 |
+| Late collision | A collision detected after the normal collision window. | 01-10 |
