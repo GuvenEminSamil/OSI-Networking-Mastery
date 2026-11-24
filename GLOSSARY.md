@@ -275,3 +275,12 @@
 | MTU (Maximum Transmission Unit) | The maximum Layer 3 packet size a link can carry without fragmentation at that link. | 02-03 |
 | Jumbo frame | An Ethernet frame with a payload larger than the standard 1500-byte Ethernet payload limit. | 02-03 |
 | IFG (Interframe Gap) | The minimum idle time required between successive Ethernet frame transmissions. | 02-03 |
+
+| Error detection | Identifying that data may have been corrupted. | 02-04 |
+| Error correction | Attempting to identify and repair corrupted data. | 02-04 |
+| Parity bit | An extra bit used to make the number of 1s even or odd for simple error detection. | 02-04 |
+| Checksum | A value calculated from data so a receiver can compare it with a newly calculated value. | 02-04 |
+| CRC (Cyclic Redundancy Check) | An error-detection method using modulo-2 polynomial division. | 02-04 |
+| Modulo-2 arithmetic | Binary arithmetic without carries or borrows; addition and subtraction use XOR. | 02-04 |
+| Generator polynomial | The agreed bit pattern used by a CRC algorithm to calculate a remainder. | 02-04 |
+| CRC-32 | A 32-bit cyclic redundancy check used by Ethernet FCS. | 02-04 |
