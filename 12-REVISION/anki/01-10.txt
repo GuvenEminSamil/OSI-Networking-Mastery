@@ -1,0 +1,10 @@
+#separator:tab
+#html:false
+What is physical topology?	The actual arrangement of devices, cables, and connections. (01-10)
+What is logical topology?	The way data flows through a network. (01-10)
+What does a repeater do?	It regenerates a signal so it can travel farther. (01-10)
+How does a hub differ from a switch?	A hub repeats bits; a switch forwards frames using MAC-address information. (01-10)
+What does a media converter do?	It converts between compatible physical media, such as copper Ethernet and fiber Ethernet. (01-10)
+What does a rising CRC counter suggest?	Received frames are corrupted; investigate cables, connectors, interference, and transceivers. (01-10)
+What is a late collision?	A collision detected after the normal collision window; it can indicate duplex mismatch or physical cabling problems. (01-10)
+Should normal full-duplex switched Ethernet have collisions?	No. (01-10)
