@@ -290,3 +290,17 @@
 | Jam signal | A signal sent after a collision so other devices on a shared segment recognize it. | 02-05 |
 | Backoff | A random waiting period before retrying transmission after a collision. | 02-05 |
 | Binary exponential backoff | A backoff method that increases the range of possible waiting times after repeated collisions. | 02-05 |
+
+| MAC address table | A switch table associating VLANs and MAC addresses with switch ports. | 02-06 |
+| MAC learning | A switch process that records the source MAC address, VLAN, and incoming port of a frame. | 02-06 |
+| MAC aging | Removal of dynamic MAC table entries after a configured period of inactivity. | 02-06 |
+| MAC move | A change in the switch port associated with a learned MAC address. | 02-06 |
+| Flooding | Sending a frame out multiple eligible ports in a VLAN, except the incoming port. | 02-06 |
+| CAM (Content-Addressable Memory) | Hardware memory that searches for stored content to perform fast exact lookups. | 02-06 |
+| TCAM (Ternary Content-Addressable Memory) | Hardware memory that can match 0, 1, and don't-care values. | 02-06 |
+| ASIC (Application-Specific Integrated Circuit) | A chip designed to perform specific tasks efficiently, such as packet forwarding. | 02-06 |
+| Store-and-forward switching | A switching method that receives the full frame and checks its FCS before forwarding. | 02-06 |
+| Cut-through switching | A switching method that begins forwarding after reading the destination MAC address. | 02-06 |
+| Fragment-free switching | A switching method that waits for the first 64 bytes before forwarding. | 02-06 |
+| Egress queue | A queue that holds frames waiting to leave an output port. | 02-06 |
+| IGMP snooping | A switch feature that observes IGMP messages to manage multicast forwarding. | 02-06 |
