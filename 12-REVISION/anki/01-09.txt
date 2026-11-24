@@ -1,0 +1,9 @@
+#separator:tab
+#html:false
+What does 1000BASE-T mean?	1 Gbps Ethernet over twisted-pair copper. (01-09)
+What is auto-negotiation?	A process in which Ethernet interfaces exchange capabilities and select a compatible operating mode. (01-09)
+What is duplex?	Whether a link can transmit and receive at the same time. (01-09)
+Can half-duplex send and receive simultaneously?	No. It can send or receive at a given time, but not both at once. (01-09)
+Why do normal full-duplex switched Ethernet links not have collisions?	They can transmit and receive simultaneously on separate paths; they do not use half-duplex shared-media collision handling. (01-09)
+What is a duplex mismatch?	The two ends of a link use different duplex settings. (01-09)
+Which command quickly displays switch-port speed and duplex?	show interfaces status. (01-09)
