@@ -145,3 +145,34 @@
 | Sampling | Measuring a changing signal at a particular time. | 01-04 |
 | SFD (Start Frame Delimiter) | A pattern marking the end of the Ethernet preamble and the start of the frame. | 01-04 |
 | Subcarrier | One of the smaller frequency components used within a wider communication channel. | 01-03 |
+
+| Attenuation | Loss of signal strength as it travels through a medium. | 01-05 |
+| Crosstalk | Unwanted signal coupling from one wire pair to another nearby pair. | 01-05 |
+| dB (decibel) | A logarithmic unit used to express a ratio between power levels. | 01-05 |
+| dBm | An absolute power level measured relative to 1 milliwatt. | 01-05 |
+| Dispersion | Spreading of a signal because different components arrive at different times. | 01-05 |
+| EMI (Electromagnetic Interference) | Unwanted electromagnetic energy that affects a signal. | 01-05 |
+| FEXT (Far-End Crosstalk) | Crosstalk measured at the far end of a cable. | 01-05 |
+| Impedance mismatch | A difference in expected impedance along a transmission path that can cause reflections. | 01-05 |
+| NEXT (Near-End Crosstalk) | Crosstalk measured at the same end as the signal source. | 01-05 |
+| Noise | Unwanted energy mixed with the wanted signal. | 01-05 |
+| RFI (Radio-Frequency Interference) | Interference caused by radio-frequency energy. | 01-05 |
+| Signal impairment | An unwanted change that makes a signal harder to receive correctly. | 01-05 |
+| Twisted-pair cable | A cable containing insulated copper wires twisted into pairs. | 01-06 |
+| UTP (Unshielded Twisted Pair) | Twisted-pair cable without an additional metallic shield. | 01-06 |
+| STP (Shielded Twisted Pair) | A general term for twisted-pair cable with shielding. | 01-06 |
+| F/UTP | Twisted-pair cable with an overall foil shield around unshielded pairs. | 01-06 |
+| Cable category | A classification describing a cable's transmission performance requirements. | 01-06 |
+| RJ-45 | Common name for the modular Ethernet connector often described as 8P8C. | 01-06 |
+| 8P8C | An eight-position, eight-contact modular connector. | 01-06 |
+| T568A | A standardized wire-color and pin arrangement for an Ethernet connector. | 01-06 |
+| T568B | An alternative standardized wire-color and pin arrangement for an Ethernet connector. | 01-06 |
+| Straight-through cable | A cable using the same wiring scheme at both ends. | 01-06 |
+| Crossover cable | A cable using T568A at one end and T568B at the other. | 01-06 |
+| Rollover cable | A cable that reverses pin order, traditionally used for console connections. | 01-06 |
+| Auto-MDIX | A feature that automatically adapts to the transmit and receive pair arrangement. | 01-06 |
+| PSE (Power Sourcing Equipment) | A device that supplies power using PoE, such as a PoE switch. | 01-06 |
+| PD (Powered Device) | A device that receives power through PoE, such as an access point. | 01-06 |
+| PoE+ | Common name for IEEE 802.3at Power over Ethernet. | 01-06 |
+| PoE++ | Common name often used for higher-power IEEE 802.3bt PoE. | 01-06 |
+| Patch cord | A short flexible cable used to connect equipment to a wall outlet or patch panel. | 01-06 |
