@@ -289,3 +289,19 @@
 | What is promiscuous mode? | A NIC mode that passes received frames to the OS even when the destination MAC is not the NIC's own address. |
 | Does promiscuous mode guarantee visibility of all switch unicast traffic? | No. The switch must deliver or mirror the traffic to the monitoring port. |
 | What is hardware offloading? | The NIC performs selected processing tasks instead of the CPU performing them all. |
+
+### 02-03 — Ethernet Frame Structure
+
+| Question | Answer |
+|---|---|
+| What is the purpose of the preamble? | It helps the receiving interface synchronize with the incoming signal. |
+| What does SFD stand for? | Start Frame Delimiter; it marks the start of the Ethernet frame. |
+| What is the EtherType for IPv4? | 0x0800. |
+| What is the EtherType for IPv6? | 0x86DD. |
+| What is the EtherType for ARP? | 0x0806. |
+| What is the minimum standard Ethernet frame size? | 64 bytes, from destination MAC through FCS. |
+| What is the maximum standard untagged Ethernet frame size? | 1518 bytes. |
+| What is the maximum standard frame size with one 802.1Q VLAN tag? | 1522 bytes. |
+| What does FCS do? | Carries a CRC value used to detect frame corruption. |
+| What is the standard Ethernet MTU? | Commonly 1500 bytes. |
+| Is IFG part of the frame? | No. It is the minimum idle time between transmissions. |
