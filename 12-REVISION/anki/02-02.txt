@@ -1,0 +1,10 @@
+#separator:tab
+#html:false
+How long is a common Ethernet MAC address?	48 bits, or six bytes. (02-02)
+What does OUI stand for?	Organizationally Unique Identifier. (02-02)
+What does I/G = 0 mean?	Individual (unicast) address. (02-02)
+What does U/L = 1 mean?	Locally administered address. (02-02)
+What is the Ethernet broadcast MAC address?	FF:FF:FF:FF:FF:FF. (02-02)
+What is promiscuous mode?	A NIC mode that passes received frames to the OS even when the destination MAC is not the NIC's own address. (02-02)
+Does promiscuous mode guarantee visibility of all switch unicast traffic?	No. The switch must deliver or mirror traffic to the monitoring port. (02-02)
+What is hardware offloading?	The NIC performs selected processing tasks instead of the CPU performing them all. (02-02)
