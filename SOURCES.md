@@ -218,3 +218,8 @@ Bu bölümdeki kimlikler ilk kez burada tanımlandı ya da daha önce "planland�
 
 | CISCO-GIG-SFP-DATA-SHEET | [Cisco — Gigabit Ethernet SFP Transceiver Data Sheet](https://www.cisco.com/c/en/us/products/collateral/interfaces-modules/gigabit-ethernet-gbic-sfp-modules/datasheet-c78-366584.html) | 01-07: example 1000BASE-SX and 1000BASE-LX/LH wavelengths, fiber types, and transceiver reach |
 | CISCO-CPWE-FIBER-GUIDE | [Cisco — Physical Infrastructure Design Guide (Fiber Optics)](https://www.cisco.com/c/en/us/td/docs/solutions/Verticals/CPwE/5-1/Phy_Arch/CPwE-Physical-Infrastructure_Feb2023.pdf) | 01-07: core size, SMF/MMF overview, OM/OS fiber categories |
+
+| CISCO-WIRELESS-RF-GUIDE | [Cisco Wireless RF Reference Guide](https://www.cisco.com/c/en/us/td/docs/wireless/controller/9800/technical-reference/wireless-rf-reference-guide.html) | 01-08: frequency bands, channel overlap, RSSI/dBm, attenuation, multipath, MIMO |
+| CISCO-WIRELESS-DESIGN-LARGE | [Cisco Design Guide — Wireless for Large Public Networks](https://www.cisco.com/c/en/us/support/docs/wireless/catalyst-9800-series-wireless-controllers/222000-design-guide-cx-wireless-for-large-pub.html) | 01-08: channel width, 2.4/5/6 GHz planning, regional channel considerations |
+| CISCO-ETHERNET-AUTONEG | [Cisco Configure and Verify Ethernet Auto-Negotiation](https://www.cisco.com/c/en/us/support/docs/lan-switching/ethernet/10561-3.html) | 01-09: auto-negotiation, speed/duplex, duplex mismatch |
+| CISCO-LAN-TROUBLESHOOT | [Cisco Troubleshoot LAN Switching Environments](https://www.cisco.com/c/en/us/support/docs/lan-switching/ethernet/12006-chapter22.html) | 01-10: collisions, late collisions, errors and Ethernet troubleshooting |
