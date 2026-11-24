@@ -1,0 +1,10 @@
+#separator:tab
+#html:false
+What is amplitude?	The size or strength of a signal. (01-02)
+What is frequency?	The number of complete signal cycles per second, measured in hertz (Hz). (01-02)
+What is period?	The time required for one complete cycle. T = 1/f. (01-02)
+What is phase?	The position of a waveform within its cycle relative to a reference waveform. (01-02)
+What is the difference between signal bandwidth and network data rate?	Signal bandwidth is a range of frequencies measured in Hz; data rate is bits per second (bps). (01-02)
+What is aliasing?	A sampling error in which high-frequency components appear as incorrect lower frequencies. (01-02)
+What does SNR compare?	The power of the wanted signal with the power of noise. (01-02)
+What does the Shannon capacity idea tell us?	The theoretical maximum data rate depends on channel bandwidth and signal-to-noise ratio. (01-02)
