@@ -1,11 +1,9 @@
 #separator:tab
 #html:false
-12 bitlik 802.1Q VLAN alanıyla kaç VLAN kullanılabilir?	4094 (1–4094); 0 ve 4095 ayrılmıştır. (00-06)
-Ağ bayt sırası (network byte order) nedir?	Big-endian: Çok baytlı bir değerin en anlamlı baytı önce gönderilir (RFC 791, Ek B). (00-06)
-0x12345678 little-endian bir bellekte hangi bayt sırasıyla durur?	78 56 34 12. (00-06)
-htons() işlevi ne yapar?	16 bitlik bir değeri (ör. port) host bayt sırasından ağ bayt sırasına çevirir; ntohs() tersini yapar. (00-06)
-Nyquist koşulu nedir?	Örnekleme frekansı, sinyaldeki en yüksek frekansın iki katından büyük olmalıdır; yoksa aliasing oluşur. (00-06)
-G.711'in 64 kbps'ı nasıl hesaplanır?	8.000 örnek/s × 8 bit/örnek = 64.000 bit/s. (00-06)
-20 ms paketlemeli bir G.711 görüşmesi Ethernet üzerinde kaç kbps kullanır?	87,2 kbps: (160 bayt ses + 40 bayt RTP/UDP/IP + 18 bayt Ethernet) × 8 × 50 paket/s. (00-06)
-Sıkıştırılmamış 1080p, 30 kare/s video yaklaşık kaç bit/s'tir?	~1,49 Gbps (1920 × 1080 × 3 bayt × 30 × 8). (00-06)
-Bir dosyanın türü neyle belirlenir?	Uzantıyla değil; dosyanın imzasıyla (ör. PNG: 89 50 4E 47 0D 0A 1A 0A) ya da ağda protokolün bildirdiği türle (Content-Type). (00-06)
+Why do bytes need an agreed interpretation?	The same bytes can represent different things. A protocol or file format defines their meaning. (00-06)
+How many values can an 8-bit unsigned field represent?	256 values, from 0 to 255. (00-06)
+What is the maximum value of a 16-bit unsigned field?	65,535, because 2^16 - 1 = 65,535. (00-06)
+What does big-endian mean?	The most significant byte comes first. (00-06)
+What is network byte order?	Big-endian byte order used for multi-byte numeric fields in Internet protocols. (00-06)
+What is a character encoding?	A rule that maps characters to numeric values and bytes, such as ASCII or UTF-8. (00-06)
+Why is a file signature useful?	It is a recognizable byte pattern that can help identify a file's actual format, unlike a file extension alone. (00-06)
