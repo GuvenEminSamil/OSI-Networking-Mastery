@@ -317,3 +317,15 @@
 | What is the Ethernet FCS? | A four-byte field carrying the CRC-32 value used to detect frame corruption. |
 | What does a switch normally do with a frame that has an invalid FCS? | It discards the frame. |
 | Does Ethernet retransmit a frame after an FCS failure? | No. A higher-layer protocol such as TCP may recover. |
+
+### 02-05 — Media Access, CSMA/CD, and Duplex
+
+| Question | Answer |
+|---|---|
+| What does CSMA/CD stand for? | Carrier Sense Multiple Access with Collision Detection. |
+| What is a collision domain? | A shared half-duplex network segment where simultaneous transmissions can collide. |
+| What is the purpose of a jam signal? | It makes sure other devices on the shared segment recognize a collision. |
+| Why do devices use backoff after a collision? | They wait for different random periods to reduce repeated collisions. |
+| Can half-duplex send and receive simultaneously? | No. |
+| Why does full-duplex switched Ethernet not use CSMA/CD? | Each point-to-point link can send and receive simultaneously and does not share a collision medium. |
+| What does CSMA/CA stand for? | Carrier Sense Multiple Access with Collision Avoidance. |
