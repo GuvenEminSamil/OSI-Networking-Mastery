@@ -154,3 +154,28 @@
 | What does the Ethernet preamble do? | It gives the receiver a known pattern to prepare and synchronize before the frame. |
 | What does SFD stand for? | Start Frame Delimiter; it marks the beginning of the Ethernet frame after the preamble. |
 | What does BER measure? | The ratio of incorrect bits to total bits. |
+
+### 01-05 — Signal Impairments
+
+| Question | Answer |
+|---|---|
+| What is attenuation? | Loss of signal strength as a signal travels through a medium. |
+| What is the difference between dB and dBm? | dB compares two values; dBm expresses power relative to 1 mW. |
+| What does SNR compare? | Wanted signal power with noise power. |
+| What is crosstalk? | Unwanted signal coupling from one wire pair to another. |
+| What does NEXT mean? | Near-End Crosstalk, measured at the same end as the signal source. |
+| What can impedance mismatch cause? | Signal reflection. |
+| What does BER measure? | Incorrect bits divided by total bits. |
+
+### 01-06 — Copper Cabling
+
+| Question | Answer |
+|---|---|
+| Why are wires twisted in Ethernet copper cable? | To reduce noise and crosstalk. |
+| What does UTP mean? | Unshielded Twisted Pair. |
+| Which category supports 10GBASE-T up to 100 m? | Cat6A. |
+| What does 8P8C mean? | Eight positions and eight electrical contacts. |
+| What cable uses T568A at one end and T568B at the other? | A traditional crossover cable. |
+| What does Auto-MDIX do? | Detects and adapts to the required transmit and receive pair arrangement. |
+| What is the difference between PSE and PD? | PSE supplies PoE power; PD receives it. |
+| What is the maximum power at the PD under IEEE 802.3bt Type 4? | Up to 71.3 W. |
