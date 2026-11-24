@@ -3,7 +3,7 @@
 > **ACTIVE STUDY STANDARD (2026-11-24):** The user approved the redesigned English-first teaching format. The target remains CCNA 200-301 v1.1; the curriculum scope is unchanged. The last completed lesson remains `00-02`. The existing `00-02` through `00-09` lessons have been rewritten in clear, beginner-friendly English, and Physical Layer lessons `01-01` through `01-04` have been created. This redesign does not record any new lesson completion. Use the revised 00-02 as a quick refresh if helpful, then continue with 00-03. No fixed calendar, daily hour target, mandatory Anki routine, or daily log is required. The older dated production plan below is historical only.
 > **Last update:** 2026-11-24
 > **Project status:** The Foundations module has nine lesson files. Lessons 00-02 through 00-09 have been rewritten in English; 00-01 remains the previously completed original lesson. Physical Layer lessons 01-01 through 01-04 are published; 01-05 onward and later modules remain planned or in production.
-> **Active study step:** Review the revised 00-02 briefly if useful, then continue with 00-03 through 00-09, followed by the Physical Layer lessons in order. Content production continues with 01-07.
+> **Active study step:** Review the revised 00-02 briefly if useful, then continue with 00-03 through 00-09, followed by the Physical Layer lessons in order. Content production continues with 01-08.
 
 Bu dosya iki şeyi takip eder: (A) içeriğin üretim durumu ve (B) öğrencinin ustalık durumu. Dosya listesi CURRICULUM.md'dedir; burada yalnızca sayılar, tamamlanan dosyalar, takvim ve sorunlar tutulur.
 
@@ -27,7 +27,7 @@ Durumlar: **Yazıldı** = dosya oluşturuldu. **Doğrulandı** = hesaplar, kimli
 | Modül | Planlanan | Yazıldı | Doğrulandı | Sıradaki |
 |---|---|---|---|---|
 | 00-FOUNDATIONS | 9 | 9 | 1* | Written: 9; 00-02–00-09 rewritten in English; formal audit pending |
-| 01-PHYSICAL-LAYER | 10 | 6 | 0 | 01-07 |
+| 01-PHYSICAL-LAYER | 10 | 7 | 0 | 01-08 |
 | 02-DATA-LINK-LAYER | 16 | 0 | 0 | 02-01 |
 | 03-NETWORK-LAYER | 21 | 0 | 0 | 03-01 |
 | 04-TRANSPORT-LAYER | 7 | 0 | 0 | 04-01 |
@@ -40,7 +40,7 @@ Durumlar: **Yazıldı** = dosya oluşturuldu. **Doğrulandı** = hesaplar, kimli
 | 13-CCNA-EXAM-PREPARATION | 4 | 0 | 0 | 13-01 |
 | 14-SECURITY-FUNDAMENTALS | 6 | 0 | 0 | 14-01 |
 | 15-NETWORK-OPERATIONS-AUTOMATION-AI | 6 | 0 | 0 | 15-01 |
-| **Total** | **116** | **17** | **3** | |
+| **Total** | **116** | **18** | **3** | |
 
 ### A.3 Pratikler ve değerlendirme
 
@@ -202,3 +202,5 @@ Henüz yok. Bir komut PT'de çalışmazsa ya da bir açıklamada hata bulursan b
 | 2026-11-24 | Added 01-03 Line Coding and Modulation and 01-04 Bit Synchronization and Reception, plus English review cards and glossary terms. Learner completion remains unchanged. |
 
 | 2026-11-24 | Added 01-05 Signal Impairments and 01-06 Copper Cabling; added English review cards and glossary entries. Copper-category, 10GBASE-T distance, and PoE power values were cross-checked with reference documents. Learner completion unchanged. |
+
+| 2026-11-24 | Added 01-07 Fiber Optics, English review cards and glossary entries; checked example transceiver reach/wavelength information against Cisco product data sheets. Learner completion unchanged. |
