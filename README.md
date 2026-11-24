@@ -66,7 +66,7 @@ There is no fixed daily schedule or required number of study hours. Progress is 
 - `14-SECURITY-FUNDAMENTALS/` and `15-NETWORK-OPERATIONS-AUTOMATION-AI/`: security, operations, and automation topics included in the CCNA scope.
 - `16-REAL-HOST-LABS/`: optional practice on real operating systems and with code.
 
-Only lessons that exist in the repository should be treated as published study material. Planned topics in the curriculum are not completed lessons until their files are created and reviewed. All ten Physical Layer lessons (01-01 through 01-10) and the first Data Link lesson (02-01) are now published. The remaining Data Link lessons are in production.
+Only lessons that exist in the repository should be treated as published study material. Planned topics in the curriculum are not completed lessons until their files are created and reviewed. All ten Physical Layer lessons (01-01 through 01-10) and Data Link lessons 02-01 and 02-02 are also published. The remaining Data Link lessons are in production.
 
 ## Course decisions
 
