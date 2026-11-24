@@ -1,10 +1,10 @@
 #separator:tab
 #html:false
-XOR ile OR'u ayıran tek satır hangisidir?	1 ve 1: OR 1 verir, XOR 0 verir. XOR "bitler farklı mı?" sorusudur. (00-03)
-Bir IP adresinden ağ adresi hangi işlemle bulunur?	Adres AND maske. (00-03)
-Yayın adresi hangi işlemle bulunur?	Adres OR joker maske (host bitlerinin tamamını 1 yapmak). (00-03)
-255.255.255.192 maskesinin joker maskesi nedir?	0.0.0.63 (her bayt için 255 − değer). (00-03)
-Hedefin yerel olup olmadığına kim karar verir?	Gönderen host, kendi maskesiyle iki adresi AND'leyerek. Router değil. (00-03)
-Parite neden çift sayıda bit hatasını kaçırır?	Yalnızca 1'lerin sayısının tekliğine bakar; iki bit değişince teklik değişmez. (00-03)
-Yarım toplayıcı hangi kapılardan oluşur?	Toplam için XOR, elde için AND. (00-03)
-TCP sıra numaraları neden modüler aritmetikle karşılaştırılır?	32 bitlik sabit genişlikte oldukları için zamanla taşar ve 0'a dönerler. (00-03)
+What does Boolean logic work with?	True and false values, commonly represented as 1 and 0 in digital systems. (00-03)
+When does AND return 1?	Only when both input bits are 1. (00-03)
+When does OR return 1?	When at least one input bit is 1. (00-03)
+When does XOR return 1?	When the two input bits are different. (00-03)
+What is overflow in an 8-bit unsigned value?	The result needs more than eight bits. If only eight bits are kept, the extra carry is lost; 255 + 1 becomes 0 in eight bits. (00-03)
+How do you calculate an IPv4 network address?	Perform a bitwise AND between the IP address and its subnet mask. (00-03)
+What is the wildcard mask for 255.255.255.192?	0.0.0.63. It is the inverse of the subnet mask. (00-03)
+What is the broadcast address of 192.168.10.64/26?	192.168.10.127. The host bits are all set to 1. (00-03)
