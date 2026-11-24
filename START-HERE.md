@@ -1,60 +1,59 @@
-# Buradan Başla (Start Here)
+# Start Here
 
-> **ÖNEMLİ — 2026-11-24:** Kullanıcı en son `00-02` dersini tamamladı. Mevcut içerik ve çalışma biçimi fazla karmaşık/yorucu geldiği için devamı durduruldu. **Eski günlük plan ve ders sırası askıdadır. `00-03` veya başka bir sonraki dersi atama.** Önce kullanıcıyla daha sade, yönetilebilir bir öğrenme biçimi tasarla ve onaylanan değişikliği buraya/PROGRESS.md'ye kaydet. Eski saat, uzunluk, Anki ve günlük rutinleri otomatik olarak dayatma.
+## Your CCNA study setup
 
+- **Exam:** Cisco CCNA 200-301 v1.1. The syllabus and exam version remain unchanged.
+- **Study language:** English.
+- **Teaching style:** Clear, beginner-friendly English. Every new technical term must be explained when it first appears.
+- **Last completed lesson:** 00-02.
+- **Current material:** Lessons 00-02 through 00-09 have been rewritten in the approved English-first format.
 
-> Bu dosya tek bir soruyu cevaplar: **"Bugün ne yapmalıyım?"** Planın tamamını anlaman gerekmiyor; her gün yalnızca aşağıdaki rutini izle.
+## Where to begin
 
-## Her sabah
+Open [00-FOUNDATIONS/02-Number-Systems-and-Units.md](00-FOUNDATIONS/02-Number-Systems-and-Units.md).
 
-1. **STUDY-ROADMAP.md**, Bölüm 3: Tabloda bugünün tarihine denk gelen fazı bul.
-2. Aynı dosyanın Bölüm 4'ünde o fazın **Sıra** satırına bak ve sıradaki ilk bitmemiş öğeyi aç.
+You have already completed the original 00-02 topic. Use the revised English version as a short refresh and to become comfortable with the new terminology. You do not need to repeat exercises you already understand.
 
-Geri kalan dosyalar (README, CURRICULUM, SOURCES, PROGRESS) başvuru dosyalarıdır. Günlük çalışmada açman gerekmez; PROGRESS.md'yi ben güncellerim.
+Then continue with:
 
-## Her ders dosyası için 5 adım
+1. [00-03 — Binary Arithmetic and Boolean Logic](00-FOUNDATIONS/03-Binary-Arithmetic-and-Boolean-Logic.md)
+2. [00-04 — Electricity Fundamentals](00-FOUNDATIONS/04-Electricity-Fundamentals.md)
+3. [00-05 — Transistors and Digital Logic](00-FOUNDATIONS/05-Transistors-and-Digital-Logic.md)
+4. [00-06 — Data Representation](00-FOUNDATIONS/06-Data-Representation.md)
+5. [00-07 — Computer Architecture for Networking](00-FOUNDATIONS/07-Computer-Architecture-for-Networking.md)
+6. [00-08 — Networking Fundamentals](00-FOUNDATIONS/08-Networking-Fundamentals.md)
+7. [00-09 — Layered Models: OSI and TCP/IP](00-FOUNDATIONS/09-Layered-Models-OSI-and-TCPIP.md)
 
-| # | Adım | Süre |
-|---|---|---|
-| 1 | Dosyayı baştan sona oku. Katlanmış cevapları **açma**. | 40–60 dk |
-| 2 | "Kendini Kontrol Et" sorularını önce kendin cevapla, sonra katlanmış cevapla karşılaştır. | 10–15 dk |
-| 3 | `12-REVISION/anki/` içindeki o dosyanın kartlarını Anki'ye aktar (File → Import, deste: `CCNA`). İstersen kendi kartlarını da ekle. | 5–10 dk |
-| 4 | Dosyadaki "Uygulama" alıştırmasını yap. | 10–30 dk |
-| 5 | Dosyanın sonundaki "Ustalık Kontrol Listesi"nde yapabildiklerine `[X]` koy. | 5 dk |
+The next module after Foundations is the Physical Layer. Its lesson files have not yet been published; they will be prepared in sequence.
 
-## Günün yapısı (pazartesi–cumartesi, ~4,75 saat)
+## How to study a lesson
 
-| Oturum | İçerik |
-|---|---|
-| 1 (1,5 saat) | Ders dosyası, 1. ve 2. adım |
-| 2 (1,5 saat) | Ders dosyasının devamı ya da ikinci ders dosyası |
-| 3 (1,5 saat) | Pratik (`LAB-` yönergesi, tam lab ya da `H-` host labı) veya soru bankası |
-| Her gün | 15 dk Anki |
+1. Read one section at a time. Stop when you need to; there is no required daily study duration.
+2. Every new technical term should be defined in simple English before it is used to explain another concept.
+3. Try the knowledge-check questions before opening the answers.
+4. Complete the practical exercise when it adds value. Not every topic needs a lab.
+5. Use the self-check list to identify what you understand and what needs another explanation.
+6. Ask questions whenever something is unclear. We will revisit the confusing point rather than restarting the entire lesson.
 
-**Pazar:** Yeni konu yok. Yaklaşık 2 saat tekrar yap (12-01, Bölüm 4.2).
+## What is not required
 
-## Senin yazacağın yerler
+- No fixed calendar, daily hour target, or mandatory number of lessons per day.
+- No daily report or activity log.
+- Anki and flashcards are optional review tools, not a required routine.
+- No mandatory teach-back. Your understanding will be checked through questions and useful practice.
 
-| Dosya | Ne zaman |
-|---|---|
-| Ders dosyasındaki ustalık listesi | Her dosyanın sonunda `[X]` işaretle |
-| `MY-NOTES/RESULTS.md` | Bir test (CE-, soru bankası) ya da faz kapısı bitince tek satır |
-| `MY-NOTES/QUESTIONS.md` | İsteğe bağlı: anlamadığın bir şey olursa yaz, devam et |
+## Progress tracking
 
-Gün sonunda değişiklikleri gönder: `git add -A`, `git commit -m "..."`, `git push`.
+The only source of truth for lesson progress is [PROGRESS.md](PROGRESS.md). A lesson is recorded as completed only after you have studied it and completed the relevant knowledge check and practical work, when applicable.
 
-## Bu hafta
+## Main reference files
 
-| Gün | Plan |
-|---|---|
-| 21 Kas, Cumartesi | 00-02, ardından 00-03 |
-| 22 Kas, Pazar | Tekrar (~2 saat) |
-| 23 Kas, Pazartesi | 00-04, ardından 00-05 |
-| 24 Kas, Salı | 00-06, ardından 00-07 |
-| 25 Kas, Çarşamba | 00-08, 00-09, FND soruları (`10-QUESTION-BANK/FOUNDATIONS/`, önce `10-QUESTION-BANK/README.md`) ve Faz 1 kapısı |
+- [README.md](README.md): repository overview and study principles.
+- [CURRICULUM.md](CURRICULUM.md): full CCNA v1.1 scope and topic inventory.
+- [PROGRESS.md](PROGRESS.md): lesson and course-material status.
+- [GLOSSARY.md](GLOSSARY.md): simple English definitions of key terms.
+- [12-REVISION/02-Flashcards-by-Module.md](12-REVISION/02-Flashcards-by-Module.md): optional review questions.
 
-Kurulumda eksik kaldıysa: Fedora'da Wireshark (`sudo dnf install wireshark`, ardından `sudo usermod -aG wireshark $USER` ve oturumu kapatıp aç). İlk kullanım Faz 3'te.
+## Starting a new chat
 
-## Yeni bir sohbet açtığında
-
-Her yeni sohbet boş başlar. En güncel başlangıç talimatı `GuvenEminSamil/ai-workspace` deposundaki `NEXT_AGENT_PROMPT.md` dosyasıdır. Onu yapıştır; eski kısa promptu kullanma. Prompt her anlamlı kontrol noktasında güncellenir.
+The durable handoff prompt is in the `GuvenEminSamil/ai-workspace` repository: `NEXT_AGENT_PROMPT.md`. Use its latest version so the teaching standard and course decisions stay consistent.
