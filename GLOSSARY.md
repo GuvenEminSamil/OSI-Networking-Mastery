@@ -118,3 +118,30 @@
 | Sine wave | A smooth, repeating waveform used as a basic signal model. | 01-02 |
 | SNR (Signal-to-Noise Ratio) | A comparison between wanted signal power and noise power. | 01-02 |
 | Transceiver | A component that can both transmit and receive signals. | 01-01 |
+
+| 4B/5B | A block-coding method that maps each group of four data bits to a five-bit code group. | 01-03 |
+| 8b/10b | A coding method that maps eight data bits to ten transmitted bits to help maintain useful signal properties. | 01-03 |
+| 64b/66b | A coding method that adds a two-bit synchronization header to each 64-bit data block. | 01-03 |
+| ASK (Amplitude Shift Keying) | A modulation method that represents symbols by changing signal amplitude. | 01-03 |
+| Baud | The number of symbols transmitted per second. | 01-03 |
+| Bit error rate (BER) | The ratio of incorrect bits to the total number of bits tested or received. | 01-04 |
+| Block code | A method that maps a group of data bits to a group of transmitted bits. | 01-03 |
+| Carrier | A repeating signal that can be changed to carry information. | 01-03 |
+| Clock recovery | Estimating symbol timing from a received signal. | 01-04 |
+| Decision threshold | A boundary used by a receiver to decide which symbol was received. | 01-04 |
+| Equalization | Compensating for signal distortion introduced by a communication channel. | 01-04 |
+| FSK (Frequency Shift Keying) | A modulation method that represents symbols by changing signal frequency. | 01-03 |
+| Line coding | Representing bit sequences using signal levels or transitions. | 01-03 |
+| Manchester encoding | A line code with a transition in the middle of every bit period to help timing recovery. | 01-03 |
+| Modulation | Changing a signal in a controlled way to represent information. | 01-03 |
+| MLT-3 | A three-level signaling method used with 4B/5B in 100BASE-TX Ethernet. | 01-03 |
+| NRZ (Non-Return-to-Zero) | A line-coding method that represents bits using signal levels without returning to a neutral level between each bit. | 01-03 |
+| OFDM (Orthogonal Frequency-Division Multiplexing) | A method that sends data across many closely spaced subcarriers in one channel. | 01-03 |
+| PAM (Pulse Amplitude Modulation) | A signaling method that represents symbols using different pulse amplitudes. | 01-03 |
+| Phase-Locked Loop (PLL) | A circuit that adjusts a local timing signal to stay synchronized with a reference or incoming signal. | 01-04 |
+| PSK (Phase Shift Keying) | A modulation method that represents symbols by changing signal phase. | 01-03 |
+| Preamble | A known bit pattern sent before a frame to help the receiver prepare and synchronize. | 01-04 |
+| QAM (Quadrature Amplitude Modulation) | A modulation method that uses combinations of amplitude and phase to represent symbols. | 01-03 |
+| Sampling | Measuring a changing signal at a particular time. | 01-04 |
+| SFD (Start Frame Delimiter) | A pattern marking the end of the Ethernet preamble and the start of the frame. | 01-04 |
+| Subcarrier | One of the smaller frequency components used within a wider communication channel. | 01-03 |
