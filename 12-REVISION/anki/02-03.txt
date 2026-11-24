@@ -1,0 +1,13 @@
+#separator:tab
+#html:false
+What is the purpose of the preamble?	It helps the receiving interface synchronize with the incoming signal. (02-03)
+What does SFD stand for?	Start Frame Delimiter; it marks the start of the Ethernet frame. (02-03)
+What is the EtherType for IPv4?	0x0800. (02-03)
+What is the EtherType for IPv6?	0x86DD. (02-03)
+What is the EtherType for ARP?	0x0806. (02-03)
+What is the minimum standard Ethernet frame size?	64 bytes, from destination MAC through FCS. (02-03)
+What is the maximum standard untagged Ethernet frame size?	1518 bytes. (02-03)
+What is the maximum standard frame size with one 802.1Q VLAN tag?	1522 bytes. (02-03)
+What does FCS do?	Carries a CRC value used to detect frame corruption. (02-03)
+What is the standard Ethernet MTU?	Commonly 1500 bytes. (02-03)
+Is IFG part of the frame?	No. It is the minimum idle time between transmissions. (02-03)
