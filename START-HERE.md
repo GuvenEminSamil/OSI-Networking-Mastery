@@ -24,7 +24,7 @@ Then continue with:
 6. [00-08 — Networking Fundamentals](00-FOUNDATIONS/08-Networking-Fundamentals.md)
 7. [00-09 — Layered Models: OSI and TCP/IP](00-FOUNDATIONS/09-Layered-Models-OSI-and-TCPIP.md)
 
-The next module after Foundations is the Physical Layer. Its lesson files have not yet been published; they will be prepared in sequence.
+The next module after Foundations is the Physical Layer. Lesson 01-01 is now available: [01-01 — The Purpose of the Physical Layer](01-PHYSICAL-LAYER/01-Physical-Layer-Purpose.md). The next lesson to be prepared is 01-02.
 
 ## How to study a lesson
 
