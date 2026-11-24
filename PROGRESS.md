@@ -1,10 +1,9 @@
 # İlerleme (Progress)
 
-> **ÖĞRENME PLANI DURDURULDU (2026-11-24):** Kullanıcı en son `00-02` dersini tamamladı. Sonrasında materyal/öğrenme biçimini fazla karmaşık ve bunaltıcı bulduğu için devam etmedi. Eski takvim, günlük saat hedefi, uzun ders formatı ve Anki/checklist rutini askıdadır. Kullanıcıyla daha sade bir yaklaşım tasarlanıp onaylanmadan `00-03` veya sonraki ders atanmayacak. Aşağıdaki eski üretim takvimi içerik envanteri/tarihsel plan olarak kalır; aktif öğrenci çalışma talimatı değildir.
-
-> **Son güncelleme:** 2026-11-24
-> **Proje aşaması:** İçerik üretimi sürüyor. Faz 0 tamamlandı (20 Kas); Faz 1'in bütün içeriği (P1) hazır. Hedef CCNA v1.1, sınav Türkiye'de, en geç 2 Şubat 2027.
-> **Sıradaki adım:** P2 (Faz 2, gerekli: 25 Kasım). Büyük bir paket olduğu için iki oturumda: **P2a** `11-01`, `09-PACKET-TRACER-LABS/README.md`, `01-01` – `01-06`, `DRILLS-F02` (cevaplarıyla); **P2b** `01-07` – `01-10`, `LAB-011` (çözümüyle), `H04`, PHY soruları.
+> **ACTIVE STUDY STANDARD (2026-11-24):** The user approved the redesigned English-first teaching format. The target remains CCNA 200-301 v1.1; the curriculum scope is unchanged. The last completed lesson remains `00-02`. The existing `00-02` through `00-09` lessons have been rewritten in clear, beginner-friendly English. This redesign does not record any new lesson completion. Use the revised 00-02 as a quick refresh if helpful, then continue with 00-03. No fixed calendar, daily hour target, mandatory Anki routine, or daily log is required. The older dated production plan below is historical only.
+> **Last update:** 2026-11-24
+> **Project status:** The Foundations module has nine lesson files. Lessons 00-02 through 00-09 have been rewritten in English; 00-01 remains the previously completed original lesson. Remaining modules are planned in the curriculum but their lesson files have not yet been published.
+> **Active study step:** Review the revised 00-02 briefly if useful, then study 00-03. The next new module after 00-09 is the Physical Layer.
 
 Bu dosya iki şeyi takip eder: (A) içeriğin üretim durumu ve (B) öğrencinin ustalık durumu. Dosya listesi CURRICULUM.md'dedir; burada yalnızca sayılar, tamamlanan dosyalar, takvim ve sorunlar tutulur.
 
@@ -27,7 +26,7 @@ Durumlar: **Yazıldı** = dosya oluşturuldu. **Doğrulandı** = hesaplar, kimli
 
 | Modül | Planlanan | Yazıldı | Doğrulandı | Sıradaki |
 |---|---|---|---|---|
-| 00-FOUNDATIONS | 9 | 9 | 9 | — (tamamlandı) |
+| 00-FOUNDATIONS | 9 | 9 | 1* | 00-02–00-09 rewritten in English; review after rewrite pending |
 | 01-PHYSICAL-LAYER | 10 | 0 | 0 | 01-01 |
 | 02-DATA-LINK-LAYER | 16 | 0 | 0 | 02-01 |
 | 03-NETWORK-LAYER | 21 | 0 | 0 | 03-01 |
@@ -91,14 +90,14 @@ Her paket, ilgili fazın başlangıç tarihinden önce hazır olmalı. Her oturu
 - 2026-11-19 — START-HERE.md (günlük rehber), MY-NOTES/ şablonları, 12-REVISION/anki/ içe aktarma dosyaları (00-01 – 00-04, 32 kart)
 - 2026-11-20 — 00-05, 00-06, 00-07, 00-08, 00-09; `10-QUESTION-BANK/README.md`; FND soruları (40 soru: Q-FND-DAT 12, Q-FND-HW 9, Q-FND-NET 9, Q-FND-OSI 10) ve cevap dosyaları; 12-02 ve anki/ (00-05 – 00-09, 46 kart; toplam 78)
 
-## B. Öğrenci ustalık takibi
+## B. Learner progress
 
-Seviyeler STUDY-ROADMAP.md, Bölüm 6'da tanımlıdır (0 Başlanmadı → 5 Ustalaştı). Kapı tarihi, faz kapısının geçildiği gündür; gecikmeli test en erken 14 gün sonra yapılır.
+Levels are defined in STUDY-ROADMAP.md. Dates are not used as a study schedule; progress is recorded by demonstrated understanding and completed lessons.
 
 | Faz | Konu | Hedef tarih | Seviye | Kapı tarihi | Gecikmeli test | Not |
 |---|---|---|---|---|---|---|
 | 0 | Kurulum ve tanı | 20 Kas | — | 20 Kas | — | Kurulum ve CE-00 tamamlandı |
-| 1 | Temeller | 20–25 Kas | 1 (eski kayıt; yeniden doğrulanmadı) | — | — | Kullanıcı doğrulaması: son tamamlanan ders 00-02. Eski 00-01 checklist kaydı yeniden teyit edilmeli; yeni format onaylanana kadar ilerleme durdu. |
+| 1 | Foundations | Not scheduled | 1 (older record; not re-assessed) | — | — | User confirmed last completed lesson is 00-02. The English rewrite of 00-02 is a refresh, not a new completion. Continue with 00-03 after the refresh if needed. |
 | 2 | Fiziksel Katman | 25–28 Kas | 0 | — | — | |
 | 3 | Veri Bağlantı I | 28 Kas – 3 Ara | 0 | — | — | |
 | 4 | Ağ Katmanı I | 3–9 Ara | 0 | — | — | |
@@ -188,3 +187,10 @@ Henüz yok. Bir komut PT'de çalışmazsa ya da bir açıklamada hata bulursan b
 | 2026-11-20 | Depo bağlandı (okuma). Kullanıcının isteğiyle teach-back ve günlük kaldırıldı: MY-NOTES/TEACH-BACK.md ve LOG.md silindi, RESULTS.md eklendi; START-HERE.md, README.md, 12-01 ve STUDY-ROADMAP.md (ustalık seviyesi 2, günlük şablon) güncellendi. CE-00 puanlandı (21/40). Sınav yeri Türkiye olarak kaydedildi. |
 | 2026-11-24 | Kullanıcı doğruladı: son tamamlanan ders 00-02; mevcut materyal/çalışma biçimi bunaltıcı bulundu. Eski çalışma takvimi durduruldu; içerik ve yaklaşım sadeleştirilmeden devam edilmeyecek. |
 | 2026-11-20 | P1 tamamlandı: 00-05 – 00-09 yazıldı ve betikle doğrulandı (kimlikler, bölüm bağlantıları, kaynak kimlikleri, hesaplar). `10-QUESTION-BANK/README.md` (puanlama kuralları) ve 40 FND sorusu cevaplarıyla eklendi. GLOSSARY.md'ye 103 terim, 12-02'ye ve `12-REVISION/anki/`'ye 46 kart eklendi. SOURCES.md'ye Bölüm 4.9 eklendi. Depoya yazma erişimi doğrulandı (karar #10). |
+
+
+## Language and redesign log
+
+| Date | Change |
+|---|---|
+| 2026-11-24 | User approved the English-first teaching standard and confirmed that the syllabus remains CCNA 200-301 v1.1. Lessons 00-02 through 00-09 were rewritten in simpler English; 00-01 remains unchanged. The matching flashcards, Anki decks, glossary, README, and START-HERE guide were aligned. No new lesson completion was recorded. |
