@@ -131,3 +131,26 @@
 | What is period? | The time required for one complete cycle; T = 1/f. |
 | What is the difference between signal bandwidth and data rate? | Signal bandwidth is measured in Hz; data rate is measured in bits per second. |
 | What does SNR compare? | Wanted signal power with noise power. |
+
+### 01-03 — Line Coding and Modulation
+
+| Question | Answer |
+|---|---|
+| What is line coding? | Representing a sequence of bits using signal levels or transitions on a communication medium. |
+| What does baud measure? | The number of symbols transmitted per second. |
+| What is the purpose of Manchester encoding? | A transition in every bit period helps the receiver recover timing. |
+| Which methods are used by 100BASE-TX? | 4B/5B coding and MLT-3 signaling. |
+| What does PAM vary? | Signal amplitude. |
+| What does QAM change? | Both amplitude and phase. |
+| What is OFDM? | A method that sends data across many closely spaced subcarriers within one channel. |
+
+### 01-04 — Bit Synchronization and Reception
+
+| Question | Answer |
+|---|---|
+| Why does a receiver need bit synchronization? | It must know when to sample the incoming signal. |
+| What is a decision threshold? | A boundary used to decide which symbol a measured signal value represents. |
+| What does a PLL help recover? | Timing that is synchronized with the incoming signal. |
+| What does the Ethernet preamble do? | It gives the receiver a known pattern to prepare and synchronize before the frame. |
+| What does SFD stand for? | Start Frame Delimiter; it marks the beginning of the Ethernet frame after the preamble. |
+| What does BER measure? | The ratio of incorrect bits to total bits. |
