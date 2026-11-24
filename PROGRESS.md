@@ -1,15 +1,15 @@
 # İlerleme (Progress)
 
-> **ACTIVE STUDY STANDARD (2026-11-24):** The user approved the redesigned English-first teaching format. The target remains CCNA 200-301 v1.1; the curriculum scope is unchanged. The last completed lesson remains `00-02`. The existing `00-02` through `00-09` lessons have been rewritten in clear, beginner-friendly English. This redesign does not record any new lesson completion. Use the revised 00-02 as a quick refresh if helpful, then continue with 00-03. No fixed calendar, daily hour target, mandatory Anki routine, or daily log is required. The older dated production plan below is historical only.
+> **ACTIVE STUDY STANDARD (2026-11-24):** The user approved the redesigned English-first teaching format. The target remains CCNA 200-301 v1.1; the curriculum scope is unchanged. The last completed lesson remains `00-02`. The existing `00-02` through `00-09` lessons have been rewritten in clear, beginner-friendly English, and `01-01` has been created as the first Physical Layer lesson. This redesign does not record any new lesson completion. Use the revised 00-02 as a quick refresh if helpful, then continue with 00-03. No fixed calendar, daily hour target, mandatory Anki routine, or daily log is required. The older dated production plan below is historical only.
 > **Last update:** 2026-11-24
-> **Project status:** The Foundations module has nine lesson files. Lessons 00-02 through 00-09 have been rewritten in English; 00-01 remains the previously completed original lesson. Remaining modules are planned in the curriculum but their lesson files have not yet been published.
-> **Active study step:** Review the revised 00-02 briefly if useful, then study 00-03. The next new module after 00-09 is the Physical Layer.
+> **Project status:** The Foundations module has nine lesson files. Lessons 00-02 through 00-09 have been rewritten in English; 00-01 remains the previously completed original lesson. Physical Layer lesson 01-01 is published; 01-02 onward and later modules remain planned or in production.
+> **Active study step:** Review the revised 00-02 briefly if useful, then study 00-03. The next new module after 00-09 is the Physical Layer; lesson 01-01 is published and 01-02 is the next content-production item.
 
 Bu dosya iki şeyi takip eder: (A) içeriğin üretim durumu ve (B) öğrencinin ustalık durumu. Dosya listesi CURRICULUM.md'dedir; burada yalnızca sayılar, tamamlanan dosyalar, takvim ve sorunlar tutulur.
 
 ## A. İçerik üretim durumu
 
-Durumlar: **Yazıldı** = dosya oluşturuldu. **Doğrulandı** = hesaplar, kimlikler ve dosyalar arası bağlantılar betikle kontrol edildi; sayısal iddialar kaynaklarla eşleştirildi (açık kalanlar Bölüm D'de); pratiklerde ayrıca PT durum etiketleri kontrol edildi.
+Durumlar: **Yazıldı** = dosya oluşturuldu. **Doğrulandı** = hesaplar, kimlikler ve dosyalar arası bağlantılar kontrol edildi; sayısal iddialar kaynaklarla eşleştirildi (açık kalanlar Bölüm D'de); pratiklerde ayrıca PT durum etiketleri kontrol edildi. `00-FOUNDATIONS` satırındaki `1*`, yalnızca eski biçimdeki `00-01` dersinin önceki doğrulama durumunu gösterir; yeni yazılan `00-02`–`00-09` henüz bu tam teknik denetimden geçirilmemiştir.
 
 ### A.1 Proje dosyaları
 
@@ -26,8 +26,8 @@ Durumlar: **Yazıldı** = dosya oluşturuldu. **Doğrulandı** = hesaplar, kimli
 
 | Modül | Planlanan | Yazıldı | Doğrulandı | Sıradaki |
 |---|---|---|---|---|
-| 00-FOUNDATIONS | 9 | 9 | 1* | 00-02–00-09 rewritten in English; review after rewrite pending |
-| 01-PHYSICAL-LAYER | 10 | 0 | 0 | 01-01 |
+| 00-FOUNDATIONS | 9 | 9 | 1* | Written: 9; 00-02–00-09 rewritten in English; formal audit pending |
+| 01-PHYSICAL-LAYER | 10 | 1 | 0 | 01-02 |
 | 02-DATA-LINK-LAYER | 16 | 0 | 0 | 02-01 |
 | 03-NETWORK-LAYER | 21 | 0 | 0 | 03-01 |
 | 04-TRANSPORT-LAYER | 7 | 0 | 0 | 04-01 |
@@ -194,3 +194,5 @@ Henüz yok. Bir komut PT'de çalışmazsa ya da bir açıklamada hata bulursan b
 | Date | Change |
 |---|---|
 | 2026-11-24 | User approved the English-first teaching standard and confirmed that the syllabus remains CCNA 200-301 v1.1. Lessons 00-02 through 00-09 were rewritten in simpler English; 00-01 remains unchanged. The matching flashcards, Anki decks, glossary, README, and START-HERE guide were aligned. No new lesson completion was recorded. |
+
+| 2026-11-24 | Added `01-PHYSICAL-LAYER/01-Physical-Layer-Purpose.md` (01-01) in the approved English-first format. Content-production count updated; learner completion remains unchanged. |
