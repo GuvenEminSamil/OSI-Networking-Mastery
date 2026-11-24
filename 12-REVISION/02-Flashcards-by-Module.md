@@ -276,3 +276,16 @@
 | What is a point-to-point link? | A direct link between two endpoints. |
 | What do PPP and HDLC have in common? | Both are Data Link protocols used on point-to-point links. |
 | What happens to the Ethernet frame when a router forwards a packet to a new link? | The incoming Layer 2 frame is removed and a new frame is built for the outgoing link. |
+
+### 02-02 — MAC Addresses and NICs
+
+| Question | Answer |
+|---|---|
+| How long is a common Ethernet MAC address? | 48 bits, or six bytes. |
+| What does OUI stand for? | Organizationally Unique Identifier. |
+| What does I/G = 0 mean? | Individual (unicast) address. |
+| What does U/L = 1 mean? | Locally administered address. |
+| What is the Ethernet broadcast MAC address? | FF:FF:FF:FF:FF:FF. |
+| What is promiscuous mode? | A NIC mode that passes received frames to the OS even when the destination MAC is not the NIC's own address. |
+| Does promiscuous mode guarantee visibility of all switch unicast traffic? | No. The switch must deliver or mirror the traffic to the monitoring port. |
+| What is hardware offloading? | The NIC performs selected processing tasks instead of the CPU performing them all. |
