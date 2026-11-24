@@ -24,7 +24,7 @@ Then continue with:
 6. [00-08 — Networking Fundamentals](00-FOUNDATIONS/08-Networking-Fundamentals.md)
 7. [00-09 — Layered Models: OSI and TCP/IP](00-FOUNDATIONS/09-Layered-Models-OSI-and-TCPIP.md)
 
-The next module after Foundations is the Physical Layer. Lesson 01-01 is now available: [01-01 — The Purpose of the Physical Layer](01-PHYSICAL-LAYER/01-Physical-Layer-Purpose.md). Lesson 01-02 — Signals and Bandwidth is also available: [01-02 — Signals and Bandwidth](01-PHYSICAL-LAYER/02-Signals-and-Bandwidth.md). Lessons 01-03 — Line Coding and Modulation and 01-04 — Bit Synchronization and Reception are also available. Lessons 01-05 — Signal Impairments and 01-06 — Copper Cabling are now available. The next lesson to be prepared is 01-07.
+The next module after Foundations is the Physical Layer. Lesson 01-01 is now available: [01-01 — The Purpose of the Physical Layer](01-PHYSICAL-LAYER/01-Physical-Layer-Purpose.md). Lesson 01-02 — Signals and Bandwidth is also available: [01-02 — Signals and Bandwidth](01-PHYSICAL-LAYER/02-Signals-and-Bandwidth.md). Lessons 01-03 — Line Coding and Modulation and 01-04 — Bit Synchronization and Reception are also available. Lessons 01-05 — Signal Impairments and 01-06 — Copper Cabling are now available. Lesson 01-07 — Fiber Optics is now available. The next lesson to be prepared is 01-08.
 
 ## How to study a lesson
 
