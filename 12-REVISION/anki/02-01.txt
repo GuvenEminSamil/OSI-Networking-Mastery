@@ -1,0 +1,9 @@
+#separator:tab
+#html:false
+Which OSI layer is the Data Link layer?	Layer 2. (02-01)
+What is framing?	Organizing a stream of bits into identifiable frames. (02-01)
+What are the two IEEE 802 Data Link sublayers?	LLC (Logical Link Control) and MAC (Media Access Control). (02-01)
+What is media access?	Rules that determine how devices use a communication medium. (02-01)
+What is a point-to-point link?	A direct communication link between two endpoints. (02-01)
+What do PPP and HDLC have in common?	Both are Data Link protocols used on point-to-point links. (02-01)
+What happens to the Ethernet frame when a router forwards a packet to a new link?	The incoming Layer 2 frame is removed and a new frame is built for the outgoing link. (02-01)
