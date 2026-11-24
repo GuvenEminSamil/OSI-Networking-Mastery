@@ -1,11 +1,9 @@
 #separator:tab
 #html:false
-nMOS ve pMOS transistörlerin kapısına mantık 1 uygulanınca ne olur?	nMOS iletir, pMOS iletmez. İkisi her zaman birbirinin tersini yapar (CMOS'taki "tamamlayıcı"). (00-05)
-CMOS bir evirici beklerken neden neredeyse güç harcamaz?	Kararlı durumda transistörlerden biri her zaman kapalıdır; besleme ile toprak arasında doğrudan akım yolu yoktur. Güç esas olarak durum değişirken harcanır. (00-05)
-Gürültü payları hangi formüllerle hesaplanır?	NMH = VOH − VIH; NML = VIL − VOL. (00-05)
-Klasik TTL seviyelerinde (VOH 2,4 / VIH 2,0 / VIL 0,8 / VOL 0,4 V) gürültü payları nedir?	İki seviye için de 0,4 V. (00-05)
-Bir bit SRAM'de ve DRAM'de nasıl saklanır?	SRAM: iki eviricinin halkası (6 transistör). DRAM: bir transistör ve bir kapasitördeki yük. (00-05)
-DRAM neden yenileme (refresh) ister?	Kapasitördeki yük zamanla sızar; DDR4'te her hücre en geç 64 ms'de bir okunup yeniden yazılır. (00-05)
-Saat sinyali (clock) neden gerekir?	Kapı gecikmeleri yüzünden sonuçlar farklı anlarda hazır olur; saat kenarı, flip-flop'ların sonucu hazır olduğunda ve aynı anda yakalamasını sağlar. (00-05)
-Cisco'da running-config ve startup-config nerede durur?	running-config RAM'de (uçucu), startup-config NVRAM'de (kalıcı). Kalıcı yapmak için: copy running-config startup-config. (00-05)
-Cisco'da IOS imajı ve açılış programları nerededir?	IOS imajı flash'ta; POST, bootstrap ve ROMMON ROM'da. (00-05)
+What is a transistor used for in digital devices?	It can act as a very fast electronic switch and help build logic circuits. (00-05)
+What is a logic gate?	A circuit that performs a Boolean operation on one or more input bits. (00-05)
+What does volatile memory mean?	Its contents are lost when power is removed. RAM is volatile. (00-05)
+What is RAM commonly used for in a Cisco device?	Working memory, including the active running configuration. (00-05)
+What is flash commonly used to store?	The IOS image and other files. Flash is non-volatile. (00-05)
+What is the difference between running-config and startup-config?	Running-config is the active configuration in RAM; startup-config is the saved configuration loaded at startup. (00-05)
+Which command saves the active Cisco configuration?	copy running-config startup-config. (00-05)
