@@ -205,3 +205,13 @@ Bu bölümdeki kimlikler ilk kez burada tanımlandı ya da daha önce "planland�
 | RFC 1122 | (Bölüm 4.3) §1.1.3 *Internet Protocol Suite*, §1.3.1 *Organization* | 3 | Okundu | 00-09: dört katman; ICMP'nin IP ile ilişkisi; "strict layering is an imperfect model" |
 | RFC 3439 | (Bölüm 4.3) §3 *Layering Considered Harmful* | 3 | Okundu (arama özeti: içindekiler ve bölüm girişi) | 00-09: katmanlamanın sakıncaları |
 | ITU-X200 | ITU-T X.200 (07/1994), *OSI Basic Reference Model: The basic model*; ISO/IEC 7498-1:1994 ile aynı metin. https://www.itu.int/rec/T-REC-X.200-199407-I | 2 | Okundu (kayıt sayfası; metin ücretsiz, bu oturumda açılmadı) | 00-09: OSI modelinin geçerli metni ve tarihi; önceki sürüm X.200 (11/88) |
+
+
+## References added for Physical Layer lessons
+
+| ID | Source | Used in |
+|---|---|---|
+| CISCO-CCNA-EXAM-TOPICS-V11 | [Cisco 200-301 CCNA v1.1 Exam Topics](https://learningnetwork.cisco.com/s/ccna-exam-topics) | 01-06: objective 1.3 (single-mode fiber, multimode fiber, copper; Ethernet shared media and point-to-point connections) |
+| CISCO-POE-INDUSTRIAL | [Cisco — PoE for Industrial Automation](https://www.cisco.com/c/en/us/products/collateral/networking/industrial-switches/poe-ind-data-control-single-cable-so.html) | 01-06: 802.3af/at/bt PSE and PD power levels |
+| CISCO-POE-IOSXE | [Cisco IOS XE PoE Configuration Guide](https://www.cisco.com/c/en/us/td/docs/switches/lan/c9000/infra/poe/poe-configuration-guide/g-poe/c-poe.html) | 01-06: PoE classification and power capabilities |
+| ANSI-TIA-568-E-REFERENCE | [ANSI/TIA-568-E cabling reference table](https://imlive.s3.amazonaws.com/Federal%20Government/ID62048956821926688123123361973875756393/Attachment%201i%20TIA-568%20Telecomm%20Cabling%20Standard.pdf) | 01-06: balanced twisted-pair application distances and categories |
