@@ -1,0 +1,10 @@
+#separator:tab
+#html:false
+Why are wires twisted in Ethernet copper cable?	To reduce noise and crosstalk. (01-06)
+What does UTP mean?	Unshielded Twisted Pair. (01-06)
+Which category supports 10GBASE-T up to 100 meters?	Cat6A. (01-06)
+What does 8P8C mean?	Eight positions and eight electrical contacts. (01-06)
+What cable uses T568A at one end and T568B at the other?	A traditional crossover cable. (01-06)
+What does Auto-MDIX do?	Detects and adapts to the required transmit and receive pair arrangement. (01-06)
+What is the difference between PSE and PD?	PSE supplies PoE power; PD receives it. (01-06)
+What is the maximum power at the PD under IEEE 802.3bt Type 4?	Up to 71.3 W. (01-06)
