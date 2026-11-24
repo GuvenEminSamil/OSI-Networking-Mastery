@@ -265,3 +265,13 @@
 | Checksum offload | A NIC feature that calculates or checks supported protocol checksums in hardware. | 02-02 |
 | TCP segmentation offload (TSO) | A NIC feature that divides large blocks of data into smaller TCP segments. | 02-02 |
 | Receive-side scaling (RSS) | A NIC feature that distributes receive processing across multiple CPU cores. | 02-02 |
+
+| Preamble | A known bit pattern sent before an Ethernet frame to help the receiver synchronize. | 02-03 |
+| SFD (Start Frame Delimiter) | A pattern marking the end of the preamble and the start of an Ethernet frame. | 02-03 |
+| EtherType | A two-byte Ethernet field identifying the protocol carried in the payload. | 02-03 |
+| Length/Type field | The two-byte Ethernet field used as a payload length or EtherType, depending on its value. | 02-03 |
+| Padding | Extra bytes added to a short Ethernet payload to meet the minimum frame size. | 02-03 |
+| FCS (Frame Check Sequence) | A four-byte field carrying the CRC result used to detect frame corruption. | 02-03 |
+| MTU (Maximum Transmission Unit) | The maximum Layer 3 packet size a link can carry without fragmentation at that link. | 02-03 |
+| Jumbo frame | An Ethernet frame with a payload larger than the standard 1500-byte Ethernet payload limit. | 02-03 |
+| IFG (Interframe Gap) | The minimum idle time required between successive Ethernet frame transmissions. | 02-03 |
