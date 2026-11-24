@@ -1,0 +1,9 @@
+#separator:tab
+#html:false
+What is line coding?	Representing a sequence of bits using signal levels or transitions on a communication medium. (01-03)
+What does baud measure?	The number of symbols transmitted per second. (01-03)
+What is the purpose of Manchester encoding?	A transition in every bit period helps the receiver recover timing. (01-03)
+Which methods are used by 100BASE-TX?	4B/5B coding and MLT-3 signaling. (01-03)
+What does PAM vary?	Signal amplitude. (01-03)
+What does QAM change?	Both amplitude and phase. (01-03)
+What is OFDM?	A method that sends data across many closely spaced subcarriers within one channel. (01-03)
