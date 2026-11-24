@@ -1,17 +1,15 @@
-# Çalışma Yol Haritası (Study Roadmap)
+# Study Roadmap and Topic Dependencies
 
-> Bu dosya **sırayı ve takvimi** belirler. Konuların kapsamı CURRICULUM.md'dedir; buradaki kimlikler (`MM-NN`, `LAB-NNN`, `Hnn`, `Knn`, `CE-NN`) oradaki satırlara karşılık gelir.
->
-> Durum: v0.2, CCNA v1.1 hedefine göre takvimlendi (2026-11-19).
+> This file is retained as a reference for topic order and prerequisites. The dated calendar, daily study hours, and session targets in the older v0.2 plan are historical and are **not active study instructions**. Follow START-HERE.md and PROGRESS.md instead. The curriculum target remains CCNA 200-301 v1.1, and English is the study language.
 
-## 1. Genel bakış
+## 1. Overview of the curriculum sequence
 
 - **Hedef:** CCNA 200-301 **v1.1**. Son sınav günü **2 Şubat 2027 (Salı)**.
-- **Çalışma temposu:** Pazartesi–cumartesi günde ~4,75 saat (1–1,5 saatlik 3–4 oturum). Pazar günleri yeni konu yok, yalnızca ~2 saat tekrar. 31 Aralık ve 1 Ocak tatil.
-- **Çekirdek plan: ~263 saat, 14 faz (Faz 0–13).** 20 Kasım 2026'da başlar, 26 Ocak 2027'de biter. Saatler benim tahminim; ilk fazlardan sonra gerçek hızına göre güncellenecek.
-- **Tampon:** 27 Ocak – 1 Şubat (yaklaşık 5 çalışma günü). Geride kalırsan bu günler kullanılır.
-- **Sınav penceresi:** 28 Ocak – 2 Şubat. Önce sınava girebileceğin yer ve uygunluk netleşmeli (bkz. PROGRESS.md, Açık Kararlar #9).
-- **Faz 14 — Sınav sonrası:** `[DERİN]` bölümler, "Kodla-Anla" alıştırmaları, sınavla doğrudan ilgisi olmayan host labları ve v2.0 farkları.
+- **Study pace:** Flexible and based on availability. There are no required daily hours, study days, or fixed review sessions.
+- **Sequence:** The original plan groups topics into phases. Treat this as a topic-order reference, not a time commitment or calendar.
+- **Progress:** Move forward when the current concepts are understood. Do not rush to meet a date.
+- **Exam target:** CCNA 200-301 v1.1. The syllabus version is fixed unless the user explicitly changes it.
+- **Optional extensions:** Advanced sections and extra labs are secondary to the v1.1 exam objectives.
 - **Her faz** teori, pratik (yönerge veya tam lab), soru ve bir **ustalık kapısı** içerir. Kapı geçilmeden sonraki faza geçilmez.
 
 ```mermaid
@@ -80,9 +78,9 @@ flowchart LR
 
 *Ne görüyoruz:* Subnetting'in kökü Boole mantığındaki AND işlemidir. ARP, hem host'un hem router'ın iletim kararının ön şartıdır. NAT/PAT ve TLS, TCP'den önce anlaşılamaz. L2 güvenlik savunmaları DHCP ve ARP bilinmeden anlamsız kalır.
 
-## 3. Takvim ve faz özeti
+## 3. Historical calendar (not an active study schedule)
 
-Tarihler hedeftir; bir fazın kapısı geçilmeden sonrakine başlanmaz. Geride kalırsan önce tampon günler, sonra Bölüm 8'deki kurallar devreye girer.
+The table below is retained only as a historical record of the earlier v0.2 plan. **Do not follow its dates or estimated hours.** Study at a flexible pace. Use the curriculum order and record actual lesson progress in PROGRESS.md.
 
 | Faz | Konu | Hedef tarih | Saat | Teori | PT pratikleri | Host | Senaryo | Sınav |
 |---|---|---|---|---|---|---|---|---|
