@@ -303,8 +303,6 @@ Oturumlar arasında en az 15 dakika ara ver. Pazar günü yalnızca Bölüm 5'te
 
 ## Current unit-level target deadlines (set 2026-11-26)
 
-## Current unit-level target deadlines
-
 > Set on 2026-11-26 against the previously agreed CCNA 200-301 v1.1 exam target of **2027-02-02**. These are unit completion targets, not daily schedules or required study hours. Some later units may be studied in parallel once their stated prerequisites are complete.
 
 | Unit | Unit name | Target completion |
