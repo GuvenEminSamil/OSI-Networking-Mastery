@@ -97,6 +97,6 @@ A unit is complete when its lessons have been studied, the relevant checks have 
 
 - Last completed lesson: **00-02 — Number Systems and Units** (2026-11-26).
 - Next learner lesson: **00-03 — Binary Arithmetic and Boolean Logic**.
-- Next content-production lesson: **02-07 — Collision and Broadcast Domains**.
+- Next content-production lesson: **02-06 — Ethernet Switch Operation and MAC Address Learning**.
 - The learner's diagnostic baseline is recorded in `MY-NOTES/RESULTS.md`.
 - The current state and confirmed completion record are maintained in `PROGRESS.md`.
