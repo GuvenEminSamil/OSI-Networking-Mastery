@@ -6,7 +6,7 @@
 - **Study language:** English.
 - **Teaching style:** Clear, beginner-friendly English. Every new technical term must be explained when it first appears.
 - **Last completed lesson:** 00-02.
-- **Current material:** Lessons 00-02 through 00-09 have been rewritten in the approved English-first format.
+- **Current material:** Lessons 00-01 through 00-09 are available in English. Lesson 00-01 was rewritten during the 2026-11-26 language audit.
 
 ## Where to begin
 
@@ -24,7 +24,7 @@ Then continue with:
 6. [00-08 — Networking Fundamentals](00-FOUNDATIONS/08-Networking-Fundamentals.md)
 7. [00-09 — Layered Models: OSI and TCP/IP](00-FOUNDATIONS/09-Layered-Models-OSI-and-TCPIP.md)
 
-The next module after Foundations is the Physical Layer. Lesson 01-01 is now available: [01-01 — The Purpose of the Physical Layer](01-PHYSICAL-LAYER/01-Physical-Layer-Purpose.md). Lesson 01-02 — Signals and Bandwidth is also available: [01-02 — Signals and Bandwidth](01-PHYSICAL-LAYER/02-Signals-and-Bandwidth.md). Lessons 01-03 — Line Coding and Modulation and 01-04 — Bit Synchronization and Reception are also available. Lessons 01-05 — Signal Impairments and 01-06 — Copper Cabling are now available. Lesson 01-07 — Fiber Optics is now available. The Physical Layer lessons 01-01 through 01-10 are published. Data Link lessons 02-01 through 02-06 are also published. Continue through the modules in curriculum order; the next Data Link lesson being prepared is 02-07 — Collision and Broadcast Domains.
+The next module after Foundations is the Physical Layer. Lesson 01-01 is now available: [01-01 — The Purpose of the Physical Layer](01-PHYSICAL-LAYER/01-Physical-Layer-Purpose.md). Lesson 01-02 — Signals and Bandwidth is also available: [01-02 — Signals and Bandwidth](01-PHYSICAL-LAYER/02-Signals-and-Bandwidth.md). Lessons 01-03 — Line Coding and Modulation and 01-04 — Bit Synchronization and Reception are also available. Lessons 01-05 — Signal Impairments and 01-06 — Copper Cabling are now available. Lesson 01-07 — Fiber Optics is now available. The Physical Layer lessons 01-01 through 01-10 are published. Data Link lessons 02-01 through 02-05 are present. The next Data Link lesson to be authored is 02-06 — Ethernet Switch Operation and MAC Address Learning. The 02-06 Anki deck exists, but its lesson file has not yet been published.
 
 ## Unit-level target deadlines
 
