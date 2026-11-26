@@ -320,7 +320,7 @@ Oturumlar arasında en az 15 dakika ara ver. Pazar günü yalnızca Bölüm 5'te
 | 14 | Security Fundamentals | **2027-01-31** |
 | 15 | Network Operations, Automation, and AI | **2027-02-01** |
 | 12 | Revision resources and final review | **2027-02-01** |
-| 13 | CCNA Exam Preparation | **2027-02-02** |
+| 13 | CCNA Exam Preparation | **2027-02-01** |
 
 **How to use these dates:** A unit is complete when its lessons have been studied, the relevant knowledge checks have been attempted, and any lesson-specific practical task has been completed where required. Publishing a lesson file or checking a self-check list alone does not automatically complete a whole unit.
 
