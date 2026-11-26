@@ -1,163 +1,126 @@
-# FND-DAT Cevap Anahtarı
+# FND-DAT — Answer Key
 
-> Sorular: `../Q-FND-DAT.md`. Önce soruları çöz, sonra bu dosyayı aç. Puanlama kuralları: `10-QUESTION-BANK/README.md`.
+> Questions: `../Q-FND-DAT.md`. Complete the questions before opening this file. Scoring rules: `10-QUESTION-BANK/README.md`.
 
 ---
 
 ### FND-DAT-001
-**Cevap:** B
+**Answer:** B
 
-**Açıklama:** İkili seçilmesinin nedeni güvenilirlik ve basitliktir. Bir gerilim aralığını iki seviyeye bölmek, seviyeler ile karar eşiği arasındaki mesafeyi, yani gürültü payını en büyük yapar. CMOS transistörler de tam iletim ve tam kesim uçlarında en kararlı ve en az güç harcayarak çalışır.
+**Explanation:** Binary is useful because two clearly separated states provide a relatively wide noise margin, and transistors can operate reliably as switches. Speed is not the main reason.
 
-**Çeldiriciler:**
-- A) Hız neden değildir. 00-01 bunu açıkça vurgular: Neden güvenilirliktir.
-- C) Yanlış. Kablolar ikiden fazla seviye taşıyabilir; 1000BASE-T beş seviyeli PAM-5 kullanır. İkili, bilgisayarın **içi** için bir tercihtir.
-- D) Tersine, ikili aynı sayı için onluktan **daha fazla** basamak kullanır.
+**Why the other options are wrong:**
+- A) Binary arithmetic is not inherently faster in every context.
+- C) Cables can carry more than two signal levels. 1000BASE-T, for example, uses five-level PAM-5 signalling.
+- D) Binary usually requires more digits than decimal for the same value.
 
-**Teori:** → 00-01, Bölüm 3.3; 00-05, Bölüm 3.3
-
----
+**Lesson links:** 00-01 §4; 00-05 §3.3
 
 ### FND-DAT-002
-**Cevap:** a) **12 bit**. b) **1.096** cihaz.
+**Answer:** a) **12 bits**. b) **1,096 unused values**.
 
-**Açıklama:** 2¹¹ = 2.048 < 3.000, ama 2¹² = 4.096 ≥ 3.000. Bu yüzden ⌈log₂ 3000⌉ = 12 bit gerekir. 12 bit 4.096 farklı değer verir; 4.096 − 3.000 = 1.096 boş değer kalır.
+**Explanation:** (2^{11}=2,048), which is not enough. (2^{12}=4,096), so 12 bits are required. The number of unused values is (4,096-3,000=1,096).
 
-**Puan:** Her parça 0,5.
-
-**Teori:** → 00-01, Bölüm 4; 00-02, Bölüm 4.5
-
----
+**Scoring:** 0.5 for each part.  
+**Lesson links:** 00-01 §6; 00-02 §4.5
 
 ### FND-DAT-003
-**Cevap:** a) `1100 0000 1010 1000`. b) **49.320**. c) **192.168.**…
+**Answer:** a) `1100 0000 1010 1000`. b) **49,320**. c) **192.168.**
 
-**Açıklama:** Her onaltılık basamak 4 bittir: C = 1100, 0 = 0000, A = 1010, 8 = 1000. 16 bitlik değer 0xC0 × 256 + 0xA8 = 192 × 256 + 168 = 49.152 + 168 = 49.320. Oktet olarak okunursa 0xC0 = 192, 0xA8 = 168; adres `192.168.` ile başlar.
+**Explanation:** Each hexadecimal digit represents four bits: C = 1100, 0 = 0000, A = 1010, and 8 = 1000. As an unsigned 16-bit value, (0xC0A8 = 192\times256+168=49,320). Interpreted as two IPv4 octets, the bytes are 192 and 168.
 
-**Puan:** Her parça 1/3.
-
-**Teori:** → 00-02, Bölüm 4.2 ve 4.4; 00-06, Bölüm 1
-
----
+**Scoring:** One third per part.  
+**Lesson links:** 00-02 §§4.2, 4.4; 00-06 §1
 
 ### FND-DAT-004
-**Cevap:** **Haklı değil**; 60 MB/s, 500 Mbps'lık bir bağlantının pratikte ulaşılabilecek en yüksek değerine çok yakındır.
+**Answer:** No. A measured rate of 60 MB/s is close to what a 500 Mbps connection can deliver.
 
-**Açıklama:**
-- 500 Mbps = 500 × 10⁶ bit/s → 8'e bölünce **62,5 MB/s** (ondalık megabayt, ham).
-- Başlıklar (Ethernet, IP, TCP) kabloda yaklaşık %5 yer kaplar (00-09, Bölüm 4.1): 62,5 × 0,949 ≈ **59,3 MB/s**.
-- Program MiB/s gösteriyorsa ham değer bile 62,5 × 10⁶ / 2²⁰ ≈ 59,6 MiB/s'tır.
+**Explanation:**
+- (500\text{ Mbps} = 500\text{ million bits/s}).
+- Divide by eight to convert bits to bytes: (500/8=62.5\text{ MB/s}) before protocol overhead.
+- Ethernet, IP, and TCP headers consume some of the link capacity, so the useful application rate is lower. The earlier estimate of about 59.3 MB/s is consistent with a 60 MB/s display, depending on how the application reports units and measures throughput.
 
-Yani 60 MB/s, bağlantının neredeyse tamamının kullanıldığını gösterir. Arkadaşının hatası, bit ile baytı (8 kat) ve başlık yükünü hesaba katmamaktır.
+The mistake is comparing megabits per second (Mbps) with megabytes per second (MB/s) as though they were the same unit.
 
-**Puan:** Mbps → MB/s dönüşümü (8'e bölme) 0,5; başlık yükünü ya da MB/MiB farkını belirtip doğru sonuca varmak 0,5.
-
-**Teori:** → 00-02, Bölüm 4.8 ve 4.9; 00-09, Bölüm 4.1
-
----
+**Scoring:** 0.5 for dividing by eight; 0.5 for accounting for overhead or correctly discussing MB versus MiB.  
+**Lesson links:** 00-02 §§4.8–4.9; 00-09 §4.1
 
 ### FND-DAT-005
-**Cevap:** A ve C
+**Answer:** A and C.
 
-**Açıklama:** /26 maskesi 255.255.255.192'dir; son oktette blok büyüklüğü 256 − 192 = 64'tür. 77, 64–127 bloğundadır. Ağ adresi = adres AND maske = 10.20.30.64. Joker maske = 255 − 192 = 63 → 0.0.0.63. Yayın adresi = ağ adresi OR joker maske = 10.20.30.127.
+**Explanation:** A /26 mask is 255.255.255.192. The block size in the final octet is (256-192=64). Address 77 belongs to the range 64–127. Therefore, the network address is 10.20.30.64, and the wildcard mask is 0.0.0.63. The broadcast address is 10.20.30.127.
 
-**Çeldiriciler:**
-- B) 10.20.30.255, /24 bir ağın yayın adresi olurdu.
-- D) 10.20.30.0, /24 bir ağın adresi olurdu; /26'da 77 ikinci bloktadır.
-- E) 0.0.0.192, maskenin son okteti ile joker maskenin karıştırılmasıdır.
+**Why the other options are wrong:**
+- B) 10.20.30.255 would be the broadcast address for a /24 network.
+- D) 10.20.30.0 is not the /26 network containing .77.
+- E) 0.0.0.192 confuses the subnet mask with the wildcard mask.
 
-**Teori:** → 00-03, Bölüm 4.1, 4.2 ve 4.3
-
----
+**Lesson links:** 00-03 §§4.1–4.3
 
 ### FND-DAT-006
-**Cevap:** a) **Uzak**. b) **Yerel**. c) **Hayır**.
+**Answer:** a) A considers B **remote**. b) B considers A **local**. c) **No**, a ping initiated by A will fail without a default gateway.
 
-**Açıklama:** Her host kararı **kendi** adresi ve **kendi** maskesiyle verir.
+**Explanation:** Each host makes the local-versus-remote decision using its own IP address and its own subnet mask.
 
-a) A'nın maskesi /25. A'nın ağı: 192.168.1.130 AND 255.255.255.128 = 192.168.1.128. B'nin adresi aynı maskeyle: 192.168.1.100 AND 255.255.255.128 = 192.168.1.0. Sonuçlar farklı → A, B'yi **uzak** sayar ve paketi varsayılan ağ geçidine göndermeye çalışır.
+a) Host A uses /25 (255.255.255.128). A's network is 192.168.1.130 AND 255.255.255.128 = 192.168.1.128. B's address using that same mask gives 192.168.1.0. The results differ, so A considers B remote and tries to send the packet to its default gateway.
 
-b) B'nin maskesi /24. İki adres de 255.255.255.0 ile AND'lenince 192.168.1.0 verir → B, A'yı **yerel** sayar ve doğrudan gönderir.
+b) Host B uses /24 (255.255.255.0). Both addresses produce network address 192.168.1.0 with that mask, so B considers A local and sends directly.
 
-c) A'da ağ geçidi yoksa A, uzak saydığı B'ye paketi gönderecek bir yer bulamaz; ping A'dan başlatıldığında başarısız olur. (B'den A'ya giden istek A'ya ulaşır; ama A'nın cevabı da aynı nedenle gönderilemez.) Bu tür asimetrik sorunlar, maske hatalarının en kafa karıştırıcı belirtilerindendir.
+c) A has no gateway to which it can send a packet it considers remote. A ping initiated by A therefore fails. A request from B may reach A, but A cannot route the reply back.
 
-**Puan:** Her parça 1/3. (a) için hesap gösterilmeden verilen cevap 0'dır.
-
-**Teori:** → 00-03, Bölüm 4.1 ve 5 (ev ağı örneği); ayrıntı 03-06
-
----
+**Scoring:** One third per part. For (a), the subnet calculation must be shown.  
+**Lesson links:** 00-03 §§4.1 and 5; details in 03-06
 
 ### FND-DAT-007
-**Cevap:** a) `01100110`. b) `11001010` (ilk sayı geri geldi). c) XOR kendi kendisinin tersidir: (x XOR k) XOR k = x.
+**Answer:** a) `01100110`. b) `11001010`. c) XOR is its own inverse: ((x\ XOR\ k)\ XOR\ k=x).
 
-**Açıklama:** XOR, bitler farklıysa 1 verir. Aynı anahtarla iki kez XOR'lamak her biti iki kez çevirir ya da hiç çevirmez; sonuç başlangıç değeridir. Bu özellik parite ve CRC hesaplarında (00-03, Bölüm 4.4) ve birçok şifreleme algoritmasında (06-05) kullanılır.
+**Explanation:** XOR outputs 1 when the input bits differ. XORing with the same value twice reverses the first operation, returning the original value. This property is useful in parity and CRC operations and appears in some cryptographic constructions.
 
-**Puan:** Her parça 1/3.
-
-**Teori:** → 00-03, Bölüm 3.4 ve 4.4
-
----
+**Scoring:** One third per part.  
+**Lesson links:** 00-03 §§3.4 and 4.4
 
 ### FND-DAT-008
-**Cevap:** B
+**Answer:** B — destination port 53, DNS.
 
-**Açıklama:** Ağ protokolleri çok baytlı alanları big-endian (ağ bayt sırası) gönderir. `00 35` → 0x0035 = 3 × 16 + 5 = **53**. 53 numaralı port DNS'e aittir (07-02).
+**Explanation:** Multi-byte network protocol fields use big-endian (network byte order). Bytes `00 35` represent hexadecimal `0x0035`, which is decimal 53.
 
-**Çeldiriciler:**
-- A) 13.568 = 0x3500. Baytları ters sırayla (little-endian) okumanın sonucudur.
-- C) 35, onaltılık basamakların onluk sanılmasıdır.
-- D) 3.500, baytları ters çevirip onaltılık basamakları onluk okumanın sonucudur.
+**Why the other options are wrong:** A reverses the byte order; C treats hexadecimal 35 as decimal 35; D reverses the bytes and then misreads the result.
 
-**Teori:** → 00-06, Bölüm 3.2 ve 4
-
----
+**Lesson links:** 00-06 §§3.2 and 4; 07-02
 
 ### FND-DAT-009
-**Cevap:** a) **500**. b) `0xF4010000` (= 4.093.706.240).
+**Answer:** a) **500**. b) `0xF4010000`.
 
-**Açıklama:**
-a) Big-endian: 0x000001F4 = 1 × 256 + 0xF4 = 256 + 244 = 500.
-b) Little-endian okumada ilk bayt en az anlamlı bayt sayılır; baytlar ters çevrilir: `F4 01 00 00` → 0xF4010000 = 244 × 2²⁴ + 1 × 2¹⁶ = 4.093.640.704 + 65.536 = 4.093.706.240.
+**Explanation:** In big-endian order, `00 00 01 F4` is `0x000001F4`, or 500. In little-endian order the byte sequence is interpreted with the least significant byte first, giving `0xF4010000` (4,093,706,240 in decimal).
 
-**Puan:** Her parça 0,5 (b için onaltılık sonuç yeterli).
-
-**Teori:** → 00-06, Bölüm 3.2
-
----
+**Scoring:** 0.5 for each part; hexadecimal is sufficient for (b).  
+**Lesson links:** 00-06 §3.2
 
 ### FND-DAT-010
-**Cevap:** a) **22 görüşme**. b) Başlıkları unutmuş.
+**Answer:** a) **22 calls**. b) The 64 kbps figure excludes packet and link overhead.
 
-**Açıklama:**
-a) 2.000 kbps / 87,2 kbps ≈ 22,9 → tam sayıya **aşağı** yuvarlanır: 22. (23. görüşme hattı aşar.)
-b) 64 kbps yalnızca ses verisidir. Her 20 ms'lik pakete 40 bayt RTP/UDP/IP başlığı ve 18 bayt Ethernet başlığı ile FCS eklenir. Başlıklar ses verisinin yaklaşık %36'sı kadar yük getirir; bu yüzden 31 görüşme hattı tıkar ve bütün görüşmelerin kalitesi bozulur.
+**Explanation:** (2,000/87.2\approx22.9), so only 22 complete calls fit. The 64 kbps rate describes the encoded voice payload, not the full Ethernet traffic. Packet headers and the Ethernet frame add overhead to every 20 ms packet. Twenty-three calls would exceed the 2 Mbps link.
 
-**Puan:** Her parça 0,5.
-
-**Teori:** → 00-06, Bölüm 3.5 ve 5
-
----
+**Scoring:** 0.5 for each part.  
+**Lesson links:** 00-06 §§3.5 and 5
 
 ### FND-DAT-011
-**Cevap:** İstemci, port numarasını ağ bayt sırasına çevirmeden (`htons()` kullanmadan) pakete yazmıştır.
+**Answer:** The client likely copied the port number into the packet without converting it to network byte order, for example by omitting `htons()`.
 
-**Açıklama:** 5000 = 0x1388. Doğru gönderimde kabloya `13 88` gider. Little-endian bir bilgisayarda bellekte `88 13` olarak durur; çevirmeden kopyalanınca kabloya `88 13` gider ve karşı taraf 0x8813 = 8 × 4096 + 8 × 256 + 1 × 16 + 3 = **34.835** okur. Wireshark'ta görülen değer tam olarak budur.
+**Explanation:** Decimal 5000 is hexadecimal `0x1388`. The correct byte sequence is `13 88`. On a little-endian computer, the value may be stored in memory as `88 13`. If those bytes are copied into a network packet without conversion, the receiver interprets them as `0x8813`, which is decimal 34,835 — the value seen in Wireshark.
 
-**Puan:** Nedeni (bayt sırası / `htons()`) söylemek 0,5; 0x1388 → 0x8813 hesabıyla göstermek 0,5.
-
-**Teori:** → 00-06, Bölüm 3.2
-
----
+**Scoring:** 0.5 for identifying byte order / missing `htons()`; 0.5 for showing the hexadecimal conversion.  
+**Lesson links:** 00-06 §3.2
 
 ### FND-DAT-012
-**Örnek cevap:** Kabloda giden şey yalnızca bitlerdir; bu bitlerin ne anlama geldiğini, iki tarafın önceden anlaştığı protokol belirler. Örneğin Ethernet başlığındaki `08 00` baytları, EtherType alanında okunduğunda "yükte bir IPv4 paketi var" demektir. Aynı iki bayt bir TCP başlığının port alanında olsaydı 2048 numaralı portu, bir metin dosyasında olsaydı iki kontrol karakterini anlatırdı. Alıcı baytları hangi alanda bulduğuna göre yorumlar; yorum kuralı farklı olursa aynı veri bambaşka bir bilgiye dönüşür. Protokollerin var olma nedeni de bu ortak yorum kuralını sağlamaktır.
+**Example answer:** The bits sent over a link do not explain their own meaning. A protocol defines how the receiver should interpret each field. For example, the Ethernet EtherType value `0x0800` tells the receiver that the frame payload contains an IPv4 packet. The same two bytes in a TCP port field would represent a port number, not an IPv4 packet. The field's location and the protocol definition determine the interpretation.
 
-**Puanlama ölçütü (toplam 1):**
+**Scoring rubric (1 point total):**
 
-| Ölçüt | Puan |
-|---|---|
-| Verinin bitler/baytlar olduğunu, kendi başına anlam taşımadığını söylüyor | 0,25 |
-| Aynı baytların iki farklı yorumla iki farklı anlama geldiği, 00-06'dakinden farklı ve doğru bir örnek veriyor | 0,5 |
-| Yorum kuralını protokolün ya da alanın konumunun belirlediğini açıklıyor | 0,25 |
+| Criterion | Points |
+|---|---:|
+| Explains that data consists of bits or bytes and has no built-in meaning | 0.25 |
+| Gives a different, correct example showing the same bytes can have different meanings | 0.50 |
+| Explains that a protocol or field position defines the interpretation | 0.25 |
 
-**Teori:** → 00-01, Bölüm 2; 00-06, Bölüm 1 ve 3.7
+**Lesson links:** 00-01 §2; 00-06 §§1 and 3.7

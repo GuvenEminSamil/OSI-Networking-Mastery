@@ -1,102 +1,85 @@
-# FND-HW: Elektrik, Transistörler ve Bilgisayar Mimarisi
+# FND-HW — Electricity, Transistors, and Computer Architecture
 
-> Kapsam: 00-04, 00-05, 00-07 | 9 soru | Önerilen süre: 30 dakika | Cevaplar: `answers/A-FND-HW.md`
->
-> Kurallar ve puanlama: `10-QUESTION-BANK/README.md`. Hesap makinesi kullanma.
+> **Coverage:** 00-04, 00-05, 00-07 | **Questions:** 9 | **Suggested time:** 30 minutes  
+> Answers: `answers/A-FND-HW.md`. See `10-QUESTION-BANK/README.md` for scoring rules. No calculator.
 
 ---
 
 ### FND-HW-001
-**Kategori:** O · **Zorluk:** 1 · **Teori:** 00-04
+**Category:** O · **Difficulty:** 1 · **Lesson:** 00-04
 
-Bir IP kamera PoE ile 48 V'ta 0,25 A çekiyor. Kablonun toplam döngü direnci 10 Ω.
+An IP camera uses PoE at 48 V and draws 0.25 A. The cable's total loop resistance is 10 Ω.
 
-a) Kameranın çektiği güç nedir?
-b) Kabloda ısıya dönüşen güç nedir?
-
----
+a) How much power does the camera receive?  
+b) How much power is lost as heat in the cable?
 
 ### FND-HW-002
-**Kategori:** MC · **Zorluk:** 1 · **Teori:** 00-04
+**Category:** MC · **Difficulty:** 1 · **Lesson:** 00-04
 
-Bir fabrikada, büyük bir motorun güç kablosuyla aynı kanaldan geçen bir Ethernet kablosunun bağlı olduğu switch portunda CRC hataları artıyor. Hangi **iki** önlem sorunu doğrudan hedefler? (İki tane seçin.)
+In a factory, an Ethernet cable runs in the same cable tray as the power cable for a large motor. CRC errors increase on the connected switch port. Which **two** actions directly address the likely problem? (Select two.)
 
-- A) Veri kablosunu güç kablosundan ayrı bir güzergâha almak
-- B) Daha uzun bir kablo kullanmak
-- C) Bu bağlantıyı fiber optik kabloya taşımak
-- D) Portun hızını 100 Mbps'tan 1 Gbps'a çıkarmak
-- E) Switch'i yeniden başlatmak
-
----
+- A) Route the data cable separately from the power cable.
+- B) Use a longer Ethernet cable.
+- C) Replace the Ethernet connection with fiber.
+- D) Increase the port speed from 100 Mbps to 1 Gbps.
+- E) Restart the switch.
 
 ### FND-HW-003
-**Kategori:** İ · **Zorluk:** 2 · **Teori:** 00-05
+**Category:** I · **Difficulty:** 2 · **Lesson:** 00-05
 
-Bir mantık ailesinin veri sayfasında şu değerler var: VOH = 3,0 V, VIH = 2,3 V, VIL = 1,0 V, VOL = 0,4 V.
+A logic family datasheet lists: VOH = 3.0 V, VIH = 2.3 V, VIL = 1.0 V, VOL = 0.4 V.
 
-a) Yüksek ve düşük seviye gürültü paylarını hesapla.
-b) Hatta en fazla 0,65 V gürültü bekleniyor. Hangi mantık seviyesi risk altındadır? Neden?
-
----
+a) Calculate the high-level and low-level noise margins.  
+b) The line may experience 0.65 V of noise. Which logic level is at risk, and why?
 
 ### FND-HW-004
-**Kategori:** MC · **Zorluk:** 1 · **Teori:** 00-05
+**Category:** MC · **Difficulty:** 1 · **Lesson:** 00-05
 
-Bir Cisco router'da `configure terminal` ile yaptığın değişiklikler ilk olarak nereye yazılır ve elektrik kesilirse ne olur?
+On a Cisco router, where are changes made with `configure terminal` first stored, and what happens if power is lost before saving?
 
-- A) NVRAM'deki startup-config'e; korunur.
-- B) RAM'deki running-config'e; kaybolur.
-- C) Flash'taki IOS imajına; korunur.
-- D) ROM'daki bootstrap programına; korunur.
-
----
+- A) In startup-config in NVRAM; the changes remain.
+- B) In running-config in RAM; the unsaved changes are lost.
+- C) In the IOS image in flash; the changes remain.
+- D) In the bootstrap program in ROM; the changes remain.
 
 ### FND-HW-005
-**Kategori:** S · **Zorluk:** 2 · **Teori:** 00-05
+**Category:** S · **Difficulty:** 2 · **Lesson:** 00-05
 
-Laboratuvarda bir Catalyst switch'e `hostname SW-LAB` yazdın ve 10, 20 numaralı VLAN'ları oluşturdun. Hiçbir şeyi kaydetmeden switch'in fişini çektin. Switch açıldığında VLAN 10 ve 20 hâlâ duruyor, ama istem `Switch>` olarak geri gelmiş.
+In a lab, you enter `hostname SW-LAB` and create VLANs 10 and 20 on a Catalyst switch. You remove power without saving the configuration. After reboot, VLANs 10 and 20 still exist, but the prompt is back to `Switch>`.
 
-Bu iki farklı sonucu açıkla.
-
----
+Explain why these two results are different.
 
 ### FND-HW-006
-**Kategori:** MC · **Zorluk:** 2 · **Teori:** 00-07
+**Category:** MC · **Difficulty:** 2 · **Lesson:** 00-07
 
-Bir Linux sunucusunun bağlı olduğu switch portunda hiç CRC hatası yok. Ancak yoğun trafik saatlerinde sunucuda `ethtool -S` çıktısındaki `rx_missed_errors` sayacı hızla artıyor. En olası neden hangisidir?
+A Linux server is connected to a switch port with no CRC errors. During busy periods, the server's `ethtool -S` output shows a rapidly increasing `rx_missed_errors` counter. What is the most likely cause?
 
-- A) Kablo arızalı; çerçeveler bozuk geliyor.
-- B) RX halka tamponu doluyor; sürücü ve CPU gelen çerçevelere yetişemiyor.
-- C) Sunucu ile switch arasında duplex uyuşmazlığı var.
-- D) Ağda sunucuyla aynı IP adresini kullanan başka bir cihaz var.
-
----
+- A) A faulty cable is corrupting frames.
+- B) The RX ring buffer is full because the driver and CPU cannot process incoming frames quickly enough.
+- C) The server and switch have a duplex mismatch.
+- D) Another device is using the server's IP address.
 
 ### FND-HW-007
-**Kategori:** O · **Zorluk:** 2 · **Teori:** 00-07
+**Category:** O · **Difficulty:** 2 · **Lesson:** 00-07
 
-100 Mbps'lık bir Ethernet bağlantısında yalnızca en küçük (64 baytlık) çerçeveler gönderiliyor.
+A 100 Mbps Ethernet link carries only minimum-size 64-byte frames.
 
-a) Saniyede yaklaşık kaç çerçeve geçer? (Preamble, SFD ve IFG'yi hesaba kat.)
-b) Bir çerçevenin kabloda kapladığı süre nedir?
-
----
+a) Approximately how many frames per second can it transmit? Include preamble, SFD, and interframe gap (IFG).  
+b) How long does each frame occupy the link?
 
 ### FND-HW-008
-**Kategori:** KK · **Zorluk:** 2 · **Teori:** 00-07
+**Category:** KK · **Difficulty:** 2 · **Lesson:** 00-07
 
-Kesme (interrupt) ile yoklamayı (polling) karşılaştır:
+Compare interrupts and polling.
 
-- Düşük trafikte hangisi, neden daha uygundur?
-- Yüksek trafikte hangisi, neden daha uygundur?
-- Linux'taki NAPI ikisini nasıl birleştirir?
-
----
+- Which is generally more suitable at low traffic rates, and why?
+- Which can be more suitable at high traffic rates, and why?
+- How does Linux NAPI combine the two approaches?
 
 ### FND-HW-009
-**Kategori:** A · **Zorluk:** 2 · **Teori:** 00-07
+**Category:** A · **Difficulty:** 2 · **Lesson:** 00-07
 
-Bir öğrenci kendi dizüstü bilgisayarında Wireshark ile yakalama yapıyor. Bilgisayarından **çıkan** TCP paketlerinin checksum alanlarını `incorrect` olarak görüyor ve "kablom bozuk, paketlerim bozuk gidiyor" diyor. Gelen paketlerde ise sorun yok.
+A student captures traffic with Wireshark on a laptop. Outgoing TCP packets are marked with an `incorrect` checksum, but incoming packets look correct. The student concludes that the cable is faulty and packets are being transmitted with errors.
 
-a) Öğrenci haklı mı? En olası açıklama nedir?
-b) Bu açıklamayı doğrulamak için iki yol söyle.
+a) Is the student correct? What is the most likely explanation?  
+b) Give two ways to verify your explanation.

@@ -1,7 +1,7 @@
-# Test Sonuçlarım (Results)
+# Test Results
 
-> Yalnızca test sonuçları. Bir test ya da faz kapısı bitirdiğinde tek satır ekle. Yeni bir oturumda bu dosyaya bakarak PROGRESS.md'yi güncellerim.
+> Record test results here. Add one row when you finish a test or a formal knowledge check. Use this file as the source for updating your learner progress.
 
-| Tarih | Test | Puan | Not |
-|---|---|---|---|
-| 2026-11-20 | CE-00 (tanı) | 21/40 | Puanlama Claude tarafından yapıldı; ayrıntılar `CE-00-MY-ANSWERS.md` içinde |
+| Date | Test | Score | Notes |
+|---|---|---:|---|
+| 2026-11-20 | CE-00 (diagnostic) | 21/40 | Original baseline result, scored on 2026-11-20. Details and feedback are in `CE-00-MY-ANSWERS.md`. |

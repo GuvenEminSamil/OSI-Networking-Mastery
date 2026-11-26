@@ -1,10 +1,10 @@
-# Soru Bankası (Question Bank)
+# Question Bank
 
-> Pratik testler burada. Teori dosyalarındaki "Kendini Kontrol Et" soruları ısınmadır; bu klasördeki sorular ise faz kapılarında sayılan testlerdir. Tasarım: CURRICULUM.md, Bölüm 6.
+> This folder contains practice tests. The “Check Your Understanding” questions inside lesson files are short warm-ups; question-bank tests are used for larger knowledge checks.
 
-## Düzen
+## Structure
 
-| Klasör | Alan kodu | Kapsam |
+| Folder | Area code | Coverage |
 |---|---|---|
 | `FOUNDATIONS/` | FND | 00-01 – 00-09 |
 | `PHYSICAL/` | PHY | 01-* |
@@ -15,48 +15,51 @@
 | `SECURITY/`, `OPERATIONS/` | SEC, OPS | 14-*, 15-* |
 | `COMPREHENSIVE-EXAMS/` | CE | CE-00 – CE-06 |
 
-Her konu dosyasının (`Q-<ALAN>-<KONU>.md`) ayrı bir cevap dosyası vardır: `answers/A-<ALAN>-<KONU>.md`. Soru kimlikleri `<ALAN>-<KONU>-NNN` biçimindedir (ör. `FND-OSI-004`).
+Each question file has a separate answer file under `answers/`. Question IDs use the format `<AREA>-<TOPIC>-NNN`, for example `FND-OSI-004`.
 
-## Soru kategorileri
+## Question Categories
 
-| Kod | Kategori | Ne ölçer |
+| Code | Category | What it measures |
 |---|---|---|
-| B | Temel anlama | Kavramın doğru tanımı ve rolü |
-| O | Orta düzey teknik | Hesaplar, alan değerleri, davranışlar, çıktılar |
-| İ | İleri muhakeme | Neden-sonuç; "şu değişirse ne olur" |
-| S | Gerçek dünya senaryosu | Bilgiyi verilen ağa uygulama |
-| A | Arıza giderme | Belirtiden nedene ulaşma |
-| MC | CCNA tarzı çoktan seçmeli | Tek ya da çok cevaplı ("İki tane seçin") |
-| K | Kendi cümlelerinle | Açık uçlu; cevap anahtarında puanlama ölçütü |
-| KK | Karşılaştır | İki seçenekten hangisinin, ne zaman ve neden seçildiği |
+| B | Basic understanding | Correct definition and role of a concept |
+| O | Intermediate technical | Calculations, field values, behaviour, or command output |
+| I | Advanced reasoning | Cause and effect; “what changes if…” |
+| S | Real-world scenario | Applying knowledge to a described network |
+| A | Troubleshooting | Finding likely causes from symptoms |
+| MC | CCNA-style multiple choice | One or multiple correct answers |
+| K | Explain in your own words | Open-ended answer scored using a rubric |
+| KK | Compare | Which option is appropriate, when, and why |
 
-Zorluk: 1 (temel) – 3 (zor).
+Difficulty is rated from 1 (basic) to 3 (challenging).
 
-## Nasıl çözülür?
+## How to Take a Test
 
-1. Bir dosyayı **tek oturumda**, teori dosyalarına ve cevap anahtarına bakmadan çöz. Hesap makinesi kullanma; sınavda yok.
-2. Cevaplarını kâğıda ya da ayrı bir dosyaya yaz. Emin olmadıklarının yanına `?` koy.
-3. Bitince cevap dosyasıyla puanla. Yanlış ve `?` işaretli her soru için cevaptaki teori bağlantısını aç ve o bölümü yeniden oku.
+1. Try to complete a test in one sitting without looking at lesson files or the answer key. Do not use a calculator unless the question explicitly allows it.
+2. Write your answers on paper or in a separate file. Mark uncertain answers with `?`.
+3. When finished, use the answer file to score your work.
+4. For every incorrect or uncertain answer, review the linked lesson section.
 
-## Puanlama
+## Scoring
 
-- Her soru **1 puandır**.
-- Çok cevaplı MC sorularında puan için seçeneklerin **hepsi** doğru olmalıdır (sınavdaki gibi kısmi puan yok).
-- Birden fazla parçası olan O, İ, S ve A sorularında her parça eşit ağırlıktadır (ör. iki parçalı soruda her parça 0,5).
-- K ve KK sorularında cevap anahtarındaki ölçütler (rubric) kullanılır; puan 0,25'lik adımlarla verilir.
+- Each question is worth **1 point**.
+- For multiple-answer MC questions, every required option must be correct to earn the point.
+- For multi-part O, I, S, and A questions, parts have equal weight unless stated otherwise.
+- K and KK questions use the scoring rubric in the answer key; scores may be awarded in 0.25-point increments.
 
-**Faz kapısı:** Bir alanın sorularında toplam **≥ %85** (ör. 40 FND sorusunda en az 34 puan). Sonucu `MY-NOTES/RESULTS.md`'ye tek satır olarak yaz:
+**Knowledge-check target:** Aim for **at least 85%** in the relevant topic area. Record completed test results in `MY-NOTES/RESULTS.md`.
 
+Example:
+
+```text
+| 2026-11-25 | FND (40 questions) | 35/40 | Review: FND-DAT-006, FND-OSI-005 |
 ```
-| 2026-11-25 | FND (40 soru) | 35/40 | Yanlışlar: FND-DAT-006, FND-OSI-005 |
-```
 
-## Mevcut dosyalar
+## Current Files
 
-| Dosya | Soru | Kapsam |
-|---|---|---|
-| `FOUNDATIONS/Q-FND-DAT.md` | 12 | Bilgi, sayı sistemleri, Boole mantığı, veri temsili (00-01, 00-02, 00-03, 00-06) |
-| `FOUNDATIONS/Q-FND-HW.md` | 9 | Elektrik, transistörler, bilgisayar mimarisi (00-04, 00-05, 00-07) |
-| `FOUNDATIONS/Q-FND-NET.md` | 9 | Ağ temelleri (00-08) |
-| `FOUNDATIONS/Q-FND-OSI.md` | 10 | Katmanlı modeller (00-09) |
-| `COMPREHENSIVE-EXAMS/CE-00.md` | 25 | Tanı testi (ustalık seviyesine sayılmaz) |
+| File | Questions | Coverage |
+|---|---:|---|
+| `FOUNDATIONS/Q-FND-DAT.md` | 12 | Information, number systems, Boolean logic, data representation (00-01, 00-02, 00-03, 00-06) |
+| `FOUNDATIONS/Q-FND-HW.md` | 9 | Electricity, transistors, computer architecture (00-04, 00-05, 00-07) |
+| `FOUNDATIONS/Q-FND-NET.md` | 9 | Networking fundamentals (00-08) |
+| `FOUNDATIONS/Q-FND-OSI.md` | 10 | Layered models (00-09) |
+| `COMPREHENSIVE-EXAMS/CE-00.md` | 25 | Historical starting-point diagnostic; not a mastery test |

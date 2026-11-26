@@ -1,220 +1,175 @@
-# 00-01 Bilgi ve Veri (Information and Data)
+# 00-01 — Information and Data
 
-> Önkoşullar: — | Tahmini süre: ~1,5 saat | CCNA: dolaylı (v1.1 1.3, 1.4'ün altyapısı)
+> **Prerequisite:** None  
+> **CCNA connection:** Background for understanding network data, protocols, and communication.
 
-## Öğrenme Hedefleri
+## What You Will Learn
 
-- Bilgi (information) ile veri (data) arasındaki farkı bir ağ örneğiyle açıklamak.
-- Analog ve dijital temsili karşılaştırmak; dijitalin ağ iletişiminde neden kazandığını gerekçelendirmek.
-- Bilgisayarların neden ikili sistem kullandığını gürültü payı (noise margin) kavramıyla açıklamak.
-- N olası durumu ayırt etmek için kaç bit gerektiğini hesaplamak.
-- "Kabloda 0 ve 1 akar" yanılgısını düzeltmek.
+- Explain the difference between data and information.
+- Describe how a protocol gives meaning to transmitted data.
+- Explain, in practical terms, why digital systems commonly use two logic states.
+- Understand how noise can affect signals and why a receiver needs a decision threshold.
+- Calculate how many bits are needed to represent a set of possible values.
 
-## 1. Sezgisel Giriş
+## 1. Start with a Simple Example
 
-Bir arkadaşınla bir anlaşma yapıyorsun: "Akşam maça geleceksem odamın ışığını yakacağım, gelmeyeceksem yakmayacağım." Arkadaşın pencereden baktığında iki olasılıktan birini öğrenir. Işık burada **veri**dir: fiziksel bir durum. Arkadaşının öğrendiği "geliyor" ya da "gelmiyor" ise **bilgi**dir: belirsizliğin ortadan kalkması.
+Imagine you and a friend agree on a signal:
 
-Dikkat et, iki şey olmadan bu sistem çalışmaz:
+- A room light switched **on** means “I am coming.”
+- The light switched **off** means “I am not coming.”
 
-1. **Ayırt edilebilir durumlar:** Işık ya açık ya kapalı olmalı. Yarı açık bir lamba kafa karıştırır.
-2. **Önceden yapılmış bir anlaşma:** "Işık açık = geliyorum" kuralını ikiniz de bilmelisiniz. Bu kurala sahip olmayan biri için ışık yalnızca ışıktır.
+The light is the **data**: a physical state that can be observed. The meaning your friend learns is the **information**.
 
-Bilgisayar ağları tam olarak bu iki fikrin üzerine kurulur. Kablodaki gerilimler, fiberdeki ışık darbeleri ve havadaki radyo dalgaları **veriyi** taşır. Bu veriden **bilgi** çıkarabilmek için gönderici ile alıcının aynı kurallar üzerinde anlaşmış olması gerekir. Ağ dünyasında bu kurallara **protokol (protocol)** denir.
+The agreement matters. Someone who does not know your rule sees only a light. They cannot know what it means.
 
-## 2. Neden Var?
+Networks work in the same way. A cable carries electrical signals, fiber carries light, and Wi-Fi uses radio waves. These physical signals represent data. A shared set of rules tells the sender and receiver how to interpret that data. Those rules are called a **protocol**.
 
-### 2.1 Bilgi nedir?
+## 2. Data, Information, and Bits
 
-Claude Shannon 1948'de iletişimi matematiksel olarak tanımlarken bilgiyi anlamla değil **belirsizliğin azalmasıyla** ölçtü [PAPER-SHANNON]. Bir mesaj, alıcının bilmediği bir şeyi ne kadar netleştiriyorsa o kadar bilgi taşır. "Güneş yarın doğacak" mesajı neredeyse hiç bilgi taşımaz; zaten biliyorsun. Bir yazı-tura atışının sonucu ise tam olarak bir birimlik belirsizliği giderir.
+**Data** is a representation: symbols, numbers, bytes, or signal states.
 
-Bu birimin adı **bit (binary digit)**'tir: **eşit olasılıklı iki seçenek arasındaki tek bir karar.**
+**Information** is what a receiver can understand from data by applying an agreed interpretation.
 
-### 2.2 Veri nedir?
+For example, the byte sequence `01000001` may represent the letter “A” under ASCII. Without knowing the encoding rule, it is only a sequence of bits.
 
-Veri, bilginin **temsilidir**: semboller, sayılar, baytlar, gerilim seviyeleri. Aynı bilgi farklı verilerle temsil edilebilir:
+A **bit** (binary digit) is a unit that can represent one of two values, commonly written as 0 and 1. One bit can distinguish between two alternatives.
 
-| Bilgi | Temsil 1 | Temsil 2 |
-|---|---|---|
-| "5 sayısı" | 8 bitlik tamsayı: `00000101` | ASCII karakteri "5": `00110101` (0x35) |
-| "Evet" | Işık açık | Tek bir bit: `1` |
-| Bir hedef adres | `192.168.1.10` (metin) | 32 bitlik sayı: `11000000 10101000 00000001 00001010` |
+The same data can mean different things in different contexts. A protocol defines what each field means and where it appears. For example, an Ethernet frame uses its first six bytes for the destination MAC address. A receiver must understand the Ethernet format to interpret those bytes correctly.
 
-Tablonun ilk satırı önemli bir ders içerir: `00000101` ile `00110101` farklı bit dizileridir ama ikisi de "5"i temsil edebilir. Hangisinin kullanıldığını bilmeden bitlere bakmak sana hiçbir şey söylemez. **Bitlerin anlamı bitlerin içinde değil, anlaşmadadır.** Bu yüzden ağda her protokol, hangi bitin hangi anlama geldiğini bayt bayt tanımlar. Ethernet çerçevesinin ilk 6 baytının hedef MAC adresi olması (02-03) ya da IPv4 başlığındaki 9. baytın üst katman protokolünü göstermesi (03-02) bu tür anlaşmalardır.
+## 3. Analog and Digital Signals
 
-## 3. Mekanizma: Analog ve dijital temsil
+### 3.1 Analog representation
 
-### 3.1 Analog temsil
+An **analog** value can vary continuously across a range. A microphone, for example, converts changes in air pressure into a changing electrical voltage.
 
-**Analog (analog)** temsilde değer süreklidir; belirli bir aralıktaki her değeri alabilir. Bir mikrofonun ürettiği gerilim, havadaki ses basıncını bire bir taklit eder. Ses yükseldikçe gerilim de yükselir; 0,312 V, 0,3121 V, 0,31215 V… hepsi farklı bir değeri temsil eder.
+Noise can alter an analog signal. When an analog signal is copied or amplified, unwanted noise may be amplified too.
 
-Analog temsilin büyük zayıflığı şudur: **Her bozulma doğrudan bilgiye karışır.** Kabloya karışan 0,002 V'luk bir gürültü, alıcı tarafında "gerçek" sesten ayırt edilemez. Bir fotokopinin fotokopisini çektikçe görüntünün bozulması gibi: her kopya bir öncekinin hatasını da taşır ve hata birikir.
+### 3.2 Digital representation
 
-### 3.2 Dijital temsil
+A **digital** system interprets a physical signal as one of a limited set of symbols. In a simple two-state system, the receiver decides whether a received voltage represents 0 or 1.
 
-**Dijital (digital)** temsilde değer **sınırlı sayıda ayrık sembolden** biridir. En basit durumda iki sembol vardır: 0 ve 1. Alıcı, gelen sinyali "tam olarak hangi değer?" diye değil, **"hangi sembole en yakın?"** diye yorumlar.
+A **decision threshold** is the boundary the receiver uses to make that decision.
 
-Bir örnek: Gönderici 0 için 0 V, 1 için 1 V kullansın. Alıcı **karar eşiğini (decision threshold)** 0,5 V'a koysun:
+For example, imagine:
+- A voltage below 0.5 V is interpreted as 0.
+- A voltage above 0.5 V is interpreted as 1.
 
-```
- Gerilim
-  1.0 V ─────────────  "1" gönderildi
-                        ↑ gürültü payı: 0,5 V'a kadar bozulma tolere edilir
-  0.5 V ─ ─ ─ ─ ─ ─ ─  karar eşiği
-                        ↓ gürültü payı
-  0.0 V ─────────────  "0" gönderildi
-```
+The received voltage does not have to be exactly the value sent. It only needs to remain on the correct side of the threshold.
 
-Gelen değer 0,87 V ya da 1,12 V olabilir; alıcı ikisini de "1" olarak okur. Gürültü eşiği aşmadıkça **bilgi kaybolmaz.** Sembol ile eşik arasındaki bu güvenlik mesafesine **gürültü payı (noise margin)** denir.
+The safety distance between a valid signal level and the point where the receiver could make the wrong decision is called the **noise margin**. More noise margin generally makes a signal easier to interpret reliably.
 
-Dijital temsilin ağ iletişimi için sağladığı dört büyük avantaj bu mekanizmadan doğar:
+### 3.3 Why digital systems are useful
 
-1. **Yenileme (regeneration):** Bir ara cihaz sinyali okuyup sembolleri kusursuz bir şekilde yeniden üretebilir. Gürültü bir sonraki bağlantıya taşınmaz. Bu, analogdaki "fotokopinin fotokopisi" sorununu çözer. Her switch ve router portu tam olarak bunu yapar.
-2. **Hata tespiti (error detection):** Semboller sayılabildiği için üzerlerinde matematik yapılabilir. Göndericinin eklediği bir kontrol değeri (Ethernet'te FCS, 02-04), alıcının bozulmayı fark etmesini sağlar.
-3. **Kayıpsız kopyalama ve saklama:** Bir dosyayı bin kez kopyalasan da bitler aynı kalır.
-4. **Mantıkla işleme:** Sembollerle mantık işlemleri yapılabilir (00-03). Bir router'ın hedef adresi maskeyle karşılaştırması, bitler üzerinde yapılan bir AND işlemidir.
+Digital systems have several practical advantages:
 
-### 3.3 Neden ikili? Neden 10 seviye değil?
+1. **Regeneration:** A device can interpret incoming symbols and generate a clean new signal for the next link. Small amounts of noise do not have to accumulate at every stage.
+2. **Error detection:** Extra bits can help a receiver detect damaged data. Ethernet uses a Frame Check Sequence (FCS) for this purpose.
+3. **Reliable copying and storage:** Digital data can be copied without gradually changing its values, provided the storage and transfer process works correctly.
+4. **Logical processing:** Digital values can be processed using operations such as AND, OR, and XOR. These operations are useful in networking, including subnet masks and error detection.
 
-Daha fazla seviye kullanırsan tek bir sembolde daha fazla bilgi taşırsın. Ama aynı gerilim aralığına daha çok seviye sığdırırsan seviyeler birbirine yaklaşır ve gürültü payı küçülür:
+## 4. Why Do Computers Commonly Use Two States?
 
-| Seviye sayısı | 0–1 V aralığında seviyeler arası mesafe | Sembol başına bit |
-|---|---|---|
-| 2 | 1 V | 1 |
-| 4 | ~0,33 V | 2 |
-| 10 | ~0,11 V | ~3,32 |
+Two states are relatively easy for electronic circuits to distinguish reliably. Transistors can be used as switches, and digital circuits are designed around defined voltage ranges for 0 and 1.
 
-Bilgisayarın içinde ikili seçilmesinin nedeni **güvenilirlik ve basitliktir**, hız değil:
+Using only two states is not necessarily faster than using more states. Its main advantage is practical reliability and simpler circuit design.
 
-- Transistör (00-05) en kolay ve en güvenilir şekilde iki durumda çalışır: tam iletimde ya da tam kesimde. Ara değerlerde çalıştırmak hem daha çok güç harcar hem de sıcaklık ve üretim farklılıklarına karşı hassastır.
-- İki seviye, belirli bir gerilim aralığında en geniş gürültü payını verir.
-- Mantık işlemleri (00-03) ikili değerlerle doğrudan tanımlanır.
+However, do not assume that every network signal has only two physical levels. Some communication systems use multiple signal levels to carry more than one bit per symbol. For example, 1000BASE-T uses five-level PAM-5 signalling, while Wi-Fi can use QAM schemes with many possible signal states.
 
-> **[TCP/IP-GERÇEK]** İletişim hatları her zaman ikili sinyal kullanmaz. Bant genişliği kısıtlı olduğunda mühendisler gürültü payından vazgeçip sembol başına daha çok bit taşır. 1000BASE-T Ethernet, kabloda beş seviyeli PAM-5 sembolleri kullanır; Wi-Fi tek bir sembolde birçok biti QAM ile taşır. Bilgisayarın içi ikilidir, ama kablodaki sinyal bu ikili veriyi başka bir alfabeyle kodlayabilir. Bu konu 01-03'te açılacak.
+The information is digital, but the physical signal can use a more complex alphabet.
 
-### 3.4 Önemli bir ayrım: "dijital sinyal" bir yorumdur
+## 5. A Physical Signal Is Not Literally a Stream of 0s and 1s
 
-Fiziksel dünyada her sinyal süreklidir. Kablodaki gerilim 0 V'tan 1 V'a anında sıçramaz; bir eğri çizerek yükselir, yolda gürültü alır, bükülür. "Dijital sinyal" dediğimiz şey, **sürekli bir fiziksel büyüklüğün ayrık sembollere göre yorumlanmasıdır.** Alıcının işi tam olarak budur: Sürekli bir dalga biçimini belirli anlarda örnekler ve her örneği bir sembole eşler. Bunun nasıl yapıldığı 01-04'ün konusudur.
+A cable does not contain tiny 0s and 1s. It carries a physical signal, such as a changing voltage. Fiber carries light, and wireless links carry radio waves.
 
-### 3.5 Analogdan dijitale ve geri
+The receiver measures the physical signal and interprets it according to the agreed encoding rules. “Digital” describes how the signal is interpreted, not a separate kind of physical substance.
 
-Gerçek dünyadaki bilginin çoğu analogdur: ses, görüntü, sıcaklık. Bunları ağda taşımak için önce dijitale çevirmek gerekir. Bu dönüşümün iki adımı vardır (ayrıntılar 00-06'da):
+For some applications, an analog source such as sound must first be converted into digital data:
 
-1. **Örnekleme (sampling):** Sürekli sinyalden belirli aralıklarla ölçüm almak. Örneğin bir sesi saniyede 48.000 kez ölçmek.
-2. **Nicemleme (quantization):** Her ölçümü sonlu sayıda seviyeden en yakınına yuvarlamak. Örneğin 16 bitle 65.536 seviyeden birine.
+1. **Sampling** means measuring a changing signal at regular time intervals.
+2. **Quantization** means mapping each measurement to one of a limited number of values.
 
-Bu yuvarlama küçük ama kalıcı bir hata yaratır (nicemleme hatası). Karşılığında elde edilen veri artık gürültüye karşı korunabilir, kopyalanabilir ve ağda taşınabilir.
+These steps allow sound, images, and other information to be represented as digital data.
 
-## 4. Teknik Ayrıntı: Bir bilgi kaç bit eder?
+## 6. How Many Bits Are Needed?
 
-N tane **eşit olasılıklı** durumdan birini belirtmek için gereken bit sayısı log₂(N)'dir. Bit sayısı tam sayı olmak zorunda olduğundan pratikte bu değer yukarı yuvarlanır: ⌈log₂(N)⌉.
+With (n) bits, you can represent (2^n) different combinations.
 
-| Ayırt edilecek durum | Hesap | Gereken bit |
-|---|---|---|
-| Yazı-tura | log₂(2) = 1 | 1 |
-| Bir zar atışı (6 sonuç) | log₂(6) ≈ 2,585 | 3 |
-| İngiliz alfabesindeki 26 harf | log₂(26) ≈ 4,7 | 5 |
-| 1000 farklı host'tan biri | log₂(1000) ≈ 9,97 | 10 |
-| Tüm IPv4 adresleri | 2³² | 32 |
-| Tüm MAC adresleri | 2⁴⁸ | 48 |
+To represent at least (N) different possibilities, choose the smallest whole number (n) for which (2^n geq N).
 
-Ters yönde de düşünebilirsin: **n bit, 2ⁿ farklı durumu ayırt edebilir.** Her bit eklediğinde ayırt edebileceğin durum sayısı ikiye katlanır. Bu basit kural, subnetting'in temelidir: Bir alt ağın host kısmında 8 bit varsa 2⁸ = 256 farklı adres vardır (03-04).
+Examples:
 
-> **[DERİN]** Durumlar eşit olasılıklı değilse ortalama bilgi miktarı daha düşüktür. Shannon bunu **entropi (entropy)** ile tanımladı: H = −Σ pᵢ · log₂(pᵢ). Örneğin %90 yazı, %10 tura gelen hileli bir para atışı yaklaşık 0,47 bit bilgi taşır, çünkü sonuç büyük ölçüde tahmin edilebilir. Kayıpsız sıkıştırma (06-04) bu fazlalığı kullanır: Bir veri, entropisinin altına sıkıştırılamaz.
+| Number of possibilities | Minimum bits | Why |
+|---:|---:|---|
+| 2 | 1 | (2^1 = 2) |
+| 6 | 3 | (2^2 = 4) is too small; (2^3 = 8) is enough |
+| 26 | 5 | (2^4 = 16) is too small; (2^5 = 32) is enough |
+| 1,000 | 10 | (2^{10} = 1,024) |
+| All IPv4 addresses | 32 | An IPv4 address has 32 bits |
+| A common MAC address | 48 | A MAC address has 48 bits |
 
-## 5. Gerçek Dünya Örnekleri
+This relationship is useful throughout networking. IPv4 subnetting, for example, depends on how many combinations a given number of host bits can represent.
 
-- **Görüntülü görüşme:** Mikrofon havadaki basınç değişimini analog bir gerilime çevirir. Ses kartı bu gerilimi örnekler ve nicemler; sonuç bir bit dizisidir. Bu bitler sıkıştırılır (06-04), paketlere bölünür ve ağda taşınır. Karşı tarafta bitler yeniden bir gerilime, gerilim de hoparlörde ses dalgasına dönüşür. Uçtan uca yalnızca iki noktada analog dünya vardır: mikrofon ve hoparlör.
-- **Çevrim içi oyun:** Bir tuşa basman, oyunun protokolüne göre birkaç baytlık bir mesaja dönüşür ("oyuncu 7, x=120, y=45'e hareket etti"). Bu baytlar sunucuya ulaştığında sunucu aynı protokolü kullanarak onları yeniden anlama çevirir.
-- **Ev ağın:** Dizüstü bilgisayarın ile modem arasında aynı bitler en az iki farklı fiziksel biçimde taşınır: havada radyo dalgası olarak (Wi-Fi), modemin içinde ve kablosunda elektrik sinyali olarak. Biçim değişir, bitler değişmez. Ortamlar arasındaki bu bağımsızlık, katmanlı modelin (00-09) en önemli sonucudur.
+## 7. Networking Examples
 
-## 6. Diğer Konularla Bağlantı
+**A video call:** A microphone converts sound into an electrical signal. The computer converts that signal into digital data, encodes it, and sends it through the network. The receiving device converts the data back into sound.
 
-| Bu dosyadaki fikir | Nerede derinleşiyor |
+**An online game:** A button press can become a short message describing an action. The receiver interprets the message according to the game's protocol.
+
+**A home Wi-Fi connection:** Data may travel as radio signals between a laptop and an access point, and as electrical signals over a copper cable after that. The physical form changes, but the data is interpreted according to the same higher-level protocols.
+
+## 8. Troubleshooting Connection
+
+A physical problem can corrupt a signal. If the receiver interprets a symbol incorrectly, a frame may fail its integrity check.
+
+On a Cisco switch, increasing `CRC` or `input errors` counters can point to a physical-link problem, such as a damaged cable, interference, or a duplex mismatch. These counters do not identify the cause by themselves, but they help guide the investigation.
+
+A useful reasoning chain is:
+
+`physical issue → corrupted signal → damaged frame → failed FCS check → frame discarded`
+
+You will study signal problems in the Physical Layer unit and Ethernet error detection in the Data Link Layer unit.
+
+## 9. Common Misunderstandings
+
+| Misunderstanding | Correct idea |
 |---|---|
-| İkili sayılar, bit ve bayt | 00-02 |
-| Bitler üzerinde mantık işlemleri | 00-03 |
-| Gerilim ve gürültü | 00-04 |
-| Transistörün iki durumu | 00-05 |
-| Ses, görüntü ve metnin bitlerle temsili | 00-06, 06-02 |
-| Bitlerin sinyale dönüşmesi ve çok seviyeli semboller | 01-02, 01-03 |
-| Alıcının sembol kararı | 01-04 |
-| Gürültü ve sinyal bozulması | 01-05 |
-| Hata tespiti | 02-04 |
-| Protokol kavramı | 00-08, 00-09 |
+| “Data and information are the same thing.” | Data is the representation; information is what the receiver understands from it. |
+| “A cable literally carries 0s and 1s.” | A cable carries a physical signal that the receiver interprets as symbols. |
+| “All network signals use only two voltage levels.” | Some technologies use multiple signal levels to carry more information per symbol. |
+| “Computers use binary because it is always faster.” | Two-state circuits are practical and reliable to build. |
+| “Digital means there is no noise.” | Physical signals can still be affected by noise. Digital receivers are designed to tolerate a range of signal variation. |
 
-## 7. Cisco ve Pratik
+## 10. Check Your Understanding
 
-Bir Cisco cihazında `show interfaces` komutunun çıktısı, aynı trafiği hem **bit** hem **bayt** cinsinden gösterir. Örnek çıktı (değerler örnektir):
+1. What is the difference between data and information? Give a network example.
+2. What does a protocol contribute to communication?
+3. What is a decision threshold?
+4. What does noise margin describe?
+5. Why can a network signal use multiple physical levels even though computers process binary data?
 
-```
-  5 minute input rate 2000 bits/sec, 3 packets/sec
-  ...
-     1234 packets input, 567890 bytes, 0 no buffer
-```
+<details><summary>Answers</summary>
 
-İlk satırdaki hız bit/saniye, ikinci satırdaki sayaç bayt cinsindendir. Bu iki birimi karıştırmamak, kapasite ve performans hesaplarında temel bir beceridir (birim dönüşümleri 00-02'de).
+1. Data is a representation, such as bytes. Information is the meaning obtained by interpreting those bytes. For example, an Ethernet header's destination field is understood as a MAC address because Ethernet defines that field.
+2. A protocol defines the rules that let devices interpret messages consistently.
+3. It is the boundary a receiver uses to decide which symbol a received signal represents.
+4. It is the tolerance between a valid signal level and the point where noise could cause an incorrect decision.
+5. The physical encoding can map bit groups to multi-level symbols. The receiver decodes those symbols back into bits.
 
-## 8. Yaygın Yanılgılar
+</details>
 
-| Yanılgı | Doğrusu |
-|---|---|
-| "Kabloda 0'lar ve 1'ler akar." | Kabloda sürekli değişen bir gerilim vardır. Alıcı onu belirli anlarda örnekleyip sembollere çevirir. Üstelik semboller her zaman ikili değildir (1000BASE-T'de beş seviye). |
-| "Veri ile bilgi aynı şeydir." | Veri temsildir, bilgi ise o temsilin bir anlaşmaya göre yorumlanmasıyla giderilen belirsizliktir. Aynı bitler farklı protokollerde farklı anlamlara gelir. |
-| "Bilgisayarlar ikili kullanır, çünkü ikili daha hızlıdır." | Asıl neden güvenilirlik ve basitliktir: İki durum en geniş gürültü payını verir ve transistör iki durumda en kararlı çalışır. |
-| "Analog kötü, dijital iyidir." | Gerçek dünya analogdur ve her dijital sistem sonunda analog bir fiziksel ortamı kullanır. Dijitalin üstünlüğü, gürültünün birikmesini ve yayılmasını engellemesidir. |
-| "Bir bit, bir gerilim seviyesine eşittir." | Bit soyut bir bilgi birimidir. Fiziksel olarak bir bit; bir gerilim seviyesiyle, bir geçişle (Manchester kodlaması), birden çok bitin tek bir sembolde birleşmesiyle ya da ışığın varlığıyla temsil edilebilir. |
+## 11. Practical Reflection
 
-## 9. Arıza Giderme Yaklaşımı
+Think about a video reaching your phone over Wi-Fi. Identify one place where information starts as an analog physical quantity, how it becomes digital data, and the different physical media the data may travel through.
 
-Bu dosyanın arıza giderme dersi tek bir cümledir: **Gürültü karar eşiğini aşarsa alıcı yanlış sembole karar verir.** Bir bitin yanlış okunması, o bitin taşıdığı çerçevenin bozulması demektir. Alıcı bunu hata tespit koduyla (FCS) fark eder ve çerçeveyi atar.
+## Readiness Checklist
 
-Bir switch arayüzünde artan `CRC` ve `input errors` sayaçları gördüğünde zincir şöyle işler: fiziksel bir sorun (hasarlı kablo, elektromanyetik parazit, duplex uyumsuzluğu) → gürültü → yanlış sembol kararları → bozuk çerçeveler → FCS hatası → atılan çerçeveler. Bu zinciri 01-05, 01-10 ve 02-04'te adım adım kuracağız.
+- [ ] I can explain data versus information using my own example.
+- [ ] I can explain what a protocol does.
+- [ ] I can describe a decision threshold and noise margin in simple terms.
+- [ ] I can explain why two-state digital circuits are practical.
+- [ ] I can calculate the minimum number of bits needed for a given number of possibilities.
 
-## 10. CCNA Bağlantısı
+## Further Reading
 
-CCNA bu konuyu doğrudan sormaz. Ama v1.1 1.3 (kablo türleri) ve 1.4 (arayüz ve kablo sorunları) konularındaki "neden" sorularının cevabı buradaki gürültü payı fikrine dayanır.
-
-## 11. Kendini Kontrol Et
-
-1. Bir ağ protokolünün "bitlere anlam veren anlaşma" olduğunu bir örnekle açıkla.
-   <details><summary>Cevap</summary>
-   Örneğin Ethernet standardı, çerçevenin ilk 6 baytının hedef MAC adresi olduğunu söyler. Bu anlaşmayı bilmeyen bir alıcı için o 48 bit yalnızca bir bit dizisidir. Anlam, bitlerin içinde değil, iki tarafın uyguladığı ortak kuraldadır.
-   </details>
-
-2. Bir repeater (tekrarlayıcı) analog bir sinyali güçlendirdiğinde ne olur? Dijital bir sinyali yenilediğinde ne olur?
-   <details><summary>Cevap</summary>
-   Analog sinyali güçlendirdiğinde içindeki gürültüyü de güçlendirir; gürültü bir sonraki bağlantıya taşınır ve birikir. Dijital sinyali yenilediğinde önce sembollere karar verir, sonra temiz sembolleri yeniden üretir. Gürültü eşiği aşmadığı sürece hiçbir hata taşınmaz.
-   </details>
-
-3. Bir ağda 500 cihaza benzersiz bir numara vermek istiyorsun. En az kaç bit gerekir?
-   <details><summary>Cevap</summary>
-   2⁸ = 256 < 500 ≤ 512 = 2⁹. En az 9 bit gerekir.
-   </details>
-
-4. Neden bir hattaki sembol seviyesi sayısını artırmak hem bir kazanç hem bir risktir?
-   <details><summary>Cevap</summary>
-   Kazanç: Her sembol daha fazla bit taşır, aynı sembol hızında daha yüksek veri hızı elde edilir. Risk: Seviyeler birbirine yaklaşır, gürültü payı küçülür ve alıcının yanlış karar verme olasılığı artar.
-   </details>
-
-5. "Dijital sinyal" ifadesi fiziksel olarak neden bir basitleştirmedir?
-   <details><summary>Cevap</summary>
-   Fiziksel ortamdaki gerilim, ışık ya da radyo dalgası her zaman süreklidir ve sonlu bir hızla değişir. "Dijital" olan, alıcının bu sürekli büyüklüğü belirli anlarda örnekleyip ayrık sembollere göre yorumlamasıdır.
-   </details>
-
-## 12. Uygulama
-
-Bu dosyanın PT pratiği yoktur. Kısa bir düşünce alıştırması yap: Evindeki Wi-Fi'den bir videonun telefonuna ulaşmasını düşün. Bilginin **analog** olduğu her noktayı ve **dijital** olduğu her noktayı sırayla yaz. Aynı bitlerin kaç farklı fiziksel ortamda taşındığını say. Cevabını 08-05'i okuduğunda kontrol edeceksin.
-
-## 13. Ustalık Kontrol Listesi
-
-- [ X ] Bilgi ile veri farkını, kaynağa bakmadan bir ağ örneğiyle anlatabiliyorum.
-- [ X ] Gürültü payı kavramını bir çizimle açıklayabiliyorum.
-- [ ] Dijitalin ağ iletişimine sağladığı dört avantajı ve her birinin nedenini söyleyebiliyorum.
-- [ X ] N durum için gereken bit sayısını ve n bitin ayırt edebileceği durum sayısını hesaplayabiliyorum.
-- [ X ] "Kabloda 0 ve 1 akar" ifadesinin neden yanlış olduğunu iki gerekçeyle açıklayabiliyorum.
-
-## Kaynaklar
-
-- [PAPER-SHANNON] C. E. Shannon, "A Mathematical Theory of Communication" (1948): bit ve entropi kavramları.
-- [TXT-PETZOLD] Code, 2. baskı: bilgi, kodlar ve ikili sistem üzerine sezgisel anlatım (ek okuma).
-- [IEEE-8023] 1000BASE-T'nin PAM-5 kullanması (ayrıntılar ve madde numarası 01-03'te).
+- C. E. Shannon, “A Mathematical Theory of Communication” (1948), for the foundations of information theory.
+- Charles Petzold, *Code: The Hidden Language of Computer Hardware and Software*, for an approachable introduction to digital representation.

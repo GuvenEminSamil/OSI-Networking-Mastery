@@ -1,9 +1,11 @@
 #separator:tab
 #html:false
-Bilgi ile veri arasındaki fark nedir?	Veri temsildir (bitler, gerilimler). Bilgi, bu temsilin ortak bir anlaşmaya göre yorumlanmasıyla giderilen belirsizliktir. (00-01)
-Bir bit tam olarak neyi ölçer?	Eşit olasılıklı iki seçenek arasındaki tek bir kararı. (00-01)
-Gürültü payı nedir ve neden önemlidir?	Bir sembol seviyesi ile karar eşiği arasındaki mesafe. Gürültü bu mesafeyi aşmadıkça alıcı doğru sembole karar verir. (00-01)
-Dijital temsil, bir ara cihazın gürültüyü bir sonraki bağlantıya taşımasını nasıl engeller?	Cihaz sembollere karar verir ve temiz sembolleri yeniden üretir (yenileme). Analogda ise gürültü sinyalle birlikte güçlendirilir. (00-01)
-Bilgisayarlar neden ikili kullanır?	İki durum en geniş gürültü payını verir ve transistör iki durumda en kararlı çalışır. Neden hız değil, güvenilirliktir. (00-01)
-Kabloda her zaman ikili sinyal mi vardır?	Hayır. Örneğin 1000BASE-T beş seviyeli PAM-5 sembolleri kullanır; Wi-Fi QAM ile sembol başına birçok bit taşır. (00-01)
-1000 cihaza benzersiz numara vermek için en az kaç bit gerekir?	10 bit (2¹⁰ = 1024). (00-01)
+What is the difference between data and information?	Data is a representation (such as bits or signal states). Information is what a receiver understands by interpreting that representation using shared rules. (00-01)
+What does one bit represent?	One choice between two possible values, commonly written as 0 and 1. (00-01)
+What is a protocol?	A shared set of rules that tells communicating devices how to interpret data. (00-01)
+What is a decision threshold?	The boundary a receiver uses to decide which symbol a received physical signal represents. (00-01)
+What does noise margin describe?	The tolerance between a valid signal level and the point where noise could cause the receiver to interpret the wrong symbol. (00-01)
+How can a digital device reduce the spread of signal noise to the next link?	It interprets the incoming symbols and generates a new signal. This process is called regeneration. (00-01)
+Why do digital computers commonly use binary internally?	Two states are comparatively easy to distinguish reliably and work well with transistor switching. Reliability and simplicity are the main reasons, not guaranteed speed. (00-01)
+Do all network links use only two physical signal levels?	No. For example, 1000BASE-T uses five-level PAM-5 signalling, while Wi-Fi can use QAM with multiple bits per symbol. (00-01)
+How many bits are needed to identify 1,000 different values?	10 bits, because 2^10 = 1,024. (00-01)

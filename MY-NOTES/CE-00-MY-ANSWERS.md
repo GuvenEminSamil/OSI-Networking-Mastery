@@ -1,75 +1,76 @@
-# CE-00 Cevaplarım
+# CE-00 — My Answers
 
-> Soruları `10-QUESTION-BANK/COMPREHENSIVE-EXAMS/CE-00.md` dosyasından oku, cevaplarını buraya yaz. Emin olmadıklarının yanına `?` koy. Puanlamayı cevap dosyasıyla yap.
+> These are the answers from the original diagnostic attempt. They are preserved as a historical record; corrections and feedback are listed below.
 
-**Başlangıç saati:** ··· **Bitiş saati:** ···
+**Start time:** Not recorded  
+**Finish time:** Not recorded
 
-## Bölüm A (1'er puan)
+## Section A (1 point each)
 
 1. 7
-2. fiziksel, uygulama
-3. 4. katman
-4. 3. katman
-5. 2. katman
-6. 3. katman
-7. 2. katman
-8. paket
-9. 2. katman
-10. birisi verinin yola çıkması için paketlenmesi diğeri ise paketin çöümlenmesi
+2. Physical, Application
+3. Layer 4
+4. Layer 3
+5. Layer 2
+6. Layer 3
+7. Layer 2
+8. Packet
+9. Layer 2
+10. One process prepares data to be sent; the other decodes the packet.
 
-## Bölüm B (2'şer puan)
+## Section B (2 points each)
 
-11. 1. katmanı kontrol ederim. Belki kabloda bir problem vardır.
-12. Switchte problem olabilir. 1. ve 2. katmanları kontol ederim.
-13. 3. katmanı kontrol ederim. Belki DNS sunucusu ile bir kopukluk vardır.
-14. LAN'ın dışına veri göndereceğimiz için öncelikle router'a gitmelidir.
-15. LAN'daki bütün cihazlara flood yapar.
-16. Source IP ve MAC ve Destination IP ve MAC
+11. Check Layer 1 first. There may be a cable problem.
+12. There may be a switch problem. I would check Layers 1 and 2.
+13. Check Layer 3. There may be a connection problem with the DNS server.
+14. Because the data is going outside the LAN, it should first go to the router.
+15. Flood the frame to all devices on the LAN.
+16. Source IP and MAC addresses, and destination IP and MAC addresses.
 17. ?
 18. ?
-19. şifreleme-güvenlik amacıyla
+19. For encryption and security.
 20. ARP?
 
-## Bölüm C (2'şer puan)
+## Section C (2 points each)
 
-21. Mutlak olarak hangi iki cihazın haberleştiği karışmasın diye.
-22. Hız sebebiyle.
-23. Çerçevelerde TTL yoktur ya da TTL değeri yüksektir. TTL protokolü
-24. 192.168.1.0/24 seçilir çünkü hedef IP ile aynı ağdadır.
-25. İlk senaryoda diğer bilgisayarla aynı ağdadır ve L2 Switch o ağdaki MAC adreslerini bilir. İkinci senaryoda ise WAN'ı kullanacaktır ve bunun için Default Gateway olan Router'ın MAC adresine ihtiyaç duyar.
+21. To avoid confusion about which two devices are communicating.
+22. Because of speed.
+23. Frames do not have a TTL field, or the TTL value is high. “TTL protocol.”
+24. Use `192.168.1.0/24` because the destination IP is in the same network.
+25. In the first scenario, the destination is on the same network and the Layer 2 switch knows the MAC addresses in that network. In the second scenario, the data goes through the WAN, so the computer needs the router's MAC address (the default gateway).
 
-## Puanlama
+## Scoring
 
-> Puanlama Claude tarafından, `answers/CE-00-ANSWERS.md`'deki ölçütlerle yapıldı (2026-11-20).
+> Scored on 2026-11-20 using the criteria in `10-QUESTION-BANK/COMPREHENSIVE-EXAMS/answers/CE-00-ANSWERS.md`.
 
-| Bölüm | Puan |
-|---|---|
-| A (10 üzerinden) | 10 |
-| B (20 üzerinden) | 6 |
-| C (10 üzerinden) | 5 |
-| **Toplam (40 üzerinden)** | **21** |
+| Section | Score |
+|---|---:|
+| A (out of 10) | 10 |
+| B (out of 20) | 6 |
+| C (out of 10) | 5 |
+| **Total (out of 40)** | **21** |
 
-Yorum: Katman–kavram eşleştirmeleri sağlam (Bölüm A tam). Eksik olan, mekanizmalar ve ayrıntılar. Müfredat tam olarak bunu kuracak.
+**Feedback summary:** Layer-to-concept matching was strong (Section A was full marks). The main gaps were in mechanisms and practical detail. The redesigned course is intended to build those mechanisms step by step.
 
-## Yanlış ya da eksik olanlar
+## Incorrect or Incomplete Answers
 
-**Kalın** satırlar, emin olarak verilmiş ama yanlış olan cevaplardır (yanılgı). Bu dosyalara geldiğinde o bölümleri özellikle dikkatle oku.
+Bold rows below indicate answers that were given confidently but contained a misconception.
 
-| Soru | Puan | Derinleştiği yer | Not |
-|---|---|---|---|
-| 10 | 1/1 | 08-01 | Yön doğru; eksik olan, her katmanın kendi başlığını ekleyip çıkarması |
-| 11 | 1/2 | 01-10, 11-01 | L1 doğru; gerekçe (link ışığı = iki PHY birbirini algılıyor) ve ikinci bir kontrol eksik |
-| 12 | 0/2 | 03-06, 11-03, 02-15 | İnternet çalıştığına göre senin L1–L2'n büyük olasılıkla sağlam. Sorun hedef tarafta: güvenlik duvarı ICMP'yi engelliyor olabilir, hedefin IP ayarı yanlış olabilir, iki cihaz farklı VLAN'larda olabilir |
-| **13** | 1/2 | 07-02, 08-10 | DNS tahmini doğru, ama **DNS L7'dir**. 8.8.8.8'e ping gittiğine göre L3 zaten çalışıyor |
-| 14 | 2/2 | 03-06 | Doğru. Cevabı açıkça "router'ın, yani varsayılan ağ geçidinin MAC adresi" diye yazmaya alış |
-| 15 | 1/2 | 02-06 | Flooding doğru; ama "LAN'daki bütün cihazlara" değil, **geldiği port hariç, aynı VLAN'daki** portlara |
-| **16** | 1/2 | 03-07 | MAC adreslerinin değiştiği doğru, ama **IP adresleri değişmez** (NAT yoksa). Değişen TTL ve IPv4 checksum'ıdır |
-| 17 | 0/2 | 04-03 | SYN, SYN-ACK, ACK |
-| 18 | 0/2 | 07-03 | Discover, Offer, Request, Acknowledge (DORA) |
-| 19 | 0/2 | 06-05, 06-06 | Üç amaç: gizlilik (şifreleme), bütünlük, sunucunun kimlik doğrulaması |
-| **20** | 0/2 | 03-10 | **ARP değil**, L3 yönlendirme gerekir: router-on-a-stick ya da L3 switch'te SVI |
-| 21 | 1/2 | 03-07, 08-04 | IP'nin uçtan uca rolü doğru; eksik olan, MAC adresinin yalnızca tek bir bağlantıda anlamlı olması |
-| 22 | 1/2 | 04-06 | "Hız" yerine: bayat verinin yeniden gönderilmesi anlamsız; TCP'de kaybolan bir segment arkasındakileri bekletir |
-| **23** | 1/2 | 02-11, 02-12 | "Çerçevede TTL yok" gözlemi çok iyi. Ama **"TTL protokolü" diye bir protokol yok**; döngüyü önleyen STP'dir |
-| 24 | 1/2 | 03-08 | Rota doğru, gerekçe eksik: İki rota da hedefi kapsar; seçilen, en uzun önek eşleşmesidir |
-| **25** | 1/2 | 00-03, 03-06 | Sonuç doğru, ama **MAC adresini switch değil, host ARP ile öğrenir**. Yerel/uzak kararını host, maskeyle AND yaparak verir |
+| Question | Score | Revisit | Feedback |
+|---:|---:|---|---|
+| 10 | 1/1 | 08-01 | The overall direction was right. The missing detail is that each layer adds its own header and removes it at the receiving side. |
+| 11 | 1/2 | 01-10, 11-01 | Layer 1 was correct. Add why the link light matters (the two PHYs detect each other) and name at least one additional physical check. |
+| 12 | 0/2 | 03-06, 11-03, 02-15 | If Internet access works, the sender's L1–L3 path is probably functional. The target may block ICMP, have incorrect IP settings, belong to another VLAN, or be isolated by the wireless network. |
+| 13 | 1/2 | 07-02, 08-10 | DNS was a good guess, but **DNS is Layer 7**, not Layer 3. A successful ping to 8.8.8.8 indicates that basic Layer 3 reachability is working. |
+| 14 | 2/2 | 03-06 | Correct. State explicitly that the destination MAC is the router's (default gateway's) MAC address. |
+| 15 | 1/2 | 02-06 | Flooding was correct. The switch floods only within the same VLAN and excludes the port on which the frame arrived. |
+| **16** | 1/2 | 03-07 | The MAC-address change was correct, but **IP addresses do not normally change during routing** (unless NAT is used). TTL is reduced and the IPv4 header checksum is recalculated. |
+| 17 | 0/2 | 04-03 | The TCP handshake is SYN, SYN-ACK, ACK. |
+| 18 | 0/2 | 07-03 | DHCP uses Discover, Offer, Request, Acknowledge (DORA). |
+| 19 | 0/2 | 06-05, 06-06 | TLS provides confidentiality (encryption), integrity, and server authentication. |
+| **20** | 0/2 | 03-10 | **ARP is not enough** for communication between different VLANs. Layer 3 routing is required, using router-on-a-stick or a Layer 3 switch with an SVI. |
+| 21 | 1/2 | 03-07, 08-04 | The end-to-end IP role was right. The missing detail is that MAC addresses are used only on the current link and are replaced at each routed hop. |
+| 22 | 1/2 | 04-06 | “Speed” is too general. Old game updates may no longer be useful; TCP retransmission and head-of-line blocking can delay newer data. |
+| **23** | 1/2 | 02-11, 02-12 | It is correct that Ethernet frames have no TTL field. But there is no “TTL protocol” for this problem. STP prevents Layer 2 loops. |
+| 24 | 1/2 | 03-08 | The selected route was correct, but explain longest prefix match. Both routes cover the destination; /24 is more specific than /16. |
+| **25** | 1/2 | 00-03, 03-06 | The result was right, but **the host uses ARP to learn the MAC address**. The host uses its own subnet mask to decide local versus remote. A local destination needs its own MAC; a remote destination needs the default gateway's MAC. |

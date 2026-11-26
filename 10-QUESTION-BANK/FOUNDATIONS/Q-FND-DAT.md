@@ -1,135 +1,112 @@
-# FND-DAT: Bilgi, Sayılar, Mantık ve Veri Temsili
+# FND-DAT — Information, Number Systems, Logic, and Data Representation
 
-> Kapsam: 00-01, 00-02, 00-03, 00-06 | 12 soru | Önerilen süre: 35 dakika | Cevaplar: `answers/A-FND-DAT.md`
->
-> Kurallar ve puanlama: `10-QUESTION-BANK/README.md`. Hesap makinesi kullanma.
+> **Coverage:** 00-01, 00-02, 00-03, 00-06 | **Questions:** 12 | **Suggested time:** 35 minutes  
+> Answers: `answers/A-FND-DAT.md`. See `10-QUESTION-BANK/README.md` for scoring rules. No calculator.
 
 ---
 
 ### FND-DAT-001
-**Kategori:** MC · **Zorluk:** 1 · **Teori:** 00-01
+**Category:** MC · **Difficulty:** 1 · **Lesson:** 00-01
 
-Bilgisayarların içinde ikili sistemin kullanılmasının asıl nedeni hangisidir?
+Why do digital computers commonly use binary internally?
 
-- A) İkili sayılarla yapılan toplama, onluk sayılarla yapılandan daha hızlıdır.
-- B) İki seviye, belirli bir gerilim aralığında en geniş gürültü payını verir ve transistör iki uçta en kararlı çalışır.
-- C) Kablolar fiziksel olarak yalnızca iki gerilim seviyesi taşıyabilir.
-- D) İkili sistem, aynı sayıyı yazmak için daha az basamak kullanır.
-
----
+- A) Binary addition is always faster than decimal addition.
+- B) Two states provide a wide noise margin, and transistors operate reliably as switches.
+- C) Cables can physically carry only two voltage levels.
+- D) Binary uses fewer digits than decimal for the same number.
 
 ### FND-DAT-002
-**Kategori:** O · **Zorluk:** 1 · **Teori:** 00-01, 00-02
+**Category:** O · **Difficulty:** 1 · **Lessons:** 00-01, 00-02
 
-Bir kampüsteki 3.000 cihazın her birine benzersiz bir kimlik numarası verilecek.
+A campus has 3,000 devices. Each device needs a unique identification number.
 
-a) En az kaç bit gerekir?
-b) Bu bit sayısıyla, 3.000 cihazdan sonra kaç cihaz için daha yer kalır?
-
----
+a) What is the minimum number of bits required?  
+b) With that number of bits, how many additional values remain after assigning 3,000 devices?
 
 ### FND-DAT-003
-**Kategori:** O · **Zorluk:** 2 · **Teori:** 00-02
+**Category:** O · **Difficulty:** 2 · **Lesson:** 00-02
 
-`0xC0A8` değerini ele al.
+Convert `0xC0A8`.
 
-a) İkili olarak yaz.
-b) 16 bitlik işaretsiz bir sayı olarak onluk değeri nedir?
-c) Bu iki bayt bir IPv4 adresinin ilk iki okteti olsaydı adres nasıl başlardı?
-
----
+a) Write it in binary.  
+b) What is its decimal value as an unsigned 16-bit integer?  
+c) If these two bytes were the first two octets of an IPv4 address, what would the address begin with?
 
 ### FND-DAT-004
-**Kategori:** S · **Zorluk:** 2 · **Teori:** 00-02, 00-09
+**Category:** S · **Difficulty:** 2 · **Lessons:** 00-02, 00-09
 
-Bir arkadaşın şöyle diyor: "İnternet paketim 500 Mbps, ama indirme programı en fazla 60 MB/s gösteriyor. Servis sağlayıcı bana eksik hız veriyor."
+A friend says: “My Internet plan is 500 Mbps, but my download application shows a maximum of 60 MB/s. My provider is not giving me the full speed.”
 
-Haklı mı? Hesabını göstererek açıkla.
-
----
+Is the friend correct? Show the calculation and explain the units.
 
 ### FND-DAT-005
-**Kategori:** MC · **Zorluk:** 2 · **Teori:** 00-03
+**Category:** MC · **Difficulty:** 2 · **Lesson:** 00-03
 
-`10.20.30.77/26` adresiyle ilgili hangi **iki** ifade doğrudur? (İki tane seçin.)
+Which **two** statements about address `10.20.30.77/26` are correct? (Select two.)
 
-- A) Ağ adresi 10.20.30.64'tür.
-- B) Yayın adresi 10.20.30.255'tir.
-- C) Joker maske 0.0.0.63'tür.
-- D) Ağ adresi 10.20.30.0'dır.
-- E) Joker maske 0.0.0.192'dir.
-
----
+- A) The network address is 10.20.30.64.
+- B) The broadcast address is 10.20.30.255.
+- C) The wildcard mask is 0.0.0.63.
+- D) The network address is 10.20.30.0.
+- E) The wildcard mask is 0.0.0.192.
 
 ### FND-DAT-006
-**Kategori:** İ · **Zorluk:** 3 · **Teori:** 00-03
+**Category:** I · **Difficulty:** 3 · **Lesson:** 00-03
 
-İki host aynı switch'e bağlı ve aynı VLAN'da. Yöneticinin yaptığı yazım hatası yüzünden maskeleri farklı:
+Two hosts are connected to the same switch and belong to the same VLAN. An administrator has mistakenly configured different subnet masks:
 
-| Host | Adres |
+| Host | Address |
 |---|---|
 | A | 192.168.1.130/25 |
 | B | 192.168.1.100/24 |
 
-a) A, B'ye bir paket gönderirken B'yi yerel mi uzak mı sayar? Hesabını göster.
-b) B, A'ya bir paket gönderirken A'yı yerel mi uzak mı sayar?
-c) A'da varsayılan ağ geçidi tanımlı değilse A'dan B'ye ping başarılı olur mu?
-
----
+a) When A sends a packet to B, does A consider B local or remote? Show the calculation.  
+b) When B sends a packet to A, does B consider A local or remote?  
+c) If Host A has no default gateway configured, will a ping initiated by A to B succeed?
 
 ### FND-DAT-007
-**Kategori:** O · **Zorluk:** 1 · **Teori:** 00-03
+**Category:** O · **Difficulty:** 1 · **Lesson:** 00-03
 
-a) `11001010 XOR 10101100` işleminin sonucu nedir?
-b) (a)'nın sonucunu yeniden `10101100` ile XOR'la. Ne elde ettin?
-c) Bu sonuç XOR'un hangi özelliğini gösterir?
-
----
+a) Calculate `11001010 XOR 10101100`.  
+b) XOR the result from (a) with `10101100` again. What do you get?  
+c) Which XOR property does this demonstrate?
 
 ### FND-DAT-008
-**Kategori:** MC · **Zorluk:** 1 · **Teori:** 00-06
+**Category:** MC · **Difficulty:** 1 · **Lesson:** 00-06
 
-Wireshark'ta bir TCP başlığının hedef port alanı kabloda `00 35` baytlarıyla görünüyor. Hedef port ve büyük olasılıkla ulaşılmak istenen servis hangisidir?
+In Wireshark, a TCP destination-port field appears on the wire as bytes `00 35`. What is the destination port, and which service is most likely intended?
 
-- A) 13.568, bilinmeyen bir servis
-- B) 53, DNS
-- C) 35, bilinmeyen bir servis
-- D) 3.500, bilinmeyen bir servis
-
----
+- A) 13,568; an unknown service
+- B) 53; DNS
+- C) 35; an unknown service
+- D) 3,500; an unknown service
 
 ### FND-DAT-009
-**Kategori:** O · **Zorluk:** 2 · **Teori:** 00-06
+**Category:** O · **Difficulty:** 2 · **Lesson:** 00-06
 
-Bir başlıkta 32 bitlik işaretsiz bir alan kabloda şu dört baytla geliyor: `00 00 01 F4`.
+A header contains a 32-bit unsigned field transmitted as four bytes: `00 00 01 F4`.
 
-a) Alanın değeri nedir?
-b) Bir program bu dört baytı little-endian bir sayı olarak okursa hangi değeri görür? (Sonucu onaltılık yazman yeterli; onluk değer bonus.)
-
----
+a) What is the value when interpreted in network byte order?  
+b) What value would a program see if it interpreted these bytes as a little-endian integer? (Hexadecimal is sufficient; decimal is optional.)
 
 ### FND-DAT-010
-**Kategori:** S · **Zorluk:** 2 · **Teori:** 00-06
+**Category:** S · **Difficulty:** 2 · **Lesson:** 00-06
 
-Bir şirketin iki şubesi 2 Mbps'lık bir hatla bağlı. Hattın tamamı yalnızca G.711 sesli görüşmelere ayrılırsa ve her görüşme Ethernet üzerinde 87,2 kbps kullanırsa (20 ms paketleme):
+Two company offices are connected by a 2 Mbps link. Assume the entire link is reserved for G.711 voice calls, and each call uses 87.2 kbps over Ethernet (20 ms packetization).
 
-a) En fazla kaç eş zamanlı görüşme taşınabilir?
-b) Bir çalışan "64 kbps'tan hesaplarsak 31 görüşme sığar" diyor. Hatası nedir?
-
----
+a) What is the maximum number of simultaneous calls?  
+b) An employee says that 31 calls fit if we calculate using 64 kbps per call. What did the employee overlook?
 
 ### FND-DAT-011
-**Kategori:** A · **Zorluk:** 2 · **Teori:** 00-06
+**Category:** A · **Difficulty:** 2 · **Lesson:** 00-06
 
-Bir öğrenci kendi yazdığı bir UDP sunucusunu 5000 numaralı portta dinlemeye açtı. Aynı öğrencinin yazdığı istemci sunucuya ulaşamıyor. Wireshark'ta istemcinin gönderdiği paketlerin hedef portu **34835** görünüyor.
+A student has written a UDP server that listens on port 5000. The student's client cannot reach it. Wireshark shows that outgoing packets have destination port **34835**.
 
-En olası neden nedir? Görüşünü bir hesapla destekle.
-
----
+What is the most likely cause? Support your answer with a calculation.
 
 ### FND-DAT-012
-**Kategori:** K · **Zorluk:** 2 · **Teori:** 00-01, 00-06
+**Category:** K · **Difficulty:** 2 · **Lessons:** 00-01, 00-06
 
-"Veri anlamını kendisi taşımaz; anlamı, iki tarafın anlaştığı yorum kuralı verir."
+Explain this statement in your own words: “Data does not carry its meaning by itself; meaning comes from the interpretation rules agreed by both sides.”
 
-Bu cümleyi kendi cümlelerinle açıkla. 00-06'nın girişindeki `C0 A8 01 01` örneğinden **farklı** bir ağ örneği kullan. (4–6 cümle.)
+Use a networking example different from the `C0 A8 01 01` example in lesson 00-06. Write 4–6 sentences.

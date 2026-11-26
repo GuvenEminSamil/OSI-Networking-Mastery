@@ -1,7 +1,7 @@
-# Sorularım (Questions)
+# My Questions
 
-> Anlamadığın ya da emin olamadığın bir şeyle karşılaştığında buraya yaz ve çalışmaya devam et. Bir sonraki oturumda cevaplayacağım; cevaplanan sorunun yanına ✓ koy.
+> Add anything that is unclear or uncertain while studying. Include the lesson and section so it can be answered later. Mark a question as resolved when it has been answered.
 
-| Tarih | Dosya ve bölüm | Soru | Durum |
+| Date | Lesson and section | Question | Status |
 |---|---|---|---|
 |  |  |  |  |
