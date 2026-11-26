@@ -601,3 +601,204 @@ The earlier user notes (`USR-OSI-NOTES`) are a high-level overview and a source 
 | IPv6 routers update an IPv4-like header checksum | IPv6 has no header checksum field. Integrity checks are provided at other layers. | 03-16 |
 | Ethernet has no TTL field, described as a router TTL issue | TTL is a field in the IP header, not a router feature. Ethernet has no hop counter, which is why Layer 2 loops need STP. | 02-11 |
 | Routed and routing protocols are not clearly distinguished | IP is a routed protocol. OSPF, RIP and BGP are routing protocols that distribute route information. | 03-13 |
+
+## 12. Detailed Practice Catalogue Metadata — Preserved from the Approved Plan
+
+This section retains the implementation details that are useful when the practical exercises are eventually written. Section 4 provides a quick topic index; the tables here preserve the original OSI mapping, technical focus, CCNA objective links, and known Packet Tracer limitations.
+
+### 12.1 Packet Tracer Environment and Device Set
+
+- **Target version:** Packet Tracer 9.0. Differences from 8.2.2 should be noted when each lab is written. Confirm the learner's installed version before creating version-sensitive instructions.
+- **Devices to consider** (verify the exact model and supported commands in the installed Packet Tracer version):
+  - PC-PT, Laptop-PT, Server-PT
+  - 2960-24TT Layer 2 switch
+  - 3560-24PS or 3650-24PS Layer 3 switch with PoE
+  - ISR 1941/2911 (IOS 15)
+  - ISR 4321 (IOS XE, for NAT/PAT exercises)
+  - WLC-3504 and lightweight AP
+  - Home Router, IP Phone 7960, Hub-PT, and Sniffer
+- **Simulation Mode** should be used where it adds value: follow a PDU step by step, inspect the OSI Model tab and Inbound/Outbound PDU Details, and enable relevant event filters.
+
+### 12.2 Lab Levels and Intended Blocks
+
+| Level | Lab range | Main blocks |
+|---|---|---|
+| Beginner | LAB-001–LAB-025 | Packet Tracer and Physical Layer; Ethernet, switching and VLANs; IPv4 introduction |
+| Intermediate | LAB-026–LAB-061 | STP and EtherChannel; static routing and ICMP; OSPF, FHRP and IPv6; TCP/UDP; application services |
+| Advanced | LAB-062–LAB-082 | NAT and security; automation; multi-layer integrated networks |
+| Expert | LAB-083–LAB-100 | Enterprise troubleshooting; comprehensive CCNA-style scenarios |
+
+### 12.3 Practical Exercise Types and File Layout
+
+| Type | Learner receives | Expected solution | File layout |
+|---|---|---|---|
+| **Y — Drill** | A 1–3 sentence task, success criteria, optional expandable command hints, and related theory. The learner designs the topology, addressing and configuration. | One answer file per phase: concise solution, why it works, and `[PT-LIMITATION]` notes. | `09-PACKET-TRACER-LABS/DRILLS/DRILLS-FNN.md` and `DRILLS/answers/DRILLS-FNN-ANSWERS.md` |
+| **T — Full lab** | The 17-part template described in the lab README: topology, addressing table and tasks. A break-fix lab includes intentionally incorrect configurations as text. | Separate solution file. | `09-PACKET-TRACER-LABS/<LEVEL>/LAB-NNN-<slug>.md` and `<LEVEL>/solutions/LAB-NNN-<slug>-SOLUTION.md` |
+
+A full lab is reserved for cases where a fixed starting state is important: an intentionally broken configuration, a detailed integration/exam task, or an incorrect diagram to repair. The intended distribution is **31 full labs and 69 drills**. Labs marked as deferred are post-exam items.
+
+### 12.4 Detailed Lab Catalogue
+
+#### Beginner — LAB-001 to LAB-025
+
+| ID | Type | Title | OSI | Key concepts | CCNA objectives (v1.1 / v2.0) | PT |
+|---|---|---|---|---|---|---|
+| LAB-001 | Y | First network in Packet Tracer; Realtime and Simulation modes | L1–L3 | Add devices, cable links, ping, inspect the event list | 1.1 / 2.4 | ✅ |
+| LAB-002 | Y | Inspect a PDU in Simulation Mode | L1–L7 | OSI Model tab, inbound/outbound PDU details, filters | Indirect / 2.4 | ✅ |
+| LAB-003 | Y | Cable types and link states | L1 | Straight-through, crossover, console, fibre and serial cables; link indicators; Auto-MDIX | 1.3 / 1.1 | ✅ (Auto-MDIX behaviour: ⚠️) |
+| LAB-004 | Y | Hub and switch: collision domains | L1–L2 | Shared media, observe collisions, microsegmentation | 1.3 / 1.1 | ✅ |
+| LAB-005 | Y | Console access and IOS command modes | Management | Console; user EXEC, privileged EXEC, global configuration; help and abbreviations | 2.8 / — | ✅ |
+| LAB-006 | Y | Basic device configuration and configuration files | Management | hostname, banner, enable secret, local user, running/startup configuration | 5.3 / 4.1 | ✅ |
+| LAB-007 | Y | Interface states and counters | L1–L2 | up/down, administratively down, err-disabled; `show interfaces` counters | 1.4 / 1.1, 2.4 | ✅ |
+| LAB-008 | Y | Speed, duplex and auto-negotiation | L1 | Auto-negotiation; duplex-mismatch symptoms such as late collisions and CRC errors | 1.4 / 1.1 | ⚠️ (use output interpretation as needed) |
+| LAB-009 | Y | Serial WAN link: DCE/DTE and clock rate | L1–L2 | Serial interface, clock rate and HDLC encapsulation | — / — | ✅ |
+| LAB-010 | Y | Home wireless network | L1–L2 | SSID, WPA2-PSK, band and channel selection, client association | 1.11, 5.10 / 1.5 | ✅ (host-lab alternative H04) |
+| LAB-011 | T | Physical-layer break-fix | L1 | Wrong cable, disabled interface, err-disabled state, wrong port | 1.4 / 1.1 | ✅ |
+| LAB-012 | Y | Inspect an Ethernet frame | L2 | Fields, EtherType, FCS and MAC address types | 1.13 / — | ✅ |
+| LAB-013 | Y | MAC address table: learning, aging and flooding | L2 | Learning, aging, unknown unicast and broadcast | 1.13 / — | ✅ |
+| LAB-014 | Y | Switch management: management SVI and Telnet | L2–L3, L7 | VLAN 1 SVI, `ip default-gateway`, VTY lines, Telnet | 2.8 / 2.1 | ✅ |
+| LAB-015 | Y | VLANs and access ports | L2 | Create VLANs, configure access ports, separate broadcast domains | 2.1 / 2.2 | ✅ |
+| LAB-016 | Y | VLANs across multiple switches using 802.1Q trunks | L2 | Trunk configuration; inspect the tag in PDU details | 2.2 / 2.1 | ✅ |
+| LAB-017 | Y | Native VLAN, allowed VLANs and DTP | L2 | Native VLAN mismatch, allowed list, DTP modes, nonegotiate | 2.2 / 2.1 | ✅ |
+| LAB-018 | Y | Voice VLAN, IP phone and edge-port profiles | L1–L2 | Voice VLAN, PoE and port settings for endpoint types | 1.1, 2.1 / 2.2 | ✅ (PoE: ⚠️) |
+| LAB-019 | Y | Verify network documentation using CDP and LLDP | L2 | Neighbour discovery; compare findings with the network diagram | 2.3 / 2.3 | ✅ |
+| LAB-020 | T | VLAN and trunk break-fix | L2 | Wrong VLAN; trunk, native VLAN and allowed-list faults | 2.2 / 2.1, 2.4 | ✅ |
+| LAB-021 | Y | ARP in action | L2–L3 | ARP cache, request and reply, gateway ARP | Indirect / 2.4 | ✅ |
+| LAB-022 | Y | Host IPv4 configuration and default gateway | L3 | Local/remote decision; missing or incorrect gateway | 1.6 / 1.3 | ✅ |
+| LAB-023 | Y | Two LANs connected by a router: MAC-header rewrite | L2–L3 | Router interfaces; trace MAC and IP values across each hop | 3.1, 3.2 / 2.4, 3.1 | ✅ |
+| LAB-024 | Y | FLSM subnet design and implementation | L3 | Equal-sized subnets and address planning | 1.6 / 1.3 | ✅ |
+| LAB-025 | Y | VLSM address plan for a multi-branch organisation | L3 | VLSM, /30 and /31 links, documentation | 1.6 / 1.3 | ✅ (/31 support: ⚠️) |
+
+#### Intermediate — LAB-026 to LAB-061
+
+| ID | Type | Title | OSI | Key concepts | CCNA objectives (v1.1 / v2.0) | PT |
+|---|---|---|---|---|---|---|
+| LAB-026 | Y | STP: loop, broadcast storm and root-bridge election | L2 | Bridge ID, root election, port roles | 2.5 / 2.5 | ✅ |
+| LAB-027 | Y | Rapid PVST+: per-VLAN root and port states | L2 | Root primary/secondary, cost, port roles and states | 2.5 / 2.5 | ✅ |
+| LAB-028 | Y | PortFast, BPDU Guard, Root Guard and Loop Guard | L2 | Protection features and err-disabled behaviour | 2.5 / 2.5 | ✅ (Loop Guard: ⚠️) |
+| LAB-029 | Y | EtherChannel: LACP, PAgP and static mode | L2 | Mode compatibility and port-channel verification | 2.4 / 2.1, 2.2 | ✅ |
+| LAB-030 | T | STP and EtherChannel break-fix | L2 | Incompatible parameters and incorrect root bridge | 2.5 / 2.4, 2.5 | ✅ |
+| LAB-031 | Y | Static routing across three routers | L3 | Network routes, next hop and exit interface | 3.3 / 3.2 | ✅ |
+| LAB-032 | Y | Default route and floating static backup | L3 | Default route and backup using administrative distance | 3.3 / 3.2 | ✅ |
+| LAB-033 | Y | Host routes, summary routes and longest-prefix match | L3 | /32 routes, summarisation and LPM | 3.2, 3.3 / 3.1, 3.2 | ✅ |
+| LAB-034 | Y | Inter-VLAN routing with router-on-a-stick | L2–L3 | Subinterfaces and `encapsulation dot1Q` | 2.1 / 2.1 | ✅ |
+| LAB-035 | Y | Layer 3 switch: SVI, routed port and Layer 3 EtherChannel | L2–L3 | `ip routing`, `no switchport`, Layer 3 port-channel | 2.1, 2.4 / 2.1 | ✅ |
+| LAB-036 | Y | ICMP: ping, extended ping, traceroute and TTL | L3 | Echo, Time Exceeded and Destination Unreachable | Indirect / 2.4 | ✅ |
+| LAB-037 | Y | MTU and fragmentation | L3 | MTU, DF bit and fragmentation fields | — / — | ⚠️ (host-lab alternative H05) |
+| LAB-038 | Y | Interpret a routing table | L3 | Route codes, AD, metric, connected and local routes | 3.1, 3.2 / 3.1 | ✅ |
+| LAB-039 | T | Static-routing break-fix | L3 | Missing or incorrect route, return path and wrong mask | 3.3 / 3.2 | ✅ |
+| LAB-040 | Y | OSPFv2 point-to-point adjacency and router ID | L3 | Form adjacency and select router ID | 3.4 / 3.3 | ✅ |
+| LAB-041 | Y | OSPFv2 DR/BDR election on broadcast networks | L3 | Priority, DR/BDR and neighbour states | 3.4 / 3.3 | ✅ |
+| LAB-042 | Y | OSPF cost, passive interface and default-information originate | L3 | Cost calculation, reference bandwidth and default-route advertisement | 3.4 / 3.3 | ✅ |
+| LAB-043 | T | OSPF adjacency break-fix | L3 | Hello/dead timers, area, subnet, duplicate router ID and MTU | 3.4 / 3.3, 2.4 | ✅ (MTU: ⚠️) |
+| LAB-044 | Y | Interpret HSRP and FHRP state | L3 | Virtual IP/MAC, priority and preemption | 3.5 / 3.4 | ✅ (VRRP: ⚠️; interpret output) |
+| LAB-045 | Y | IPv6 addressing: GUA, link-local and EUI-64 | L3 | `ipv6 unicast-routing` and address types | 1.8, 1.9 / 1.4 | ✅ |
+| LAB-046 | Y | NDP, SLAAC and DHCPv6 | L3 | RS/RA/NS/NA, DAD, stateless and stateful DHCPv6 | 1.8 / 1.4 | ✅ (stateful DHCPv6: ⚠️) |
+| LAB-047 | Y | IPv6 static routing | L3 | Default, network, host and floating routes | 3.3 / 3.2 | ✅ |
+| LAB-048 | Y, deferred | Single-area OSPFv3 | L3 | OSPFv3 adjacency and router ID | — / 3.3 | ✅ |
+| LAB-049 | T | Dual-stack network and IPv6 break-fix | L3 | Dual-stack verification and common IPv6 faults | 1.8, 3.3 / 1.4, 3.2 | ✅ |
+| LAB-050 | Y | TCP handshake and connection termination | L4 | SYN, SYN-ACK, ACK, SEQ/ACK values and FIN | 1.5 / — | ✅ |
+| LAB-051 | Y | TCP and UDP: DNS and HTTP traffic | L4, L7 | Ports, sockets and multiplexing | 1.5 / — | ✅ |
+| LAB-052 | Y | DHCPv4 server and DORA | L2–L3, L7 | Address pool, excluded addresses and observe DORA | 4.3 / 1.7 | ✅ |
+| LAB-053 | Y | DHCP relay and DHCP client on a router | L3, L7 | `ip helper-address`, `ip address dhcp` | 4.6 / 1.7 | ✅ |
+| LAB-054 | T | DHCPv4 break-fix | L2–L3, L7 | Missing relay, wrong pool/gateway and exhausted pool | 4.6 / 1.7 | ✅ |
+| LAB-055 | Y | DNS server and name-resolution faults | L7 | Record types and client DNS configuration | 4.3 / 4.4 | ✅ (MX/PTR: ⚠️; use H11) |
+| LAB-056 | Y | HTTP and HTTPS: follow a web request across layers | L4–L7 | TCP 80/443 and what Packet Tracer shows about TLS | — / — | ✅ |
+| LAB-057 | Y | File transfer and backup using TFTP/FTP | L7 | `copy running-config tftp:`, IOS image transfer | 4.9 / 4.2 | ✅ (SCP/SFTP: ⚠️; use H13) |
+| LAB-058 | Y | Email: SMTP and POP3 | L7 | Client/server settings and ports | — / — | ✅ |
+| LAB-059 | Y | Secure remote management with SSH | L7 | RSA key, `ip domain-name`, `transport input ssh` | 2.8, 4.8 / 4.1 | ✅ |
+| LAB-060 | Y | NTP and syslog | L7 | NTP client/server, `logging host` and severity levels | 4.2, 4.5 / 5.6 | ✅ |
+| LAB-061 | Y | SNMP: community and MIB queries | L7 | Get/Set, community and MIB browser | 4.4 / 5.4 | ⚠️ (host-lab alternative H14) |
+
+#### Advanced — LAB-062 to LAB-082
+
+| ID | Type | Title | OSI | Key concepts | CCNA objectives (v1.1 / v2.0) | PT |
+|---|---|---|---|---|---|---|
+| LAB-062 | Y | Publish a server using static NAT (IOS XE) | L3–L4 | inside/outside, inside local/global | 4.1 / 4.3 | ✅ |
+| LAB-063 | Y | Dynamic NAT pool and PAT | L3–L4 | Pool, overload and translation table | 1.7, 4.1 / 4.3 | ✅ |
+| LAB-064 | Y | Standard ACL | L3 | Wildcard mask, placement and implicit deny | 5.6 / 4.6 | ✅ |
+| LAB-065 | Y | Extended ACL | L3–L4 | Protocol/port filtering and `established` | 5.6 / 4.6 | ✅ |
+| LAB-066 | Y | Named ACLs and VTY access control | L3–L4 | Sequence numbers, editing and `access-class` | 5.6 / 4.6 | ✅ |
+| LAB-067 | Y | Port security in depth | L2 | Maximum, sticky learning, violation modes and err-disabled recovery | 5.7 / 4.7 | ✅ |
+| LAB-068 | Y | DHCP snooping and Dynamic ARP Inspection | L2–L3 | Trusted/untrusted ports, binding table and ARP validation | 5.7 / 4.7 | DHCP snooping ✅; DAI ⚠️ |
+| LAB-069 | Y, deferred | Storm control and RA Guard | L2–L3 | Thresholds, actions and rogue Router Advertisements | — / 4.7 | ⚠️ (conceptual and output-interpretation alternative) |
+| LAB-070 | Y | AAA: local users, RADIUS and TACACS+ | L7 | `aaa new-model`, server groups and fallback method | 2.8, 5.8 / 4.1 | ✅ |
+| LAB-071 | Y | Enterprise wireless: WLC, lightweight APs and WPA2 | L1–L2 | WLC GUI, WLAN, VLAN mapping, WPA2-PSK and Enterprise | 2.6, 2.7, 2.9, 5.9, 5.10 / 2.2, 1.5 | ✅ |
+| LAB-072 | Y | Site-to-site VPN: GRE and IPsec | L3 | Tunnel interface, IKE and ESP concepts | 5.5 / 4.5 | ⚠️ |
+| LAB-073 | T | NAT and ACL break-fix | L3–L4 | inside/outside mistakes and ACL order | 4.1, 5.6 / 4.3, 4.6 | ✅ |
+| LAB-074 | Y | Controller-based network: Packet Tracer Network Controller and REST API | L7 | REST, JSON and Python script | 6.2, 6.5, 6.7 / 5.3 | ⚠️ |
+| LAB-075 | T | Build a small-office network end to end | L1–L7 | VLAN, inter-VLAN routing, DHCP, DNS, web and NAT | Multiple / Multiple | ✅ |
+| LAB-076 | T | Opening a website: the complete journey | L1–L7 | Home network, ISP, DNS and web server; PDU at each step | Multiple / Multiple | ✅ |
+| LAB-077 | T | Redundant two-tier campus design | L2–L3 | Rapid PVST+, EtherChannel and HSRP | 1.2, 2.5, 3.5 / 2.1, 2.5, 3.4 | ✅ |
+| LAB-078 | T | Multi-branch WAN: OSPF, central services and Internet exit | L3–L7 | OSPF, DHCP relay and NAT | 3.4, 4.1, 4.6 / 3.3, 1.7, 4.3 | ✅ |
+| LAB-079 | Y | Dual-stack enterprise services | L3–L7 | SLAAC, DHCPv4, AAAA records and IPv6 static routes | 1.8, 3.3, 4.3 / 1.4, 3.3, 4.4 | ✅ |
+| LAB-080 | T | Secure the management plane | L3–L7 | SSH, AAA, VTY ACL, NTP, syslog and SNMP | 2.8, 4.2, 4.4, 4.5, 4.8, 5.3, 5.6, 5.8 / 4.1, 4.6, 5.4, 5.6 | ✅ |
+| LAB-081 | T | Wired and wireless integration | L1–L3, L7 | VLAN per SSID, DHCP and WLC-switch connection | 2.7 / 2.2 | ✅ |
+| LAB-082 | T | Correct an inaccurate network diagram using CDP/LLDP | L2–L3 | Verify documentation against discovered neighbours | 2.3 / 2.3 | ✅ |
+
+#### Expert — LAB-083 to LAB-100
+
+Labs 083–090 provide intentionally incorrect configurations as text. The learner identifies the symptom, forms a hypothesis, verifies it and applies a correction. Each lab has a target completion time. Capstone and exam-style labs follow.
+
+| ID | Type | Title | OSI | Key concepts | CCNA objectives (v1.1 / v2.0) | PT |
+|---|---|---|---|---|---|---|
+| LAB-083 | T | Methodology: “I cannot access a website” ticket | L1–L7 | Top-down and bottom-up approaches; hypothesis and test | Multiple / 2.4 | ✅ |
+| LAB-084 | T | Multi-fault Layer 2 scenario | L2 | VLAN, trunk, STP and EtherChannel | 2.2, 2.4 / 2.4, 2.5 | ✅ |
+| LAB-085 | T | Multi-fault Layer 3 scenario | L3 | Addressing, gateway, static route and OSPF | 1.6, 3.3, 3.4 / 1.3, 3.2, 3.3 | ✅ |
+| LAB-086 | T | Service faults: DHCP, DNS and NAT | L3–L7 | Relay, DNS record and inside/outside errors | 4.1, 4.3 / 1.7, 4.3, 4.4 | ✅ |
+| LAB-087 | T | Security faults | L2–L4 | ACL order, port security and snooping trust configuration | 5.7 / 4.6, 4.7 | ✅ (DAI: ⚠️) |
+| LAB-088 | T | IPv6 faults | L3 | Address, RA, static route and OSPFv3 | 1.8, 3.3 / 1.4, 3.2, 3.3 | ✅ |
+| LAB-089 | T | Interface and performance faults | L1–L2 | Duplex, CRC, giant/runt and err-disabled | 1.4 / 1.1 | ⚠️ (supplement with output interpretation) |
+| LAB-090 | T | Troubleshoot using packet capture | L2–L7 | Simulation Mode and Sniffer device | Multiple / 2.4 | ✅ (Sniffer support: ⚠️) |
+| LAB-091 | T | Capstone 1: build an SMB network from scratch | L1–L7 | Timed, complete network build | Multiple / Multiple | ✅ |
+| LAB-092 | T | Capstone 2: high-availability campus | L2–L3 | Redundancy and convergence testing | Multiple / Multiple | ✅ |
+| LAB-093 | Y | Capstone 3: dual-stack multi-branch OSPF network | L3 | OSPFv2, IPv6 static routes and summarisation | Multiple / Multiple | ✅ |
+| LAB-094 | T | Capstone 4: services and security hardening | L2–L7 | Services, ACLs, Layer 2 security and AAA | Multiple / Multiple | ✅ |
+| LAB-095 | Y | Capstone 5: branch, wireless and VPN | L1–L7 | WLC, branch connection and tunnel | Multiple / Multiple | ⚠️ (VPN) |
+| LAB-096 | T | CCNA-style configuration task 1 | Multiple | Timed task with complete requirements | Multiple / Multiple | ✅ |
+| LAB-097 | T | CCNA-style configuration task 2 | Multiple | Timed task with complete requirements | Multiple / Multiple | ✅ |
+| LAB-098 | T | CCNA-style troubleshooting task 1 | Multiple | Timed scenario with several faults | Multiple / Multiple | ✅ |
+| LAB-099 | T | CCNA-style troubleshooting task 2 | Multiple | Timed scenario with several faults | Multiple / Multiple | ✅ |
+| LAB-100 | T | Final: design, build, document, break and repair | L1–L7 | Requirements through design, implementation, documentation and troubleshooting | Multiple / Multiple | ✅ |
+
+### 12.5 Real-Host Lab Phases and Exam Mapping
+
+The purpose of these labs is to observe real bytes, operating-system behaviour and protocol behaviour that Packet Tracer does not fully represent. Windows, macOS and Linux are supported; Linux-specific labs target Fedora. The phase column is the originally approved scheduling phase; Phase 14 means post-exam/extension work.
+
+| ID | Lab | Related theory | CCNA objective (v1.1 / v2.0) | Phase |
+|---|---|---|---|---:|
+| H01 | Verify IP configuration on Windows, macOS and Linux | 03-06, 11-03 | 1.10 / 1.6 | 4 |
+| H02 | First Wireshark capture; Ethernet fields, FCS and checksum-offload warning | 00-09, 02-03 | — / 2.4 | 3 |
+| H03 | Capture ARP and IPv6 NDP traffic | 02-10, 03-17 | — / 1.4 | 6 |
+| H04 | Wireless environment analysis: band, channel, RSSI and interference | 01-08 | — / 1.5, 1.6 | 2 |
+| H05 | MTU and PMTUD using DF-bit ping | 03-12 | — / — | 14 |
+| H06 | Traceroute types: ICMP on Windows and UDP on Linux/macOS | 03-11 | — / 2.4 | 5 |
+| H07 | Inspect TCP in Wireshark: handshake, window and retransmission; use `ss` and `netstat` | 04-03–04-05 | 1.5 / — | 7 |
+| H08 | Observe UDP and QUIC traffic | 04-02, 04-06 | 1.5 / — | 14 |
+| H09 | TLS 1.3 handshake with Wireshark and `openssl s_client` | 06-06 | — / — | 14 |
+| H10 | Inspect HTTP using `curl -v` | 07-04 | — / — | 14 |
+| H11 | Inspect DNS using `dig` and `nslookup`: A, AAAA, CNAME, MX, NS and PTR | 07-02 | — / 4.4 | 9 |
+| H12 | Observe DHCP release/renew and capture DORA on a real host | 07-03 | — / 1.7 | 9 |
+| H13 | SSH, SCP and SFTP | 07-06, 07-07 | — / 4.2 | 9 |
+| H14 | Linux syslog and SNMP | 07-09 | — / 5.4, 5.6 | 14 |
+| H15 | Hypervisor network modes: VirtualBox NAT, bridged, host-only and internal | 15-02 | — / 1.2 | 14 |
+| H16 | Build a switch/router using Linux network namespaces, veth and bridge | 15-02, 02-06, 03-07 | — / 1.2 | 14 |
+| H17 | Docker networks: bridge, port publishing and NAT rules | 15-02, 03-20 | — / 1.2 | 14 |
+| H18 | Execute commands with Ansible | 15-05 | — / 5.5 | 14 |
+| H19 | Select a generative-AI prompt for network operations | 15-06 | — / 5.2 | 14 |
+
+### 12.6 Code Exercises — Phase 14 by Default
+
+The original intent is to use short Python standard-library exercises to test whether a mechanism is understood. They were deferred to Phase 14 to protect the exam-focused schedule. They may be done immediately after the associated theory only when the learner is comfortably ahead.
+
+| ID | Exercise | Related theory | Phase |
+|---|---|---|---:|
+| K01 | Number-system converter and bitwise operations | 00-02, 00-03 | 14 |
+| K02 | Line-coding simulator: NRZ, Manchester and MLT-3 | 01-03 | 14 |
+| K03 | Calculate CRC-32 and detect a damaged frame | 02-04 | 14 |
+| K04 | Toy switch: simulate MAC learning and flooding | 02-06 | 14 |
+| K05 | IPv4 header checksum and subnet calculator | 03-02, 03-04 | 14 |
+| K06 | Mini-router lookup using longest-prefix match | 03-08 | 14 |
+| K07 | TCP and UDP echo servers using sockets | 04-07 | 14 |
+| K08 | UTF-8 encoder/decoder and Base64 | 06-02, 06-03 | 14 |
+
