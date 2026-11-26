@@ -233,10 +233,10 @@ int('11001000', 2)  # 200
 
 ## Self-Check
 
-- [ ] I can explain decimal, binary, and hexadecimal in simple words.
-- [ ] I can convert an 8-bit binary number to decimal.
-- [ ] I can convert four-bit groups to hexadecimal.
-- [ ] I understand bits, bytes, and octets.
-- [ ] I can convert Mbps to MB/s.
+- [ X ] I can explain decimal, binary, and hexadecimal in simple words.
+- [ X ] I can convert an 8-bit binary number to decimal.
+- [ X ] I can convert four-bit groups to hexadecimal.
+- [ X ] I understand bits, bytes, and octets.
+- [ X ] I can convert Mbps to MB/s.
 
 **Next lesson:** 00-03 — Binary Arithmetic and Boolean Logic.
