@@ -38,7 +38,7 @@
 
 - Foundations question bank: 40 questions across FND-DAT, FND-HW, FND-NET, and FND-OSI.
 - CE-00: 25-question diagnostic test with a separate answer key.
-- English Anki decks are available for lessons 00-01–00-09, 01-01–01-10, and 02-01–02-05.
+- English Anki decks are available for lessons 00-01–00-09, 01-01–01-10, and 02-01–02-06. Note that the 02-06 deck exists before its lesson file has been published.
 - `GLOSSARY.md`, `SOURCES.md`, revision flashcards, and question-bank material support the lesson files.
 - Packet Tracer drills, full labs, real-host labs, and code exercises remain to be produced according to the curriculum.
 
