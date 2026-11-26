@@ -1,9 +1,9 @@
 # İlerleme (Progress)
 
-> **ACTIVE STUDY STANDARD (2026-11-24):** The user approved the redesigned English-first teaching format. The target remains CCNA 200-301 v1.1; the curriculum scope is unchanged. The last completed lesson remains `00-02`. The existing `00-02` through `00-09` lessons have been rewritten in clear, beginner-friendly English, and Physical Layer lessons `01-01` through `01-04` have been created. This redesign does not record any new lesson completion. Use the revised 00-02 as a quick refresh if helpful, then continue with 00-03. No fixed calendar, daily hour target, mandatory Anki routine, or daily log is required. The older dated production plan below is historical only.
+> **ACTIVE STUDY STANDARD (2026-11-24):** The user approved the redesigned English-first teaching format. The target remains CCNA 200-301 v1.1; the curriculum scope is unchanged. The learner completed the redesigned English `00-02` on 2026-11-26 and pushed the checked self-check list in commit `da47e41`. Next lesson: `00-03`. The existing `00-02` through `00-09` lessons have been rewritten in clear, beginner-friendly English, and all ten Physical Layer lessons plus Data Link lessons `02-01` through `02-06` have been published. No fixed calendar, daily hour target, mandatory Anki routine, or daily log is required. The older dated production plan below is historical only.
 > **Last update:** 2026-11-24
-> **Project status:** The Foundations module has nine lesson files. Lessons 00-02 through 00-09 have been rewritten in English; 00-01 remains the previously completed original lesson. All ten Physical Layer lessons 01-01 through 01-10 are published. Data Link lessons 02-01 through 02-06 are published; next content-production item is 02-07.
-> **Active study step:** Review the revised 00-02 briefly if useful, then continue with 00-03 through 00-09, followed by the Physical Layer lessons in order. Physical Layer content production is complete; Data Link 02-01 through 02-06 are published, and next is 02-07.
+> **Project status:** The Foundations module has nine lesson files; learner completion is confirmed through 00-02. Lessons 00-02 through 00-09 are in English. All ten Physical Layer lessons and Data Link lessons 02-01 through 02-06 are published; next content-production item is 02-07.
+> **Active study step:** Continue with 00-03 through 00-09, then study the Physical Layer lessons 01-01 through 01-10. Physical Layer content production is complete; Data Link 02-01 through 02-06 are published, and next is 02-07.
 
 Bu dosya iki şeyi takip eder: (A) içeriğin üretim durumu ve (B) öğrencinin ustalık durumu. Dosya listesi CURRICULUM.md'dedir; burada yalnızca sayılar, tamamlanan dosyalar, takvim ve sorunlar tutulur.
 
@@ -27,7 +27,7 @@ Durumlar: **Yazıldı** = dosya oluşturuldu. **Doğrulandı** = hesaplar, kimli
 | Modül | Planlanan | Yazıldı | Doğrulandı | Sıradaki |
 |---|---|---|---|---|
 | 00-FOUNDATIONS | 9 | 9 | 1* | Written: 9; 00-02–00-09 rewritten in English; formal audit pending |
-| 01-PHYSICAL-LAYER | 10 | 10 | 0 | 02-01 |
+| 01-PHYSICAL-LAYER | 10 | 10 | 0 | Complete (formal audit pending) |
 | 02-DATA-LINK-LAYER | 16 | 6 | 0 | 02-07 |
 | 03-NETWORK-LAYER | 21 | 0 | 0 | 03-01 |
 | 04-TRANSPORT-LAYER | 7 | 0 | 0 | 04-01 |
@@ -92,12 +92,41 @@ Her paket, ilgili fazın başlangıç tarihinden önce hazır olmalı. Her oturu
 
 ## B. Learner progress
 
-Levels are defined in STUDY-ROADMAP.md. Dates are not used as a study schedule; progress is recorded by demonstrated understanding and completed lessons.
+Levels are defined in STUDY-ROADMAP.md. There is no daily schedule or fixed number of study hours. The unit-level dates below are milestone targets only; progress is recorded by demonstrated understanding and completed lessons.
+
+## Current unit-level target deadlines
+
+> Set on 2026-11-26 against the previously agreed CCNA 200-301 v1.1 exam target of **2027-02-02**. These are unit completion targets, not daily schedules or required study hours. Some later units may be studied in parallel once their stated prerequisites are complete.
+
+| Unit | Unit name | Target completion |
+|---|---|---:|
+| 00 | Foundations | **2026-12-03** |
+| 01 | Physical Layer | **2026-12-10** |
+| 02 | Data Link Layer | **2026-12-20** |
+| 03 | Network Layer | **2027-01-07** |
+| 04 | Transport Layer | **2027-01-13** |
+| 05 | Session Layer | **2027-01-15** |
+| 06 | Presentation Layer | **2027-01-20** |
+| 07 | Application Layer | **2027-01-28** |
+| 08 | Cross-Layer Communication | **2027-01-31** |
+| 11 | Troubleshooting | **2027-01-31** |
+| 14 | Security Fundamentals | **2027-01-31** |
+| 15 | Network Operations, Automation, and AI | **2027-02-01** |
+| 12 | Revision resources and final review | **2027-02-01** |
+| 13 | CCNA Exam Preparation | **2027-02-02** |
+
+**How to use these dates:** A unit is complete when its lessons have been studied, the relevant knowledge checks have been attempted, and any lesson-specific practical task has been completed where required. Publishing a lesson file or checking a self-check list alone does not automatically complete a whole unit.
+
+The schedule is intentionally ambitious because it preserves the current exam target. If a target is missed, we will move the remaining dates and reassess exam readiness rather than skip concepts or rush through lessons.
+
+**Companion resources:** Packet Tracer labs (09) and the question bank (10) are used alongside the relevant units, not as separate sequential theory units. Revision (12) is continuous; 2027-02-01 is the final review checkpoint. Optional real-host labs (16) remain secondary and may be done after core exam preparation.
+
+
 
 | Faz | Konu | Hedef tarih | Seviye | Kapı tarihi | Gecikmeli test | Not |
 |---|---|---|---|---|---|---|
 | 0 | Kurulum ve tanı | 20 Kas | — | 20 Kas | — | Kurulum ve CE-00 tamamlandı |
-| 1 | Foundations | Not scheduled | 1 (older record; not re-assessed) | — | — | User confirmed last completed lesson is 00-02. The English rewrite of 00-02 is a refresh, not a new completion. Continue with 00-03 after the refresh if needed. |
+| 1 | Foundations | 2026-12-03 | 1 (self-check complete; broader mastery not re-assessed) | — | — | Redesigned English 00-02 completed on 2026-11-26; all five self-check items checked in GitHub commit da47e41. Next: 00-03. |
 | 2 | Fiziksel Katman | 25–28 Kas | 0 | — | — | |
 | 3 | Veri Bağlantı I | 28 Kas – 3 Ara | 0 | — | — | |
 | 4 | Ağ Katmanı I | 3–9 Ara | 0 | — | — | |
@@ -216,3 +245,5 @@ Henüz yok. Bir komut PT'de çalışmazsa ya da bir açıklamada hata bulursan b
 | 2026-11-24 | Published 02-05 Media Access, CSMA/CD, and Duplex; added English review cards and glossary terms. Learner completion remains 00-02. |
 
 | 2026-11-24 | Published 02-06 Ethernet Switch Operation and MAC Address Learning; added review cards, glossary terms, and Cisco command references. Learner completion remains 00-02. |
+
+| 2026-11-26 | User completed the redesigned English 00-02 and pushed commit [da47e41](https://github.com/GuvenEminSamil/OSI-Networking-Mastery/commit/da47e41ed94ed926e37382a559a4480f90d358e1). All five self-check items are checked. Learner next step is 00-03. Added unit-level target deadlines through the existing 2027-02-02 exam goal. |
