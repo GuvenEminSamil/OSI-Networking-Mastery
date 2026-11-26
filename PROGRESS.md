@@ -9,7 +9,7 @@
 
 - **Last lesson completed by the learner:** 00-02 — Number Systems and Units (2026-11-26).
 - **Next learner lesson:** 00-03 — Binary Arithmetic and Boolean Logic.
-- **Next content-production lesson:** 02-07 — Collision and Broadcast Domains.
+- **Next content-production lesson:** 02-06 — Ethernet Switch Operation and MAC Address Learning.
 - **Learner progress and content-production progress are separate.** A lesson being written or published does not mean it has been studied.
 - The teaching standard is clear, beginner-friendly English. Explain new technical terms when they first appear; do not assume prior knowledge.
 - No fixed daily schedule, study-hour quota, mandatory Anki routine, daily log, or forced teach-back is required.
@@ -20,7 +20,7 @@
 |---|---:|---:|---|
 | 00 — Foundations | 9 | 9 | 00-01 has now been rewritten in English; 00-02–00-09 are in English. Formal technical audit remains pending. |
 | 01 — Physical Layer | 10 | 10 | All lessons published in English. Formal audit remains pending. |
-| 02 — Data Link Layer | 16 | 6 | 02-01–02-06 published in English; next authoring item is 02-07. |
+| 02 — Data Link Layer | 16 | 5 | 02-01–02-05 published in English; next authoring item is 02-06. |
 | 03 — Network Layer | 21 | 0 | Not yet produced. |
 | 04 — Transport Layer | 7 | 0 | Not yet produced. |
 | 05 — Session Layer | 2 | 0 | Not yet produced. |
@@ -38,7 +38,7 @@
 
 - Foundations question bank: 40 questions across FND-DAT, FND-HW, FND-NET, and FND-OSI.
 - CE-00: 25-question diagnostic test with a separate answer key.
-- English Anki decks are available for lessons 00-01–00-09, 01-01–01-10, and 02-01–02-06.
+- English Anki decks are available for lessons 00-01–00-09, 01-01–01-10, and 02-01–02-05.
 - `GLOSSARY.md`, `SOURCES.md`, revision flashcards, and question-bank material support the lesson files.
 - Packet Tracer drills, full labs, real-host labs, and code exercises remain to be produced according to the curriculum.
 
@@ -111,6 +111,9 @@ The v1.1 exam-objective mapping has already been checked against Cisco's publish
 | 2026-11-19 | Initial course structure, curriculum, source list, progress tracker, diagnostic test, and Foundations material created. |
 | 2026-11-20 | CE-00 diagnostic completed and scored 21/40. The learner's original answers and feedback are preserved in `MY-NOTES/CE-00-MY-ANSWERS.md`. |
 | 2026-11-24 | Learner confirmed that 00-02 was the last completed lesson and that the previous course depth felt overwhelming. The course was redesigned for a clearer, more practical English-first approach. |
-| 2026-11-24 | Published the ten English Physical Layer lessons and Data Link lessons 02-01–02-06, with supporting review material. |
+| 2026-11-24 | Published the ten English Physical Layer lessons and Data Link lessons 02-01–02-05, with supporting review material. |
 | 2026-11-26 | Learner completed redesigned lesson 00-02 and pushed commit `da47e41`. Next learner lesson: 00-03. Unit-level milestones were added, retaining the agreed exam target. |
 | 2026-11-26 | Repository language audit started. Turkish lesson, question-bank, answer-key, revision, and personal-note files are being translated. Conflicting fixed-schedule sections are being retired. Learner completion status is unchanged. |
+
+
+> Repository audit correction (2026-11-26): the live `main` tree contains five Data Link lesson files (02-01 through 02-05). A previous status note had counted 02-06 as published, but the file is absent. The 02-06 Anki deck is present; the lesson itself remains to be authored. This correction does not change learner progress.
