@@ -68,7 +68,7 @@ Her paket, ilgili fazın başlangıç tarihinden önce hazır olmalı. Her oturu
 | P0 | GLOSSARY.md, 12-01, CE-00 ve cevapları | 20 Kas | **Tamamlandı** (19 Kas) |
 | P1 | 00-01 – 00-09, FND soruları | 20 Kas (00-01 – 00-04), 22 Kas (00-05 – 00-09) | **Tamamlandı** (20 Kas) |
 | P2 | 11-01, 01-01 – 01-10, DRILLS-F02, LAB-011, H04, PHY questions (+ `09-PACKET-TRACER-LABS/README.md`) | Historical target: 25–26 Nov | Partially complete: 01-01–01-10 published; 11-01, drills, lab, host lab, and PHY questions remain pending |
-| P3 | 02-01 – 02-09, 02-14, DRILLS-F03, LAB-020, H02, DL soruları (I) | 28 Kas | Pending |
+| P3 | 02-01 – 02-09, 02-14, DRILLS-F03, LAB-020, H02, DL questions (I) | Historical target: 28 Nov | Partially complete: 02-01–02-06 published; remaining lessons and practice items pending |
 | P4 | 03-01 – 03-08, 02-10, 11-03, 08-01, 08-03, DRILLS-F04, H01, NET soruları (I), CE-01 | 3 Ara | Bekliyor |
 | P5 | 02-11 – 02-13, 02-15, 02-16, 03-09 – 03-12, 11-02, 08-04, DRILLS-F05, LAB-030, LAB-039, H06, DL (II) ve NET (II) soruları | 9 Ara | Bekliyor |
 | P6 | 03-13 – 03-19, DRILLS-F06, LAB-043, LAB-049, H03, NET (III) soruları, CE-02 | 17 Ara | Bekliyor |
@@ -92,7 +92,7 @@ Her paket, ilgili fazın başlangıç tarihinden önce hazır olmalı. Her oturu
 
 ## B. Learner progress
 
-Levels are defined in STUDY-ROADMAP.md. There is no daily schedule or fixed number of study hours. The unit-level dates below are milestone targets only; progress is recorded by demonstrated understanding and completed lessons.
+Levels are defined in STUDY-ROADMAP.md. There is no daily schedule or fixed number of study hours. The unit-level dates below are current milestone targets; the phase table that follows is a legacy mastery record, not the current unit deadline list. Progress is recorded by demonstrated understanding and completed lessons.
 
 ## Current unit-level target deadlines
 
@@ -123,10 +123,10 @@ The schedule is intentionally ambitious because it preserves the current exam ta
 
 
 
-| Faz | Konu | Hedef tarih | Seviye | Kapı tarihi | Gecikmeli test | Not |
+| Faz | Konu | Legacy target (historical v0.2) | Seviye | Kapı tarihi | Gecikmeli test | Not |
 |---|---|---|---|---|---|---|
 | 0 | Kurulum ve tanı | 20 Kas | — | 20 Kas | — | Kurulum ve CE-00 tamamlandı |
-| 1 | Foundations | 2026-12-03 | 1 (self-check complete; broader mastery not re-assessed) | — | — | Redesigned English 00-02 completed on 2026-11-26; all five self-check items checked in GitHub commit da47e41. Next: 00-03. |
+| 1 | Foundations | 20–25 Kas (legacy plan) | 1 (self-check complete; broader mastery not re-assessed) | — | — | Redesigned English 00-02 completed on 2026-11-26; all five self-check items checked in GitHub commit da47e41. Next: 00-03. Current unit 00 deadline: 2026-12-03 (see B.1). |
 | 2 | Fiziksel Katman | 25–28 Kas | 0 | — | — | |
 | 3 | Veri Bağlantı I | 28 Kas – 3 Ara | 0 | — | — | |
 | 4 | Ağ Katmanı I | 3–9 Ara | 0 | — | — | |
