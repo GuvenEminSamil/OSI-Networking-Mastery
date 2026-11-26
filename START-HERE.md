@@ -45,7 +45,7 @@ These are module completion targets, not daily study hours or a fixed calendar o
 | 14 — Security Fundamentals | 2027-01-31 |
 | 15 — Network Operations, Automation, and AI | 2027-02-01 |
 | 12 — Revision and final review | 2027-02-01 |
-| 13 — Exam Preparation | 2027-02-02 |
+| 13 — Exam Preparation | 2027-02-01 |
 
 The dates are ambitious targets, not reasons to rush. If a deadline slips, we will revise the remaining dates and assess the exam target rather than skip topics. Packet Tracer labs and the question bank are used alongside the relevant units.
 
