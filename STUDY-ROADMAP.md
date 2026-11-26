@@ -1,12 +1,12 @@
 # Study Roadmap and Topic Dependencies
 
-> This file is retained as a reference for topic order and prerequisites. The dated calendar, daily study hours, and session targets in the older v0.2 plan are historical and are **not active study instructions**. Follow START-HERE.md and PROGRESS.md instead. The curriculum target remains CCNA 200-301 v1.1, and English is the study language.
+> This file is retained as a reference for topic order and prerequisites. The dated calendar, daily study hours, and session targets in the older v0.2 plan are historical. Current unit-level target deadlines are listed in the section below and in START-HERE.md / PROGRESS.md; there are still no daily-hour or session quotas. The curriculum target remains CCNA 200-301 v1.1, and English is the study language.
 
 ## 1. Overview of the curriculum sequence
 
 - **Hedef:** CCNA 200-301 **v1.1**. Son sınav günü **2 Şubat 2027 (Salı)**.
 - **Study pace:** Flexible and based on availability. There are no required daily hours, study days, or fixed review sessions.
-- **Sequence:** The original plan groups topics into phases. Treat this as a topic-order reference, not a time commitment or calendar.
+- **Sequence:** Follow the prerequisite order in CURRICULUM.md. The new unit-level target dates below are completion milestones, not a daily schedule.
 - **Progress:** Move forward when the current concepts are understood. Do not rush to meet a date.
 - **Exam target:** CCNA 200-301 v1.1. The syllabus version is fixed unless the user explicitly changes it.
 - **Optional extensions:** Advanced sections and extra labs are secondary to the v1.1 exam objectives.
@@ -299,3 +299,34 @@ Oturumlar arasında en az 15 dakika ara ver. Pazar günü yalnızca Bölüm 5'te
 | CE-02 (22 Aralık) | Sınava gireceğin yer ve uygunluk netleşti mi, sınav rezervasyonu yapıldı mı? Plandan 5 çalışma gününden fazla geride misin? | Uygunluk netleşmediyse ya da 5 günden fazla gerideysen → hedefi v2.0'a çevir (3 Şubat sonrası); Faz 14'ün v2.0 kısmı Faz 13'ten önce yapılır |
 | CE-04 (14 Ocak) | CE-04 ≥ %80 mi? | Hayır → tampon günleri Faz 12'den önce zayıf alanlara ayır |
 | CE-05 (yaklaşık 23 Ocak) | CE-05 ≥ %85 mi? | Hayır → sınavı tampon dönemin sonuna (en geç 2 Şubat) kaydır |
+
+
+## Current unit-level target deadlines (set 2026-11-26)
+
+## Current unit-level target deadlines
+
+> Set on 2026-11-26 against the previously agreed CCNA 200-301 v1.1 exam target of **2027-02-02**. These are unit completion targets, not daily schedules or required study hours. Some later units may be studied in parallel once their stated prerequisites are complete.
+
+| Unit | Unit name | Target completion |
+|---|---|---:|
+| 00 | Foundations | **2026-12-03** |
+| 01 | Physical Layer | **2026-12-10** |
+| 02 | Data Link Layer | **2026-12-20** |
+| 03 | Network Layer | **2027-01-07** |
+| 04 | Transport Layer | **2027-01-13** |
+| 05 | Session Layer | **2027-01-15** |
+| 06 | Presentation Layer | **2027-01-20** |
+| 07 | Application Layer | **2027-01-28** |
+| 08 | Cross-Layer Communication | **2027-01-31** |
+| 11 | Troubleshooting | **2027-01-31** |
+| 14 | Security Fundamentals | **2027-01-31** |
+| 15 | Network Operations, Automation, and AI | **2027-02-01** |
+| 12 | Revision resources and final review | **2027-02-01** |
+| 13 | CCNA Exam Preparation | **2027-02-02** |
+
+**How to use these dates:** A unit is complete when its lessons have been studied, the relevant knowledge checks have been attempted, and any lesson-specific practical task has been completed where required. Publishing a lesson file or checking a self-check list alone does not automatically complete a whole unit.
+
+The schedule is intentionally ambitious because it preserves the current exam target. If a target is missed, we will move the remaining dates and reassess exam readiness rather than skip concepts or rush through lessons.
+
+**Companion resources:** Packet Tracer labs (09) and the question bank (10) are used alongside the relevant units, not as separate sequential theory units. Revision (12) is continuous; 2027-02-01 is the final review checkpoint. Optional real-host labs (16) remain secondary and may be done after core exam preparation.
+
