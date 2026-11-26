@@ -12,7 +12,7 @@
 
 Open [00-FOUNDATIONS/02-Number-Systems-and-Units.md](00-FOUNDATIONS/02-Number-Systems-and-Units.md).
 
-You have already completed the original 00-02 topic. Use the revised English version as a short refresh and to become comfortable with the new terminology. You do not need to repeat exercises you already understand.
+You have completed the redesigned English 00-02 lesson. Your self-check was pushed to GitHub on 2026-11-26. Continue with 00-03.
 
 Then continue with:
 
@@ -26,6 +26,29 @@ Then continue with:
 
 The next module after Foundations is the Physical Layer. Lesson 01-01 is now available: [01-01 — The Purpose of the Physical Layer](01-PHYSICAL-LAYER/01-Physical-Layer-Purpose.md). Lesson 01-02 — Signals and Bandwidth is also available: [01-02 — Signals and Bandwidth](01-PHYSICAL-LAYER/02-Signals-and-Bandwidth.md). Lessons 01-03 — Line Coding and Modulation and 01-04 — Bit Synchronization and Reception are also available. Lessons 01-05 — Signal Impairments and 01-06 — Copper Cabling are now available. Lesson 01-07 — Fiber Optics is now available. The Physical Layer lessons 01-01 through 01-10 are published. The first Data Link lesson is now available: [02-01 — The Purpose of the Data Link Layer](02-DATA-LINK-LAYER/01-Data-Link-Layer-Purpose.md). Continue with [02-02 — MAC Addresses and NICs](02-DATA-LINK-LAYER/02-MAC-Addresses-and-NICs.md), then [02-03 — Ethernet Frame Structure](02-DATA-LINK-LAYER/03-Ethernet-Frame-Structure.md).
 
+## Unit-level target deadlines
+
+These are module completion targets, not daily study hours or a fixed calendar of sessions. They preserve the current 2027-02-02 exam target. Some units can overlap once prerequisites are complete.
+
+| Unit | Target |
+|---|---:|
+| 00 — Foundations | 2026-12-03 |
+| 01 — Physical Layer | 2026-12-10 |
+| 02 — Data Link Layer | 2026-12-20 |
+| 03 — Network Layer | 2027-01-07 |
+| 04 — Transport Layer | 2027-01-13 |
+| 05 — Session Layer | 2027-01-15 |
+| 06 — Presentation Layer | 2027-01-20 |
+| 07 — Application Layer | 2027-01-28 |
+| 08 — Cross-Layer Communication | 2027-01-31 |
+| 11 — Troubleshooting | 2027-01-31 |
+| 14 — Security Fundamentals | 2027-01-31 |
+| 15 — Network Operations, Automation, and AI | 2027-02-01 |
+| 12 — Revision and final review | 2027-02-01 |
+| 13 — Exam Preparation | 2027-02-02 |
+
+The dates are ambitious targets, not reasons to rush. If a deadline slips, we will revise the remaining dates and assess the exam target rather than skip topics. Packet Tracer labs and the question bank are used alongside the relevant units.
+
 ## How to study a lesson
 
 1. Read one section at a time. Stop when you need to; there is no required daily study duration.
@@ -37,7 +60,7 @@ The next module after Foundations is the Physical Layer. Lesson 01-01 is now ava
 
 ## What is not required
 
-- No fixed calendar, daily hour target, or mandatory number of lessons per day.
+- No fixed daily timetable, daily hour target, or mandatory number of lessons per day. The unit-level target dates above are checkpoints only.
 - No daily report or activity log.
 - Anki and flashcards are optional review tools, not a required routine.
 - No mandatory teach-back. Your understanding will be checked through questions and useful practice.
