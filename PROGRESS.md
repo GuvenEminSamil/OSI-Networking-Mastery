@@ -1,7 +1,7 @@
 # İlerleme (Progress)
 
-> **ACTIVE STUDY STANDARD (2026-11-24):** The user approved the redesigned English-first teaching format. The target remains CCNA 200-301 v1.1; the curriculum scope is unchanged. The learner completed the redesigned English `00-02` on 2026-11-26 and pushed the checked self-check list in commit `da47e41`. Next lesson: `00-03`. The existing `00-02` through `00-09` lessons have been rewritten in clear, beginner-friendly English, and all ten Physical Layer lessons plus Data Link lessons `02-01` through `02-06` have been published. No fixed calendar, daily hour target, mandatory Anki routine, or daily log is required. The older dated production plan below is historical only.
-> **Last update:** 2026-11-24
+> **ACTIVE STUDY STANDARD (2026-11-26):** The user approved the redesigned English-first teaching format. The target remains CCNA 200-301 v1.1; the curriculum scope is unchanged. The learner completed the redesigned English `00-02` on 2026-11-26 and pushed the checked self-check list in commit `da47e41`. Next lesson: `00-03`. The existing `00-02` through `00-09` lessons have been rewritten in clear, beginner-friendly English, and all ten Physical Layer lessons plus Data Link lessons `02-01` through `02-06` have been published. No fixed calendar, daily hour target, mandatory Anki routine, or daily log is required. The older dated production plan below is historical only.
+> **Last update:** 2026-11-26
 > **Project status:** The Foundations module has nine lesson files; learner completion is confirmed through 00-02. Lessons 00-02 through 00-09 are in English. All ten Physical Layer lessons and Data Link lessons 02-01 through 02-06 are published; next content-production item is 02-07.
 > **Active study step:** Continue with 00-03 through 00-09, then study the Physical Layer lessons 01-01 through 01-10. Physical Layer content production is complete; Data Link 02-01 through 02-06 are published, and next is 02-07.
 
@@ -59,7 +59,7 @@ Durumlar: **Yazıldı** = dosya oluşturuldu. **Doğrulandı** = hesaplar, kimli
 | Tanı testi (CE-00) | 1 | 1 | 1 |
 | Kapsamlı sınavlar (CE-01 – CE-06) | 6 | 0 | 0 |
 
-### A.4 İçerik üretim takvimi
+### A.4 Historical content-production calendar
 
 Her paket, ilgili fazın başlangıç tarihinden önce hazır olmalı. Her oturumda bir paket (büyük fazlarda yarım paket) yazılır. İçeriğin her zaman en az 1–2 gün önde olması için, elindeki malzemenin bitmesine iki gün kala yeni bir oturum açman yeterli.
 
@@ -67,8 +67,8 @@ Her paket, ilgili fazın başlangıç tarihinden önce hazır olmalı. Her oturu
 |---|---|---|---|
 | P0 | GLOSSARY.md, 12-01, CE-00 ve cevapları | 20 Kas | **Tamamlandı** (19 Kas) |
 | P1 | 00-01 – 00-09, FND soruları | 20 Kas (00-01 – 00-04), 22 Kas (00-05 – 00-09) | **Tamamlandı** (20 Kas) |
-| P2 | 11-01, 01-01 – 01-10, DRILLS-F02, LAB-011, H04, PHY questions (+ `09-PACKET-TRACER-LABS/README.md`) | Historical target: 25–26 Nov | In progress: 01-01 published; remaining items pending |
-| P3 | 02-01 – 02-09, 02-14, DRILLS-F03, LAB-020, H02, DL soruları (I) | 28 Kas | Bekliyor |
+| P2 | 11-01, 01-01 – 01-10, DRILLS-F02, LAB-011, H04, PHY questions (+ `09-PACKET-TRACER-LABS/README.md`) | Historical target: 25–26 Nov | Partially complete: 01-01–01-10 published; 11-01, drills, lab, host lab, and PHY questions remain pending |
+| P3 | 02-01 – 02-09, 02-14, DRILLS-F03, LAB-020, H02, DL soruları (I) | 28 Kas | Pending |
 | P4 | 03-01 – 03-08, 02-10, 11-03, 08-01, 08-03, DRILLS-F04, H01, NET soruları (I), CE-01 | 3 Ara | Bekliyor |
 | P5 | 02-11 – 02-13, 02-15, 02-16, 03-09 – 03-12, 11-02, 08-04, DRILLS-F05, LAB-030, LAB-039, H06, DL (II) ve NET (II) soruları | 9 Ara | Bekliyor |
 | P6 | 03-13 – 03-19, DRILLS-F06, LAB-043, LAB-049, H03, NET (III) soruları, CE-02 | 17 Ara | Bekliyor |
